@@ -1,0 +1,141 @@
+\textbf{Definitions, Notations, and Conventions}
+
+Always assume surface $\Sigma$ (our case $\Sigma = \torus$) is oriented.
+
+define cellular decomp of surface
+
+$V,E,F$ are set of vertices, edges, faces.
+
+$\vec{E}$ is the set of oriented edges.
+We may identify an oriented edge $\vec{e}$ with the pair $(f_{\vec{e}}, e)$,
+where $f_{\vec{e}}$ is the face to the left of $\vec{e}$.
+
+
+%===============================================================================
+
+
+Recall circle pattern.
+
+A circle pattern is determined by the radius of the circle $C_f$ associated to each face, $r_f$,
+and the angle that each edge subtends in adjacent faces, $\vphi_{\vec{e}}$. (see figure TODO)
+Thus determines, and is determined by a point in $\RRR \times \QQQ$, where
+
+\begin{itemize}
+	\item $\RRR := \RR_+^F = \{(r_f)_{f\in F} | r_f \in \RR_+\}$
+	\item $\QQQ := \RR^{\vec{E}} =
+		\{(\vphi_{\vec{e}})_{\vec{e} \in \vec{E}} | \vphi_{\vec{e}} \in \RR\}$
+\end{itemize}
+but clearly not every point $c\in \RRR \times \QQQ$ determines a circle pattern.
+
+
+On $\RRR \times \QQQ$, there are several functions to consider:
+\begin{itemize}
+	\item $\Phi_f = 2 \sum_{\vec{e} \in \del f} \vphi_{\vec{e}}$, measuring the cone angle
+		at the center of $C_f$
+	\item $\theta_e = \pi - \vphi_{\vec{e}} - \vphi_{\cev{e}}$
+	\item $l_{\vec{e}} = r_{f_{\vec{e}}} \sin \vphi_{\vec{e}}$
+\end{itemize}
+
+These fit together to give maps to the following spaces:
+
+\begin{itemize}
+	\item $\PPP := \RR^F = \{(\Phi_f)_{f\in F} | \Phi_f \in \RR\}$
+	\item $\TTT := \RR^E = \{(\theta_e)_{e \in E} | \theta_e \in \RR\}$
+	\item $\LLL := \RR^{\vec{E}} = \{(l_{\vec{e}})_{\vec{e} \in E} | l_{\vec{e}} \in \RR\}$
+\end{itemize}
+
+
+Our main argument is to deform ``degenerate" circle patterns,
+where adjacent circles may
+be identical or tangent, into ones that don't look so degenerate,
+hence it is conveneint to extend the notion of circle pattern:
+
+\begin{definition}
+An \emph{extended circle pattern} is
+$c = ((r_f), (\vphi_{\vec{e}})) \in \RRR \times \QQQ$
+such that $l_{\vec{e}} = l_{\cev{e}}$ for all edges $e\in E$. We denote by
+$\CCC$ the set of extended circle patterns.
+\end{definition}
+
+
+\begin{tikzcd}
+\CCC = \{l_{\vec{e}} = l_{\cev{e}} \} \ar[r,symbol=\subseteq]
+	& \RRR \times \QQQ \ar[r] \ar[d]
+	&\TTT \\
+	& \PPP
+\end{tikzcd}
+
+
+[Check this] The usual notion of circle pattern would be restricted to those $c\in \CCC$
+with $\vphi_{\vec{e}} \in (0,\pi)$ and $\theta_e \in (0,\pi)$.
+One may consider deforming a circle pattern so as to have some $\theta_e$ approach 0 or $\pi$.
+The limit $\theta_e \to \pi$ is easy to picture, one simply gets that the two circles
+$C_f, C_{f'}$ of the adjacent faces become tangent. The limit $\theta_e \to 0$
+is a bit more complex, as the final shape of $Q_e$ (the quadrangle associated to $e$)
+depends also on $\vphi_{\vec{e}}$ (which equals $\pi - \vphi_{\cev{e}}$ in the limit.
+If we parametrize circle patterns by $(r_f)$ and $(\theta_e)$ as in TODO \ocite{BS},
+the limiting shape would depend on how $r_f$ approaches $r_{f'}$,
+some sort of blow up stuff TODO.
+
+
+We will mostly be working with extended circle patterns that mostly ``look normal",
+with all $\vphi_{\vec{e}}$ in some range $(-\veps, \pi + \veps)$.
+
+\begin{definition}
+An extended circle pattern is said to be \emph{face non-singular}
+if $\Phi_f = 2\pi$ for all faces $f$; it is said to be \emph{vertex non-singular}
+if $\sum_{e \ni v} \theta_e = 2\pi$ for all vertices $v$.
+Finally it is said to be \emph{non-singular} if it is both.
+\end{definition}
+
+non-degenerate circle pattern?
+
+
+\begin{definition}
+Given some extended circle pattern $c \in \CCC$,
+we say a face $f$ is \emph{convex} if for all edges $\vec{e} \in \del f$,
+we have $\vphi_{\vec{e}} \in [0,\pi/2)$.
+We say $f$ is \emph{thin} if exactly two edges $\vec{e}, \vec{e'} \in \del f$
+have nonzero $\vphi_{\bullet}$, and furtheremore,
+	$0 < \vphi_{\vec{e}} = \pi - \vphi_{\vec{e'}} < \pi/2$.
+\end{definition}
+
+TODO figures for convex, thin faces
+
+\begin{definition}
+Given an extended circle pattern $c\in \CCC$, an edge $e$ is \emph{short}
+if it has length 0, $l_{\vec{e}} = l_{\cev{e}} = 0$;
+it is \emph{long} otherwise.
+\end{definition}
+
+
+\begin{definition}
+Given an extended circle pattern $c\in \CCC$, a \emph{thick path}
+is a sequence of faces $f_0,f_1,\ldots,f_n$
+such that $f_i,f_{i+1}$ share a long edge.
+A \emph{thick cycle} is a thick path with $f_0 = f_n$.
+\end{definition}
+
+
+\begin{definition}
+A \emph{slit-convex circle pattern} is an extended cirlce pattern
+$c \in \CCC$ such that all its faces are either convex or thin.
+\end{definition}
+
+\begin{lemma}
+$\CCC$ is a manifold near slit-convex circle patterns.
+\end{lemma}
+
+\begin{proof}
+$d(l_{\vec{e}} - l_{\cev{e}})
+= \sin \vphi_{\vec{e}} d r_{f_{\vec{e}}}
++ r_{f_{\vec{e}}} \cos \vphi_{\vec{e}} d \vphi_{\vec{e}}
+- \sin \vphi_{\cev{e}} d r_{f_{\cev{e}}}
+- r_{f_{\cev{e}}} \cos \vphi_{\cev{e}} d \vphi_{\cev{e}}
+$,
+and since having only convex of thin faces implies
+$\cos \vphi_{\vec{e}} \neq 0$,
+we see the differentials are linearly independent at
+a slit-convex circle pattern $c$.
+\end{proof}
+

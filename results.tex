@@ -1,0 +1,55 @@
+\section{Main results??}
+
+
+Our general strategry for obtaining a (non-singular) circle pattern
+is to start with an assignment $\underline{\theta} = (\theta_\bullet)$
+for which we know an extended circle pattern exists
+(say from results of \ocite{BS}),
+and a path $\gamma$ in $\TTT$ starting at $\underline{\theta}$.
+We then attempt to lift $\gamma$ to a path $\tilde{\gamma}$ in $\CCC$,
+so that $\tilde{\gamma}$ remains (face) non-singular
+(vertex non-singularity is already determined by $\gamma$).
+
+Note that since $\sum_{e\in E} \theta_e
+= 2\pi |E| - \sum_{\vec{e} \in \vec{E}} \vphi_{\vec{e}}
+= 2\pi |E| - \sum_{f\in F} \Phi_f$,
+we see that maintaining face non-singularity of $\tilde{\gamma}$
+forces $\sum \theta_e$ to be constant.
+We will show that this is the only obstruction on $\gamma$
+to the lifting to such $\tilde{\gamma}$.
+
+To that end, let $L$ be the $(|E|-1)$-plane distribution on $\TTT$
+tangent to the level sets of $\sum \theta_v$.
+The following proposition proves it(?) up to first order at a point:
+
+
+\begin{proposition}
+\label{p:point_lift}
+Let $c \in \CCC$ be an extended circle pattern such that
+\begin{itemize}
+	\item $\Phi_f = 2\pi$ for all $f\in F$;
+	\item all faces are eithe convex or thin;
+	\item every pair of faces is connected by a thick path.
+\end{itemize}
+Let $K_c = \ker (A_*|_c : T_c \CCC \to T_{A(c)} \PPP)$.
+Then $B_*(K_c) = L_{B(c)}$.
+
+In other words, for any vector $b = b^e \del_{\theta_e}$
+with sum of coefficients 0, one can vary $c$ so that its
+first order change in $\theta_\bullet$ is $b$,
+and also remains face non-singular up to first order.
+\end{proposition}
+
+
+\begin{lemma}
+Let $c \in \CCC$ be as in \prpref{p:point_lift}.
+Then $A$ is a submersion in a neighbourhood of $c$.
+\end{lemma}
+
+\begin{proposition}
+Let $c\in \CCC$ be as in \prpref{p:point_lift}.
+TODO full lifting statement.
+\end{proposition}
+
+%===============================================================================
+
