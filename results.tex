@@ -28,7 +28,8 @@ The following proposition proves it(?) up to first order at a point:
 Let $c \in \CCC$ be an extended circle pattern such that
 \begin{itemize}
 	\item $\Phi_f = 2\pi$ for all $f\in F$;
-	\item all faces are eithe convex or thin;
+	\item all faces are eithe convex or thin,
+		with at least one convex face;
 	\item every pair of faces is connected by a thick path.
 \end{itemize}
 Let $K_c = \ker (A_*|_c : T_c \CCC \to T_{A(c)} \PPP)$.
@@ -41,10 +42,57 @@ and also remains face non-singular up to first order.
 \end{proposition}
 
 
+Before we prove this, it is convenient to first prove the following:
+
 \begin{lemma}
 Let $c \in \CCC$ be as in \prpref{p:point_lift}.
 Then $A$ is a submersion in a neighbourhood of $c$.
 \end{lemma}
+
+\begin{proof}
+We construct vectors $\beta_f \in T_c \CCC$ so that
+$A_*(\beta_f) = \ddd{\Phi_f}$.
+The vector
+\begin{equation}
+\beta_f = [ \ddd{r_f} - \sum_{\vec{e} \in \del f} 
+	\frac{\tan \vphi_{\vec{e}}}{r_f} \ddd{\vphi_{\vec{e}}}] \cdot \alpha
+\end{equation}
+doesn't change $l_{\vec{e}}$,
+so is in $T_c \CCC$
+($\alpha$ to be determined).
+Its pushforward under $A$ is simply
+$A_*(\beta_f) = \frac{1}{r_f} \sum_{\vec{e}\in \del f} \tan \vphi_{\vec{e}}
+	\ddd{\Phi_f}$.
+
+
+If $f$ is a convex face, then the $\tan \vphi_{\vec{e}}$ are all positive,
+so $A_*(\beta_f)$ is a negative multiple of $\ddd{\Phi_f}$;
+we choose $\alpha$ so that $A_*(\beta_f) = \ddd{\Phi_f}$.
+Intuitively, this is like
+pulling the center of $C_f$ up off the plane, increasing $r_f$ and decreasing all
+$\vphi$'s.
+
+
+If $f$ is thin, the coefficients sum to 0 so that $A_*(\beta_f) = 0$,
+so we need a different approach. First suppose $f$ shares an edge
+$e$ with a convex face $f'$. We can increase $l_e$
+by increasing $\vphi_{\vec{e}},\vphi_{\cev{e}}$
+while holding $r_f,r_{f'}$ constant.
+This will affect both $\Phi_f, \Phi_{f'}$,
+so we use $\beta_{f'}$ to make $\Phi_{f'}$ constant.
+More explicitly, consider
+$\beta_e = \frac{1}{2\cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
++ \frac{1}{2\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}$.
+Then we can take
+$\beta_f = \cos \vphi_{\vec{e}}
+	(\beta_e - \frac{1}{\cos \vphi_{\cev{e}}} \beta_{f'})$.
+We can repeat this procedure with $f'$ set to $f$.
+\end{proof}
+
+\begin{proof}[Proof of \prpref{p:point_lift}]
+proof
+\end{proof}
+
 
 \begin{proposition}
 Let $c\in \CCC$ be as in \prpref{p:point_lift}.
