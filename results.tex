@@ -1,4 +1,4 @@
-\section{Main results??}
+\section{Main ?? results}
 
 
 Our general strategry for obtaining a (non-singular) circle pattern
@@ -20,7 +20,7 @@ to the lifting to such $\tilde{\gamma}$.
 
 To that end, let $L$ be the $(|E|-1)$-plane distribution on $\TTT$
 tangent to the level sets of $\sum \theta_v$.
-The following proposition proves it(?) up to first order at a point:
+The following proposition proves it (avoid using `it'?) up to first order at a point:
 
 
 \begin{proposition}
@@ -32,8 +32,8 @@ Let $c \in \CCC$ be an extended circle pattern such that
 		with at least one convex face;
 	\item every pair of faces is connected by a thick path.
 \end{itemize}
-Let $K_c = \ker (A_*|_c : T_c \CCC \to T_{A(c)} \PPP)$.
-Then $B_*(K_c) = L_{B(c)}$.
+Let $K_c = \ker (\Phi_*|_c : T_c \CCC \to T_{\Phi(c)} \PPP)$.
+Then $\Theta_*(K_c) = L_{\Theta(c)}$.
 
 In other words, for any vector $b = b^e \del_{\theta_e}$
 with sum of coefficients 0, one can vary $c$ so that its
@@ -46,34 +46,41 @@ Before we prove this, it is convenient to first prove the following:
 
 \begin{lemma}
 Let $c \in \CCC$ be as in \prpref{p:point_lift}.
-Then $A$ is a submersion in a neighbourhood of $c$.
+Then $\Phi$ is a submersion in a neighbourhood of $c$.
 \end{lemma}
 
 \begin{proof}
 We construct vectors $\beta_f \in T_c \CCC$ so that
-$A_*(\beta_f) = \ddd{\Phi_f}$.
+$\Phi_*(\beta_f) = \ddd{\Phi_f}$.
 The vector
 \begin{equation}
-\beta_f = [ \ddd{r_f} - \sum_{\vec{e} \in \del f} 
-	\frac{\tan \vphi_{\vec{e}}}{r_f} \ddd{\vphi_{\vec{e}}}] \cdot \alpha
+\label{e:alpha_f}
+\alpha_f := \ddd{r_f} - \sum_{\vec{e} \in \del f} 
+	\frac{\tan \vphi_{\vec{e}}}{r_f} \ddd{\vphi_{\vec{e}}}
+	\in T(\RRR \times \QQQ)
 \end{equation}
 doesn't change $l_{\vec{e}}$,
-so is in $T_c \CCC$
-($\alpha$ to be determined).
-Its pushforward under $A$ is simply
-$A_*(\beta_f) = \frac{1}{r_f} \sum_{\vec{e}\in \del f} \tan \vphi_{\vec{e}}
+so is in $T_c \CCC$.
+Intuitively, $\alpha_f$ is like
+pulling the center of $C_f$ up off the plane, increasing $r_f$ and decreasing all
+$\vphi$'s.
+Its pushforward under $\Phi$ is simply
+$\Phi_*(\beta_f) = \frac{1}{r_f} \sum_{\vec{e}\in \del f} \tan \vphi_{\vec{e}}
 	\ddd{\Phi_f}$.
 
 
-If $f$ is a convex face, then the $\tan \vphi_{\vec{e}}$ are all positive,
-so $A_*(\beta_f)$ is a negative multiple of $\ddd{\Phi_f}$;
-we choose $\alpha$ so that $A_*(\beta_f) = \ddd{\Phi_f}$.
-Intuitively, this is like
-pulling the center of $C_f$ up off the plane, increasing $r_f$ and decreasing all
-$\vphi$'s.
+If $f$ is a convex face, then the $\tan \vphi_{\vec{e}}$ are all non-negative,
+being 0 if and only if $e$ is short.
+so $\Phi_*(\alpha_f)$ is a negative multiple of $\ddd{\Phi_f}$;
+we choose $\beta$ so that
+\begin{equation}
+\label{e:beta_f_convex}
+\beta_f := \beta \cdot \alpha_f; \;\;\;
+\Phi_*(\beta_f) = \ddd{\Phi_f}
+\end{equation}
 
 
-If $f$ is thin, the coefficients sum to 0 so that $A_*(\beta_f) = 0$,
+If $f$ is thin, the coefficients sum to 0 so that $\Phi_*(\beta_f) = 0$,
 so we need a different approach. First suppose $f$ shares an edge
 $e$ with a convex face $f'$. We can increase $l_e$
 by increasing $\vphi_{\vec{e}},\vphi_{\cev{e}}$
@@ -81,16 +88,62 @@ while holding $r_f,r_{f'}$ constant.
 This will affect both $\Phi_f, \Phi_{f'}$,
 so we use $\beta_{f'}$ to make $\Phi_{f'}$ constant.
 More explicitly, consider
-$\beta_e = \frac{1}{2\cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
-+ \frac{1}{2\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}$.
+\begin{equation}
+\label{e:alpha_e}
+\alpha_e = \frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
++ \frac{1}{2 r_{f'}\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}
+\end{equation}
 Then we can take
-$\beta_f = \cos \vphi_{\vec{e}}
-	(\beta_e - \frac{1}{\cos \vphi_{\cev{e}}} \beta_{f'})$.
-We can repeat this procedure with $f'$ set to $f$.
+\begin{equation}
+\label{e:beta_f_thin}
+\beta_f = r_f \cos \vphi_{\vec{e}}
+	(\alpha_e - \frac{1}{r_{f'} \cos \vphi_{\cev{e}}} \beta_{f'})
+\end{equation}
+which increases $l_{\vec{e}}, l_{\cev{e}}$ at unit speed,
+$dl_{\vec{e}}(\alpha_e) = dl_{\cev{e}}(\alpha_e) = 1$.
+We can repeat this procedure with $f'$ set to this thin face,
+and $f$ set to another thin face adjacent to it, etc.
 \end{proof}
 
 \begin{proof}[Proof of \prpref{p:point_lift}]
-proof
+We construct a vector $u_e \in K_c \subseteq T_c \CCC$ for each long edge $e$
+such that if $\Theta_*(u_e) = \sum_{e' \in E} a^{e'} \ddd{\theta_{e'}}$,
+\begin{itemize}
+	\item $a^e = 1$;
+	\item $a^{e'} \leq 0$ for all $e' \neq e$;
+	\item $a^{e'} = 0$ for short edges $e'$.
+\end{itemize}
+
+First suppose that $e$ is between two convex faces $f, f'$
+(so $\vec{e} \in \del f, \cev{e} \in \del f'$).
+Observe that $\alpha_e$ from \eqnref{e:alpha_e}
+increases $\Phi_f$ and $\Phi_{f'}$,
+and we can compensate using $\beta_f$ from \eqnref{e:beta_f_convex},
+so we consider
+\[
+w_e = \alpha_e - \frac{1}{\cos \vphi_{\vec{e}}} \beta_f
+	- \frac{1}{\cos \vphi_{\cev{e}}} \beta_{f'} \in K_c
+\]
+%Since $\theta_e = \pi - \vphi_{\vec{e}} - \vphi_{\cev{e}}$,
+%we need to show that the coefficients of $\ddd{\vphi_{\vec{e}}},
+%\ddd{\vphi_{\cev{e}}}$ sum to 0.
+For $\vec{e'} \in \del f \cup \del f' \backslash \{\vec{e},\cev{e}\}$,
+the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
+or $\beta_{f'}$, which is positive by construciton
+(this requires $f,f'$ to be convex faces);
+thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
+is equal 0 if and only if $e'$ is short.
+Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
+constant, so $d\theta_e(w_e) < 0$, so we can take
+\begin{equation}
+\label{e:u_e}
+u_e = (d\theta_e(w_e))^\inv \cdot w_e
+\end{equation}
+
+In general, we consider a thick path of faces $f_0, \ldots, f_n$,
+such that all faces except $f_0$ and $f_n$ are thin.
+
+
 \end{proof}
 
 
