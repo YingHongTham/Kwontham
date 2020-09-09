@@ -23,7 +23,7 @@ We will show that this is the only obstruction on $\gamma$
 to the lifting to such $\tilde{\gamma}$.
 
 To that end, let $L$ be the $(|E|-1)$-plane distribution on $\TTT$
-tangent to the level sets of $\sum \theta_v$.
+tangent to the level sets of $\sum_{e\in E} \theta_e$.
 The following proposition proves it (avoid using `it'?) up to first order at a point:
 
 
@@ -39,16 +39,18 @@ Let $c \in \CCC$ be an extended circle pattern such that
 Let $K_c = \ker (\Phi_*|_c : T_c \CCC \to T_{\Phi(c)} \PPP)$.
 Then $\Theta_*(K_c) = L_{\Theta(c)}$.
 
-In other words, for any vector $a = a^e \del_{\theta_e}$
-with sum of coefficients 0, one can vary $c$ so that its
+In other words, for any vector $a \in T_{\Theta(c)} \TTT$
+with sum of components 0, one can vary $c$ so that its
 first order change in $\theta_\bullet$ is $a$,
 and also remains face non-singular up to first order.
 \end{proposition}
 
 
-Before we prove this, it is convenient to first prove the following:
+Before we prove this, it is convenient to first prove the following,
+which will establish some useful notation:
 
 \begin{lemma}
+\label{l:Phi_full}
 Let $c \in \CCC$ be as in \prpref{p:point_lift}.
 Then $\Phi$ is a submersion in a neighbourhood of $c$.
 \end{lemma}
@@ -69,13 +71,15 @@ Intuitively, $\alpha_f$ is like
 pulling the center of $C_f$ up off the plane, increasing $r_f$ and decreasing all
 $\vphi$'s.
 Its pushforward under $\Phi$ is simply
-$\Phi_*(\beta_f) = \frac{1}{r_f} \sum_{\vec{e}\in \del f} \tan \vphi_{\vec{e}}
+$\Phi_*(\alpha_f) =
+	(-\frac{2}{r_f} \sum_{\vec{e}\in \del f} \tan \vphi_{\vec{e}})
 	\ddd{\Phi_f}$.
 
 
 If $f$ is a convex face, then the $\tan \vphi_{\vec{e}}$ are all non-negative,
-being 0 if and only if $e$ is short.
-so $\Phi_*(\alpha_f)$ is a negative multiple of $\ddd{\Phi_f}$;
+being 0 if and only if $e$ is short,
+and because $\Phi_f = 2\pi$, atleast three edges are long.
+So $\Phi_*(\alpha_f)$ is a negative multiple of $\ddd{\Phi_f}$;
 we choose $\beta$ so that
 \begin{equation}
 \label{e:beta_f_convex}
@@ -85,10 +89,11 @@ we choose $\beta$ so that
 
 
 If $f$ is thin, we actually have that $\alpha_f \in K_c$,
-since the coefficients sum to 0 so that $\Phi_*(\alpha_f) = 0$,
-so we need a different approach. First suppose $f$ shares an edge
-$e$ with a convex face $f'$. We can increase $l_e$
-by increasing $\vphi_{\vec{e}},\vphi_{\cev{e}}$
+since the components sum to 0, so we need a different approach.
+First suppose $f$ shares an edge $e$ with a convex face $f'$,
+with $\vec{e} \in \del f$.
+We can increase $l_e$
+by varying $\vphi_{\vec{e}},\vphi_{\cev{e}}$
 while holding $r_f,r_{f'}$ constant.
 This will affect both $\Phi_f, \Phi_{f'}$,
 so we use $\beta_{f'}$ to make $\Phi_{f'}$ constant.
@@ -98,14 +103,14 @@ More explicitly, consider
 \alpha_e = \frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
 + \frac{1}{2 r_{f'}\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}
 \end{equation}
+which increases $l_{\vec{e}}, l_{\cev{e}}$ at half unit speed,
+$dl_{\vec{e}}(\alpha_e) = dl_{\cev{e}}(\alpha_e) = 1/2$.
 Then we can take
 \begin{equation}
 \label{e:beta_f_thin}
 \beta_f = r_f \cos \vphi_{\vec{e}}
 	(\alpha_e - \frac{1}{r_{f'} \cos \vphi_{\cev{e}}} \beta_{f'})
 \end{equation}
-which increases $l_{\vec{e}}, l_{\cev{e}}$ at unit speed,
-$dl_{\vec{e}}(\alpha_e) = dl_{\cev{e}}(\alpha_e) = 1$.
 We can repeat this procedure with $f'$ set to this thin face,
 and $f$ set to another thin face adjacent to it, etc.
 \end{proof}
@@ -123,6 +128,7 @@ if $\Theta_*(u_e) = \sum_{e' \in E} a^{e'} \ddd{\theta_{e'}}$, then
 	\item $a^e = 1$;
 	\item $a^{e'} \leq 0$ for all $e' \neq e$;
 	\item $a^{e'} = 0$ for short edges $e'$.
+	\item $\sum_{e' \in E} a^{e'} = 0$ (follows directly from $u_e \in K_c$)
 \end{itemize}
 Furthermore, these $u_e$'s collectively satisfy the following
 connectivity property:
@@ -138,6 +144,7 @@ one has
 \begin{itemize}
 	\item $a^e = 1$;
 	\item $a^{e'} = 0$ for other short edges $e'$.
+	\item $\sum_{e' \in E} a^{e'} = 0$ (follows directly from $u_e \in K_c$)
 \end{itemize}
 
 
@@ -168,8 +175,9 @@ of the submatrix $M_\llong$ of long-by-long entries.
 Let $|b_e|$ be the largest among components of $b_\llong$;
 rescale $b$ so that $b_e = 1$.
 The $e$-th component of $M_\llong b_\llong$
-is $1 - \sum a^{e'} b_{e'}$.
-Since $\sum a^{e'} = 1$, this can 0 if and only if
+is $1 - \sum_{e' \neq e} a^{e'} b_{e'}$,
+where $a^{e'}$ are the components of $\Theta_*(u_e)$.
+Since $\sum_{e' \neq e} |a^{e'}| = 1$, this can be 0 if and only if
 for all $e'$ with $a^{e'} < 0$, we have exactly $b_{e'} = 1$.
 By connectedness of $G_\llong$, this implies
 $b_\llong = (1 \; \cdots \; 1)^T$.
@@ -218,7 +226,7 @@ u_e := (d\theta_e(w_e))^\inv \cdot w_e
 In general, we consider a thick path of faces $f_0, \ldots, f_n$,
 such that all faces except $f_0$ and $f_n$ are thin,
 and $f_i$ are distinct except possibly $f_0 = f_n$.
-\footnote{Picture a slinky linking two rocks.}
+\footnote{Picture a closed accordian.}
 Let $e_i$ be the long edge between $f_i$ and $f_{i+1}$,
 and orient so that $\vec{e_i} \in \del f_i$, $\cev{e_i} \in \del f_{i+1}$.
 
@@ -227,7 +235,7 @@ We will construct $u_{e_i}$ for $i = 1,\ldots,n$.
 
 
 We want to increase the lengths of $e_i$'s all together.
-Let $E' = \{\vec{e_i}, \cev{e_i} | i=1,\ldots, n\}$.
+Let $E' = \{\vec{e_i}, \cev{e_i} | i=0,1,\ldots,n-1\}$.
 Consider
 \[
 x :=
@@ -244,15 +252,14 @@ x :=
 with $\alpha_e$ from \eqnref{e:alpha_e}.
 It is clear that $x$ increases all oriented $e_i$ lengths
 $l_{\vec{e}}$ equally fast,
-i.e. $dl_{\vec{e_i}}(x) = dl_{\cev{e_i}}(x) = 1$ for all $i$,
+i.e. $dl_{\vec{e_i}}(x) = dl_{\cev{e_i}}(x) = 1/2$ for all $i$,
 so $x\in T_c \CCC$.
 It is also clear that for the thin faces $f_i$,
 $x$ makes one of the angles $\vphi_{\cev{e_{i-1}}}, \vphi_{\vec{e_i}}$
-increase and makes the other decrease, both at the same rate,
+increase and the other decrease, both at the same rate,
 thus $d\Phi_{f_i}(x) = 0$.
-
-The vector $x$ increase $\Phi_{f_0}$ and $\Phi_{f_n}$, so it is compensated
-using $\beta_f$'s, so that
+However, the vector $x$ increase $\Phi_{f_0}$ and $\Phi_{f_n}$,
+so it is compensated using $\beta_f$'s, so that
 \[
 y := x - \frac{1}{r_{f_0} \cos \vphi_{\vec{e_0}}} \beta_{f_0}
 - \frac{1}{r_{f_n} \cos \vphi_{\cev{e_{n-1}}}} \beta_{f_n}
@@ -260,10 +267,10 @@ y := x - \frac{1}{r_{f_0} \cos \vphi_{\vec{e_0}}} \beta_{f_0}
 \]
 Before we modify $y$ to give the desired $u_{e_i}$,
 we note that for $\vec{e} \in (\cup \del f_i) \backslash E'$,
-the coefficient of $\ddd{\vphi_{\vec{e}}}$ in $y$ is non-positive,
+the $\vphi_{\vec{e}}$-component in $y$ is non-positive,
 and is 0 if and only if $e$ is short;
-so $\Theta_*(y)$ satisfies two of the three properties
-desired in $u_e$.
+so $\Theta_*(-y)$ already satisfies three of the four properties
+desired in $\Theta_*(u_e)$.
 
 
 Recall that for thin face $f$,
@@ -275,7 +282,7 @@ and we have
 \]
 Write $\bar{\alpha}_{f_i} = \frac{r_{f_i}}{\tan \vphi_{\vec{e_i}}} \alpha_{f_i}$.
 Then it is easy to see that using $\bar{\alpha}_{f_i}$'s, we can
-push the coefficients of $\ddd{\theta_{e_i}}$'s in $\Theta_*(y)$ around
+``push around" the $\theta_{e_i}$-components in $\Theta_*(y)$
 so only one is nonzero.
 More precisely, if
 $\Theta_*(y) = \sum_e y^e \ddd{\theta_e}$, the image under $\Theta_*$
@@ -284,9 +291,13 @@ of the vector
 \bar{u}_{e_0} := y - y^{e_{n-1}} \bar{\alpha}_{f_{n-1}}
 - (y^{e_{n-2}} + y^{e_{n-1}}) \bar{\alpha}_{f_{n-2}}
 - \ldots
+- (y^{e_1} + \ldots + y^{e_{n-1}}) \bar{\alpha}_{f_1}
 \]
-would have $\ddd{\theta_{e_i}}$ coefficients 0 for all $i$ except 0.
-Finally, we can take
+would have $\theta_{e_i}$-components 0 for all $i$ except 0;
+for $i=0$, the $\theta_{e_0}$-component is now $y^{e_0} + \ldots + y^{e_{n-1}}$,
+which is nonzero because $\sum_{e'\in E} y^{e'} = 0$
+and $\sum_{e' \in E \backslash E'} y^{e'} > 0$.
+Therefore, we can take
 \[
 u_{e_0} := (d\theta_{e_0}(\bar{u}_{e_0}))^\inv \cdot \bar{u}_{e_0};
 \;\;\;
@@ -298,7 +309,7 @@ It is easy to see that the long edges of a convex face
 are connected in $G_\llong$
 (for example, $u_{e_0}$ defined above clearly does it for
 $f_0$).
-Furthermore, all the $\Theta_*(u_{e_i})$ share most of the same coefficients,
+Furthermore, all the $\Theta_*(u_{e_i})$ have most components equal,
 so $e_i$ are in the same connected component of $G_\llong$.
 Thus connectivity of $G_\llong$ follows from the
 thick-path-connectivity of faces.
@@ -307,24 +318,70 @@ thick-path-connectivity of faces.
 Finally, for short edges $e$, we simply define $u_e$
 as in \eqnref{e:u_e}
 (here we do not worry about whether faces are thin or convex,
-as there is no non-positivity condition of $a^{e'}$ is absent).
+as the non-positivity condition of $a^{e'}$ is absent).
 \end{proof}
 
 
 \begin{proposition}
+\label{p:nghd_lift}
 Let $c\in \CCC$ be as in \prpref{p:point_lift}.
-Given a path $\gamma: [0,\veps] \to \TTT$
+Given a smooth path $\gamma: [0,\infty) \to \TTT$
 starting at $\gamma(0) = \Theta(c)$
 and has constant value $(\sum \theta_e) \circ \gamma$,
-there exists a lift $\tilde{\gamma} :[0, \veps] \to \CCC$
+there exists $\veps > 0$ and a lift $\tilde{\gamma} :[0, \veps] \to \CCC$
+of $\gamma|_{[0,\veps]}$ along $\Theta$
 that starts at $\tilde{\gamma}(0) = c$
 and has constant value $\Phi \circ \tilde{\gamma}$.
 \end{proposition}
 
 
 \begin{proof}
-TODO.
+By \lemref{l:Phi_full}, $\Phi$ is a submersion at $c$,
+hence is a submersion in a neighborhood $U \in \CCC$ of $c$.
+Thus, the kernels
+$K_{c'} = \ker(\Phi_*|{c'} : T_{c'} \CCC \to T_{\Phi(c')} \PPP)$
+form an $|E|$-plane distribution $K \subset T\CCC|_U$ over $U$.
+By \prpref{p:point_lift}, the bundle map
+$\Theta_*|_K : K \to L$ is full rank at $c$,
+hence it is full in a possibly smaller neighborhood,
+which we redefine $U$ to be.
+
+
+Since $\sum_{e \in E} \theta_e = 2\pi |E| - \sum_{f\in F} \Phi_f$,
+the fullness of $\Phi_*$ also shows that
+$\sum \theta$ has no critical points in $U$;
+for $s$ in some small interval around $(\sum \theta)(c)$,
+denote, by overloading notation,
+$L_s = (\sum \theta)^\inv (s)$,
+$U_s = U \cap \Theta^\inv(L_s)$.
+We may consider $K$ as a family of $|E|$-plane distributions
+$K_s$ over $U_s$.
+
+
+The vector $\rho := \sum_{f\in F} r_f \ddd{r_f}$ corresponds to
+scaling all radii by the same factor, and is clearly in $T\CCC$.
+It is obviously mapped to zero under $\Phi_*$ and $\Theta_*$,
+so $\Span\{\rho\} = \ker(\Theta_*|_K) \subset K$.
+Thus, over $U$, we may split
+$K = \Span\{\rho\} \oplus K'$
+(say as orthogonal decomposition w.r.t. some smooth metric on $\CCC$),
+so that $\Theta_*|{c'} : K'|_{c'} \simeq L_{\Theta(c')}$.
+
+
+In other words, $K'|_{U_s}$ is a horizontal $(|E|-1)$-plane distribution
+that determines an Ehresmann connection of the
+fibre bundle $U_s \to L_s$ (after being appropriately restricted).
+Therefore, a short path $\gamma$ starting at $\Theta(c)$
+with constant $\sum \theta$, i.e. a path in $L_s$, $s ={(\sum \theta)(c)}$,
+can be lifted to a path $\tilde{\gamma}$ in $U_s$,
+so that $\tilde{\gamma}$ is always tangent to $K'$,
+hence $\Phi(\tilde{\gamma})$ is constant.
 \end{proof}
 
 %===============================================================================
+
+
+TODO
+Note: no face can have its edges glued together; prevented by fact
+of alternating links
 
