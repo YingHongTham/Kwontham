@@ -7,10 +7,22 @@ Colin~C. Adams.
   ({C}oventry/{D}urham, 1984)}, volume 112 of {\em London Math. Soc. Lecture
   Note Ser.}, pages 115--130. Cambridge Univ. Press, Cambridge, 1986.
 
+\bibitem{BandS}
+Alexander~I. Bobenko and Boris~A. Springborn.
+\newblock Variational principles for circle patterns and {K}oebe's theorem.
+\newblock {\em Trans. Amer. Math. Soc.}, 356(2):659--689, 2004.
+
 \bibitem{CKP2}
 Abhijit Champanerkar, Ilya Kofman, and Jessica~S. Purcell.
 \newblock Geometry of biperiodic alternating links.
 \newblock {\em J. Lond. Math. Soc. (2)}, 99(3):807--830, 2019.
+
+\bibitem{Casson-Rivin}
+David Futer and Fran\c{c}ois Gu\'{e}ritaud.
+\newblock From angled triangulations to hyperbolic structures.
+\newblock In {\em Interactions between hyperbolic geometry, quantum topology
+  and number theory}, volume 541 of {\em Contemp. Math.}, pages 159--182. Amer.
+  Math. Soc., Providence, RI, 2011.
 
 \bibitem{lackenby}
 Marc Lackenby.
@@ -25,10 +37,11 @@ William~W. Menasco.
   1981)}, volume~20 of {\em Contemp. Math.}, pages 305--325. Amer. Math. Soc.,
   Providence, RI, 1983.
 
-\bibitem{JP-book}
-Jessica~S. Purcell.
-\newblock {\em Hyperbolic Knot Theory}.
-\newblock Graduate Studies in Mathematics, to appear. American Mathematical
-  Society, Providence, RI, 2020.
+\bibitem{Thurston}
+W.~P. Thurston.
+\newblock The geometry and topology of three-manifolds.
+\newblock Princeton Univ. Math. Dept. Notes. Available at
+  http://www.msri.org/communications/books/gt3m. [2, 21, 50, 58, 68, 87, 89,
+  94, 97, 99, 138, 196], 1979.
 
 \end{thebibliography}

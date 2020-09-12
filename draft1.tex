@@ -1,9 +1,11 @@
 \documentclass[11pt]{amsart}
 \usepackage{float}
 \usepackage{amsfonts, amstext, amsmath, amsthm, amscd, amssymb, upgreek}
+\usepackage{bbm}
 \usepackage{graphicx, color,  subfigure, wrapfig, overpic}
 \usepackage[all,cmtip]{xy} 
 \usepackage{tikz}
+%\usepackage{mystyle}
 
 
 
@@ -49,6 +51,25 @@
 \newcommand{\K}{\upkappa}
 
 \def\co{\colon\thinspace}
+
+
+\newcommand{\torus}{{\mathbb{T}^2}}
+
+\newcommand{\RRR}{{\underline{\mathfrak{R}}}}
+\newcommand{\QQQ}{{\underline{\mathfrak{Q}}}}
+\newcommand{\CCC}{{\underline{\mathfrak{C}}}}
+\newcommand{\PPP}{{\underline{\mathbf{\Phi}}}}
+\newcommand{\TTT}{{\underline{\mathbf{\Theta}}}}
+\newcommand{\LLL}{{\underline{\mathfrak{L}}}}
+
+\newcommand{\cev}[1]{\overset{\leftarrow}{#1}}
+
+\newcommand{\del}{\partial}
+\newcommand{\ddd}[1]{{\frac{\del}{\del #1}}}
+\newcommand{\vphi}{\varphi}
+\newcommand{\llong}{{\text{long}}}
+\newcommand{\Span}{{\text{span}}}
+\newcommand{\Pol}{{\text{Pol}}}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
@@ -220,19 +241,92 @@ The faces of one torihedron which do not correspond to a bow-tie glue to a corre
 
 {\it Proof.}  Using the decomposition from Proposition \ref{thm:torihedraldecomposition} we can add a stellation edge whose end points are $T^2 \times \{-1\}$ and $T^2 \times \{1\}$ which cut through faces of $T^2 \times I$ which do not come from the augmentation disks like in \cite{CKP2}. Since each face of the top torihedron gets glued to the bottom torihedron, we obtain bipyramids, and the stellation edge will decompose the bipyramids into tetrahedra. Then the link of the vertex  $T^2 \times \{1\}$ or $T^2 \times \{-1\}$ is the graph of the torihedron $T^2 \times [0,1)$ or $T^2 \times (-1,0]$ respectively. \qed
 
-\section{Hyperbolicity of Augmented Links}
 
-We will use angle structures and a result by Casson-Rivin which shows that if one has angled triangulation manifold is hyperbolic. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{From Extended Circle Patterns to polyhedra}
+
+In this section, we describe how to obtain a
+decomposition of a torihedron
+into hyperbolic ideal pyramids
+from a non-singular extended circle pattern.
+
+\begin{lemma}
+Suppose we have the graph of a torihedron.
+Given a non-singular extended circle pattern $c \in \CCC$ on the graph,
+there exists a decomposition of the torihedron
+into base-angled ideal pyramids (TODO make sure it's been defined) so that
+	\begin{itemize}
+		\item each interior edge of the torihedron has dihedral angles sum to $2\pi$;
+		\item each boundary edge $e$ of the torihedron has dihedral angles sum to
+			$\pi - \theta_e$.
+	\end{itemize}
+\end{lemma}
+
+\begin{proof}
+For each directed edge $\vec{e} \in \vec{E}$,
+construct the isosceles triangle $T_{\vec{e}}$
+with equal sides of length $r_{f_{\vec{e}}}$ and
+angle $2\tilde{\vphi_{\vec{e}}}$ subtended between them,
+where $\tilde{\vphi_{\vec{e}}} = \vphi_{\vec{e}}$
+if $\vphi_{\vec{e}}$ if it is acute,
+and = $\pi - \vphi_{\vec{e}}$ otherwise.
+(TODO draw figure?)
+
+
+Let $f \in F$ be a face.
+If $\vphi_{\vec{e}} \leq \pi/2$ for all $\vec{e} \in \del f$,
+i.e. if $f$ is convex, then 
+the $T_{\vec{e}}$ for $\vec{e}\in \del f$
+fit together into a Euclidean polygon $\Pol_f$.
+If not, suppose $\vphi_{\vec{e}} > \pi/2$
+for $\vec{e} = \vec{e_1}$, 
+and $\leq \pi/2$ for $\vec{e} = \vec{e_2},\ldots \vec{e_k} \in \del f$.
+Then put $T_{\vec{e_2}},\ldots,T_{\vec{e_k}}$ together as above,
+creating a $(k+1)$-gon,
+then subtract $T_{\vec{e_1}}$ from it.
+
+Thus, to each face, we associate $\Pol_f$.
+View the Euclidean plane as the boundary of the upper-half space.
+Then $\Pol_f$ subtends an ideal hyperbolic pyramid $P_f$.
+
+Clearly, these $P_f$'s, as abstract ideal tetrahedra,
+glue together into the torihedron (TODO rephrase).
+%The hyperbolic structure on $P_f$
+%in particular provide dihedral angles to each edge of $P_f$
+%which clearly satisfies the conditions of making $P_f$
+%a base-angled ideal pyramid.
+We need to check that the angles around each edge of
+the torihedron have the appropriate angles.
+For an interior edge, i.e. an edge that dooes not meet the boundary,
+
+have dihedral angles that sum to $2\pi$,
+and boundary angle
+and it is easy to see
+These $P_f$'s clearly glue tog
+
+\end{proof}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hyperbolicity of Augmented Links}
+Thurston introduced a method for finding the unique hyperbolic metric for a given 3-manifold $M$ with boundary consisting of tori \cite{Thurston}. The idea was to triangulate the interior of $M$ into ideal tetrahedra and give those tetrahedra hyperbolic shapes (called shape parameters) that glue up coherently in $M$. The shape parameter of a tetrahedron is described by the cross-ratio of its four vertices on the sphere at infinity. Thurston had written down a system of gluing equations with shape parameters whose solutions correspond to the complete hyperbolic metric on the interior of $M$. Casson and Rivin separated gluing equations into a linear and non-linear part \cite{Casson-Rivin}. Angle structures is the linear part of Thurston's gluing equations, and what we will use to attain hyperbolicity of complements of augmented links in the thickened torus. 
 
 \begin{define}
-angle structure
+Let $M$ be an orientable 3–manifold with boundary consisting of tori. An angle structure on an ideal triangulation $\tau$ is an assignment of an (internal) dihedral angle to each edge of each tetrahedron, such that opposite
+edges carry the same dihedral angle, and such that
+\begin{itemize}
+\item all angles lie in the range $(0,\pi)$,
+\item around each ideal vertex of a tetrahedron, the dihedral angles sum to $\pi$
+\item around each edge of $M$, the dihedral angles sum to $2\pi$.
+\end{itemize}
 \end{define}
 
-\begin{theorem}\cite{ANGLE STRUCTURE PAPER}
-casson-Rivin theorem
+\begin{theorem}\cite{Casson-Rivin}\label{thm:Casson-Rivin}
+Let $M$ be a 3-manifold admitting an angle structure. Then $M$ is hyperbolic.
 \end{theorem}
 
-For a hyperbolic link $K$ in $T^2 \times I$, we produce sufficient conditions on augmentations such that the resulting link obtained from augmenting $K$ is hyperbolic. The idea is to start with a graph from the torihedral decomposition of the link $K$ which will give us a graph on each torihedron with $\pi/2$ edges \cite{CKP}. Then there is corresponding right-angled circle pattern \cite{B-S}. We then consider the augmented link torihedral decomposition from Proposition \ref{} with a corresponding ``degenerate" circle pattern. We then deform this degenerate circle pattern into a ``proper" circle pattern which will give us a polyhedral decomposition with angles of the torihedra in our torihedral decomposition. Which we can further decompose into tetrahedra with angles satisfying conditions of an angle structure. 
+For a hyperbolic link $K$ in $T^2 \times I$, we produce sufficient conditions on augmentations such that the resulting link obtained from augmenting $K$ is hyperbolic. The idea is to start with a graph from the torihedral decomposition of the link $K$ which will give us a graph on each torihedron with $\pi/2$ edges \cite{CKP2}. Then by results of \cite{BandS} there exist a corresponding right-angled circle pattern. We then consider the augmented link $L$ and its torihedral decomposition from Proposition \ref{thm:torihedraldecomposition} with a corresponding ``degenerate" circle pattern. We deform this degenerate circle pattern into a ``proper" circle pattern which will give us a polyhedral decomposition of $(T^2 \times I)-L$ with angles of the torihedra in our torihedral decomposition. Which we can further decompose into tetrahedra with angles satisfying conditions of an angle structure. 
 
 
 \begin{define}
@@ -246,12 +340,27 @@ to each edge, such that
 \end{define}
 
 
+\begin{define}
+A \emph{base-angled ideal pyramid}
+is a pyramid whose base is an $n$-gon, $n \geq 3$,
+and each boundary edge $e_i$ of the base face is assigned a dihedral angle $\alpha_i$
+such that for adjacent edges, $\alpha_i + \alpha_{i+1} < \pi$.
+The vertical edge $e_i'$ that meets $e_i$ and $e_{i+1}$
+is automatically assigned the dihedral angle $\pi - \alpha_i - \alpha_{i+1}$.
+\end{define}
+
+Clearly, the dihedral angles of an ideal hyperbolic pyramid
+make it a base-angled ideal pyramid.
+(TODO probably vice-versa?)
+
 \begin{lemma}
-Let $P_n$ be an ideal pyramid whose base is an $n$-gon and suppose,
-\begin{itemize}
-\item each boundary edge of the original base face is assigned a dihedral angle $\alpha_i$ such that for adjacent edges, $\alpha_i + \alpha_{i+1} < \pi$;
-\item we are given a decomposition of the base face into triangles by adding new edges. 
-\end{itemize}
+%Let $P_n$ be an ideal pyramid whose base is an $n$-gon and suppose,
+%\begin{itemize}
+%\item each boundary edge of the base face is assigned a dihedral angle $\alpha_i$ such that for adjacent edges, $\alpha_i + \alpha_{i+1} < \pi$;
+%\item we are given a decomposition of the base face into triangles by adding new edges. 
+%\end{itemize}
+Let $P_n$ be a base-angled ideal pyramid,
+and suppose we are given a decomposition of the base face into triangles by adding new edges. 
 One gets an obvious corresponding triangulation of $P_n$, where a new face is added for each new edge. Then there is an assignment of a dihedral angle to each edge of each ideal tetrahedron in this triangulation such that
 \begin{itemize}
 \item each tetrahedron is an angled ideal tetrahedron;
@@ -263,7 +372,7 @@ One gets an obvious corresponding triangulation of $P_n$, where a new face is ad
 {\it Proof.} See Figure \ref{TODO}
 
 \begin{define}
-We say an augmentation is \emph{right-augmented} when both strands are (locally) oriented such that they cross the augmentation disk in the same direction, the crossing is positive/ a right-handed half-twist. See Figure \ref{TODO}
+We say an augmentation is \emph{right-augmented} when both strands are (locally) oriented such that they cross the augmentation disk in the same direction, the crossing is positive/a right-handed half-twist. See Figure \ref{TODO}
 We say an augmentation is \emph{left-augmented} if it is not right-augmented.
 \end{define}
 
@@ -280,15 +389,22 @@ R \text{ if $v$ is right-augmented}
 \end{define}
 
 \begin{theorem}
-Let $K$ be a weakly prime, alternating link with diagram $D$ with no bigons. Let $L$ be a link obtained from augmenting $K$ such that:
-\begin{enumerate}
-\item there exist no sequence of augmentations so that a Left augmentation is adjacent to a Right augmentation;
-\item the sequence of augmentations does not contain a subsequence $0, L, L, 0$ and $0, R, R, 0$.
-\end{enumerate}  
-Then $L$ is hyperbolic.
+Let $K$ be a weakly prime, alternating link with diagram $D$ with no bigons. Let $L$ be a link obtained from augmenting $K$ such that there exist no sequence of augmentations where a Left augmentation is adjacent to a Right augmentation. Then $L$ is hyperbolic.
 \end{theorem}
 
 {\it Proof.}
+
+Part 1:  
+
+
+by ckp the original link can be decomposed into torihedra with projection graph as torihedra graph with pi/2 edges and this gives circle pattern by bobenko-springborn
+
+Part 2: Our torihedral decomposition has graph and on augmentation we will give 0 and pi angles. Next we add another edge and give blah angle (we have three cases)
+do three cases with pictures
+
+part 3: Use proposition to get circle pattern to get polyhedral decomposition of the link 
+
+part 4: get triangulation.  
 
 \bibliographystyle{plain}
 \bibliography{references-ak}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  7 SEP 2020 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 SEP 2020 16:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -130,6 +130,13 @@ Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
 \symugrf@m=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -623,24 +630,24 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
  (./draft1.aux)
 \openout1 = `draft1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Try loading font information for U+msa on input line 97.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 97.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -710,63 +717,63 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package xypdf Info: Line width: 0.43799pt on input line 76.
+Package xypdf Info: Line width: 0.43799pt on input line 97.
 
 ABD: EveryShipout initializing macros
 
 Class amsart Warning: Abstract should precede \maketitle in AMS document classe
-s; reported on input line 79.
+s; reported on input line 100.
 
 <augmentation1.png, id=4, 397.485pt x 485.815pt>
 File: augmentation1.png Graphic file (type png)
 <use augmentation1.png>
-Package pdftex.def Info: augmentation1.png  used on input line 92.
+Package pdftex.def Info: augmentation1.png  used on input line 113.
 (pdftex.def)             Requested size: 93.11786pt x 113.81102pt.
 <augmentation2.png, id=6, 945.5325pt x 503.8825pt>
 File: augmentation2.png Graphic file (type png)
 <use augmentation2.png>
-Package pdftex.def Info: augmentation2.png  used on input line 93.
+Package pdftex.def Info: augmentation2.png  used on input line 114.
 (pdftex.def)             Requested size: 213.558pt x 113.81102pt.
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./aug
 mentation1.png> <./augmentation2.png>]
 <fig1.png, id=23, 1198.4775pt x 1198.4775pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 133.
+Package pdftex.def Info: fig1.png  used on input line 154.
 (pdftex.def)             Requested size: 85.35826pt x 85.34668pt.
 <twist-augment.png, id=24, 1204.5pt x 1204.5pt>
 File: twist-augment.png Graphic file (type png)
 <use twist-augment.png>
-Package pdftex.def Info: twist-augment.png  used on input line 134.
+Package pdftex.def Info: twist-augment.png  used on input line 155.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
 <fig-2.png, id=25, 1198.4775pt x 1198.4775pt>
 File: fig-2.png Graphic file (type png)
 <use fig-2.png>
-Package pdftex.def Info: fig-2.png  used on input line 135.
+Package pdftex.def Info: fig-2.png  used on input line 156.
 (pdftex.def)             Requested size: 85.35826pt x 85.34668pt.
  [2 <./fig1.png> <./twist-augment.png> <./fig-2.png>]
 <crossingArc.png, id=32, 377.41pt x 231.86626pt>
 File: crossingArc.png Graphic file (type png)
 <use crossingArc.png>
-Package pdftex.def Info: crossingArc.png  used on input line 163.
+Package pdftex.def Info: crossingArc.png  used on input line 184.
 (pdftex.def)             Requested size: 113.81102pt x 69.92128pt.
 <crossingPush.png, id=33, 2427.0675pt x 1852.9225pt>
 File: crossingPush.png Graphic file (type png)
 <use crossingPush.png>
-Package pdftex.def Info: crossingPush.png  used on input line 164.
+Package pdftex.def Info: crossingPush.png  used on input line 185.
 (pdftex.def)             Requested size: 142.26378pt x 108.59767pt.
 <falGluing1.png, id=34, 5857.885pt x 1782.66pt>
 File: falGluing1.png Graphic file (type png)
 <use falGluing1.png>
-Package pdftex.def Info: falGluing1.png  used on input line 176.
+Package pdftex.def Info: falGluing1.png  used on input line 197.
 (pdftex.def)             Requested size: 227.62204pt x 69.25417pt.
 <falGluing2.png, id=35, 5857.885pt x 2372.865pt>
 File: falGluing2.png Graphic file (type png)
 <use falGluing2.png>
-Package pdftex.def Info: falGluing2.png  used on input line 177.
+Package pdftex.def Info: falGluing2.png  used on input line 198.
 (pdftex.def)             Requested size: 199.16928pt x 80.6691pt.
 
-Overfull \hbox (8.1119pt too wide) in paragraph at lines 175--180
+Overfull \hbox (8.1119pt too wide) in paragraph at lines 196--201
  [][] 
  []
 
@@ -775,66 +782,75 @@ g>]
 <fig-3.png, id=43, 1204.5pt x 1204.5pt>
 File: fig-3.png Graphic file (type png)
 <use fig-3.png>
-Package pdftex.def Info: fig-3.png  used on input line 190.
+Package pdftex.def Info: fig-3.png  used on input line 211.
 (pdftex.def)             Requested size: 85.35284pt x 85.35826pt.
 <fig-4.png, id=44, 2051.665pt x 1204.5pt>
 File: fig-4.png Graphic file (type png)
 <use fig-4.png>
-Package pdftex.def Info: fig-4.png  used on input line 191.
+Package pdftex.def Info: fig-4.png  used on input line 212.
 (pdftex.def)             Requested size: 145.38435pt x 85.35826pt.
 <fig-5.png, id=45, 3346.5025pt x 1204.5pt>
 File: fig-5.png Graphic file (type png)
 <use fig-5.png>
-Package pdftex.def Info: fig-5.png  used on input line 198.
+Package pdftex.def Info: fig-5.png  used on input line 219.
 (pdftex.def)             Requested size: 237.13866pt x 85.35826pt.
 <fig-6.png, id=46, 3519.1475pt x 1204.5pt>
 File: fig-6.png Graphic file (type png)
 <use fig-6.png>
-Package pdftex.def Info: fig-6.png  used on input line 205.
+Package pdftex.def Info: fig-6.png  used on input line 226.
 (pdftex.def)             Requested size: 249.37257pt x 85.35826pt.
 <top-bottom.png, id=47, 2487.2925pt x 1204.5pt>
 File: top-bottom.png Graphic file (type png)
 <use top-bottom.png>
-Package pdftex.def Info: top-bottom.png  used on input line 212.
+Package pdftex.def Info: top-bottom.png  used on input line 233.
 (pdftex.def)             Requested size: 176.25363pt x 85.35826pt.
  [4 <./fig-3.png> <./fig-4.png> <./fig-5.png> <./fig-6.png> <./top-bottom.png>]
+LaTeX Font Info:    Try loading font information for U+euf on input line 254.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [5]
+
+LaTeX Warning: Reference `TODO' on page 6 undefined on input line 326.
 
 
-LaTeX Warning: Reference `TODO' on page 5 undefined on input line 252.
+LaTeX Warning: Reference `TODO' on page 6 undefined on input line 329.
 
-
-LaTeX Warning: Reference `TODO' on page 5 undefined on input line 255.
-
-[5] (./draft1.bbl) [6] (./draft1.aux)
+[6] (./draft1.bbl) [7] (./draft1.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 15957 strings out of 492649
- 288246 string characters out of 6129622
- 377632 words of memory out of 5000000
- 19316 multiletter control sequences out of 15000+600000
- 14943 words of font info for 60 fonts, out of 8000000 for 9000
+ 16009 strings out of 492649
+ 288955 string characters out of 6129622
+ 377955 words of memory out of 5000000
+ 19358 multiletter control sequences out of 15000+600000
+ 15887 words of font info for 64 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 55i,12n,54p,3234b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,3234b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft1.pdf (6 pages, 1465716 bytes).
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on draft1.pdf (7 pages, 1495015 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
