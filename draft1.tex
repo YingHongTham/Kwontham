@@ -3,7 +3,7 @@
 \usepackage{amsfonts, amstext, amsmath, amsthm, amscd, amssymb, upgreek}
 \usepackage{bbm}
 \usepackage{graphicx, color,  subfigure, wrapfig, overpic}
-\usepackage[all,cmtip]{xy} 
+%\usepackage[all,cmtip]{xy} 
 \usepackage{tikz}
 %\usepackage{mystyle}
 
@@ -202,44 +202,58 @@ We now place a crossing edge on each crossing of the link so that for each cross
  \label{fig:falGluings}
  \end{figure}
 
-\indent We repeat the steps for the bottom half of $T^2 \times I$, $T^2 \times [-1,0)$. Then we get two isomorphic torihedra. The graph of each will come from crossing edges and, edges of the disk. Now, if there are half twists we will decompose the complement of the link the same way as if there are no half twists and we will identify the two bow-ties as in Figure \ref{fig:falGluings}. Finally we obtain the complement of the link by gluing the two torihedra with the gluing information given by identifying crossing edges and triangles of the bow-tie. We glue the faces of the torihedra which do not correspond to a bow-tie with a $\pi/n$ twist where $n$ is the number of sides of each face as in Figure \ref{fig:top-bottom} clockwise or counterclockwise. \qed
+\indent We repeat the steps for the bottom half of $T^2 \times I$, $T^2 \times
+[-1,0)$. Then we get two isomorphic torihedra. The graph of each will come from
+crossing edges and, edges of the disk. Now, if there are half twists we will
+decompose the complement of the link the same way as if there are no half twists
+and we will identify the two bow-ties as in Figure \ref{fig:falGluings}. Finally
+we obtain the complement of the link by gluing the two torihedra with the gluing
+information given by identifying crossing edges and triangles of the bow-tie. We
+glue the faces of the torihedra which do not correspond to a bow-tie with a
+$\pi/n$ twist where $n$ is the number of sides of each face as in Figure
+\ref{fig:top-bottom} clockwise or counterclockwise. \qed
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The following figures is an example which decomposes the link (C) of Figure \ref{fig:Augmentations}.
- \begin{figure}[h]
- \centering
- \includegraphics [height=3cm]{fig-3}
- \includegraphics [height=3cm]{fig-4}
- \caption{Each crossing circle bounds a disk}
- \end{figure}
+The following figures is an example which decomposes the link (C) of Figure
+\ref{fig:Augmentations}.  \begin{figure}[h] \centering \includegraphics
+[height=3cm]{fig-3} \includegraphics [height=3cm]{fig-4} \caption{Each crossing
+circle bounds a disk} \end{figure}
  
- \vspace*{-0.5cm}
-  \begin{figure}[h]
-\centering
- \includegraphics [height=3cm]{fig-5}
- \caption{We split the disk and collapse the arc of each crossing circle to ideal vertices}
- \end{figure}
+ \vspace*{-0.5cm} \begin{figure}[h] \centering \includegraphics
+ [height=3cm]{fig-5} \caption{We split the disk and collapse the arc of each
+ crossing circle to ideal vertices} \end{figure}
  
-  \vspace*{-0.5cm}
-  \begin{figure}[h]
- \centering
- \includegraphics [height=3cm]{fig-6}
- \caption{Left: The crossing arc is the edge in red. Middle: Picture of splitting the crossing edge. Right: The link component is pushed off to infinity.}
- \end{figure}
+	\vspace*{-0.5cm} \begin{figure}[h] \centering \includegraphics
+	[height=3cm]{fig-6} \caption{Left: The crossing arc is the edge in red.
+	Middle: Picture of splitting the crossing edge. Right: The link component is
+	pushed off to infinity.} \end{figure}
 
- \vspace*{-0.5cm}
- \begin{figure}[h]
- \centering
- \includegraphics [height=3cm]{top-bottom}
- \caption{Left: The top torihedron. Right: The bottom torihdron with rotation for face gluing.}
- \label{fig:top-bottom}
- \end{figure}
+ \vspace*{-0.5cm} \begin{figure}[h] \centering \includegraphics
+ [height=3cm]{top-bottom} \caption{
+	Left: The top torihedron.
+	Right: The bottom torihdron with rotation for face gluing.} \label{fig:top-bottom} \end{figure}
 
 \begin{remark}\label{cor:triangulation}
-The faces of one torihedron which do not correspond to a bow-tie glue to a corresponding face of the second torihedron to form bipyramids. One can add stellating edges, edges which have vertices corresponding to the different components of the Hopf link that cuts through the center of the face to decompose the bipyramids into tetrahedra. This process is called {\it stellation}. Stellating all the bipyramids of the decomposition obtained from Proposition \ref{thm:torihedraldecomposition} we obtained a triangulation of the complement of $L$ which is made up of {\it horizontal} edges (edges from the graph of the torihedra), {\it vertical} edges (edges from coning vertices of the the graph of the torihedra) and stellating edges. 
-\end{remark}
+The faces of one torihedron which do not correspond to a bow-tie glue to a
+corresponding face of the second torihedron to form bipyramids. One can add
+stellating edges, edges which have vertices corresponding to the different
+components of the Hopf link that cuts through the center of the face to
+decompose the bipyramids into tetrahedra. This process is called {\it
+stellation}. Stellating all the bipyramids of the decomposition obtained from
+Proposition \ref{thm:torihedraldecomposition} we obtained a triangulation of the
+complement of $L$ which is made up of {\it horizontal} edges (edges from the
+graph of the torihedra), {\it vertical} edges (edges from coning vertices of the
+the graph of the torihedra) and stellating edges.  \end{remark}
 
-{\it Proof.}  Using the decomposition from Proposition \ref{thm:torihedraldecomposition} we can add a stellation edge whose end points are $T^2 \times \{-1\}$ and $T^2 \times \{1\}$ which cut through faces of $T^2 \times I$ which do not come from the augmentation disks like in \cite{CKP2}. Since each face of the top torihedron gets glued to the bottom torihedron, we obtain bipyramids, and the stellation edge will decompose the bipyramids into tetrahedra. Then the link of the vertex  $T^2 \times \{1\}$ or $T^2 \times \{-1\}$ is the graph of the torihedron $T^2 \times [0,1)$ or $T^2 \times (-1,0]$ respectively. \qed
+{\it Proof.}  Using the decomposition from Proposition
+\ref{thm:torihedraldecomposition} we can add a stellation edge whose end points
+are $T^2 \times \{-1\}$ and $T^2 \times \{1\}$ which cut through faces of $T^2
+\times I$ which do not come from the augmentation disks like in \cite{CKP2}.
+Since each face of the top torihedron gets glued to the bottom torihedron, we
+obtain bipyramids, and the stellation edge will decompose the bipyramids into
+tetrahedra. Then the link of the vertex  $T^2 \times \{1\}$ or $T^2 \times
+\{-1\}$ is the graph of the torihedron $T^2 \times [0,1)$ or $T^2 \times (-1,0]$
+respectively. \qed
 
 
 
@@ -267,26 +281,36 @@ into base-angled ideal pyramids (TODO make sure it's been defined) so that
 For each directed edge $\vec{e} \in \vec{E}$,
 construct the isosceles triangle $T_{\vec{e}}$
 with equal sides of length $r_{f_{\vec{e}}}$ and
-angle $2\tilde{\vphi_{\vec{e}}}$ subtended between them,
-where $\tilde{\vphi_{\vec{e}}} = \vphi_{\vec{e}}$
+angle $2\tilde{\vphi}_{\vec{e}}$ subtended between them,
+where $\tilde{\vphi}_{\vec{e}} = \vphi_{\vec{e}}$
 if $\vphi_{\vec{e}}$ if it is acute,
 and = $\pi - \vphi_{\vec{e}}$ otherwise.
 (TODO draw figure?)
 
 
 Let $f \in F$ be a face.
+We construct a Euclidean polygon $\Pol_f$ as follows.
 If $\vphi_{\vec{e}} \leq \pi/2$ for all $\vec{e} \in \del f$,
 i.e. if $f$ is convex, then 
 the $T_{\vec{e}}$ for $\vec{e}\in \del f$
-fit together into a Euclidean polygon $\Pol_f$.
+fit together into $\Pol_f$.
 If not, suppose $\vphi_{\vec{e}} > \pi/2$
 for $\vec{e} = \vec{e_1}$, 
 and $\leq \pi/2$ for $\vec{e} = \vec{e_2},\ldots \vec{e_k} \in \del f$.
 Then put $T_{\vec{e_2}},\ldots,T_{\vec{e_k}}$ together as above,
 creating a $(k+1)$-gon,
-then subtract $T_{\vec{e_1}}$ from it.
+then subtract $T_{\vec{e_1}}$ from it to form $\Pol_f$.
 
-Thus, to each face, we associate $\Pol_f$.
+Thus, to each face, we associate the Euclidean polygon $\Pol_f$.
+If $v$ is the vertex of $\Pol_f$ between $e_i$ and $e_{i+1}$,
+then the angle at $v$ is
+$\pi - \vphi_{\vec{e_i}} - \vphi_{\vec{e_{i+1}}}$.
+Then the non-vertex-singularity of $c$ guarantees that
+the sum of angles at $v$ of $\Pol_f$, for faces $f$ containing $v$,
+is $2\pi$.
+%; in other words, $\Pol_f$ glue along edges
+
+
 View the Euclidean plane as the boundary of the upper-half space.
 Then $\Pol_f$ subtends an ideal hyperbolic pyramid $P_f$.
 
@@ -298,12 +322,19 @@ glue together into the torihedron (TODO rephrase).
 %a base-angled ideal pyramid.
 We need to check that the angles around each edge of
 the torihedron have the appropriate angles.
-For an interior edge, i.e. an edge that dooes not meet the boundary,
 
-have dihedral angles that sum to $2\pi$,
-and boundary angle
-and it is easy to see
-These $P_f$'s clearly glue tog
+
+Consider an interior edge $e$ of the pyramidal decomposition
+of the torihedron.
+It corresponds to a vertex $v$ of the graph.
+Note that the dihedral angle of the vertical edge
+at $v$ of $P_f$ is simply the angle at $v$ of $\Pol_f$;
+these sum to $2\pi$ over $f \ni v$.
+
+
+For a boundary edge $e$, the dihedral angles at $e$ of the $P_f$'s
+containing it are $\vphi_{\vec{e}}$ and $\vphi_{\cev{e}}$,
+which sum to $\theta_e$ by definition.
 
 \end{proof}
 
