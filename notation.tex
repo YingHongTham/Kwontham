@@ -66,20 +66,32 @@ $\CCC$ the set of extended circle patterns.
 \end{tikzcd}
 
 
-[Check this] The usual notion of circle pattern would be restricted to those $c\in \CCC$
+[TODO Check this] The usual notion of circle pattern would be restricted to those $c\in \CCC$
 with $\vphi_{\vec{e}} \in (0,\pi)$ and $\theta_e \in (0,\pi)$.
 One may consider deforming a circle pattern so as to have some $\theta_e$ approach 0 or $\pi$.
 The limit $\theta_e \to \pi$ is easy to picture, one simply gets that the two circles
 $C_f, C_{f'}$ of the adjacent faces become tangent. The limit $\theta_e \to 0$
 is a bit more complex, as the final shape of $Q_e$ (the quadrangle associated to $e$)
-depends also on $\vphi_{\vec{e}}$ (which equals $\pi - \vphi_{\cev{e}}$ in the limit.
+may depend on $\vphi_{\vec{e}}$ or $\vphi_{\cev{e}}$.
 If we parametrize circle patterns by $(r_f)$ and $(\theta_e)$ as in TODO \ocite{BS},
-the limiting shape would depend on how $r_f$ approaches $r_{f'}$,
-some sort of blow up stuff TODO.
+the limiting shape would depend on the relationship between 
+$r_f$ and $r_{f'}$.
+As our main result depends on extending \ocite{BS} result
+to such limits and beyond,
+we find it more convenient to describe extended circle patterns by
+$(r_f)$ and $(\vphi_{\vec{e}})$.
 
 
-We will mostly be working with extended circle patterns that mostly ``look normal",
-with all $\vphi_{\vec{e}}$ in some range $(-\veps, \pi + \veps)$.
+We will mostly be working with extended circle patterns that ``looks normal",
+with all $\vphi_{\vec{e}}$ in the range $[0,\pi)$,
+so we do not dwell on the meaning of negative $\vphi_{\vec{e}}$'s.
+\footnote{
+Intuitively, one can visualize decreasing $\vphi_{\vec{e}}$
+from $\veps$ to $-\veps$
+as moving the black vertices of the quadrangle $Q_e$ past each other,
+thus flipping $Q_e$ along its long axis
+and making it have negative area.
+}
 
 \begin{definition}
 An extended circle pattern is said to be \emph{face non-singular}
@@ -88,7 +100,7 @@ if $\sum_{e \ni v} \theta_e = 2\pi$ for all vertices $v$.
 Finally it is said to be \emph{non-singular} if it is both.
 \end{definition}
 
-non-degenerate circle pattern?
+TODO non-degenerate circle pattern?
 
 
 \begin{definition}
@@ -117,13 +129,15 @@ A \emph{thick cycle} is a thick path with $f_0 = f_n$.
 \end{definition}
 
 
-\begin{definition}
-A \emph{slit-convex circle pattern} is an extended cirlce pattern
-$c \in \CCC$ such that all its faces are either convex or thin.
-\end{definition}
+%\begin{definition}
+%A \emph{slit-convex circle pattern} is an extended cirlce pattern
+%$c \in \CCC$ such that all its faces are either convex or thin.
+%\end{definition}
 
 \begin{lemma}
-$\CCC$ is a manifold near slit-convex circle patterns.
+Let $c$ be an extended circle pattern whose faces are either
+convex or thin.
+Then $\CCC$ is a manifold in a neighborhood of $c$.
 \end{lemma}
 
 \begin{proof}
@@ -134,8 +148,11 @@ $d(l_{\vec{e}} - l_{\cev{e}})
 - r_{f_{\cev{e}}} \cos \vphi_{\cev{e}} d \vphi_{\cev{e}}
 $,
 and since having only convex of thin faces implies
-$\cos \vphi_{\vec{e}} \neq 0$,
-we see the differentials are linearly independent at
-a slit-convex circle pattern $c$.
+$\cos \vphi_{\vec{e}} \neq 0$ for all $\vec{e}$,
+we see that the differentials $d(l_{\vec{e}} - l_{\cev{e}})$
+are linearly independent at $c$,
+hence are linearly independent in a neighborhood of $c$.
+Thus, by the implicit function theorem,
+$\CCC$ is a manifold in a neighborhood of $c$.
 \end{proof}
 
