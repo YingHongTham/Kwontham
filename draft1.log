@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  12 SEP 2020 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  13 SEP 2020 01:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -208,15 +208,7 @@ Package: overpic 2020/02/22 1.3 picture overlays (RN)
 Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: sty)
 
-Enter file name: titlepic
-(/usr/share/texmf-dist/tex/latex/titlepic/titlepic.sty
-
-LaTeX Warning: You have requested package `epic',
-               but the package provides `titlepic'.
-
-Package: titlepic 2017/03/14 1.2 Package to display a picture on the title page
-
-)
+Enter file name: 
 \OVP@box=\box51
 ) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -489,26 +481,26 @@ File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count282
 \l__pdf_internal_box=\box63
 ) (./draft1.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
 
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -538,62 +530,77 @@ e
 ))
 ABD: EveryShipout initializing macros
 
-LaTeX Warning: No \author given.
-
-
 Class amsart Warning: Abstract should precede \maketitle in AMS document classe
-s; reported on input line 100.
+s; reported on input line 102.
+
+
+LaTeX Warning: Citation `CA' on page 1 undefined on input line 110.
 
 <augmentation1.png, id=4, 397.485pt x 485.815pt>
 File: augmentation1.png Graphic file (type png)
 <use augmentation1.png>
-Package pdftex.def Info: augmentation1.png  used on input line 113.
+Package pdftex.def Info: augmentation1.png  used on input line 114.
 (pdftex.def)             Requested size: 93.11786pt x 113.81102pt.
 <augmentation2.png, id=6, 945.5325pt x 503.8825pt>
 File: augmentation2.png Graphic file (type png)
 <use augmentation2.png>
-Package pdftex.def Info: augmentation2.png  used on input line 114.
+Package pdftex.def Info: augmentation2.png  used on input line 115.
 (pdftex.def)             Requested size: 213.558pt x 113.81102pt.
+
+LaTeX Warning: Citation `CKP2' on page 1 undefined on input line 127.
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./augmentation1.png> <./
 augmentation2.png>]
+
+LaTeX Warning: Citation `CKP2' on page 2 undefined on input line 135.
+
 <fig1.png, id=23, 1198.4775pt x 1198.4775pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 154.
+Package pdftex.def Info: fig1.png  used on input line 155.
 (pdftex.def)             Requested size: 85.35826pt x 85.34668pt.
 <twist-augment.png, id=24, 1204.5pt x 1204.5pt>
 File: twist-augment.png Graphic file (type png)
 <use twist-augment.png>
-Package pdftex.def Info: twist-augment.png  used on input line 155.
+Package pdftex.def Info: twist-augment.png  used on input line 156.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
 <fig-2.png, id=25, 1198.4775pt x 1198.4775pt>
 File: fig-2.png Graphic file (type png)
 <use fig-2.png>
-Package pdftex.def Info: fig-2.png  used on input line 156.
+Package pdftex.def Info: fig-2.png  used on input line 157.
 (pdftex.def)             Requested size: 85.35826pt x 85.34668pt.
- [2 <./fig1.png> <./twist-augment.png> <./fig-2.png>]
+
+LaTeX Warning: Citation `Menasco' on page 2 undefined on input line 169.
+
+
+LaTeX Warning: Citation `lackenby' on page 2 undefined on input line 169.
+
+
+LaTeX Warning: Citation `CKP2' on page 2 undefined on input line 172.
+
+[2 <./fig1.png> <./twist-augment.png> <./fig-2.png>]
 <crossingArc.png, id=32, 377.41pt x 231.86626pt>
 File: crossingArc.png Graphic file (type png)
 <use crossingArc.png>
-Package pdftex.def Info: crossingArc.png  used on input line 184.
+Package pdftex.def Info: crossingArc.png  used on input line 192.
 (pdftex.def)             Requested size: 113.81102pt x 69.92128pt.
 <crossingPush.png, id=33, 2427.0675pt x 1852.9225pt>
 File: crossingPush.png Graphic file (type png)
 <use crossingPush.png>
-Package pdftex.def Info: crossingPush.png  used on input line 185.
+Package pdftex.def Info: crossingPush.png  used on input line 193.
 (pdftex.def)             Requested size: 142.26378pt x 108.59767pt.
 <falGluing1.png, id=34, 5857.885pt x 1782.66pt>
 File: falGluing1.png Graphic file (type png)
 <use falGluing1.png>
-Package pdftex.def Info: falGluing1.png  used on input line 197.
+Package pdftex.def Info: falGluing1.png  used on input line 219.
 (pdftex.def)             Requested size: 227.62204pt x 69.25417pt.
 <falGluing2.png, id=35, 5857.885pt x 2372.865pt>
 File: falGluing2.png Graphic file (type png)
 <use falGluing2.png>
-Package pdftex.def Info: falGluing2.png  used on input line 198.
+Package pdftex.def Info: falGluing2.png  used on input line 220.
 (pdftex.def)             Requested size: 199.16928pt x 80.6691pt.
 
-Overfull \hbox (8.11192pt too wide) in paragraph at lines 196--201
+Overfull \hbox (8.11192pt too wide) in paragraph at lines 218--223
  [][] 
  []
 
@@ -602,73 +609,107 @@ g>]
 <fig-3.png, id=43, 1204.5pt x 1204.5pt>
 File: fig-3.png Graphic file (type png)
 <use fig-3.png>
-Package pdftex.def Info: fig-3.png  used on input line 219.
+Package pdftex.def Info: fig-3.png  used on input line 245.
 (pdftex.def)             Requested size: 85.35284pt x 85.35826pt.
 <fig-4.png, id=44, 2051.665pt x 1204.5pt>
 File: fig-4.png Graphic file (type png)
 <use fig-4.png>
-Package pdftex.def Info: fig-4.png  used on input line 219.
+Package pdftex.def Info: fig-4.png  used on input line 245.
 (pdftex.def)             Requested size: 145.38435pt x 85.35826pt.
 <fig-5.png, id=45, 3346.5025pt x 1204.5pt>
 File: fig-5.png Graphic file (type png)
 <use fig-5.png>
-Package pdftex.def Info: fig-5.png  used on input line 223.
+Package pdftex.def Info: fig-5.png  used on input line 249.
 (pdftex.def)             Requested size: 237.13866pt x 85.35826pt.
 <fig-6.png, id=46, 3519.1475pt x 1204.5pt>
 File: fig-6.png Graphic file (type png)
 <use fig-6.png>
-Package pdftex.def Info: fig-6.png  used on input line 227.
+Package pdftex.def Info: fig-6.png  used on input line 253.
 (pdftex.def)             Requested size: 249.37257pt x 85.35826pt.
 <top-bottom.png, id=47, 2487.2925pt x 1204.5pt>
 File: top-bottom.png Graphic file (type png)
 <use top-bottom.png>
-Package pdftex.def Info: top-bottom.png  used on input line 232.
+Package pdftex.def Info: top-bottom.png  used on input line 258.
 (pdftex.def)             Requested size: 176.25363pt x 85.35826pt.
- [4 <./fig-3.png> <./fig-4.png> <./fig-5.png> <./fig-6.png> <./top-bottom.png>]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 270
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `CKP2' on page 4 undefined on input line 277.
+
+[4 <./fig-3.png> <./fig-4.png> <./fig-5.png> <./fig-6.png>]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 296
 .
- (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [5] [6]
+)
 
-LaTeX Warning: Reference `TODO' on page 7 undefined on input line 403.
+LaTeX Warning: Citation `Thurston' on page 5 undefined on input line 370.
 
 
-LaTeX Warning: Reference `TODO' on page 7 undefined on input line 406.
+LaTeX Warning: Citation `Casson-Rivin' on page 5 undefined on input line 370.
 
-(./draft1.bbl) [7] (./draft1.aux)
+[5 <./top-bottom.png>]
+
+LaTeX Warning: Citation `Casson-Rivin' on page 6 undefined on input line 382.
+
+
+LaTeX Warning: Citation `CKP2' on page 6 undefined on input line 386.
+
+
+LaTeX Warning: Citation `BandS' on page 6 undefined on input line 386.
+
+[6]
+
+LaTeX Warning: Reference `TODO' on page 7 undefined on input line 462.
+
+
+LaTeX Warning: Reference `TODO' on page 7 undefined on input line 466.
+
+
+LaTeX Warning: Citation `BandS' on page 7 undefined on input line 506.
+
+[7]
+
+LaTeX Warning: Reference `p:nghd_lift' on page 8 undefined on input line 577.
+
+(./draft1.bbl) [8] (./draft1.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 13722 strings out of 480478
- 260002 string characters out of 5905959
- 479779 words of memory out of 5000000
- 29313 multiletter control sequences out of 15000+600000
- 545263 words of font info for 73 fonts, out of 8000000 for 9000
+ 13704 strings out of 480478
+ 259678 string characters out of 5905959
+ 478597 words of memory out of 5000000
+ 29302 multiletter control sequences out of 15000+600000
+ 543136 words of font info for 65 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,12n,60p,943b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,60p,918b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft1.pdf (7 pages, 1520815 bytes).
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on draft1.pdf (8 pages, 1525726 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

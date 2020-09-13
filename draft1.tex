@@ -7,7 +7,8 @@
 \usepackage{tikz}
 %\usepackage{mystyle}
 
-
+\newcommand{\thmref}[1]{Theorem \ref{#1}}
+\newcommand{\prpref}[1]{Proposition \ref{#1}}
 
 \textwidth 6.07in 
 \textheight 8.6in 
@@ -26,7 +27,7 @@
 \AtBeginDocument{
    \def\MR#1{}
 }
-\newcommand{\Sp}{\rm{S}}
+\newcommand{\Sp}{{\rm{S}}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -70,6 +71,7 @@
 \newcommand{\llong}{{\text{long}}}
 \newcommand{\Span}{{\text{span}}}
 \newcommand{\Pol}{{\text{Pol}}}
+\newcommand{\toruscomp}[1]{{\torus \times I - #1}}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
@@ -106,7 +108,6 @@
 Given a twist reduced diagram of a link $L$, {\it augmentation} is a process in which an unknotted circle component is added to one or more twist regions (a single crossing or a string of bigons) of $L$. Due to the added circle component we can remove full twists at the twist region of $L$. If the twist region has an odd number of crossings then all but one crossing is removed, whereas if the twist region has an even number of crossings then all are removed. The newly obtained link diagram is called an {\it augmented link diagram}. See Figure \ref{fig:Augmentations}.
 
 Adams showed in \cite{CA} that given a hyperbolic alternating link $K$ in $\Sp^3$ the link $L$ obtained by augmentation $K$ is hyperbolic. In this paper we investigate if this statement holds for links in the thickened torus i.e. if $L$ is a link obtained from augmenting a hyperbolic alternating link $K$ in the thickened torus. In this chapter we find many families of hyperbolic links in the thickened torus which remain hyperbolic after augmentation. 
-
  \begin{figure}
  \centering  
  \begin{tabular}{cc}
@@ -172,24 +173,45 @@ We show a method of decomposing an augmented link in the thickened torus into tw
  A \emph{torihedron} is a cone on the torus, i.e. $T^2 \times [0,1]/(T^2 \times \{1\})$, with a cellular graph $G$ on $T^2 \times \{0\}$. An \emph{ideal torihedron} is a torihedron with the vertices of $G$ and the vertex $T^2 \times \{1\}$ removed. Hence, an ideal torihedron is homeomorphic to $T^2 \times [0,1)$ with a finite set of points (ideal vertices) removed from $T^2 \times \{0\}$ 
 \end{define}
 
-\begin{prop}\label{thm:torihedraldecomposition}
-Let $L$ be an augmented link in $T^2 \times I$. Let $G(L)$ be a diagram of the link on $T^2 \times \{0\}$. There is a decomposition of the complement, $(T^2 \times I) - L$ into two isomorphic ideal torihedra.
+\begin{prop}\label{p:tori_decomp}
+Let $L$ be an augmented link in $T^2 \times I$.
+%Let $G(L)$ be a diagram of the link on $T^2 \times \{0\}$.
+There is a decomposition of the complement,
+$(T^2 \times I) - L$ into two isomorphic ideal torihedra.
 \end{prop}
 
-\textit{Proof}. We will begin by assuming that there are no half twists and then arrange the link diagram of $L$ in the following way: first place the added circle components (augmentation) perpendicular to the projection plane, $T^2 \times \{0\}$ leaving the remaining part of the link parallel to the projection plane. 
-We now place a crossing edge on each crossing of the link so that for each crossing edge, one end of the edge lies on a bottom strand while the other end lies on a top strand as in Figure \ref{fig:crossingArc} left.
+\begin{proof}
+We will begin by assuming that there are no half twists and then
+arrange the link diagram of $L$ in the following way: first place the added
+circle components (augmentation) perpendicular to the projection plane, $T^2
+\times \{0\}$ leaving the remaining part of the link parallel to the projection
+plane.  We now place a crossing edge on each crossing of the link so that for
+each crossing edge, one end of the edge lies on a bottom strand while the other
+end lies on a top strand as in Figure \ref{fig:crossingArc} left.
 
-\begin{figure}
- \centering
- \includegraphics[width=4cm]{crossingArc}
-  \includegraphics[width=5cm]{crossingPush}
- \caption{Left: The black strands are part of the link and the red strand is the crossing edge. Right: The blue and red edges represent the split crossing edges and the shaded half disk is bounded by the crossing circle}
- \label{fig:crossingArc}
- \end{figure}
+\begin{figure} \centering \includegraphics[width=4cm]{crossingArc}
+\includegraphics[width=5cm]{crossingPush} \caption{Left: The black strands are
+part of the link and the red strand is the crossing edge. Right: The blue and
+red edges represent the split crossing edges and the shaded half disk is bounded
+by the crossing circle} \label{fig:crossingArc} \end{figure}
 
-\indent We view the link from the point at infinity from the top. We will push the top strand to the bottom strand, splitting the crossing edge into two identical edges as in Figure \ref{fig:crossingArc} right. We push the link components to infinity and stretch the crossing edge so that we have flattened the link onto $T^2 \times \{0\}$ except for the crossing circles which will remain perpendicular to the projection plane. 
+\indent We view the link from the point at infinity from the top. We will push
+the top strand to the bottom strand, splitting the crossing edge into two
+identical edges as in Figure \ref{fig:crossingArc} right. We push the link
+components to infinity and stretch the crossing edge so that we have flattened
+the link onto $T^2 \times \{0\}$ except for the crossing circles which will
+remain perpendicular to the projection plane. 
  
-\indent Now place a disk on each crossing circle, so that the disk bounded by the crossing circle. We can then cut $T^2 \times I$ along $T^2 \times \{0\}$ and focus on the top half, $T^2 \times [0,1)$. We will follow the same method on the bottom half to obtain the second identical torihedron. The disk we place on each crossing circle is now cut in half. This half disk is now bounded by the projection plane and the semi-cricle arc of the crossing circle. We push down on the crossing circle and split the disk into two identical disks. We then push the arc of each crossing circle to infinity, collapsing them to ideal vertices. We obtain two triangular faces which represent the disk which look like a bow-tie as in Figure \ref{fig:falGluings}. 
+\indent Now place a disk on each crossing circle, so that the disk bounded by
+the crossing circle. We can then cut $T^2 \times I$ along $T^2 \times \{0\}$ and
+focus on the top half, $T^2 \times [0,1)$. We will follow the same method on the
+bottom half to obtain the second identical torihedron. The disk we place on each
+crossing circle is now cut in half. This half disk is now bounded by the
+projection plane and the semi-cricle arc of the crossing circle. We push down on
+the crossing circle and split the disk into two identical disks. We then push
+the arc of each crossing circle to infinity, collapsing them to ideal vertices.
+We obtain two triangular faces which represent the disk which look like a
+bow-tie as in Figure \ref{fig:falGluings}. 
 
 \begin{figure}
  \centering
@@ -211,7 +233,11 @@ we obtain the complement of the link by gluing the two torihedra with the gluing
 information given by identifying crossing edges and triangles of the bow-tie. We
 glue the faces of the torihedra which do not correspond to a bow-tie with a
 $\pi/n$ twist where $n$ is the number of sides of each face as in Figure
-\ref{fig:top-bottom} clockwise or counterclockwise. \qed
+\ref{fig:top-bottom} clockwise or counterclockwise.
+
+For future reference, we will denote the graph for the top and bottom
+torihedra by $\Gamma_T(L)$ and $\Gamma_B(L)$, respectively.
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The following figures is an example which decomposes the link (C) of Figure
@@ -240,13 +266,13 @@ stellating edges, edges which have vertices corresponding to the different
 components of the Hopf link that cuts through the center of the face to
 decompose the bipyramids into tetrahedra. This process is called {\it
 stellation}. Stellating all the bipyramids of the decomposition obtained from
-Proposition \ref{thm:torihedraldecomposition} we obtained a triangulation of the
+Proposition \ref{p:tori_decomp} we obtained a triangulation of the
 complement of $L$ which is made up of {\it horizontal} edges (edges from the
 graph of the torihedra), {\it vertical} edges (edges from coning vertices of the
 the graph of the torihedra) and stellating edges.  \end{remark}
 
 {\it Proof.}  Using the decomposition from Proposition
-\ref{thm:torihedraldecomposition} we can add a stellation edge whose end points
+\ref{p:tori_decomp} we can add a stellation edge whose end points
 are $T^2 \times \{-1\}$ and $T^2 \times \{1\}$ which cut through faces of $T^2
 \times I$ which do not come from the augmentation disks like in \cite{CKP2}.
 Since each face of the top torihedron gets glued to the bottom torihedron, we
@@ -312,7 +338,7 @@ is $2\pi$.
 
 
 View the Euclidean plane as the boundary of the upper-half space.
-Then $\Pol_f$ subtends an ideal hyperbolic pyramid $P_f$.
+Then $\Pol_f$ supports an ideal hyperbolic pyramid $P_f$.
 
 Clearly, these $P_f$'s, as abstract ideal tetrahedra,
 glue together into the torihedron (TODO rephrase).
@@ -357,7 +383,7 @@ edges carry the same dihedral angle, and such that
 Let $M$ be a 3-manifold admitting an angle structure. Then $M$ is hyperbolic.
 \end{theorem}
 
-For a hyperbolic link $K$ in $T^2 \times I$, we produce sufficient conditions on augmentations such that the resulting link obtained from augmenting $K$ is hyperbolic. The idea is to start with a graph from the torihedral decomposition of the link $K$ which will give us a graph on each torihedron with $\pi/2$ edges \cite{CKP2}. Then by results of \cite{BandS} there exist a corresponding right-angled circle pattern. We then consider the augmented link $L$ and its torihedral decomposition from Proposition \ref{thm:torihedraldecomposition} with a corresponding ``degenerate" circle pattern. We deform this degenerate circle pattern into a ``proper" circle pattern which will give us a polyhedral decomposition of $(T^2 \times I)-L$ with angles of the torihedra in our torihedral decomposition. Which we can further decompose into tetrahedra with angles satisfying conditions of an angle structure. 
+For a hyperbolic link $K$ in $T^2 \times I$, we produce sufficient conditions on augmentations such that the resulting link obtained from augmenting $K$ is hyperbolic. The idea is to start with a graph from the torihedral decomposition of the link $K$ which will give us a graph on each torihedron with $\pi/2$ edges \cite{CKP2}. Then by results of \cite{BandS} there exist a corresponding right-angled circle pattern. We then consider the augmented link $L$ and its torihedral decomposition from Proposition \ref{p:tori_decomp} with a corresponding ``degenerate" circle pattern. We deform this degenerate circle pattern into a ``proper" circle pattern which will give us a polyhedral decomposition of $(T^2 \times I)-L$ with angles of the torihedra in our torihedral decomposition. Which we can further decompose into tetrahedra with angles satisfying conditions of an angle structure. 
 
 
 \begin{define}
@@ -374,15 +400,18 @@ to each edge, such that
 \begin{define}
 A \emph{base-angled ideal pyramid}
 is a pyramid whose base is an $n$-gon, $n \geq 3$,
-and each boundary edge $e_i$ of the base face is assigned a dihedral angle $\alpha_i$
-such that for adjacent edges, $\alpha_i + \alpha_{i+1} < \pi$.
+and each boundary edge $e_i$ of the base face is assigned a dihedral angle
+$\alpha_i > 0$ such that the sum is $\sum \alpha_i = 2\pi$.
 The vertical edge $e_i'$ that meets $e_i$ and $e_{i+1}$
 is automatically assigned the dihedral angle $\pi - \alpha_i - \alpha_{i+1}$.
 \end{define}
 
 Clearly, the dihedral angles of an ideal hyperbolic pyramid
-make it a base-angled ideal pyramid.
+make it a base-angled ideal pyramid
+(with $\alpha_i = \vphi_{e_i}$).
 (TODO probably vice-versa?)
+Also, an angled ideal tetrahedron is simply a base-angled ideal pyramid
+with base a triangle, and with no preferred face.
 
 \begin{lemma}
 %Let $P_n$ be an ideal pyramid whose base is an $n$-gon and suppose,
@@ -390,17 +419,48 @@ make it a base-angled ideal pyramid.
 %\item each boundary edge of the base face is assigned a dihedral angle $\alpha_i$ such that for adjacent edges, $\alpha_i + \alpha_{i+1} < \pi$;
 %\item we are given a decomposition of the base face into triangles by adding new edges. 
 %\end{itemize}
-Let $P_n$ be a base-angled ideal pyramid,
-and suppose we are given a decomposition of the base face into triangles by adding new edges. 
-One gets an obvious corresponding triangulation of $P_n$, where a new face is added for each new edge. Then there is an assignment of a dihedral angle to each edge of each ideal tetrahedron in this triangulation such that
+Let $P_n$ be a base-angled ideal pyramid, and suppose we are given a
+decomposition of the base face into triangles by adding new edges.  One gets an
+obvious corresponding triangulation of $P_n$, where a new face is added for each
+new edge. Then there is an assignment of a dihedral angle to each edge of each
+ideal tetrahedron in this triangulation such that
 \begin{itemize}
 \item each tetrahedron is an angled ideal tetrahedron;
 \item the sum of dihedral angles around each new edge is $\pi$;
-\item the dihedral angles of the edges of the original base face are the same as before.
+\item the dihedral angles of the edges of the original base face are the same as
+	before.
 \end{itemize} 
 \end{lemma}
 
-{\it Proof.} See Figure \ref{TODO}
+\begin{proof}
+Induct on $n$; there is nothing to prove for the base case $n=3$.
+
+Suppose the edges are labelled $e_i$,
+which goes between vertices $v_i$ and $v_{i+1}$,
+and suppose $e_i$ is assigned dihedral angle $\alpha_i$.
+Let $e'$ be a new edge addeed to the base face of $P_n$
+such that it separates the base face into a triangle and
+an $(n-1)$-gon;
+suppose the sides of the triangle are
+$e_i, e_{i+1}$, and $e'$.
+The new face corresponding to $e'$ separates $P_n$ into
+an ideal tetrahedron $T$ and an ideal pyramid $P_{n-1}$.
+We assign the dihedral angle of $\pi - \alpha_i - \alpha_{i+1}$
+to $e'$ in $T$, and assign $\alpha_i + \alpha_{i+1}$ to $e'$ in $P_{n-1}$.
+Clearly the condition that the sum of dihedral angles are satisfied
+in $T$ and $P_{n-1}$.
+It remains to check that the dihedral angles assigned to the vertical edges
+are correct.
+For the vertical edge associated $v_j$ for $j \neq i, i+2$,
+there is nothing to check;
+for $j = i$, the dihedral angles are
+$\pi - \alpha_i - (\pi - \alpha_i - \alpha_{i-1})$
+in $T$ and $\pi - \alpha_{i-1} - (\alpha_i + \alpha_{i+1})$ in $P_{n-1}$,
+which sum to $\pi - \alpha_i - \alpha_{i+1}$;
+it is similar for $j = i+2$.
+
+See Figure \ref{TODO}
+\end{proof}
 
 \begin{define}
 We say an augmentation is \emph{right-augmented} when both strands are (locally) oriented such that they cross the augmentation disk in the same direction, the crossing is positive/a right-handed half-twist. See Figure \ref{TODO}
@@ -408,7 +468,10 @@ We say an augmentation is \emph{left-augmented} if it is not right-augmented.
 \end{define}
 
 \begin{define}
-Given a face $f$ of the original link diagram the \emph{augmentation sequence} of $f$, denoted $\sigma_f$ is a sequence of symbols $0, L, R$ indexed by vertices of $f$ going counter-clockwise, where, for $v \in \partial f$, the $v$-th element is
+Given a face $f$ of the original link diagram the \emph{augmentation sequence}
+of $f$, denoted $\sigma_f$, is a cyclical sequence of symbols $0, L, R$ indexed
+by vertices of $f$ going counter-clockwise, where, for $v \in \partial f$, the
+$v$-th element is
 \[
 \sigma_f^v = 
 \begin{cases}
@@ -419,25 +482,119 @@ R \text{ if $v$ is right-augmented}
 \]
 \end{define}
 
+\begin{prop}
+Suppose $L$ is obtained from augmenting $K$,
+so that for each face $f$ of the link projection of $K$,
+the augmentation sequence $\sigma_f$ has no $L$ adjacent to $R$.
+Then the TODO CONTINUE HERE
+\end{prop}
+
 \begin{theorem}
-Let $K$ be a weakly prime, alternating link with diagram $D$ with no bigons. Let $L$ be a link obtained from augmenting $K$ such that there exist no sequence of augmentations where a Left augmentation is adjacent to a Right augmentation. Then $L$ is hyperbolic.
+Let $K$ be a weakly prime, alternating link with diagram $D$ with no bigons. Let
+$L$ be a link obtained from augmenting $K$ such that there exist no sequence of
+augmentations where a Left augmentation is adjacent to a Right augmentation.
+Then $L$ is hyperbolic.
 \end{theorem}
 
-{\it Proof.}
 
-Part 1:  
+\begin{proof}
+By ckp [TODO look up precise thm number],
+$\toruscomp{K}$ can be decomposed
+into two torihedra whose graphs are the projection graph of $K$,
+which we denote by $\Gamma$.
+By assigning angles $\pi/2$ to each edge of the torihedra graphs,
+we can invoke \cite[Theorem 3]{BandS} to give us a circle pattern
+on the projection graph.
+
+By \prpref{p:tori_decomp}, $\toruscomp{L}$ can be
+obtained by gluing two torihedra with graph $\Gamma_T(L)$ and $\Gamma_B(L)$.
+Recall that $\Gamma_T(L)$ is obtained from $\Gamma$ by some slight
+modifications, specifically by replacing augmented vertices with bow-ties.
+We assign angles to edges of the bow-ties as in TODO figure,
+and leave untouched edges with the same assignment of $\pi/2$;
+we do the same for $\Gamma_B(L)$.
 
 
-by ckp the original link can be decomposed into torihedra with projection graph as torihedra graph with pi/2 edges and this gives circle pattern by bobenko-springborn
+We can think of a bow-tie in $\Gamma_T(L)$ as ``thickened edges" in the
+following sense: consider the bow-tie at a crossing $v$,
+and let the edges $e,e'$ of $\Gamma$ at $v$
+be associated to the over-strand of $K$.
+There is a cellular map from each triangle of the bow-tie
+on to $e, e'$ that identifies the $\pi/2$- and 0-labelled edges,
+and collapses the $\pi$-labelled edges onto $v$
+(TODO see same figure).
+It is not hard to see that this map extends to a cellular map
+$\Psi: \Gamma_T(L) \to \Gamma$,
+and in fact extends to the faces as well.
+A similar story applies to $\Gamma_B$.
 
-Part 2: Our torihedral decomposition has graph and on augmentation we will give 0 and pi angles. Next we add another edge and give blah angle (we have three cases)
+
+Now we construct an extended circle pattern for $\Gamma_T(L)$.
+We will give a more precise description,
+but let us first give the picture.
+Under $\Psi$,
+each face $f$ of $\Gamma_T(L)$ that is not in a bow-tie
+is identified with a face $\bar{f}$ of $\Gamma$,
+so we assign the circle of $\bar{f}$ to $f$;
+each triangle face $f$ in a bow-tie is collapsed to an edge,
+and we assign to $f$ the circle circumscribing the
+face of $\Gamma$ that meets $f$ along the 0-labelled edge.
+This is a ``degenerate" circle pattern that can be thought of as
+the limit of some (singular) circle patterns.
+
+
+Let us make this more precise,
+describing an extended circle pattern $c$
+on $\Gamma_T(L)$.
+Let the circle pattern for $\Gamma$ be given by
+$\bar{c} = ((r_f),(\vphi_{\vec{e}}))$,
+where recall $r_f$ is the radius of the circle $C_f$
+circumscribing $f$ and $\vphi_{\vec{e}}$
+is half the angle subtended by the edge $e$
+at the center of $C_f$.
+For non-bow-tie faces $f$ of $\Gamma_T(L)$,
+$\Psi$ identifies $f$ with the face $\bar{f}$ of $\Gamma$.
+We set $r_f(c) = r_{\bar{f}}(\bar{c})$.
+For $\vphi$ of its edges,
+if $\vec{e} \in \del f$ is labelled $\pi$,
+we set $\vphi_{\vec{e}} = 0$;
+otherwise, $\Psi$ identifies $\vec{e}$
+with the edge $\vec{e}'$ in $\Gamma$,
+then we set $\vphi_{\vec{e}}(c) = \vphi_{\vec{e}'}(\bar{c})$.
+
+
+For a triangular face $f$ of a bow tie,
+let $\vec{e}_0, \vec{e}_{\pi/2}, \vec{e}_{\pi}$
+be the edges of $f$ labelled $0,\pi/2, \pi$ respectively.
+We set $r_f(c) = r_{f'}(c)$,
+where $f'$ is the face adjacent to $f$ across $e_0$.
+Then we set
+$\vphi_{\vec{e}_{\pi/2}} = \vphi_{\cev{e}_0} = \pi - \vphi_{\vec{e}_0}$
+and $\vphi_{\vec{e}_{\pi}} = 0$.
+
+
+It can be easily checked that $c$ satisfies the conditions of
+\prpref{p:nghd_lift}.
+
+with the same procedure for $\Gamma_B(L)$.
+
+
+
+
+
+Our torihedral decomposition has graph and on augmentation we will give 0 and pi angles. Next we add another edge and give blah angle (we have three cases)
 do three cases with pictures
 
 part 3: Use proposition to get circle pattern to get polyhedral decomposition of the link 
 
 part 4: get triangulation.  
 
+\end{proof}
+
 \bibliographystyle{plain}
 \bibliography{references-ak}
+
+
+TODO consistent torus symbol, consistent thickened torus symbols
 
 \end{document}
