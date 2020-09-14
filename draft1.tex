@@ -9,6 +9,9 @@
 
 \newcommand{\thmref}[1]{Theorem \ref{#1}}
 \newcommand{\prpref}[1]{Proposition \ref{#1}}
+\newcommand{\lemref}[1]{Lemma \ref{#1}}
+\newcommand{\comment}[1]{}
+
 
 \textwidth 6.07in 
 \textheight 8.6in 
@@ -68,6 +71,7 @@
 \newcommand{\del}{\partial}
 \newcommand{\ddd}[1]{{\frac{\del}{\del #1}}}
 \newcommand{\vphi}{\varphi}
+\newcommand{\veps}{\varepsilon}
 \newcommand{\llong}{{\text{long}}}
 \newcommand{\Span}{{\text{span}}}
 \newcommand{\Pol}{{\text{Pol}}}
@@ -292,10 +296,12 @@ into hyperbolic ideal pyramids
 from a non-singular extended circle pattern.
 
 \begin{lemma}
+\label{l:circpattern_polyhedra}
 Suppose we have the graph of a torihedron.
 Given a non-singular extended circle pattern $c \in \CCC$ on the graph,
+such that all $\vphi_{\vec{e}} \in (0,\pi)$,
 there exists a decomposition of the torihedron
-into base-angled ideal pyramids (TODO make sure it's been defined) so that
+into base-angled ideal pyramids (TODO make sure it's been defined) such that
 	\begin{itemize}
 		\item each interior edge of the torihedron has dihedral angles sum to $2\pi$;
 		\item each boundary edge $e$ of the torihedron has dihedral angles sum to
@@ -463,10 +469,18 @@ See Figure \ref{TODO}
 \end{proof}
 
 \begin{define}
-We say an augmentation is \emph{right-augmented} when both strands are (locally) oriented such that they cross the augmentation disk in the same direction, the crossing is positive/a right-handed half-twist. See Figure \ref{TODO}
+We say an augmentation is \emph{right-augmented} if, when both strands are
+(locally) oriented such that they cross the augmentation disk in the same
+direction, the crossing is positive/a right-handed half-twist. See Figure
+\ref{TODO}
 We say an augmentation is \emph{left-augmented} if it is not right-augmented.
 \end{define}
 
+We can recover $L$ from the link diagram of $K$
+together with labels at vertices indicating left- or right-augmentation.
+
+
+\comment{
 \begin{define}
 Given a face $f$ of the original link diagram the \emph{augmentation sequence}
 of $f$, denoted $\sigma_f$, is a cyclical sequence of symbols $0, L, R$ indexed
@@ -481,6 +495,10 @@ R \text{ if $v$ is right-augmented}
 \end{cases}
 \]
 \end{define}
+}
+
+
+\comment{
 
 \begin{prop}
 Suppose $L$ is obtained from augmenting $K$,
@@ -489,10 +507,46 @@ the augmentation sequence $\sigma_f$ has no $L$ adjacent to $R$.
 Then the TODO CONTINUE HERE
 \end{prop}
 
+\begin{prop}
+Let $\Sigma$ be a closed surface with a cellular decomposition.
+Suppose we have labelled some edges by either $`+'$ or $`-'$,
+such that for each face $f$,
+\begin{itemize}
+	\item no two adjacent edges have the same label,
+	\item the length of consecutive labelled edges is at least 2.
+\end{itemize}
+Then one can further decompose faces along new edges,
+and extend the labelling of edges,
+such that every vertex is adjacent to the same number of
+$`+'$'s and $`-'$'s.
+\end{prop}
+
+\begin{proof}
+Consider a face $f$ and consider a maximal contiguous sequence
+of labelled edges, $e_1,\ldots,e_k$ in $\del f$.
+they span the vertices $v_0,\ldots,v_k$.
+Suppose $e_1$ is labelled $`+'$ (the other case is similar).
+Then $e_2$ is labelled $`-'$, $e_3$ is $`+'$, and so on.
+\end{proof}
+
+\textbf{Case 1}: $k$ is odd. Then we cut $f$ along a new edge
+$\overline{v_0 v_k}$, and label this edge by $`-'$.
+
+\textbf{Case 2}: $k = 2$ and . Then we cut $f$ along a new edge
+\end{proof}
+}
+
+
+%\begin{theorem}
+%Let $K$ be a weakly prime, alternating link with diagram $D$ with no bigons. Let
+%$L$ be a link obtained from augmenting $K$ such that there exist no sequence of
+%augmentations where a Left augmentation is adjacent to a Right augmentation.
+%Then $L$ is hyperbolic.
+%\end{theorem}
 \begin{theorem}
-Let $K$ be a weakly prime, alternating link with diagram $D$ with no bigons. Let
-$L$ be a link obtained from augmenting $K$ such that there exist no sequence of
-augmentations where a Left augmentation is adjacent to a Right augmentation.
+Let $K$ be a weakly prime, alternating link whose diagram has no bigons.
+Let $L$ be a link obtained from augmenting $K$ such that
+no edge spans left- and right-augmented vertices.
 Then $L$ is hyperbolic.
 \end{theorem}
 
@@ -515,6 +569,9 @@ and leave untouched edges with the same assignment of $\pi/2$;
 we do the same for $\Gamma_B(L)$.
 
 
+(Hmmm... might be misleading, I think $\Psi$ should be a cellular map
+$\Gamma_T(L) \to \Gamma_T(K)$, but the latter happens to be
+same as $\Gamma$, so that's why it's confusing!)
 We can think of a bow-tie in $\Gamma_T(L)$ as ``thickened edges" in the
 following sense: consider the bow-tie at a crossing $v$,
 and let the edges $e,e'$ of $\Gamma$ at $v$
@@ -575,9 +632,73 @@ and $\vphi_{\vec{e}_{\pi}} = 0$.
 
 It can be easily checked that $c$ satisfies the conditions of
 \prpref{p:nghd_lift}.
+We would like to apply \lemref{l:circpattern_polyhedra}
+to obtain a polyhedral decomposition of the torihedra,
+but there are edges with $\vphi_{\vec{e}}$
+(specifically, those with $\theta_e = \pi$).
+%We want a deformation of $\theta_{\bullet}$ of $c$
+%that remains vertex non-singular,
+%and gives us an honest ?? circle pattern.
+Hence, we want to find a vector $a = \sum a^e \ddd{\theta_e}$
+in the tangent space of $\Theta(c)$
+that maintains vertex non-singularity,
+i.e.  such that $\sum_{e \ni v} a^e = 0$ for all vertices $v$,
+and for edges $e$ with $\theta_e = \pi$,
+we have $a^e < 0$.
+By \prpref{p:nghd_lift}, there exists $\veps > 0$
+such that the path $\gamma(t) = \Theta(c) + t \cdot a$, $t\in [0,\veps]$,
+in $\TTT$ can be lifted to a path $\tilde{\gamma}$ in $\CCC$.
 
-with the same procedure for $\Gamma_B(L)$.
 
+To find such $a$, we need to modify $\Gamma_T(L)$ by
+cutting faces along new edges.
+Consider a face $f$ that is not in a bow-tie.
+Suppose the corresponding face $\bar{f}$ of $\Gamma$
+had vertices $v_1,\ldots,v_n$ in counter-clockwise order.
+Suppose it is the case that if a vertex $v_i$ is left-augmented,
+then the augmentation circle intersects $\bar{f}$
+(everything is similar if it is right-augmented circles that intersect
+$\bar{f}$).
+Vertex $v_i$ corresponds to one edge $e_i$ of $\Gamma_T(L)$
+if $v_i$ is not augmented or right-augmented,
+and corresponds to two edges $e_{i,0}, e_{i,\pi}$
+of $\Gamma_T(L)$ if $v_i$ is left-augmented
+($e_{i,0}, e_{i,\pi}$ are edges of a single bow-tie,
+and $e_{i,0}$ has $\theta_{e_{i,0}} = 0$
+and $e_{i,\pi}$ has $\theta_{e_{i,\pi}} = \pi$).
+
+
+Suppose, after cyclically reindexing, $v_1,\ldots,v_k$
+is a maximally contiguous subsequence of left-augmented vertices
+of $G(K)$ around the face $\bar{f}$;
+the edges around $f$ would start
+$e_{1,0}, e_{1,\pi}, e_{2,0}, e_{2,\pi}, \ldots$.
+We add new edges across $f$ as follows.
+
+First suppose $k=n$; then we do nothing.
+
+Next suppose there is only one such maximal contiguous subsequence.
+If $k = 1$, we add an edge that goes across
+$e_{1,0},e_{1,\pi},e_2$
+(in the sense that the new edge separates the edges of $f$ into two sets
+one of them being those three edges;
+since $n\geq 3$, this edge is new).
+If $k = 2$, we add edge across $e_{1,0},e_{1,\pi}$
+and another edge across $e_{2,0},e_{2,\pi}$
+(these two edges do not form a bigon because we've ruled out $k=n$).
+If $k \geq 3$,
+we add an edge across $e_{1,0},e_{1,\pi},e_{2,0}$
+and another edge across $e_{2,\pi},e_{3,0},\ldots,e_{k,\pi}$
+(again these two edges do not form a bigon).
+
+Finally, if there are multiple such maximal contiguous subsequences,
+we just add edges as above for each contiguous subsequence.
+The only caveat is that if the procedure calls to add a new edge
+that would form a bigon with the existing edges,
+we just don't add it.
+
+
+TODO CONTINUE HERE do the $+$ and $-$ on the edges.
 
 
 
