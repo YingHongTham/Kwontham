@@ -5,11 +5,17 @@ Always assume surface $\Sigma$ (our case $\Sigma = \torus$) is oriented.
 define cellular decomp of surface
 
 $V,E,F$ are set of vertices, edges, faces.
+No bigon faces.
 
 $\vec{E}$ is the set of oriented edges.
 We may identify an oriented edge $\vec{e}$ with the pair $(f_{\vec{e}}, e)$,
 where $f_{\vec{e}}$ is the face to the left of $\vec{e}$.
 
+When we use $\cev{e}$ to refer to an oriented edge, it refers to
+the oppositely oriented edge to $\vec{e}$.
+If we construct an expression with both $\vec{e}$ and $\cev{e}$,
+it will always be (anti-)symmetrical in the two orientations,
+and we assume that an arbitrary choice has been made.
 
 %===============================================================================
 
@@ -51,7 +57,8 @@ be identical or tangent, into ones that don't look so degenerate,
 hence it is conveneint to extend the notion of circle pattern:
 
 \begin{definition}
-An \emph{extended circle pattern} is
+Let $\Gamma$ be a graph on the torus.
+An \emph{extended circle pattern} on $\Gamma$ is
 $c = ((r_f), (\vphi_{\vec{e}})) \in \RRR \times \QQQ$
 such that $l_{\vec{e}} = l_{\cev{e}}$ for all edges $e\in E$. We denote by
 $\CCC$ the set of extended circle patterns.
@@ -152,7 +159,65 @@ $\cos \vphi_{\vec{e}} \neq 0$ for all $\vec{e}$,
 we see that the differentials $d(l_{\vec{e}} - l_{\cev{e}})$
 are linearly independent at $c$,
 hence are linearly independent in a neighborhood of $c$.
-Thus, by the implicit function theorem,
-$\CCC$ is a manifold in a neighborhood of $c$.
+%Thus, by the implicit function theorem,
+%$\CCC$ is a manifold in a neighborhood of $c$.
 \end{proof}
+
+
+\begin{lemma}
+Let $c$ be a face non-singular extended circular pattern
+such that $\vphi_{\vec{e}} \geq 0$ for all $\vec{e}\in\vec{E}$.
+TODO no cycle of thin faces? It's a bit weaker than that...
+Then $\CCC$ is a manifold in a neighborhood of $c$.
+\end{lemma}
+\begin{proof}
+We need to show that the differentials
+$d(l_{\vec{e}} - l_{\cev{e}})
+= \sin \vphi_{\vec{e}} d r_{f_{\vec{e}}}
++ r_{f_{\vec{e}}} \cos \vphi_{\vec{e}} d \vphi_{\vec{e}}
+- \sin \vphi_{\cev{e}} d r_{f_{\cev{e}}}
+- r_{f_{\cev{e}}} \cos \vphi_{\cev{e}} d \vphi_{\cev{e}}
+$
+are linearly independent at $c$.
+If $\vphi_{\vec{e}} \neq \pi/2$,
+then the $d\vphi_{\vec{e}}$ term makes $d(l_{\vec{e}} - l_{\cev{e}})$
+linearly independent from the rest;
+likewise for $\vphi_{\cev{e}} \neq \pi/2$.
+If both equal $\pi/2$,
+then $d(l_{\vec{e}} - l_{\cev{e}}) = d r_{\vec{e}} - d r_{\cev{e}}$.
+consider $f$ with $\vec{e} \in \del f$.
+
+By face non-singularity, $\sum_{\vec{e} \in f} \vphi_{\vec{e}} = \pi$,
+and since there are no bigon faces,
+
+\end{proof}
+
+\subsection{Modifications to Extended Circle Patterns}
+
+
+Let $\Gamma$ be a graph on the torus, and let $c$ be a
+non-singular extended circle pattern on $\Gamma$.
+There are two simple operations to modify $\Gamma$:
+cutting a face along a new edge,
+and splitting a vertex in two then joining them by a new edge.
+We describe how to associate an extended circle pattern $c'$ to
+the new graph.
+
+
+Cutting a face: Consider a face $f$,
+and suppose we added a new edge $e'$ so that $f$ is split into
+two faces $f'$ and $f"$, so that
+$\del f' = \{\vec{e_1},\ldots,\vec{e_k}, \vec{e'}\}$,
+and $\del f" = \{\cev{e'}, \vec{e_{k+1}},\ldots \vec{e_n}\}$.
+Then for the new extended circle pattern $c'$,
+we set $r_{f'}(c') = r_{f"}(c') = r_f(c)$,
+$\vphi_{\vec{e'}} = \pi - \vphi_{\vec{e_1}} - \ldots - \vphi_{\vec{e_k}}$,
+$\vphi_{\cev{e'}} = \pi - \vphi_{\vec{e_{k+1}}} - \ldots \vphi_{\vec{e_n}}$,
+and $r_\bullet(c') = r_\bullet(c)$, $\vphi_\bullet(c') = \vphi_\bullet(c)$
+for all other faces, edges.
+It is straightforward to check that $c'$ is non-singular.
+
+
+Consider a vertex $v$ of the 
+
 
