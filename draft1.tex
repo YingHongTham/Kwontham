@@ -58,6 +58,7 @@
 
 
 \newcommand{\torus}{{\mathbb{T}^2}}
+\newcommand{\sT}{{\mathcal{T}}}
 
 \newcommand{\RRR}{{\underline{\mathfrak{R}}}}
 \newcommand{\QQQ}{{\underline{\mathfrak{Q}}}}
@@ -91,6 +92,7 @@
 \newenvironment{named}[1]{\renewcommand{\theoremname}{#1}\begin{namedtheorem}}{\end{namedtheorem}}
 \theoremstyle{definition}
 \newtheorem{define}[theorem]{Definition}
+\newtheorem{definition}[theorem]{Definition}
 \newtheorem{question}[theorem]{Question}
 \newtheorem{remark}[theorem]{Remark}
 
@@ -128,15 +130,21 @@ Adams showed in \cite{CA} that given a hyperbolic alternating link $K$ in $\Sp^3
 \section{Augmented Links}
  Champanerkar, Kofman and Purcell have studied alternating links in the thickened torus. They define a link in the thickened torus as a quotient of a biperiodic alternating link as follows,
  
-\begin{define}\cite{CKP2} \label{def:biperiodiclink}
- A \emph{biperiodic alternating link} $\mathcal{L}$ is an infinite link which has a projection onto $\R^2$ which is invariant under an action of a two dimensional lattice $\Lambda$ by translations, such that $L=\mathcal{L}/\Lambda$ is an alternating link in $T^2 \times I$, where $I = (-1,1)$, with the projection on $T^2 \times \{0\}$. We call $L$ a link diagram in $T^2 \times I$.   
+\begin{define}\cite{CKP2}
+\label{def:biperiodiclink}
+A \emph{biperiodic alternating link} $\mathcal{L}$ is an infinite link
+which has a projection onto
+$\R^2$ which is invariant under an action of a two dimensional lattice $\Lambda$
+by translations, such that $L=\mathcal{L}/\Lambda$ is an alternating link in
+$\torus \times I$, where $I = (-1,1)$, with the projection on $\torus \times \{0\}$.
+We call $L$ a link diagram in $\torus \times I$.   
 \end{define}
 
 \begin{remark}
-Since $T^2 \times I \cong \Sp^3 - H$, where $H$ is a Hopf link. The complement $T^2 \times I- L = \Sp^3 - (L \cup H)$.
+Since $\torus \times I \cong \Sp^3 - H$, where $H$ is a Hopf link. The complement $\torus \times I- L = \Sp^3 - (L \cup H)$.
 \end{remark}
 
-Champanerkar, Kofman and Purcell \cite{CKP2} extended the definition of prime links in $\Sp^3$ for links in $T^2 \times I$ called weakly prime. 
+Champanerkar, Kofman and Purcell \cite{CKP2} extended the definition of prime links in $\Sp^3$ for links in $\torus \times I$ called weakly prime. 
 
  \begin{define} \label{def:weaklyprime}
 A diagram of a link $L$ is weakly prime if whenever a disk is embedded in the diagram surface meets the diagram transversely in exactly two edges, then the disk contains a simple edge of the diagram and no crossings.
@@ -144,13 +152,13 @@ A diagram of a link $L$ is weakly prime if whenever a disk is embedded in the di
 
 
 \begin{define}
-A \emph{twist region} in a link diagram $L=\mathcal{L}/\Lambda$ in $T^2 \times I$, is the quotient of a twist region in the biperiodic link $\mathcal{L}$. %a string of bigons, or a single crossing in the diagram on the universal cover of $T^2 \times I$ is called a . 
+A \emph{twist region} in a link diagram $L=\mathcal{L}/\Lambda$ in $\torus \times I$, is the quotient of a twist region in the biperiodic link $\mathcal{L}$. %a string of bigons, or a single crossing in the diagram on the universal cover of $\torus \times I$ is called a . 
 A biperiodic link $\mathcal{L}$ is called \emph{twist-reduced} if for any simple closed curve on the plane that intersects $\mathcal{L}$ transversely in four points, with two points adjacent to one crossing and the other two points adjacent to another crossing, the simple closed
 curve bounds a subdiagram consisting of a (possibly empty) collection of bigons
 strung end to end between these crossings. We say $L$ is \emph{twist-reduced} if it is the quotient of a twist-reduced biperiodic link. 
 \end{define}
 
-Now we can define augmentation for a link in $T^2 \times I$ the same way we define augmentation for links in $\Sp^3$. For a link in $T^2 \times I$, the crossing circles are added to the diagram projected onto $T^2 \times \{0\}$. Let $L$ be a twist reduced diagram in $T^2 \times I$, we define {\it augmentation} as a process in which an unknotted circle component is added to one or more twist regions of $L$. See Figure \ref{fig:Augmentations}
+Now we can define augmentation for a link in $\torus \times I$ the same way we define augmentation for links in $\Sp^3$. For a link in $\torus \times I$, the crossing circles are added to the diagram projected onto $\torus \times \{0\}$. Let $L$ be a twist reduced diagram in $\torus \times I$, we define {\it augmentation} as a process in which an unknotted circle component is added to one or more twist regions of $L$. See Figure \ref{fig:Augmentations}
 
 
  \begin{figure}
@@ -170,24 +178,49 @@ Now we can define augmentation for a link in $T^2 \times I$ the same way we defi
 \subsection{Torihedral Decomposition of Augmented Alternating Links in Thickened Torus}
 
 
-We show a method of decomposing an augmented link in the thickened torus into two isomorphic torihedra. The idea is to combine methods of Menasco \cite{Menasco} and the use of crossing edges between each crossing of our link and Lackenby's ``cut-slice-flatten" method \cite{lackenby} on the augmentation sites.   
+We show a method of decomposing an augmented link in the thickened torus into
+two torihedra. The idea is to combine methods of Menasco
+\cite{Menasco} and the use of crossing edges between each crossing of our link
+and Lackenby's ``cut-slice-flatten" method \cite{lackenby} on the augmentation
+sites.   
 
 
-\begin{define}\cite{CKP2} \label{def:torihedron}
- A \emph{torihedron} is a cone on the torus, i.e. $T^2 \times [0,1]/(T^2 \times \{1\})$, with a cellular graph $G$ on $T^2 \times \{0\}$. An \emph{ideal torihedron} is a torihedron with the vertices of $G$ and the vertex $T^2 \times \{1\}$ removed. Hence, an ideal torihedron is homeomorphic to $T^2 \times [0,1)$ with a finite set of points (ideal vertices) removed from $T^2 \times \{0\}$ 
+\begin{define}\cite{CKP2}
+\label{def:torihedron}
+A \emph{torihedron} $\sT$ is a cone on the torus, 
+i.e. $\torus \times [0,1]/(\torus \times \{1\})$, with a cellular graph
+$G = G(\sT)$ on $\torus \times \{0\}$.
+An \emph{ideal torihedron} is a torihedron with the
+vertices of $G$ and the vertex $\torus \times \{1\}$ removed. Hence, an ideal
+torihedron is homeomorphic to $\torus \times [0,1)$ with a finite set of points
+(ideal vertices) removed from $\torus \times \{0\}$.
+We refer to the vertex $\torus \times \{1\}$ as the cone point.
 \end{define}
 
+
+For visualization purposes, we typically draw the graph $G(\sT)$ of a
+torihedron from the perspective of the cone point $\torus \times \{1\}$.
+
+If the faces of $G(\sT)$ are disks,
+then $\sT$ can be decomposed into a union of pyramids,
+obtained by coning each face to the cone point of $\sT$.
+This also gives a decomposition of the corresponding ideal torihedron
+into ideal pyramids.
+We call these the \emph{pyramidal decompositions} of $\sT$ and its
+ideal version.
+
+
 \begin{prop}\label{p:tori_decomp}
-Let $L$ be an augmented link in $T^2 \times I$.
-%Let $G(L)$ be a diagram of the link on $T^2 \times \{0\}$.
+Let $L$ be an augmented link in $\torus \times I$.
+%Let $G(L)$ be a diagram of the link on $\torus \times \{0\}$.
 There is a decomposition of the complement,
-$(T^2 \times I) - L$ into two isomorphic ideal torihedra.
+$(\torus \times I) - L$ into two ideal torihedra.
 \end{prop}
 
 \begin{proof}
 We will begin by assuming that there are no half twists and then
 arrange the link diagram of $L$ in the following way: first place the added
-circle components (augmentation) perpendicular to the projection plane, $T^2
+circle components (augmentation) perpendicular to the projection plane, $\torus
 \times \{0\}$ leaving the remaining part of the link parallel to the projection
 plane.  We now place a crossing edge on each crossing of the link so that for
 each crossing edge, one end of the edge lies on a bottom strand while the other
@@ -203,12 +236,12 @@ by the crossing circle} \label{fig:crossingArc} \end{figure}
 the top strand to the bottom strand, splitting the crossing edge into two
 identical edges as in Figure \ref{fig:crossingArc} right. We push the link
 components to infinity and stretch the crossing edge so that we have flattened
-the link onto $T^2 \times \{0\}$ except for the crossing circles which will
+the link onto $\torus \times \{0\}$ except for the crossing circles which will
 remain perpendicular to the projection plane. 
  
-\indent Now place a disk on each crossing circle, so that the disk bounded by
-the crossing circle. We can then cut $T^2 \times I$ along $T^2 \times \{0\}$ and
-focus on the top half, $T^2 \times [0,1)$. We will follow the same method on the
+\indent Now place a disk on each crossing circle, so that the disk is bounded by
+the crossing circle. We can then cut $\torus \times I$ along $\torus \times \{0\}$ and
+focus on the top half, $\torus \times [0,1)$. We will follow the same method on the
 bottom half to obtain the second identical torihedron. The disk we place on each
 crossing circle is now cut in half. This half disk is now bounded by the
 projection plane and the semi-cricle arc of the crossing circle. We push down on
@@ -228,8 +261,8 @@ bow-tie as in Figure \ref{fig:falGluings}.
  \label{fig:falGluings}
  \end{figure}
 
-\indent We repeat the steps for the bottom half of $T^2 \times I$, $T^2 \times
-[-1,0)$. Then we get two isomorphic torihedra. The graph of each will come from
+\indent We repeat the steps for the bottom half of $\torus \times I$, $\torus \times
+(-1,0]$. Then we get two torihedra. The graph of each will come from
 crossing edges and, edges of the disk. Now, if there are half twists we will
 decompose the complement of the link the same way as if there are no half twists
 and we will identify the two bow-ties as in Figure \ref{fig:falGluings}. Finally
@@ -239,9 +272,17 @@ glue the faces of the torihedra which do not correspond to a bow-tie with a
 $\pi/n$ twist where $n$ is the number of sides of each face as in Figure
 \ref{fig:top-bottom} clockwise or counterclockwise.
 
-For future reference, we will denote the graph for the top and bottom
-torihedra by $\Gamma_T(L)$ and $\Gamma_B(L)$, respectively.
 \end{proof}
+
+For future reference, we will denote the graph for the top and bottom
+torihedra by $\Gamma_T(L)$ and $\Gamma_B(L)$, respectively,
+where both graphs are viewed from the cone point of the top torihedron
+$\torus \times \{1\}$.
+Note that if $L = K$ is the non-augmented link,
+$\Gamma_T(L)$ is simply the link projection $K$,
+and in fact $\Gamma_T(L) = \Gamma_B(L)$.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The following figures is an example which decomposes the link (C) of Figure
@@ -263,6 +304,8 @@ circle bounds a disk} \end{figure}
 	Left: The top torihedron.
 	Right: The bottom torihdron with rotation for face gluing.} \label{fig:top-bottom} \end{figure}
 
+
+\comment{
 \begin{remark}\label{cor:triangulation}
 The faces of one torihedron which do not correspond to a bow-tie glue to a
 corresponding face of the second torihedron to form bipyramids. One can add
@@ -273,124 +316,41 @@ stellation}. Stellating all the bipyramids of the decomposition obtained from
 Proposition \ref{p:tori_decomp} we obtained a triangulation of the
 complement of $L$ which is made up of {\it horizontal} edges (edges from the
 graph of the torihedra), {\it vertical} edges (edges from coning vertices of the
-the graph of the torihedra) and stellating edges.  \end{remark}
+the graph of the torihedra) and stellating edges.
+\end{remark}
+}
 
-{\it Proof.}  Using the decomposition from Proposition
+\comment{
+\begin{proof}[Proof of Remark 2.7]
+Using the decomposition from Proposition
 \ref{p:tori_decomp} we can add a stellation edge whose end points
-are $T^2 \times \{-1\}$ and $T^2 \times \{1\}$ which cut through faces of $T^2
-\times I$ which do not come from the augmentation disks like in \cite{CKP2}.
+are $\torus \times \{-1\}$ and $\torus \times \{1\}$ which cut through faces of $\torus \times I$ which do not come from the augmentation disks like in \cite{CKP2}.
 Since each face of the top torihedron gets glued to the bottom torihedron, we
 obtain bipyramids, and the stellation edge will decompose the bipyramids into
-tetrahedra. Then the link of the vertex  $T^2 \times \{1\}$ or $T^2 \times
-\{-1\}$ is the graph of the torihedron $T^2 \times [0,1)$ or $T^2 \times (-1,0]$
-respectively. \qed
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{From Extended Circle Patterns to polyhedra}
-
-In this section, we describe how to obtain a
-decomposition of a torihedron
-into hyperbolic ideal pyramids
-from a non-singular extended circle pattern.
-
-\begin{lemma}
-\label{l:circpattern_polyhedra}
-Suppose we have the graph of a torihedron.
-Given a non-singular extended circle pattern $c \in \CCC$ on the graph,
-such that all $\vphi_{\vec{e}} \in (0,\pi)$,
-there exists a decomposition of the torihedron
-into base-angled ideal pyramids (TODO make sure it's been defined) such that
-	\begin{itemize}
-		\item each interior edge of the torihedron has dihedral angles sum to $2\pi$;
-		\item each boundary edge $e$ of the torihedron has dihedral angles sum to
-			$\pi - \theta_e$.
-	\end{itemize}
-\end{lemma}
-
-\begin{proof}
-For each directed edge $\vec{e} \in \vec{E}$,
-construct the isosceles triangle $T_{\vec{e}}$
-with equal sides of length $r_{f_{\vec{e}}}$ and
-angle $2\tilde{\vphi}_{\vec{e}}$ subtended between them,
-where $\tilde{\vphi}_{\vec{e}} = \vphi_{\vec{e}}$
-if $\vphi_{\vec{e}}$ if it is acute,
-and = $\pi - \vphi_{\vec{e}}$ otherwise.
-(TODO draw figure?)
-
-
-Let $f \in F$ be a face.
-We construct a Euclidean polygon $\Pol_f$ as follows.
-If $\vphi_{\vec{e}} \leq \pi/2$ for all $\vec{e} \in \del f$,
-i.e. if $f$ is convex, then 
-the $T_{\vec{e}}$ for $\vec{e}\in \del f$
-fit together into $\Pol_f$.
-If not, suppose $\vphi_{\vec{e}} > \pi/2$
-for $\vec{e} = \vec{e_1}$, 
-and $\leq \pi/2$ for $\vec{e} = \vec{e_2},\ldots \vec{e_k} \in \del f$.
-Then put $T_{\vec{e_2}},\ldots,T_{\vec{e_k}}$ together as above,
-creating a $(k+1)$-gon,
-then subtract $T_{\vec{e_1}}$ from it to form $\Pol_f$.
-
-Thus, to each face, we associate the Euclidean polygon $\Pol_f$.
-If $v$ is the vertex of $\Pol_f$ between $e_i$ and $e_{i+1}$,
-then the angle at $v$ is
-$\pi - \vphi_{\vec{e_i}} - \vphi_{\vec{e_{i+1}}}$.
-Then the non-vertex-singularity of $c$ guarantees that
-the sum of angles at $v$ of $\Pol_f$, for faces $f$ containing $v$,
-is $2\pi$.
-%; in other words, $\Pol_f$ glue along edges
-
-
-View the Euclidean plane as the boundary of the upper-half space.
-Then $\Pol_f$ supports an ideal hyperbolic pyramid $P_f$.
-
-Clearly, these $P_f$'s, as abstract ideal tetrahedra,
-glue together into the torihedron (TODO rephrase).
-%The hyperbolic structure on $P_f$
-%in particular provide dihedral angles to each edge of $P_f$
-%which clearly satisfies the conditions of making $P_f$
-%a base-angled ideal pyramid.
-We need to check that the angles around each edge of
-the torihedron have the appropriate angles.
-
-
-Consider an interior edge $e$ of the pyramidal decomposition
-of the torihedron.
-It corresponds to a vertex $v$ of the graph.
-Note that the dihedral angle of the vertical edge
-at $v$ of $P_f$ is simply the angle at $v$ of $\Pol_f$;
-these sum to $2\pi$ over $f \ni v$.
-
-
-For a boundary edge $e$, the dihedral angles at $e$ of the $P_f$'s
-containing it are $\vphi_{\vec{e}}$ and $\vphi_{\cev{e}}$,
-which sum to $\theta_e$ by definition.
-
+tetrahedra. Then the link of the vertex  $\torus \times \{1\}$ or
+$\torus \times \{-1\}$ is the graph of the torihedron
+%$\torus \times [0,1)$ or
+%$\torus \times (-1,0]$ respectively.
 \end{proof}
+}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Hyperbolicity of Augmented Links}
-Thurston introduced a method for finding the unique hyperbolic metric for a given 3-manifold $M$ with boundary consisting of tori \cite{Thurston}. The idea was to triangulate the interior of $M$ into ideal tetrahedra and give those tetrahedra hyperbolic shapes (called shape parameters) that glue up coherently in $M$. The shape parameter of a tetrahedron is described by the cross-ratio of its four vertices on the sphere at infinity. Thurston had written down a system of gluing equations with shape parameters whose solutions correspond to the complete hyperbolic metric on the interior of $M$. Casson and Rivin separated gluing equations into a linear and non-linear part \cite{Casson-Rivin}. Angle structures is the linear part of Thurston's gluing equations, and what we will use to attain hyperbolicity of complements of augmented links in the thickened torus. 
+TODO refer to BS about theta's
+\begin{definition}
+An \emph{angled torihedron} $(\sT, \theta_\bullet^*)$
+is a torihedron $\sT$ with
+an assignment $\theta_e^* \in (0,\pi)$
+such that for each vertex $v \in G(\sT)$,
+$\sum_{e \ni v} \theta_e^* = (\deg(v) - 2)\pi$.
+We also denote $\theta_e = \pi - \theta_e^*$,
+so $\sum_{e \ni v} \theta_e = 2\pi$;
+we refer to $\theta_e$ as the exterior angle
+and $\theta_e$ as the interior angle.
+\end{definition}
 
-\begin{define}
-Let $M$ be an orientable 3–manifold with boundary consisting of tori. An angle structure on an ideal triangulation $\tau$ is an assignment of an (internal) dihedral angle to each edge of each tetrahedron, such that opposite
-edges carry the same dihedral angle, and such that
-\begin{itemize}
-\item all angles lie in the range $(0,\pi)$,
-\item around each ideal vertex of a tetrahedron, the dihedral angles sum to $\pi$
-\item around each edge of $M$, the dihedral angles sum to $2\pi$.
-\end{itemize}
-\end{define}
 
-\begin{theorem}\cite{Casson-Rivin}\label{thm:Casson-Rivin}
-Let $M$ be a 3-manifold admitting an angle structure. Then $M$ is hyperbolic.
-\end{theorem}
-
-For a hyperbolic link $K$ in $T^2 \times I$, we produce sufficient conditions on augmentations such that the resulting link obtained from augmenting $K$ is hyperbolic. The idea is to start with a graph from the torihedral decomposition of the link $K$ which will give us a graph on each torihedron with $\pi/2$ edges \cite{CKP2}. Then by results of \cite{BandS} there exist a corresponding right-angled circle pattern. We then consider the augmented link $L$ and its torihedral decomposition from Proposition \ref{p:tori_decomp} with a corresponding ``degenerate" circle pattern. We deform this degenerate circle pattern into a ``proper" circle pattern which will give us a polyhedral decomposition of $(T^2 \times I)-L$ with angles of the torihedra in our torihedral decomposition. Which we can further decompose into tetrahedra with angles satisfying conditions of an angle structure. 
-
+One may ask for the pyramidal decomposition of a torihedron
+to ``respect" angles. The following definitions make sense of this.
 
 \begin{define}
 An \emph{angled ideal tetrahedron} is an ideal tetrahedron with an assignment of a dihedral angle
@@ -418,6 +378,26 @@ make it a base-angled ideal pyramid
 (TODO probably vice-versa?)
 Also, an angled ideal tetrahedron is simply a base-angled ideal pyramid
 with base a triangle, and with no preferred face.
+
+\begin{definition}
+%TODO: this definition should come after base-angled pyramid
+An \emph{angle splitting} of an angled torihedron $(\sT,\theta_\bullet^*)$
+is a splitting of $\theta_e^* = \vphi_{\vec{e}} + \vphi_{\cev{e}}$
+for each edge $e$,
+such that for each face $f$,
+$\sum_{\vec{e} \in \del f} \vphi_{\vec{e}}^* = \pi$.
+
+Equivalently, an angle splitting is a decomposition of
+$\sT$ into base-angled pyramids,
+one for each faceTODO such that
+for each boundary edge $e$ of $\sT$,
+the dihedral angles from the two adjacent pyramids
+add to $\theta_e^*$.
+\end{definition}
+
+
+TODO check the feasible flow stuff.
+
 
 \begin{lemma}
 %Let $P_n$ be an ideal pyramid whose base is an $n$-gon and suppose,
@@ -467,6 +447,42 @@ it is similar for $j = i+2$.
 
 See Figure \ref{TODO}
 \end{proof}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hyperbolicity of Augmented Links}
+Thurston introduced a method for finding the unique hyperbolic metric for a given 3-manifold $M$ with boundary consisting of tori \cite{Thurston}. The idea was to triangulate the interior of $M$ into ideal tetrahedra and give those tetrahedra hyperbolic shapes (called shape parameters) that glue up coherently in $M$. The shape parameter of a tetrahedron is described by the cross-ratio of its four vertices on the sphere at infinity. Thurston had written down a system of gluing equations with shape parameters whose solutions correspond to the complete hyperbolic metric on the interior of $M$. Casson and Rivin separated gluing equations into a linear and non-linear part \cite{Casson-Rivin}. Angle structures is the linear part of Thurston's gluing equations, and what we will use to attain hyperbolicity of complements of augmented links in the thickened torus. 
+
+\begin{define}
+Let $M$ be an orientable 3–manifold with boundary consisting of tori. An angle structure on an ideal triangulation $\tau$ is an assignment of an (internal) dihedral angle to each edge of each tetrahedron, such that opposite
+edges carry the same dihedral angle, and such that
+\begin{itemize}
+\item all angles lie in the range $(0,\pi)$,
+\item around each ideal vertex of a tetrahedron, the dihedral angles sum to $\pi$
+\item around each edge of $M$, the dihedral angles sum to $2\pi$.
+\end{itemize}
+\end{define}
+
+\begin{theorem}\cite{Casson-Rivin}\label{thm:Casson-Rivin}
+Let $M$ be a 3-manifold admitting an angle structure. Then $M$ is hyperbolic.
+\end{theorem}
+
+For a hyperbolic link $K$ in $\torus \times I$, we produce sufficient conditions
+on augmentations such that the resulting link obtained from augmenting $K$ is
+hyperbolic. The idea is to start with a graph from the torihedral decomposition
+of the link $K$ which will give us a graph on each torihedron with $\pi/2$ edges
+\cite{CKP2}. Then by results of \cite{BandS} there exist a corresponding
+right-angled circle pattern. We then consider the augmented link $L$ and its
+torihedral decomposition from Proposition \ref{p:tori_decomp} with a
+corresponding ``degenerate" circle pattern. We deform this degenerate circle
+pattern into a ``proper" circle pattern which will give us a polyhedral
+decomposition of $(\torus \times I)-L$ with angles of the torihedra in our
+torihedral decomposition. Which we can further decompose into tetrahedra with
+angles satisfying conditions of an angle structure. 
+
+
 
 \begin{define}
 We say an augmentation is \emph{right-augmented} if, when both strands are
@@ -711,6 +727,92 @@ part 3: Use proposition to get circle pattern to get polyhedral decomposition of
 part 4: get triangulation.  
 
 \end{proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{From Extended Circle Patterns to polyhedra}
+
+In this section, we describe how to obtain a
+decomposition of a torihedron
+into hyperbolic ideal pyramids
+from a non-singular extended circle pattern.
+
+\begin{lemma}
+\label{l:circpattern_polyhedra}
+Suppose we have the graph of a torihedron.
+Given a non-singular extended circle pattern $c \in \CCC$ on the graph,
+such that all $\vphi_{\vec{e}} \in (0,\pi)$,
+there exists a decomposition of the torihedron
+into base-angled ideal pyramids (TODO make sure it's been defined) such that
+	\begin{itemize}
+		\item each interior edge of the torihedron has dihedral angles sum to $2\pi$;
+		\item each boundary edge $e$ of the torihedron has dihedral angles sum to
+			$\pi - \theta_e$.
+	\end{itemize}
+\end{lemma}
+
+\begin{proof}
+For each directed edge $\vec{e} \in \vec{E}$,
+construct the isosceles triangle $T_{\vec{e}}$
+with equal sides of length $r_{f_{\vec{e}}}$ and
+angle $2\tilde{\vphi}_{\vec{e}}$ subtended between them,
+where $\tilde{\vphi}_{\vec{e}} = \vphi_{\vec{e}}$
+if $\vphi_{\vec{e}}$ if it is acute,
+and = $\pi - \vphi_{\vec{e}}$ otherwise.
+(TODO draw figure?)
+
+
+Let $f \in F$ be a face.
+We construct a Euclidean polygon $\Pol_f$ as follows.
+If $\vphi_{\vec{e}} \leq \pi/2$ for all $\vec{e} \in \del f$,
+i.e. if $f$ is convex, then 
+the $T_{\vec{e}}$ for $\vec{e}\in \del f$
+fit together into $\Pol_f$.
+If not, suppose $\vphi_{\vec{e}} > \pi/2$
+for $\vec{e} = \vec{e_1}$, 
+and $\leq \pi/2$ for $\vec{e} = \vec{e_2},\ldots \vec{e_k} \in \del f$.
+Then put $T_{\vec{e_2}},\ldots,T_{\vec{e_k}}$ together as above,
+creating a $(k+1)$-gon,
+then subtract $T_{\vec{e_1}}$ from it to form $\Pol_f$.
+
+Thus, to each face, we associate the Euclidean polygon $\Pol_f$.
+If $v$ is the vertex of $\Pol_f$ between $e_i$ and $e_{i+1}$,
+then the angle at $v$ is
+$\pi - \vphi_{\vec{e_i}} - \vphi_{\vec{e_{i+1}}}$.
+Then the non-vertex-singularity of $c$ guarantees that
+the sum of angles at $v$ of $\Pol_f$, for faces $f$ containing $v$,
+is $2\pi$.
+%; in other words, $\Pol_f$ glue along edges
+
+
+View the Euclidean plane as the boundary of the upper-half space.
+Then $\Pol_f$ supports an ideal hyperbolic pyramid $P_f$.
+
+Clearly, these $P_f$'s, as abstract ideal tetrahedra,
+glue together into the torihedron (TODO rephrase).
+%The hyperbolic structure on $P_f$
+%in particular provide dihedral angles to each edge of $P_f$
+%which clearly satisfies the conditions of making $P_f$
+%a base-angled ideal pyramid.
+We need to check that the angles around each edge of
+the torihedron have the appropriate angles.
+
+
+Consider an interior edge $e$ of the pyramidal decomposition
+of the torihedron.
+It corresponds to a vertex $v$ of the graph.
+Note that the dihedral angle of the vertical edge
+at $v$ of $P_f$ is simply the angle at $v$ of $\Pol_f$;
+these sum to $2\pi$ over $f \ni v$.
+
+
+For a boundary edge $e$, the dihedral angles at $e$ of the $P_f$'s
+containing it are $\vphi_{\vec{e}}$ and $\vphi_{\cev{e}}$,
+which sum to $\theta_e$ by definition.
+
+\end{proof}
+
 
 \bibliographystyle{plain}
 \bibliography{references-ak}
