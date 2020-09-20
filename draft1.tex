@@ -10,6 +10,7 @@
 \newcommand{\thmref}[1]{Theorem \ref{#1}}
 \newcommand{\prpref}[1]{Proposition \ref{#1}}
 \newcommand{\lemref}[1]{Lemma \ref{#1}}
+\newcommand{\figref}[1]{Figure \ref{#1}}
 \newcommand{\comment}[1]{}
 
 
@@ -421,6 +422,12 @@ ideal tetrahedron in this triangulation such that
 \begin{proof}
 Induct on $n$; there is nothing to prove for the base case $n=3$.
 
+The proof is essentially given in \figref{f:ideal_pyramid_arg} below
+
+\begin{figure}
+\label{f:ideal_pyramid_arg}
+\includegraphics[height=8cm]{more_pictures/angle_split.png}
+\end{figure}
 Suppose the edges are labelled $e_i$,
 which goes between vertices $v_i$ and $v_{i+1}$,
 and suppose $e_i$ is assigned dihedral angle $\alpha_i$.
@@ -445,7 +452,6 @@ in $T$ and $\pi - \alpha_{i-1} - (\alpha_i + \alpha_{i+1})$ in $P_{n-1}$,
 which sum to $\pi - \alpha_i - \alpha_{i+1}$;
 it is similar for $j = i+2$.
 
-See Figure \ref{TODO}
 \end{proof}
 
 
@@ -487,9 +493,13 @@ angles satisfying conditions of an angle structure.
 \begin{define}
 We say an augmentation is \emph{right-augmented} if, when both strands are
 (locally) oriented such that they cross the augmentation disk in the same
-direction, the crossing is positive/a right-handed half-twist. See Figure
-\ref{TODO}
+direction, the crossing is positive/a right-handed half-twist.
+See \figref{right_left_aug.png}.
 We say an augmentation is \emph{left-augmented} if it is not right-augmented.
+\begin{figure}
+\label{f:right_left_aug}
+\includegraphics{more_pictures/right_left_aug.png}
+\end{figure}
 \end{define}
 
 We can recover $L$ from the link diagram of $K$
@@ -580,9 +590,15 @@ By \prpref{p:tori_decomp}, $\toruscomp{L}$ can be
 obtained by gluing two torihedra with graph $\Gamma_T(L)$ and $\Gamma_B(L)$.
 Recall that $\Gamma_T(L)$ is obtained from $\Gamma$ by some slight
 modifications, specifically by replacing augmented vertices with bow-ties.
-We assign angles to edges of the bow-ties as in TODO figure,
+We assign angles to edges of the bow-ties as in
+\figref{f:bowtie_angles},
 and leave untouched edges with the same assignment of $\pi/2$;
 we do the same for $\Gamma_B(L)$.
+
+\begin{figure}
+\label{f:bowtie_angles}
+\includegraphics{more_pictures/horizontal_bowtie.png}
+\end{figure}
 
 
 (Hmmm... might be misleading, I think $\Psi$ should be a cellular map
@@ -713,6 +729,15 @@ The only caveat is that if the procedure calls to add a new edge
 that would form a bigon with the existing edges,
 we just don't add it.
 
+See \figref{f:adding_edges}
+
+
+\begin{figure}
+\label{f:adding_edges}
+\includegraphics[width=5cm]{more_pictures/one_edge.png}
+\includegraphics[width=5cm]{more_pictures/two_edge.png}
+\includegraphics[width=5cm]{more_pictures/two_edge_many.png}
+\end{figure}
 
 TODO CONTINUE HERE do the $+$ and $-$ on the edges.
 
@@ -760,7 +785,14 @@ angle $2\tilde{\vphi}_{\vec{e}}$ subtended between them,
 where $\tilde{\vphi}_{\vec{e}} = \vphi_{\vec{e}}$
 if $\vphi_{\vec{e}}$ if it is acute,
 and = $\pi - \vphi_{\vec{e}}$ otherwise.
-(TODO draw figure?)
+
+\begin{figure}
+\includegraphics[width=8cm]{more_pictures/kite.png}
+\end{figure}
+\begin{figure}
+\includegraphics[width=5cm]{more_pictures/positive_angle.png}
+\includegraphics[width=5cm]{more_pictures/negative_angle.png}
+\end{figure}
 
 
 Let $f \in F$ be a face.
