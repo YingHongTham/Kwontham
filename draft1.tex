@@ -264,16 +264,16 @@ bow-tie as in Figure \ref{fig:falGluings}.
 
 \indent We repeat the steps for the bottom half of $\torus \times I$, $\torus \times
 (-1,0]$. Then we get two torihedra. The graph of each will come from
-crossing edges and, edges of the disk. Now, if there are half twists we will
+crossing edges and edges of the disk. Now, if there are half twists we will
 decompose the complement of the link the same way as if there are no half twists
-and we will identify the two bow-ties as in Figure \ref{fig:falGluings}. Finally
+and we will identify the two bow-ties as in Figure \ref{fig:falGluings}.
+Finally,
 we obtain the complement of the link by gluing the two torihedra with the gluing
 information given by identifying crossing edges and triangles of the bow-tie. We
 glue the faces of the torihedra which do not correspond to a bow-tie with a
-$\pi/n$ twist where $n$ is the number of sides of each face as in Figure
+$2\pi/n$ twist where $n$ is the number of sides of each face as in Figure
 \ref{fig:top-bottom} clockwise or counterclockwise.
 
-\end{proof}
 
 For future reference, we will denote the graph for the top and bottom
 torihedra by $\Gamma_T(L)$ and $\Gamma_B(L)$, respectively,
@@ -281,8 +281,9 @@ where both graphs are viewed from the cone point of the top torihedron
 $\torus \times \{1\}$.
 Note that if $L = K$ is the non-augmented link,
 $\Gamma_T(L)$ is simply the link projection $K$,
-and in fact $\Gamma_T(L) = \Gamma_B(L)$.
+and in fact $\Gamma_T(K) = \Gamma_B(K)$.
 
+\end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -340,13 +341,18 @@ TODO refer to BS about theta's
 \begin{definition}
 An \emph{angled torihedron} $(\sT, \theta_\bullet^*)$
 is a torihedron $\sT$ with
-an assignment $\theta_e^* \in (0,\pi)$
+an assignment $\theta_e^* \in [0,\pi]$
 such that for each vertex $v \in G(\sT)$,
 $\sum_{e \ni v} \theta_e^* = (\deg(v) - 2)\pi$.
 We also denote $\theta_e = \pi - \theta_e^*$,
 so $\sum_{e \ni v} \theta_e = 2\pi$;
 we refer to $\theta_e$ as the exterior angle
 and $\theta_e$ as the interior angle.
+
+
+We say $(\sT, \theta_\bullet^*)$ is \emph{degenerate}
+if $\theta_e^* = 0$ for some edge;
+we say it is \emph{non-degenerate} otherwise.
 \end{definition}
 
 
@@ -357,10 +363,13 @@ to ``respect" angles. The following definitions make sense of this.
 An \emph{angled ideal tetrahedron} is an ideal tetrahedron with an assignment of a dihedral angle
 to each edge, such that
 \begin{itemize}
-\item each dihedral angle is between 0 and $\pi$;
+\item each dihedral angle is in $[0, \pi]$;
 \item for each tetrahedron, opposite edges have equal dihedral angles;
 \item the three distinct angles sum to $\pi$.
 \end{itemize}
+
+We say a angled ideal tetrahedron is \emph{degenerate} if
+one dihedral angle is 0; we say it is \emph{non-degenerate} otherwise.
 \end{define}
 
 
@@ -368,15 +377,23 @@ to each edge, such that
 A \emph{base-angled ideal pyramid}
 is a pyramid whose base is an $n$-gon, $n \geq 3$,
 and each boundary edge $e_i$ of the base face is assigned a dihedral angle
-$\alpha_i > 0$ such that the sum is $\sum \alpha_i = 2\pi$.
+$\alpha_i \geq 0$ such that the sum is $\sum \alpha_i = 2\pi$.
 The vertical edge $e_i'$ that meets $e_i$ and $e_{i+1}$
 is automatically assigned the dihedral angle $\pi - \alpha_i - \alpha_{i+1}$.
+
+
+We say a base-angled ideal pyramid is \emph{degenerate} if
+$\alpha_i = 0$ for some $i$; we say it is \emph{non-degenerate} otherwise.
 \end{define}
+
 
 Clearly, the dihedral angles of an ideal hyperbolic pyramid
 make it a base-angled ideal pyramid
-(with $\alpha_i = \vphi_{e_i}$).
-(TODO probably vice-versa?)
+(with $\alpha_i = \vphi_{e_i}$);
+it is not hard to see that the converse is true:
+simply consider a circumsribed polygon such that the side $e_i$
+subtends an angle of $2\alpha_i$ at the center,
+and take the ideal hyperbolic pyramid over it in upper-half space.
 Also, an angled ideal tetrahedron is simply a base-angled ideal pyramid
 with base a triangle, and with no preferred face.
 
@@ -390,11 +407,13 @@ $\sum_{\vec{e} \in \del f} \vphi_{\vec{e}}^* = \pi$.
 
 Equivalently, an angle splitting is a decomposition of
 $\sT$ into base-angled pyramids,
-one for each faceTODO such that
+one for each face of $G(\sT)$, such that
 for each boundary edge $e$ of $\sT$,
 the dihedral angles from the two adjacent pyramids
 add to $\theta_e^*$.
 \end{definition}
+
+TODO same as [BS] ``coherent angle system'' or something.
 
 
 TODO check the feasible flow stuff.
@@ -440,11 +459,11 @@ The new face corresponding to $e'$ separates $P_n$ into
 an ideal tetrahedron $T$ and an ideal pyramid $P_{n-1}$.
 We assign the dihedral angle of $\pi - \alpha_i - \alpha_{i+1}$
 to $e'$ in $T$, and assign $\alpha_i + \alpha_{i+1}$ to $e'$ in $P_{n-1}$.
-Clearly the condition that the sum of dihedral angles are satisfied
+Clearly the sum of dihedral angles condition is satisfied
 in $T$ and $P_{n-1}$.
 It remains to check that the dihedral angles assigned to the vertical edges
 are correct.
-For the vertical edge associated $v_j$ for $j \neq i, i+2$,
+For the vertical edge associated to $v_j$ for $j \neq i, i+2$,
 there is nothing to check;
 for $j = i$, the dihedral angles are
 $\pi - \alpha_i - (\pi - \alpha_i - \alpha_{i-1})$
@@ -462,12 +481,12 @@ it is similar for $j = i+2$.
 Thurston introduced a method for finding the unique hyperbolic metric for a given 3-manifold $M$ with boundary consisting of tori \cite{Thurston}. The idea was to triangulate the interior of $M$ into ideal tetrahedra and give those tetrahedra hyperbolic shapes (called shape parameters) that glue up coherently in $M$. The shape parameter of a tetrahedron is described by the cross-ratio of its four vertices on the sphere at infinity. Thurston had written down a system of gluing equations with shape parameters whose solutions correspond to the complete hyperbolic metric on the interior of $M$. Casson and Rivin separated gluing equations into a linear and non-linear part \cite{Casson-Rivin}. Angle structures is the linear part of Thurston's gluing equations, and what we will use to attain hyperbolicity of complements of augmented links in the thickened torus. 
 
 \begin{define}
-Let $M$ be an orientable 3–manifold with boundary consisting of tori. An angle structure on an ideal triangulation $\tau$ is an assignment of an (internal) dihedral angle to each edge of each tetrahedron, such that opposite
-edges carry the same dihedral angle, and such that
+Let $M$ be an orientable 3-manifold with boundary consisting of tori. An angle
+structure on an ideal triangulation $\tau$ of $M$ is an assignment of a dihedral
+angle to each edge of each tetrahedron, such that
 \begin{itemize}
-\item all angles lie in the range $(0,\pi)$,
-\item around each ideal vertex of a tetrahedron, the dihedral angles sum to $\pi$
-\item around each edge of $M$, the dihedral angles sum to $2\pi$.
+\item each tetrahedron is a non-degenerate angled ideal tetrahedron,
+\item around each edge of $\tau$, the dihedral angles sum to $2\pi$.
 \end{itemize}
 \end{define}
 
@@ -532,7 +551,9 @@ so that for each face $f$ of the link projection of $K$,
 the augmentation sequence $\sigma_f$ has no $L$ adjacent to $R$.
 Then the TODO CONTINUE HERE
 \end{prop}
+}
 
+\comment{
 \begin{prop}
 Let $\Sigma$ be a closed surface with a cellular decomposition.
 Suppose we have labelled some edges by either $`+'$ or $`-'$,
@@ -560,6 +581,7 @@ $\overline{v_0 v_k}$, and label this edge by $`-'$.
 
 \textbf{Case 2}: $k = 2$ and . Then we cut $f$ along a new edge
 \end{proof}
+
 }
 
 
@@ -571,14 +593,79 @@ $\overline{v_0 v_k}$, and label this edge by $`-'$.
 %\end{theorem}
 \begin{theorem}
 Let $K$ be a weakly prime, alternating link whose diagram has no bigons.
-Let $L$ be a link obtained from augmenting $K$ such that
-no edge spans left- and right-augmented vertices.
+Let $L$ be a link obtained from augmenting $K$.
+%such that
+%no edge spans left- and right-augmented vertices.
 Then $L$ is hyperbolic.
 \end{theorem}
 
+\begin{proof}
+By \cite[Theorem 7.5]{CKP2},
+(as discussed in \prpref{p:tori_decomp},)
+$\toruscomp{K}$ can be decomposed
+into two torihedra $\sT_T$ and $\sT_B$,
+whose graphs are $\Gamma_T(K), \Gamma_B(K)$;
+viewed from the top cone point $\torus \times \{1\}$,
+they are both the same as the projection graph of $K$.
+%which we denote by $\Gamma$.
+We make them non-degenerate angled torihedra by assigning $\theta^* = \pi/2$
+for all edges.
+
+We obtain an angle-splitting by applying the
+Feasible Flow theorem TODO as follows:
+Consider the directed graph whose vertex set is
+$E \cup F \cup \{\otimes\}$,
+where $E, F$ are the set of edges, faces in $\Gamma_T(K)$,
+and $\otimes$ is some abstract vertex.
+There is a directed edge
+\begin{itemize}
+\item $\otimes \to f$ for each face $f\in F$, with capacity interval
+	$[\pi, \infty)$,
+\item $f \to e$ for each edge $e \in \del f$,
+	with capacity interval $[\veps, \infty)$
+	for some $\veps>0$ to be set later,
+\item $e \to \otimes$ for each edge $e$, with capacity interval
+	$(-\infty, \pi/2]$.
+\end{itemize}
+By TODO lemma about $2|F'| \leq |E'|$,
+and taking $\veps < \pi / |\text{max face size}|$,
+the feasible flow condition is satisfied,
+so a feasible flow exists.
+Since $2|F| = |E|$, the capacity interval restrictions
+on the flow at $\otimes$ is sharp, so out-edges at $\otimes$
+have flow $\pi$ and in-edges at $\otimes$ have flow $\pi/2$.
+Then the flow $f \to e$ gives us $\vphi_{\vec{e}}$,
+where $f$ is the face to the left of $\vec{e}$.
+(we adapted this argument from \cite{BandS}).
+
+
+By \prpref{p:tori_decomp}, $\toruscomp{L}$ can be
+obtained by gluing two torihedra $\sT_T(L),\sT_B(L)$
+with graphs $\Gamma_T(L),\Gamma_B(L)$.
+We make them degenerate angled torihedra by assigning $\theta^*$'s
+to edges of the bow-ties as in \figref{f:bowtie_angles},
+and assign $\pi/2$ to all other edges.
+
+
+\begin{figure}
+\label{f:bowtie_angles}
+\includegraphics[width=5cm]{more_pictures/horizontal_bowtie.png}
+\end{figure}
+
+
+Furthermore, we can obtain an angle-splitting of $\sT_T(L)$
+(and similarly $\sT_B(L)$) by modifying the angle-splitting
+for $\sT_T(K)$.
+
+Hmm
+
+
+
+\end{proof}
+
 
 \begin{proof}
-By ckp [TODO look up precise thm number],
+By \cite[Theorem 7.5]{CKP2},
 $\toruscomp{K}$ can be decomposed
 into two torihedra whose graphs are the projection graph of $K$,
 which we denote by $\Gamma$.
@@ -595,10 +682,10 @@ We assign angles to edges of the bow-ties as in
 and leave untouched edges with the same assignment of $\pi/2$;
 we do the same for $\Gamma_B(L)$.
 
-\begin{figure}
-\label{f:bowtie_angles}
-\includegraphics{more_pictures/horizontal_bowtie.png}
-\end{figure}
+%\begin{figure}
+%\label{f:bowtie_angles}
+%\includegraphics[width=5cm]{more_pictures/horizontal_bowtie.png}
+%\end{figure}
 
 
 (Hmmm... might be misleading, I think $\Psi$ should be a cellular map

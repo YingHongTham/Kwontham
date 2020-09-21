@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  20 SEP 2020 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  20 SEP 2020 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,69 +587,72 @@ Overfull \hbox (8.11192pt too wide) in paragraph at lines 256--261
  []
 
 [3 <./crossingArc.png> <./crossingPush.png>]
-<fig-3.png, id=42, 1204.5pt x 1204.5pt>
+<fig-3.png, id=41, 1204.5pt x 1204.5pt>
 File: fig-3.png Graphic file (type png)
 <use fig-3.png>
-Package pdftex.def Info: fig-3.png  used on input line 291.
+Package pdftex.def Info: fig-3.png  used on input line 292.
 (pdftex.def)             Requested size: 85.35284pt x 85.35826pt.
-<fig-4.png, id=43, 2051.665pt x 1204.5pt>
+<fig-4.png, id=42, 2051.665pt x 1204.5pt>
 File: fig-4.png Graphic file (type png)
 <use fig-4.png>
-Package pdftex.def Info: fig-4.png  used on input line 291.
+Package pdftex.def Info: fig-4.png  used on input line 292.
 (pdftex.def)             Requested size: 145.38435pt x 85.35826pt.
-<fig-5.png, id=44, 3346.5025pt x 1204.5pt>
+<fig-5.png, id=43, 3346.5025pt x 1204.5pt>
 File: fig-5.png Graphic file (type png)
 <use fig-5.png>
-Package pdftex.def Info: fig-5.png  used on input line 295.
+Package pdftex.def Info: fig-5.png  used on input line 296.
 (pdftex.def)             Requested size: 237.13866pt x 85.35826pt.
-<fig-6.png, id=45, 3519.1475pt x 1204.5pt>
+<fig-6.png, id=44, 3519.1475pt x 1204.5pt>
 File: fig-6.png Graphic file (type png)
 <use fig-6.png>
-Package pdftex.def Info: fig-6.png  used on input line 299.
+Package pdftex.def Info: fig-6.png  used on input line 300.
 (pdftex.def)             Requested size: 249.37257pt x 85.35826pt.
-<top-bottom.png, id=46, 2487.2925pt x 1204.5pt>
-File: top-bottom.png Graphic file (type png)
-<use top-bottom.png>
-Package pdftex.def Info: top-bottom.png  used on input line 304.
-(pdftex.def)             Requested size: 176.25363pt x 85.35826pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<top-bottom.png, id=45, 2487.2925pt x 1204.5pt>
+File: top-bottom.png Graphic file (type png)
+<use top-bottom.png>
+Package pdftex.def Info: top-bottom.png  used on input line 305.
+(pdftex.def)             Requested size: 176.25363pt x 85.35826pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [4 <./falGluing1.png> <./falGluing2.png> <./fig-3.png> <./fig-4.png> <./fig-5.p
-ng> <./fig-6.png>]
-<more_pictures/angle_split.png, id=57, 502.87875pt x 672.5125pt>
+ng>] [5 <./fig-6.png> <./top-bottom.png>]
+<more_pictures/angle_split.png, id=65, 502.87875pt x 672.5125pt>
 File: more_pictures/angle_split.png Graphic file (type png)
 <use more_pictures/angle_split.png>
-Package pdftex.def Info: more_pictures/angle_split.png  used on input line 429.
+Package pdftex.def Info: more_pictures/angle_split.png  used on input line 448.
 
 (pdftex.def)             Requested size: 170.20918pt x 227.62204pt.
- [5 <./top-bottom.png>] [6 <./more_pictures/angle_split.png>]
+ [6 <./more_pictures/angle_split.png>]
 
 LaTeX Warning: Reference `right_left_aug.png' on page 7 undefined on input line
- 497.
+ 516.
 
 <more_pictures/right_left_aug.png, id=70, 255.95625pt x 192.72pt>
 File: more_pictures/right_left_aug.png Graphic file (type png)
 <use more_pictures/right_left_aug.png>
 Package pdftex.def Info: more_pictures/right_left_aug.png  used on input line 5
-01.
+20.
 (pdftex.def)             Requested size: 255.95561pt x 192.71951pt.
-<more_pictures/horizontal_bowtie.png, id=71, 409.53pt x 334.24875pt>
+[7 <./more_pictures/right_left_aug.png>]
+<more_pictures/horizontal_bowtie.png, id=76, 409.53pt x 334.24875pt>
 File: more_pictures/horizontal_bowtie.png Graphic file (type png)
 <use more_pictures/horizontal_bowtie.png>
 Package pdftex.def Info: more_pictures/horizontal_bowtie.png  used on input lin
-e 600.
-(pdftex.def)             Requested size: 409.52899pt x 334.24792pt.
-[7 <./more_pictures/right_left_aug.png>] [8 <./more_pictures/horizontal_bowtie.
-png>]
+e 652.
+(pdftex.def)             Requested size: 142.26378pt x 116.11157pt.
+ [8 <./more_pictures/horizontal_bowtie.png>]
 
-LaTeX Warning: Reference `p:nghd_lift' on page 9 undefined on input line 666.
+LaTeX Warning: Reference `p:nghd_lift' on page 9 undefined on input line 753.
 
 
-LaTeX Warning: Reference `p:nghd_lift' on page 9 undefined on input line 680.
+LaTeX Warning: Reference `p:nghd_lift' on page 9 undefined on input line 767.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 682
+LaTeX Font Info:    Trying to load font information for U+euf on input line 769
 .
 (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -657,43 +660,45 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 <more_pictures/one_edge.png, id=81, 350.30875pt x 339.2675pt>
 File: more_pictures/one_edge.png Graphic file (type png)
 <use more_pictures/one_edge.png>
-Package pdftex.def Info: more_pictures/one_edge.png  used on input line 737.
+Package pdftex.def Info: more_pictures/one_edge.png  used on input line 824.
 (pdftex.def)             Requested size: 142.26378pt x 137.78049pt.
 <more_pictures/two_edge.png, id=82, 370.38374pt x 323.2075pt>
 File: more_pictures/two_edge.png Graphic file (type png)
 <use more_pictures/two_edge.png>
-Package pdftex.def Info: more_pictures/two_edge.png  used on input line 738.
+Package pdftex.def Info: more_pictures/two_edge.png  used on input line 825.
 (pdftex.def)             Requested size: 142.26378pt x 124.14183pt.
 <more_pictures/two_edge_many.png, id=83, 441.65pt x 452.69125pt>
 File: more_pictures/two_edge_many.png Graphic file (type png)
 <use more_pictures/two_edge_many.png>
-Package pdftex.def Info: more_pictures/two_edge_many.png  used on input line 73
-9.
+Package pdftex.def Info: more_pictures/two_edge_many.png  used on input line 82
+6.
 (pdftex.def)             Requested size: 142.26378pt x 145.81738pt.
 
-Underfull \vbox (badness 6236) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./more_pictures/one_edge.png> <./more_pictures/two_edge.png> <./more_pictu
-res/two_edge_many.png>]
-<more_pictures/kite.png, id=92, 518.93875pt x 498.86375pt>
+ [9]
+<more_pictures/kite.png, id=89, 518.93875pt x 498.86375pt>
 File: more_pictures/kite.png Graphic file (type png)
 <use more_pictures/kite.png>
-Package pdftex.def Info: more_pictures/kite.png  used on input line 790.
+Package pdftex.def Info: more_pictures/kite.png  used on input line 877.
 (pdftex.def)             Requested size: 227.62204pt x 218.81564pt.
-<more_pictures/positive_angle.png, id=93, 384.43625pt x 423.5825pt>
+<more_pictures/positive_angle.png, id=90, 384.43625pt x 423.5825pt>
 File: more_pictures/positive_angle.png Graphic file (type png)
 <use more_pictures/positive_angle.png>
-Package pdftex.def Info: more_pictures/positive_angle.png  used on input line 7
-93.
+Package pdftex.def Info: more_pictures/positive_angle.png  used on input line 8
+80.
 (pdftex.def)             Requested size: 142.26378pt x 156.75539pt.
-<more_pictures/negative_angle.png, id=94, 423.5825pt x 424.58624pt>
+<more_pictures/negative_angle.png, id=91, 423.5825pt x 424.58624pt>
 File: more_pictures/negative_angle.png Graphic file (type png)
 <use more_pictures/negative_angle.png>
-Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 7
-94.
+Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 8
+81.
 (pdftex.def)             Requested size: 142.26378pt x 142.60168pt.
- [10 <./more_pictures/kite.png>] (./draft1.bbl) [11 <./more_pictures/positive_a
-ngle.png> <./more_pictures/negative_angle.png>] (./draft1.aux)
+
+[10 <./more_pictures/one_edge.png> <./more_pictures/two_edge.png> <./more_pictu
+res/two_edge_many.png>] (./draft1.bbl [11 <./more_pictures/kite.png> <./more_pi
+ctures/positive_angle.png> <./more_pictures/negative_angle.png>]) [12]
+(./draft1.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -701,11 +706,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  13773 strings out of 480478
  261502 string characters out of 5905959
- 478747 words of memory out of 5000000
+ 478750 words of memory out of 5000000
  29360 multiletter control sequences out of 15000+600000
  543521 words of font info for 66 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,60p,898b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,60p,898b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -721,10 +726,10 @@ e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
 usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft1.pdf (11 pages, 1667328 bytes).
+Output written on draft1.pdf (12 pages, 1670673 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 165 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
