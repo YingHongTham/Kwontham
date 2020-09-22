@@ -420,6 +420,7 @@ TODO check the feasible flow stuff.
 
 
 \begin{lemma}
+\label{l:pyramid_decomp}
 %Let $P_n$ be an ideal pyramid whose base is an $n$-gon and suppose,
 %\begin{itemize}
 %\item each boundary edge of the base face is assigned a dihedral angle $\alpha_i$ such that for adjacent edges, $\alpha_i + \alpha_{i+1} < \pi$;
@@ -447,7 +448,7 @@ The proof is essentially given in \figref{f:ideal_pyramid_arg} below
 \label{f:ideal_pyramid_arg}
 \includegraphics[height=8cm]{more_pictures/angle_split.png}
 \end{figure}
-Suppose the edges are labelled $e_i$,
+Suppose the edges are labeled $e_i$,
 which goes between vertices $v_i$ and $v_{i+1}$,
 and suppose $e_i$ is assigned dihedral angle $\alpha_i$.
 Let $e'$ be a new edge addeed to the base face of $P_n$
@@ -525,77 +526,11 @@ We can recover $L$ from the link diagram of $K$
 together with labels at vertices indicating left- or right-augmentation.
 
 
-\comment{
-\begin{define}
-Given a face $f$ of the original link diagram the \emph{augmentation sequence}
-of $f$, denoted $\sigma_f$, is a cyclical sequence of symbols $0, L, R$ indexed
-by vertices of $f$ going counter-clockwise, where, for $v \in \partial f$, the
-$v$-th element is
-\[
-\sigma_f^v = 
-\begin{cases}
-0 \text{ if $v$ is not augmented} \\
-L \text{ if $v$ is left-augmented} \\
-R \text{ if $v$ is right-augmented}
-\end{cases}
-\]
-\end{define}
-}
 
 
-\comment{
-
-\begin{prop}
-Suppose $L$ is obtained from augmenting $K$,
-so that for each face $f$ of the link projection of $K$,
-the augmentation sequence $\sigma_f$ has no $L$ adjacent to $R$.
-Then the TODO CONTINUE HERE
-\end{prop}
-}
-
-\comment{
-\begin{prop}
-Let $\Sigma$ be a closed surface with a cellular decomposition.
-Suppose we have labelled some edges by either $`+'$ or $`-'$,
-such that for each face $f$,
-\begin{itemize}
-	\item no two adjacent edges have the same label,
-	\item the length of consecutive labelled edges is at least 2.
-\end{itemize}
-Then one can further decompose faces along new edges,
-and extend the labelling of edges,
-such that every vertex is adjacent to the same number of
-$`+'$'s and $`-'$'s.
-\end{prop}
-
-\begin{proof}
-Consider a face $f$ and consider a maximal contiguous sequence
-of labelled edges, $e_1,\ldots,e_k$ in $\del f$.
-they span the vertices $v_0,\ldots,v_k$.
-Suppose $e_1$ is labelled $`+'$ (the other case is similar).
-Then $e_2$ is labelled $`-'$, $e_3$ is $`+'$, and so on.
-\end{proof}
-
-\textbf{Case 1}: $k$ is odd. Then we cut $f$ along a new edge
-$\overline{v_0 v_k}$, and label this edge by $`-'$.
-
-\textbf{Case 2}: $k = 2$ and . Then we cut $f$ along a new edge
-\end{proof}
-
-}
-
-
-%\begin{theorem}
-%Let $K$ be a weakly prime, alternating link with diagram $D$ with no bigons. Let
-%$L$ be a link obtained from augmenting $K$ such that there exist no sequence of
-%augmentations where a Left augmentation is adjacent to a Right augmentation.
-%Then $L$ is hyperbolic.
-%\end{theorem}
 \begin{theorem}
 Let $K$ be a weakly prime, alternating link whose diagram has no bigons.
 Let $L$ be a link obtained from augmenting $K$.
-%such that
-%no edge spans left- and right-augmented vertices.
 Then $L$ is hyperbolic.
 \end{theorem}
 
@@ -645,6 +580,8 @@ with graphs $\Gamma_T(L),\Gamma_B(L)$.
 We make them degenerate angled torihedra by assigning $\theta^*$'s
 to edges of the bow-ties as in \figref{f:bowtie_angles},
 and assign $\pi/2$ to all other edges.
+It is easy to check that upon gluing,
+each edge has sum of dihedral angles ($\theta^*$) equals $2\pi$.
 
 
 \begin{figure}
@@ -655,136 +592,36 @@ and assign $\pi/2$ to all other edges.
 
 Furthermore, we can obtain an angle-splitting of $\sT_T(L)$
 (and similarly $\sT_B(L)$) by modifying the angle-splitting
-for $\sT_T(K)$.
-
-Hmm
-
+for $\sT_T(K)$;
+this is shown in \figref{TODO}.
 
 
-\end{proof}
+Now we have a decomposition of the two torihedra into
+degenerate base-angled pyramids.
+However, we need the pyramids to be non-degenerate,
+so we first need to modify the angles and graph on the torihedra
+to make all $\theta^*$ nonzero.
 
 
-\begin{proof}
-By \cite[Theorem 7.5]{CKP2},
-$\toruscomp{K}$ can be decomposed
-into two torihedra whose graphs are the projection graph of $K$,
-which we denote by $\Gamma$.
-By assigning angles $\pi/2$ to each edge of the torihedra graphs,
-we can invoke \cite[Theorem 3]{BandS} to give us a circle pattern
-on the projection graph.
-
-By \prpref{p:tori_decomp}, $\toruscomp{L}$ can be
-obtained by gluing two torihedra with graph $\Gamma_T(L)$ and $\Gamma_B(L)$.
-Recall that $\Gamma_T(L)$ is obtained from $\Gamma$ by some slight
-modifications, specifically by replacing augmented vertices with bow-ties.
-We assign angles to edges of the bow-ties as in
-\figref{f:bowtie_angles},
-and leave untouched edges with the same assignment of $\pi/2$;
-we do the same for $\Gamma_B(L)$.
-
-%\begin{figure}
-%\label{f:bowtie_angles}
-%\includegraphics[width=5cm]{more_pictures/horizontal_bowtie.png}
-%\end{figure}
-
-
-(Hmmm... might be misleading, I think $\Psi$ should be a cellular map
-$\Gamma_T(L) \to \Gamma_T(K)$, but the latter happens to be
-same as $\Gamma$, so that's why it's confusing!)
-We can think of a bow-tie in $\Gamma_T(L)$ as ``thickened edges" in the
-following sense: consider the bow-tie at a crossing $v$,
-and let the edges $e,e'$ of $\Gamma$ at $v$
-be associated to the over-strand of $K$.
-There is a cellular map from each triangle of the bow-tie
-on to $e, e'$ that identifies the $\pi/2$- and 0-labelled edges,
-and collapses the $\pi$-labelled edges onto $v$
-(TODO see same figure).
-It is not hard to see that this map extends to a cellular map
-$\Psi: \Gamma_T(L) \to \Gamma$,
-and in fact extends to the faces as well.
-A similar story applies to $\Gamma_B$.
-
-
-Now we construct an extended circle pattern for $\Gamma_T(L)$.
-We will give a more precise description,
-but let us first give the picture.
-Under $\Psi$,
-each face $f$ of $\Gamma_T(L)$ that is not in a bow-tie
-is identified with a face $\bar{f}$ of $\Gamma$,
-so we assign the circle of $\bar{f}$ to $f$;
-each triangle face $f$ in a bow-tie is collapsed to an edge,
-and we assign to $f$ the circle circumscribing the
-face of $\Gamma$ that meets $f$ along the 0-labelled edge.
-This is a ``degenerate" circle pattern that can be thought of as
-the limit of some (singular) circle patterns.
-
-
-Let us make this more precise,
-describing an extended circle pattern $c$
-on $\Gamma_T(L)$.
-Let the circle pattern for $\Gamma$ be given by
-$\bar{c} = ((r_f),(\vphi_{\vec{e}}))$,
-where recall $r_f$ is the radius of the circle $C_f$
-circumscribing $f$ and $\vphi_{\vec{e}}$
-is half the angle subtended by the edge $e$
-at the center of $C_f$.
-For non-bow-tie faces $f$ of $\Gamma_T(L)$,
-$\Psi$ identifies $f$ with the face $\bar{f}$ of $\Gamma$.
-We set $r_f(c) = r_{\bar{f}}(\bar{c})$.
-For $\vphi$ of its edges,
-if $\vec{e} \in \del f$ is labelled $\pi$,
-we set $\vphi_{\vec{e}} = 0$;
-otherwise, $\Psi$ identifies $\vec{e}$
-with the edge $\vec{e}'$ in $\Gamma$,
-then we set $\vphi_{\vec{e}}(c) = \vphi_{\vec{e}'}(\bar{c})$.
-
-
-For a triangular face $f$ of a bow tie,
-let $\vec{e}_0, \vec{e}_{\pi/2}, \vec{e}_{\pi}$
-be the edges of $f$ labelled $0,\pi/2, \pi$ respectively.
-We set $r_f(c) = r_{f'}(c)$,
-where $f'$ is the face adjacent to $f$ across $e_0$.
-Then we set
-$\vphi_{\vec{e}_{\pi/2}} = \vphi_{\cev{e}_0} = \pi - \vphi_{\vec{e}_0}$
-and $\vphi_{\vec{e}_{\pi}} = 0$.
-
-
-It can be easily checked that $c$ satisfies the conditions of
-\prpref{p:nghd_lift}.
-We would like to apply \lemref{l:circpattern_polyhedra}
-to obtain a polyhedral decomposition of the torihedra,
-but there are edges with $\vphi_{\vec{e}}$
-(specifically, those with $\theta_e = \pi$).
-%We want a deformation of $\theta_{\bullet}$ of $c$
-%that remains vertex non-singular,
-%and gives us an honest ?? circle pattern.
-Hence, we want to find a vector $a = \sum a^e \ddd{\theta_e}$
-in the tangent space of $\Theta(c)$
-that maintains vertex non-singularity,
-i.e.  such that $\sum_{e \ni v} a^e = 0$ for all vertices $v$,
-and for edges $e$ with $\theta_e = \pi$,
-we have $a^e < 0$.
-By \prpref{p:nghd_lift}, there exists $\veps > 0$
-such that the path $\gamma(t) = \Theta(c) + t \cdot a$, $t\in [0,\veps]$,
-in $\TTT$ can be lifted to a path $\tilde{\gamma}$ in $\CCC$.
-
-
-To find such $a$, we need to modify $\Gamma_T(L)$ by
-cutting faces along new edges.
-Consider a face $f$ that is not in a bow-tie.
-Suppose the corresponding face $\bar{f}$ of $\Gamma$
+Consider a face $f$ of $\Gamma_T(L)$ that is not in a bow-tie.
+Suppose the corresponding face $\bar{f}$ of $\Gamma$,
+the projection graph (which is equal to $\Gamma_T(K)$),
 had vertices $v_1,\ldots,v_n$ in counter-clockwise order.
-Suppose it is the case that if a vertex $v_i$ is left-augmented,
+We label the edges of $f$ by $e_{i,0}$, $e_{i,\pi}$, or $e_i$,
+depending on whether the $\theta^*$ is $0$, $\pi$, or $\pi/2$ respectively,
+with $i$ non-decreasing from 1 to $n$,
+adjacent edges having the same $i$ if and only if they
+belong to the same bow-tie.
+For sake of concreteness,
+suppose that if a vertex $v_i$ is right-augmented,
 then the augmentation circle intersects $\bar{f}$
-(everything is similar if it is right-augmented circles that intersect
-$\bar{f}$).
-Vertex $v_i$ corresponds to one edge $e_i$ of $\Gamma_T(L)$
-if $v_i$ is not augmented or right-augmented,
-and corresponds to two edges $e_{i,0}, e_{i,\pi}$
-of $\Gamma_T(L)$ if $v_i$ is left-augmented
-($e_{i,0}, e_{i,\pi}$ are edges of a single bow-tie,
-and $e_{i,0}$ has $\theta_{e_{i,0}} = 0$
-and $e_{i,\pi}$ has $\theta_{e_{i,\pi}} = \pi$).
+(everything is similar if it is left-augmented vertices' circles
+that intersect $\bar{f}$).
+In other words, locally, $f$ meets two of the edges of the bow-tie
+corresponding to a right-augmented vertex $v_i$
+(which would be labeled $e_{i,0}, e_{i,\pi}$ in counter-clockwise order),
+but only meets one of the edges of the bow-tie corresponding to
+a left-augmented vertex.
 
 
 Suppose, after cyclically reindexing, $v_1,\ldots,v_k$
@@ -793,6 +630,8 @@ of $G(K)$ around the face $\bar{f}$;
 the edges around $f$ would start
 $e_{1,0}, e_{1,\pi}, e_{2,0}, e_{2,\pi}, \ldots$.
 We add new edges across $f$ as follows.
+(See \figref{f:adding_edges}; the + and - signs will be explained later.)
+
 
 First suppose $k=n$; then we do nothing.
 
@@ -802,13 +641,15 @@ $e_{1,0},e_{1,\pi},e_2$
 (in the sense that the new edge separates the edges of $f$ into two sets
 one of them being those three edges;
 since $n\geq 3$, this edge is new).
-If $k = 2$, we add edge across $e_{1,0},e_{1,\pi}$
-and another edge across $e_{2,0},e_{2,\pi}$
+%If $k = 2$, we add edge across $e_{1,0},e_{1,\pi}$
+%and another edge across $e_{2,0},e_{2,\pi}$
+%(these two edges do not form a bigon because we've ruled out $k=n$).
+%(these two edges do not form a bigon because we've ruled out $k=n$).
+If $k \geq 2$,
+we add an edge across $e_{1,0},e_{1,\pi}$
+and another edge across $e_{2,0},e_{2,\pi},e_{3,0},\ldots,e_{k,\pi}$
 (these two edges do not form a bigon because we've ruled out $k=n$).
-If $k \geq 3$,
-we add an edge across $e_{1,0},e_{1,\pi},e_{2,0}$
-and another edge across $e_{2,\pi},e_{3,0},\ldots,e_{k,\pi}$
-(again these two edges do not form a bigon).
+%(again these two edges do not form a bigon).
 
 Finally, if there are multiple such maximal contiguous subsequences,
 we just add edges as above for each contiguous subsequence.
@@ -816,29 +657,90 @@ The only caveat is that if the procedure calls to add a new edge
 that would form a bigon with the existing edges,
 we just don't add it.
 
-See \figref{f:adding_edges}
+
+This way we obtain a new graph $\Gamma_T(L)'$, which defines a
+new torihedron $\sT_T(L)'$.
+We make it angled using the angles from $\sT_T(L)$ for old edges,
+and putting $\pi$ for all new edges.
 
 
 \begin{figure}
 \label{f:adding_edges}
 \includegraphics[width=5cm]{more_pictures/one_edge.png}
-\includegraphics[width=5cm]{more_pictures/two_edge.png}
+%\includegraphics[width=5cm]{more_pictures/two_edge.png}
 \includegraphics[width=5cm]{more_pictures/two_edge_many.png}
 \end{figure}
 
-TODO CONTINUE HERE do the $+$ and $-$ on the edges.
+Now we deform the $\theta^*$ based on \figref{f:adding_edges},
+increasing/decreasing by some small $\veps' > 0$ if the edge
+is labeled $+/-$.
+Note some edges may be labeled twice, in which case we perform
+both increasing/decreasing (e.g. if it is labeled $+$ and $-$,
+the $\theta^*$ is not changed).
+It is easy to see that the sum of $\theta^*$ around a vertex
+remains unchanged.
+Furthermore, all the edges with $\theta^*$ originally equal 0,
+i.e. all $e_{i,0}$'s,
+now have positive $\theta^*$,
+(it receives only one label $+$,
+because the other face it meets is a bow-tie).
 
 
+Thus, we may now apply the feasible flow theorem in a similar manner,
+and obtain an angle-splitting for $\sT_T(L)'$.
+Alternatively, we can directly get an angle-splitting for $\sT_T(L)'$
+using the angle-splitting for $\sT_T(L)$.
+We reuse the $+/-$ assignments from \figref{f:adding_edges}.
+For $e = e_{i,0}$, we increase $\vphi_{\vec{e}}, \vphi_{\cev{e}}$
+by $\veps'/2$ each; for $e = e_{i,\pi}$,
+we decrease them by $\veps'/2$ each.
+For other edges, we increase/decrease $\vphi_{\vec{e}}$ by $\veps'$,
+where $\vec{e}$ is the oriented edge corresponding to the side
+on which the $+/-$ sign appears in \figref{f:adding_edges};
+so for example, if an edge $e$ receives both $+$ and $-$,
+then one of $\vphi_{\vec{e}},\vphi_{\cev{e}}$ increases
+while the other decreases, thus $\theta_e^*$ remains constant.
 
 
-Our torihedral decomposition has graph and on augmentation we will give 0 and pi angles. Next we add another edge and give blah angle (we have three cases)
-do three cases with pictures
+Now we address $\sT_B(L)$.
+In the gluing of $\sT_T(L)$ to $\sT_B(L)$,
+non-bow-tie faces of $\Gamma_T(L)$ are identified with
+non-bow-tie faces of $\Gamma_B(L)$.
+Under this identification, we add the same edges to $\Gamma_B(L)$,
+thus obtaining the new torihedron $\sT_B(L)'$ with graph
+$\Gamma_B(L)'$.
+We perform the same deformations of $\theta^*$'s (or $\vphi$'s).
 
-part 3: Use proposition to get circle pattern to get polyhedral decomposition of the link 
 
-part 4: get triangulation.  
+We need to check that upon gluing $\sT_T(L)'$ to $\sT_B(L)'$,
+the sum of dihedral angles around each edge is still $2\pi$.
+This was clearly true before deforming, as the new edges of
+$\Gamma_T(L)'$ only gets identified with the unique
+corresponding edge of $\Gamma_B(L)'$, and they are both labeled
+with $\theta^* = \pi$.
+To see that the deformation does not change these sums,
+note that in the identification of faces of $\Gamma_T(L)'$
+to $\Gamma_B(L)'$,
+an edge with $\theta^*=0$ is identified with an edge with
+$\theta^*=\pi$,
+so an increase in the former would be conterbalanced by
+a decrease in the latter.
+It is also easy to see this is the case for the other edges.
+TODO hmm more detail?
 
+
+Finally, for each face of $\Gamma_T(L)'$ that has more than three sides,
+we arbitrarily decompose it into triangles
+and apply \lemref{l:pyramid_decomp}
+to obtain a triangulation of $sT_T(L)'$ into non-degenerate angled tetrahedra;
+perform the corresponding decomposition for faces of
+$\Gamma_B(L)'$ and obtain a triangulation of $\sT_B(L)'$
+into non-degenerate angled tetrahedra.
+Upon gluing, this gives an angle structure on the triangulation
+of $\toruscomp{L}$
 \end{proof}
+
+
 
 
 
@@ -936,7 +838,5 @@ which sum to $\theta_e$ by definition.
 \bibliographystyle{plain}
 \bibliography{references-ak}
 
-
-TODO consistent torus symbol, consistent thickened torus symbols
 
 \end{document}
