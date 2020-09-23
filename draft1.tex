@@ -526,6 +526,47 @@ We can recover $L$ from the link diagram of $K$
 together with labels at vertices indicating left- or right-augmentation.
 
 
+\begin{lemma}
+\label{l:2fe}
+Let $G$ be a 4-valent graph on $\torus$ with no bigons or self-loops,
+and whose faces can be checkerboard colored.
+Then for any subset $F' \subseteq F$ of faces,
+\[
+	2|F'| \leq |E'|
+\]
+where $E' = \cup_{f \in F'} \del f$ is the set of edges
+that meets some face of $F'$.
+\end{lemma}
+
+\begin{proof}
+We induct on $|F'|$ (over all possible such graphs $G$);
+for $F' = \emptyset$, there is nothing to prove.
+
+Call a vertex or edge \emph{interior} if it does not meet
+$F'' = F \backslash F'$.
+Suppose there is an interior vertex $v$.
+Make the modification as in \figref{TODO}.
+This decreases $|F'|$ by one and $|E'|$ by 2.
+However, this process may produce bigons;
+if it does, perform the modification as in \figref{TODO}
+simultaneously on all bigons,
+repeatedly until there are no more bigons.
+%each bigon eliminated decreases $|F'|$ by one and $|E'|$ by 2,
+
+
+TODO finish proof..
+
+We must check that this process terminates with a graph
+which satisfies the hypotheses set out in the lemma.
+It is clear that checkboard colorability is maintained,
+obviously there will not be any bigons.
+After the modification of the internal vertex,
+at most two bigons are created;
+in any case, the bigons belong to one color of the 
+It is clear that when a bigon is eliminated,
+the only faces which it is adjacent to will have a reduced number of edges.
+\end{proof}
+
 
 
 \begin{theorem}
@@ -562,7 +603,7 @@ There is a directed edge
 \item $e \to \otimes$ for each edge $e$, with capacity interval
 	$(-\infty, \pi/2]$.
 \end{itemize}
-By TODO lemma about $2|F'| \leq |E'|$,
+By \lemref{l:2fe}about $2|F'| \leq |E'|$,
 and taking $\veps < \pi / |\text{max face size}|$,
 the feasible flow condition is satisfied,
 so a feasible flow exists.
