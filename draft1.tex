@@ -528,44 +528,133 @@ together with labels at vertices indicating left- or right-augmentation.
 
 \begin{lemma}
 \label{l:2fe}
-Let $G$ be a 4-valent graph on $\torus$ with no bigons or self-loops,
-and whose faces can be checkerboard colored.
+Let $G$ be a 4-valent graph on $\torus$ with no bigons or self-loops.
+%and whose faces can be checkerboard colored.
 Then for any subset $F' \subseteq F$ of faces,
 \[
-	2|F'| \leq |E'|
+	2\chi(F') \leq |E'|
 \]
 where $E' = \cup_{f \in F'} \del f$ is the set of edges
-that meets some face of $F'$.
+that meets some face of $F'$,
+and $\chi(F') = \sum_{f\in F'} \chi(f)$ is the sum
+of the Euler characteristics of faces in $F'$.
 \end{lemma}
 
 \begin{proof}
-We induct on $|F'|$ (over all possible such graphs $G$);
+We induct on $\chi(F')$ (over all possible such graphs $G$);
 for $F' = \emptyset$, there is nothing to prove.
 
 Call a vertex or edge \emph{interior} if it does not meet
 $F'' = F \backslash F'$.
 Suppose there is an interior vertex $v$.
-Make the modification as in \figref{TODO}.
-This decreases $|F'|$ by one and $|E'|$ by 2.
+Make the modification as in \figref{TODO}
+(later we will choose which way to ``resolve'' the vertex).
+This decreases $chi(F')$ by one and $|E'|$ by 2.
 However, this process may produce bigons;
-if it does, perform the modification as in \figref{TODO}
-simultaneously on all bigons,
-repeatedly until there are no more bigons.
-%each bigon eliminated decreases $|F'|$ by one and $|E'|$ by 2,
+if it does, repeatedly eliminate bigons by either
+performing the modification as in \figref{TODO}
+if the two vertices of the bigon are distinct,
+or remove the bigon completely if the two vertices
+of the bigon are the same.
+Each of these steps also decreases $chi(F')$ by one and $|E'|$ by 2
+(note in the second case, after removing the bigon,
+the operation merges two distinct faces or joins a face to itself;
+this adds an $S^1$, thus does not change the (total) euler characteristic
+of the two faces or the one face).
 
-
-TODO finish proof..
 
 We must check that this process terminates with a graph
 which satisfies the hypotheses set out in the lemma.
-It is clear that checkboard colorability is maintained,
-obviously there will not be any bigons.
+It is clear that %checkboard colorability and
+4-valency is maintained
+at each step, and obviously there will not be any bigons at the end.
+We need to ensure that eliminating bigons does not
+create self-loop edges.
+Here we sepcify how to choose which way to resolve the internal
+vertex $v$. If among the four faces touching $v$,
+one of them has greater than three sides (Case 1),
+then resolve $v$ so that this face is not merged;
+if all four faces are triangles (Case 2),
+simply resolve in an arbitrary manner.
 After the modification of the internal vertex,
 at most two bigons are created;
-in any case, the bigons belong to one color of the 
-It is clear that when a bigon is eliminated,
-the only faces which it is adjacent to will have a reduced number of edges.
+eliminate those two bigons.
+Now we find that all bigons will be connected end-to-end
+(i.e. forming a single twist region) -
+this is because in Case 1, only one bigon was present after smoothing
+$v$, which would result in at most two bigons that would be connected;
+and if we were in Case 2, we find that the face between those
+eliminated bigons (coming from merging the two triangles across $v$)
+will become a bigon too,
+thus connecting the potential bigons on either ends.
+
+Thus, one can eliminate bigons in an order so that
+they belong in one twist region;
+in particular, the (not necessarily distinct) faces on either side
+are not bigons,
+so eliminating the bigon does not produce a self-loop edge.
+
+
+Now suppose $G$ has no interior vertices.
+We perform some reductions.
+Remove all $f\in F'$ that have non-positive Euler characteristic,
+since having them only makes the inequality easier to prove.
+Now consider some $f\in F'$.
+If it has at least two boundary (i.e. non-interior) edges,
+we can remove $f$ from $F'$,
+which decreases $chi(F')$ by 1 and $|E'|$ by at least 2.
+Thus we remove all such $f$.
+
+
+Now suppose $f\in F'$ has three contiguous interior edges
+$e_1,e_2,e_3$.
+(e.g. if $f$ has at least four sides).
+Let $v_1, v_2$ be the vertices between these three interior edges.
+Since $v_1$ is not inteior,
+the face across $v_1$ from $f$ is not in $F'$;
+likewise with $v_2$.
+But this shows that the face across $e_2$ from $f$
+has two boundary edges, contradicting our reduction.
+%This would lead to the situation in \figref{TODO},
+%showing that there is a face with at least
+%two boundary edges, contradicting our reduction.
+
+
+Thus, we now have a graph whose faces are triangles,
+and each face has exactly one boundary edge.
+Now the problem is solved with a simple counting argument:
+each $f$ corresponds to one boundary edge and two interior edges,
+but since the interior edges are shared by two faces,
+they should count as half an edge; so
+\[
+ |E'| = \sum_{f\in F'} 1 + 1/2 + 1/2 = 2|F'| = 2\chi(F')
+\]
+and we are done.
 \end{proof}
+
+
+The following theorem is quoted from \cite{BS}
+(TODO cite original too)
+
+\begin{theorem}[Feasible Flow Theorem]
+\label{t:feasible_flow}
+Let $(N,X)$ be a directed graph,
+with a \emph{lower capacity bound} $a_x$
+and \emph{upper capacity bound} $b_x$
+for each directed edge $x \in X$,
+with $-\infty \leq a_x \leq b_x \leq \infty$.
+A \emph{feasible flow} is a function $\vphi : X \to \RR$
+such that Kirchhof's current law is satisfied
+(i.e. flow in = flow out at every vertex).
+
+A feasible flow exists if and only if,
+for every proper nonempty subset $N' \subset N$,
+\[
+\sum_{x \in ex(N')} b_x \geq \sum_{x \in in(N')} a_x
+\]
+where $ex(N'), in(N')$ refer to edges leaving,
+entering $N'$, respectively.
+\end{theorem}
 
 
 
@@ -588,7 +677,7 @@ We make them non-degenerate angled torihedra by assigning $\theta^* = \pi/2$
 for all edges.
 
 We obtain an angle-splitting by applying the
-Feasible Flow theorem TODO as follows:
+Feasible Flow theorem (\thmref{t:feasible_flow}) as follows:
 Consider the directed graph whose vertex set is
 $E \cup F \cup \{\otimes\}$,
 where $E, F$ are the set of edges, faces in $\Gamma_T(K)$,
@@ -603,7 +692,7 @@ There is a directed edge
 \item $e \to \otimes$ for each edge $e$, with capacity interval
 	$(-\infty, \pi/2]$.
 \end{itemize}
-By \lemref{l:2fe}about $2|F'| \leq |E'|$,
+By \lemref{l:2fe}, $2|F'| = 2\chi(F') \leq |E'|$,
 and taking $\veps < \pi / |\text{max face size}|$,
 the feasible flow condition is satisfied,
 so a feasible flow exists.

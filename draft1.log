@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  23 SEP 2020 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  23 SEP 2020 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,79 +638,77 @@ File: more_pictures/right_left_aug.png Graphic file (type png)
 Package pdftex.def Info: more_pictures/right_left_aug.png  used on input line 5
 21.
 (pdftex.def)             Requested size: 255.95561pt x 192.71951pt.
-! Undefined control sequence.
-l.543 for $F' = \varemptyset
-                            $, there is nothing to prove.
-? 
 [7 <./more_pictures/right_left_aug.png>]
 
-LaTeX Warning: Reference `TODO' on page 8 undefined on input line 548.
+LaTeX Warning: Reference `TODO' on page 8 undefined on input line 550.
 
 
-LaTeX Warning: Reference `TODO' on page 8 undefined on input line 551.
+LaTeX Warning: Reference `TODO' on page 8 undefined on input line 555.
 
-<more_pictures/horizontal_bowtie.png, id=76, 409.53pt x 334.24875pt>
+
+LaTeX Warning: Citation `BS' on page 8 undefined on input line 636.
+
+[8]
+<more_pictures/horizontal_bowtie.png, id=79, 409.53pt x 334.24875pt>
 File: more_pictures/horizontal_bowtie.png Graphic file (type png)
 <use more_pictures/horizontal_bowtie.png>
 Package pdftex.def Info: more_pictures/horizontal_bowtie.png  used on input lin
-e 628.
+e 719.
 (pdftex.def)             Requested size: 142.26378pt x 116.11157pt.
 
-LaTeX Warning: Reference `TODO' on page 8 undefined on input line 635.
 
-[8 <./more_pictures/horizontal_bowtie.png>]
-<more_pictures/one_edge.png, id=81, 350.30875pt x 339.2675pt>
+LaTeX Warning: Reference `TODO' on page 9 undefined on input line 726.
+
+[9 <./more_pictures/horizontal_bowtie.png>]
+<more_pictures/one_edge.png, id=84, 350.30875pt x 339.2675pt>
 File: more_pictures/one_edge.png Graphic file (type png)
 <use more_pictures/one_edge.png>
-Package pdftex.def Info: more_pictures/one_edge.png  used on input line 708.
+Package pdftex.def Info: more_pictures/one_edge.png  used on input line 799.
 (pdftex.def)             Requested size: 142.26378pt x 137.78049pt.
-<more_pictures/two_edge_many.png, id=82, 441.65pt x 452.69125pt>
+<more_pictures/two_edge_many.png, id=85, 441.65pt x 452.69125pt>
 File: more_pictures/two_edge_many.png Graphic file (type png)
 <use more_pictures/two_edge_many.png>
-Package pdftex.def Info: more_pictures/two_edge_many.png  used on input line 71
-0.
+Package pdftex.def Info: more_pictures/two_edge_many.png  used on input line 80
+1.
 (pdftex.def)             Requested size: 142.26378pt x 145.81738pt.
-
-Underfull \vbox (badness 1990) has occurred while \output is active []
-
- [9 <./more_pictures/one_edge.png> <./more_pictures/two_edge_many.png>]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 797
+ [10 <./more_pictures/one_edge.png> <./more_pictures/two_edge_many.png>]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 888
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-<more_pictures/kite.png, id=88, 518.93875pt x 498.86375pt>
+<more_pictures/kite.png, id=91, 518.93875pt x 498.86375pt>
 File: more_pictures/kite.png Graphic file (type png)
 <use more_pictures/kite.png>
-Package pdftex.def Info: more_pictures/kite.png  used on input line 818.
+Package pdftex.def Info: more_pictures/kite.png  used on input line 909.
 (pdftex.def)             Requested size: 227.62204pt x 218.81564pt.
-<more_pictures/positive_angle.png, id=89, 384.43625pt x 423.5825pt>
+<more_pictures/positive_angle.png, id=92, 384.43625pt x 423.5825pt>
 File: more_pictures/positive_angle.png Graphic file (type png)
 <use more_pictures/positive_angle.png>
-Package pdftex.def Info: more_pictures/positive_angle.png  used on input line 8
-21.
+Package pdftex.def Info: more_pictures/positive_angle.png  used on input line 9
+12.
 (pdftex.def)             Requested size: 142.26378pt x 156.75539pt.
-<more_pictures/negative_angle.png, id=90, 423.5825pt x 424.58624pt>
+<more_pictures/negative_angle.png, id=93, 423.5825pt x 424.58624pt>
 File: more_pictures/negative_angle.png Graphic file (type png)
 <use more_pictures/negative_angle.png>
-Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 8
-22.
+Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 9
+13.
 (pdftex.def)             Requested size: 142.26378pt x 142.60168pt.
- [10] (./draft1.bbl [11 <./more_pictures/kite.png> <./more_pictures/positive_an
-gle.png> <./more_pictures/negative_angle.png>]) [12] (./draft1.aux)
+ [11] (./draft1.bbl [12 <./more_pictures/kite.png> <./more_pictures/positive_an
+gle.png> <./more_pictures/negative_angle.png>]) [13] (./draft1.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13765 strings out of 480478
- 261321 string characters out of 5905959
- 479770 words of memory out of 5000000
- 29355 multiletter control sequences out of 15000+600000
+ 13766 strings out of 480478
+ 261338 string characters out of 5905959
+ 479781 words of memory out of 5000000
+ 29356 multiletter control sequences out of 15000+600000
  542900 words of font info for 64 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,60p,898b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,60p,898b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -726,10 +724,10 @@ e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
 usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft1.pdf (12 pages, 1654093 bytes).
+Output written on draft1.pdf (13 pages, 1663192 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 167 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
