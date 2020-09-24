@@ -244,3 +244,14 @@ $\overline{v_0 v_k}$, and label this edge by $`-'$.
 }
 
 
+
+%Then by results of \cite{BandS} there exist a corresponding
+%right-angled circle pattern. We then consider the augmented link $L$ and its
+%torihedral decomposition from Proposition \ref{p:tori_decomp} with a
+%corresponding ``degenerate" circle pattern. We deform this degenerate circle
+%pattern into a ``proper" circle pattern which will give us a polyhedral
+%decomposition of $(\torus \times I)-L$ with angles of the torihedra in our
+%torihedral decomposition. Which we can further decompose into tetrahedra with
+%angles satisfying conditions of an angle structure. 
+
+
