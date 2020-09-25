@@ -112,9 +112,21 @@
 
 \section{Introduction}
 
-Given a twist reduced diagram of a link $L$, {\it augmentation} is a process in which an unknotted circle component is added to one or more twist regions (a single crossing or a string of bigons) of $L$. Due to the added circle component we can remove full twists at the twist region of $L$. If the twist region has an odd number of crossings then all but one crossing is removed, whereas if the twist region has an even number of crossings then all are removed. The newly obtained link diagram is called an {\it augmented link diagram}. See Figure \ref{fig:Augmentations}.
+Given a twist reduced diagram of a link $L$, \emph{augmentating} is a process in
+which an unknotted circle component (augmentation) is added to one or
+more twist regions (a
+single crossing or a string of bigons) of $L$. Due to the added circle component
+we can remove full twists at the twist region of $L$. If the twist region has an
+odd number of crossings then all but one crossing is removed, whereas if the
+twist region has an even number of crossings then all are removed. The newly
+obtained link diagram is called an {\it augmented link diagram}. See Figure
+\ref{fig:Augmentations}.
 
-Adams showed in \cite{CA} that given a hyperbolic alternating link $K$ in $\Sp^3$ the link $L$ obtained by augmentation $K$ is hyperbolic. In this paper we investigate if this statement holds for links in the thickened torus i.e. if $L$ is a link obtained from augmenting a hyperbolic alternating link $K$ in the thickened torus. In this chapter we find many families of hyperbolic links in the thickened torus which remain hyperbolic after augmentation. 
+Adams showed in \cite{CA} that given a hyperbolic alternating link $K$ in
+$\Sp^3$ the link $L$ obtained by augmentation $K$ is hyperbolic. In this paper
+we investigate if this statement holds for links in the thickened torus i.e. if
+$L$ is a link obtained from augmenting a hyperbolic alternating link $K$ in the
+thickened torus TODO Alice write.
  \begin{figure}
  \centering  
  \begin{tabular}{cc}
@@ -415,8 +427,7 @@ add to $\theta_e^*$.
 
 TODO same as [BS] ``coherent angle system'' or something.
 
-
-TODO check the feasible flow stuff.
+TODO remark on what splitting means in terms of ideal hyperbolic
 
 
 \begin{lemma}
@@ -495,18 +506,19 @@ angle to each edge of each tetrahedron, such that
 Let $M$ be a 3-manifold admitting an angle structure. Then $M$ is hyperbolic.
 \end{theorem}
 
-For a hyperbolic link $K$ in $\torus \times I$, we produce sufficient conditions
-on augmentations such that the resulting link obtained from augmenting $K$ is
+For a hyperbolic link $K$ in $\torus \times I$, we show
+that the resulting link obtained from augmenting $K$ is
 hyperbolic. The idea is to start with a graph from the torihedral decomposition
 of the link $K$ which will give us a graph on each torihedron with $\pi/2$ edges
-\cite{CKP2}. Then by results of \cite{BandS} there exist a corresponding
-right-angled circle pattern. We then consider the augmented link $L$ and its
-torihedral decomposition from Proposition \ref{p:tori_decomp} with a
-corresponding ``degenerate" circle pattern. We deform this degenerate circle
-pattern into a ``proper" circle pattern which will give us a polyhedral
-decomposition of $(\torus \times I)-L$ with angles of the torihedra in our
-torihedral decomposition. Which we can further decompose into tetrahedra with
-angles satisfying conditions of an angle structure. 
+\cite{CKP2},
+the angled torihedra can be further decomposed into base-angled pyramids.
+By \prpref{p:tori_decomp},
+there is a torihedral decomposition of the complement of the augmented link $L$.
+Using those angles,
+we then assign angles to edges of these torihedra
+and decompose them into base-angled pyramids.
+These pyramids can be further decomposed into tetrahedra,
+thus obtaining an angle structure on a triangulation.
 
 
 
@@ -518,7 +530,7 @@ See \figref{right_left_aug.png}.
 We say an augmentation is \emph{left-augmented} if it is not right-augmented.
 \begin{figure}
 \label{f:right_left_aug}
-\includegraphics{more_pictures/right_left_aug.png}
+\includegraphics[width=5cm]{more_pictures/right_left_aug.png}
 \end{figure}
 \end{define}
 
@@ -549,14 +561,14 @@ $F'' = F \backslash F'$.
 Suppose there is an interior vertex $v$.
 Make the modification as in \figref{TODO}
 (later we will choose which way to ``resolve'' the vertex).
-This decreases $chi(F')$ by one and $|E'|$ by 2.
+This decreases $\chi(F')$ by one and $|E'|$ by 2.
 However, this process may produce bigons;
 if it does, repeatedly eliminate bigons by either
-performing the modification as in \figref{TODO}
+(1) performing the modification as in \figref{TODO}
 if the two vertices of the bigon are distinct,
-or remove the bigon completely if the two vertices
+or (2) remove the bigon completely if the two vertices
 of the bigon are the same.
-Each of these steps also decreases $chi(F')$ by one and $|E'|$ by 2
+Each of these steps also decreases $\chi(F')$ by one and $|E'|$ by 2
 (note in the second case, after removing the bigon,
 the operation merges two distinct faces or joins a face to itself;
 this adds an $S^1$, thus does not change the (total) euler characteristic
@@ -567,7 +579,7 @@ We must check that this process terminates with a graph
 which satisfies the hypotheses set out in the lemma.
 It is clear that %checkboard colorability and
 4-valency is maintained
-at each step, and obviously there will not be any bigons at the end.
+at each step, and there will not be any bigons at the end.
 We need to ensure that eliminating bigons does not
 create self-loop edges.
 Here we sepcify how to choose which way to resolve the internal
@@ -597,12 +609,12 @@ so eliminating the bigon does not produce a self-loop edge.
 
 Now suppose $G$ has no interior vertices.
 We perform some reductions.
-Remove all $f\in F'$ that have non-positive Euler characteristic,
-since having them only makes the inequality easier to prove.
+We remove all $f$ from $F'$ that have non-positive Euler characteristic,
+as doing so will not decrease $\chi(F')$ and will not increase $|E'|$.
 Now consider some $f\in F'$.
 If it has at least two boundary (i.e. non-interior) edges,
 we can remove $f$ from $F'$,
-which decreases $chi(F')$ by 1 and $|E'|$ by at least 2.
+which decreases $\chi(F')$ by 1 and $|E'|$ by at least 2.
 Thus we remove all such $f$.
 
 
@@ -624,12 +636,12 @@ Thus, we now have a graph whose faces are triangles,
 and each face has exactly one boundary edge.
 Now the problem is solved with a simple counting argument:
 each $f$ corresponds to one boundary edge and two interior edges,
-but since the interior edges are shared by two faces,
+but, since the interior edges are shared by two faces,
 they should count as half an edge; so
 \[
  |E'| = \sum_{f\in F'} 1 + 1/2 + 1/2 = 2|F'| = 2\chi(F')
 \]
-and we are done.
+and we get the desired result.
 \end{proof}
 
 
@@ -670,7 +682,7 @@ By \cite[Theorem 7.5]{CKP2},
 (as discussed in \prpref{p:tori_decomp},)
 $\toruscomp{K}$ can be decomposed
 into two torihedra $\sT_T$ and $\sT_B$,
-whose graphs are $\Gamma_T(K), \Gamma_B(K)$;
+whose graphs are $\Gamma_T(K), \Gamma_B(K)$ respectively;
 viewed from the top cone point $\torus \times \{1\}$,
 they are both the same as the projection graph of $K$.
 %which we denote by $\Gamma$.
@@ -817,9 +829,10 @@ now have positive $\theta^*$,
 because the other face it meets is a bow-tie).
 
 
-Thus, we may now apply the feasible flow theorem in a similar manner,
-and obtain an angle-splitting for $\sT_T(L)'$.
-Alternatively, we can directly get an angle-splitting for $\sT_T(L)'$
+%Thus, we could attempt to apply the feasible flow theorem in a similar manner,
+%and obtain an angle-splitting for $\sT_T(L)'$, but 
+TODO rephrase nicely.
+We can directly get an angle-splitting for $\sT_T(L)'$
 using the angle-splitting for $\sT_T(L)$.
 We reuse the $+/-$ assignments from \figref{f:adding_edges}.
 For $e = e_{i,0}$, we increase $\vphi_{\vec{e}}, \vphi_{\cev{e}}$
