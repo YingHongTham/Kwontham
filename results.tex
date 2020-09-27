@@ -116,7 +116,7 @@ $\beta_f = \frac{1}{2} \ddd{\vphi_{\vec{e}}}$ as before.
 Otherwise, we can increase $l_{\vec{e}}$
 by varying $\vphi_{\vec{e}}$
 while holding $r_f$ constant,
-and we can increase $l_{\cev{e}}$
+and increase $l_{\cev{e}}$
 by increasing $r_{f'}$.
 This will affect both $\Phi_f, \Phi_{f'}$,
 so we use $\beta_{f'}$ to make $\Phi_{f'}$ constant.
@@ -140,6 +140,51 @@ and $f$ set to another thin face adjacent to it, etc.
 
 \begin{proof}
 NEW PROOF NEW PROOF NEW PROOF NEW PROOF NEW PROOF NEW PROOF 
+We construct a vector $u_e \in K_c \subseteq T_c \CCC$ for each edge $e$
+and show that $\{\Theta_*(u_e)\}_{e\in E}$ spans an
+$|E|-1$ dimensional space,
+thus must be equal $L_{\Theta_c}$.
+$u_e$ will have the following property:
+if $\Theta_*(u_e) = \sum_{e' \in E} a^{e'} \ddd{\theta_{e'}}$, then
+\begin{itemize}
+	\item $a^e = 1$;
+	\item $a^{e'} \leq 0$ for all $e' \neq e$;
+	%\item $a^{e'} = 0$ for short edges $e'$ (hmm...)
+	\item $\sum_{e' \in E} a^{e'} = 0$ (follows directly from $u_e \in K_c$)
+\end{itemize}
+
+
+To illustrate the main idea of the construction,
+first suppose that $e$ is an edge between two convex faces $f, f'$
+(so $\vec{e} \in \del f, \cev{e} \in \del f'$).
+Observe that %$\alpha_e$ from \eqnref{e:alpha_e}
+\begin{equation}
+\label{e:alpha_e}
+\alpha_e = \frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
++ \frac{1}{2 r_{f'}\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}
+\end{equation}
+increases $\Phi_f$ and $\Phi_{f'}$.
+We can compensate using $\beta_f$ from \eqnref{e:beta_f_convex},
+so we consider
+\[
+w_e = \alpha_e - \frac{1}{\cos \vphi_{\vec{e}}} \beta_f
+	- \frac{1}{\cos \vphi_{\cev{e}}} \beta_{f'} \in K_c
+\]
+%Since $\theta_e = \pi - \vphi_{\vec{e}} - \vphi_{\cev{e}}$,
+%we need to show that the coefficients of $\ddd{\vphi_{\vec{e}}},
+%\ddd{\vphi_{\cev{e}}}$ sum to 0.
+For $\vec{e'} \in \del f \cup \del f' \backslash \{\vec{e},\cev{e}\}$,
+the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
+or $\beta_{f'}$, which is positive by construciton
+(this requires $f,f'$ to be convex faces);
+thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
+is equal 0 if and only if $e'$ is short.
+Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
+constant, so $d\theta_e(w_e) < 0$, so we can take
+\begin{equation}
+\label{e:u_e}
+u_e := (d\theta_e(w_e))^\inv \cdot w_e
+\end{equation}
 
 
 \end{proof}
