@@ -8,7 +8,7 @@ $\Theta_*(\ddd{\vphi_{\vec{e}}}) = -\ddd{\theta_e}$.
 Our general strategry for obtaining a (non-singular) circle pattern
 is to start with an assignment $\underline{\theta} = (\theta_\bullet)$
 for which we know an extended circle pattern exists
-(say from results of \ocite{BS}),
+(say from results of \cite{BandS}),
 and a path $\gamma$ in $\TTT$ starting at $\underline{\theta}$.
 We then attempt to lift $\gamma$ to a path $\tilde{\gamma}$ in $\CCC$,
 so that $\tilde{\gamma}$ remains (face) non-singular
@@ -94,36 +94,54 @@ we choose $\beta$ so that
 If $f$ is thick but not convex,
 let $\vec{e}$ be an edge with largest $\vphi_{\vec{e}}$,
 so that $\vphi_{\vec{e}} \geq \pi/2$.
+If $\vphi_{\vec{e}} > \pi/2$,
+then since $\tan$ is convex, and $f$ has at least two other
+long edges,
+we see that $\Phi_*(\alpha_f) = -\sum \frac{\tan \vphi_{\vec{e'}}}{r_f} > 0$,
+so we can define $\beta_f$ as in \eqnref{e:beta_f_convex}.
 If $\vphi_{\vec{e}} = \pi/2$,
-we can 
+we can take
+\[
+\beta_f = \frac{1}{2} \ddd{\vphi_{\vec{e}}}
+\]
 
 
 
 If $f$ is thin, we actually have that $\alpha_f \in K_c$,
 since the components sum to 0, so we need a different approach.
-First suppose $f$ shares an edge $e$ with a convex face $f'$,
+First suppose $f$ shares an edge $e$ with a thick face $f'$,
 with $\vec{e} \in \del f$.
-We can increase $l_e$
-by varying $\vphi_{\vec{e}},\vphi_{\cev{e}}$
-while holding $r_f,r_{f'}$ constant.
+If $\vphi_{\vec{e}} = \pi/2$, we can take
+$\beta_f = \frac{1}{2} \ddd{\vphi_{\vec{e}}}$ as before.
+Otherwise, we can increase $l_{\vec{e}}$
+by varying $\vphi_{\vec{e}}$
+while holding $r_f$ constant,
+and we can increase $l_{\cev{e}}$
+by increasing $r_{f'}$.
 This will affect both $\Phi_f, \Phi_{f'}$,
 so we use $\beta_{f'}$ to make $\Phi_{f'}$ constant.
-More explicitly, consider
-\begin{equation}
-\label{e:alpha_e}
-\alpha_e = \frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
-+ \frac{1}{2 r_{f'}\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}
-\end{equation}
-which increases $l_{\vec{e}}, l_{\cev{e}}$ at half unit speed,
-$dl_{\vec{e}}(\alpha_e) = dl_{\cev{e}}(\alpha_e) = 1/2$.
-Then we can take
-\begin{equation}
-\label{e:beta_f_thin}
-\beta_f = r_f \cos \vphi_{\vec{e}}
-	(\alpha_e - \frac{1}{r_{f'} \cos \vphi_{\cev{e}}} \beta_{f'})
-\end{equation}
+%More explicitly, consider
+%\begin{equation}
+%\label{e:alpha_e}
+%\alpha_e = \frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
+%+ \frac{1}{2 r_{f'}\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}
+%\end{equation}
+%which increases $l_{\vec{e}}, l_{\cev{e}}$ at half unit speed,
+%$dl_{\vec{e}}(\alpha_e) = dl_{\cev{e}}(\alpha_e) = 1/2$.
+%Then we can take
+%\begin{equation}
+%\label{e:beta_f_thin}
+%\beta_f = r_f \cos \vphi_{\vec{e}}
+	%(\alpha_e - \frac{1}{r_{f'} \cos \vphi_{\cev{e}}} \beta_{f'})
+%\end{equation}
 We can repeat this procedure with $f'$ set to this thin face,
 and $f$ set to another thin face adjacent to it, etc.
+\end{proof}
+
+\begin{proof}
+NEW PROOF NEW PROOF NEW PROOF NEW PROOF NEW PROOF NEW PROOF 
+
+
 \end{proof}
 
 \begin{proof}[Proof of \prpref{p:point_lift}]
