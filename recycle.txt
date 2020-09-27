@@ -255,3 +255,27 @@ $\overline{v_0 v_k}$, and label this edge by $`-'$.
 %angles satisfying conditions of an angle structure. 
 
 
+
+
+
+\begin{lemma}
+Let $c$ be an extended circle pattern whose faces are either
+convex or thin.
+Then $\CCC$ is a manifold in a neighborhood of $c$.
+\end{lemma}
+
+\begin{proof}
+$d(l_{\vec{e}} - l_{\cev{e}})
+= \sin \vphi_{\vec{e}} d r_{f_{\vec{e}}}
++ r_{f_{\vec{e}}} \cos \vphi_{\vec{e}} d \vphi_{\vec{e}}
+- \sin \vphi_{\cev{e}} d r_{f_{\cev{e}}}
+- r_{f_{\cev{e}}} \cos \vphi_{\cev{e}} d \vphi_{\cev{e}}
+$,
+and since having only convex of thin faces implies
+$\cos \vphi_{\vec{e}} \neq 0$ for all $\vec{e}$,
+we see that the differentials $d(l_{\vec{e}} - l_{\cev{e}})$
+are linearly independent at $c$,
+hence are linearly independent in a neighborhood of $c$.
+%Thus, by the implicit function theorem,
+%$\CCC$ is a manifold in a neighborhood of $c$.
+\end{proof}

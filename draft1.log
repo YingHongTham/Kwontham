@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  23 SEP 2020 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  26 SEP 2020 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,13 +533,6 @@ ABD: EveryShipout initializing macros
 Class amsart Warning: Abstract should precede \maketitle in AMS document classe
 s; reported on input line 109.
 
-
-LaTeX Warning: Reference `fig:Augmentations' on page 1 undefined on input line 
-123.
-
-
-LaTeX Warning: Citation `CA' on page 1 undefined on input line 125.
-
 <augmentation1.png, id=4, 397.485pt x 485.815pt>
 File: augmentation1.png Graphic file (type png)
 <use augmentation1.png>
@@ -550,18 +543,8 @@ File: augmentation2.png Graphic file (type png)
 <use augmentation2.png>
 Package pdftex.def Info: augmentation2.png  used on input line 134.
 (pdftex.def)             Requested size: 213.558pt x 113.81102pt.
-
-LaTeX Warning: Citation `CKP2' on page 1 undefined on input line 146.
-
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./augmentation1.png> <./
 augmentation2.png>]
-
-LaTeX Warning: Citation `CKP2' on page 2 undefined on input line 160.
-
-
-LaTeX Warning: Reference `fig:Augmentations' on page 2 undefined on input line 
-174.
-
 <fig1.png, id=23, 1198.4775pt x 1198.4775pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
@@ -577,20 +560,7 @@ File: fig-2.png Graphic file (type png)
 <use fig-2.png>
 Package pdftex.def Info: fig-2.png  used on input line 182.
 (pdftex.def)             Requested size: 85.35826pt x 85.34668pt.
-
-LaTeX Warning: Citation `Menasco' on page 2 undefined on input line 196.
-
-
-LaTeX Warning: Citation `lackenby' on page 2 undefined on input line 197.
-
-
-LaTeX Warning: Citation `CKP2' on page 2 undefined on input line 201.
-
-[2 <./fig1.png> <./twist-augment.png> <./fig-2.png>]
-
-LaTeX Warning: Reference `fig:crossingArc' on page 3 undefined on input line 24
-0.
-
+ [2 <./fig1.png> <./twist-augment.png> <./fig-2.png>]
 <crossingArc.png, id=32, 377.41pt x 231.86626pt>
 File: crossingArc.png Graphic file (type png)
 <use crossingArc.png>
@@ -601,14 +571,6 @@ File: crossingPush.png Graphic file (type png)
 <use crossingPush.png>
 Package pdftex.def Info: crossingPush.png  used on input line 243.
 (pdftex.def)             Requested size: 142.26378pt x 108.59767pt.
-
-LaTeX Warning: Reference `fig:crossingArc' on page 3 undefined on input line 25
-0.
-
-
-LaTeX Warning: Reference `fig:falGluings' on page 3 undefined on input line 264
-.
-
 <falGluing1.png, id=34, 5857.885pt x 1782.66pt>
 File: falGluing1.png Graphic file (type png)
 <use falGluing1.png>
@@ -624,19 +586,7 @@ Overfull \hbox (8.11192pt too wide) in paragraph at lines 268--273
  [][] 
  []
 
-
-LaTeX Warning: Reference `fig:falGluings' on page 3 undefined on input line 281
-.
-
-
-LaTeX Warning: Reference `fig:top-bottom' on page 3 undefined on input line 287
-.
-
 [3 <./crossingArc.png> <./crossingPush.png>]
-
-LaTeX Warning: Reference `fig:Augmentations' on page 4 undefined on input line 
-303.
-
 <fig-3.png, id=41, 1204.5pt x 1204.5pt>
 File: fig-3.png Graphic file (type png)
 <use fig-3.png>
@@ -658,6 +608,7 @@ File: fig-6.png Graphic file (type png)
 Package pdftex.def Info: fig-6.png  used on input line 312.
 (pdftex.def)             Requested size: 249.37257pt x 85.35826pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <top-bottom.png, id=45, 2487.2925pt x 1204.5pt>
@@ -670,33 +621,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./falGluing1.png> <./falGluing2.png> <./fig-3.png> <./fig-4.png> <./fig-5.p
 ng>] [5 <./fig-6.png> <./top-bottom.png>]
-
-LaTeX Warning: Reference `f:ideal_pyramid_arg' on page 6 undefined on input lin
-e 456.
-
 <more_pictures/angle_split.png, id=65, 502.87875pt x 672.5125pt>
 File: more_pictures/angle_split.png Graphic file (type png)
 <use more_pictures/angle_split.png>
 Package pdftex.def Info: more_pictures/angle_split.png  used on input line 460.
 
 (pdftex.def)             Requested size: 170.20918pt x 227.62204pt.
-
-LaTeX Warning: Citation `Thurston' on page 6 undefined on input line 493.
-
-
-LaTeX Warning: Citation `Casson-Rivin' on page 6 undefined on input line 493.
-
-[6 <./more_pictures/angle_split.png>]
-
-LaTeX Warning: Citation `Casson-Rivin' on page 7 undefined on input line 505.
-
-
-LaTeX Warning: Citation `CKP2' on page 7 undefined on input line 513.
-
-
-LaTeX Warning: Reference `p:tori_decomp' on page 7 undefined on input line 515.
-
-
+ [6 <./more_pictures/angle_split.png>]
 
 LaTeX Warning: Reference `right_left_aug.png' on page 7 undefined on input line
  529.
@@ -713,39 +644,7 @@ LaTeX Warning: Reference `TODO' on page 7 undefined on input line 562.
 
 LaTeX Warning: Reference `TODO' on page 7 undefined on input line 567.
 
-[7 <./more_pictures/right_left_aug.png>]
-
-LaTeX Warning: Citation `BandS' on page 8 undefined on input line 648.
-
-
-LaTeX Warning: Citation `FF' on page 8 undefined on input line 649.
-
-[8]
-
-LaTeX Warning: Citation `CKP2' on page 9 undefined on input line 681.
-
-
-LaTeX Warning: Reference `p:tori_decomp' on page 9 undefined on input line 682.
-
-
-
-LaTeX Warning: Reference `t:feasible_flow' on page 9 undefined on input line 69
-3.
-
-
-LaTeX Warning: Reference `l:2fe' on page 9 undefined on input line 708.
-
-
-LaTeX Warning: Citation `BandS' on page 9 undefined on input line 717.
-
-
-LaTeX Warning: Reference `p:tori_decomp' on page 9 undefined on input line 720.
-
-
-
-LaTeX Warning: Reference `f:bowtie_angles' on page 9 undefined on input line 72
-4.
-
+[7 <./more_pictures/right_left_aug.png>] [8]
 <more_pictures/horizontal_bowtie.png, id=79, 409.53pt x 334.24875pt>
 File: more_pictures/horizontal_bowtie.png Graphic file (type png)
 <use more_pictures/horizontal_bowtie.png>
@@ -753,13 +652,10 @@ Package pdftex.def Info: more_pictures/horizontal_bowtie.png  used on input lin
 e 732.
 (pdftex.def)             Requested size: 142.26378pt x 116.11157pt.
 
+
 LaTeX Warning: Reference `TODO' on page 9 undefined on input line 739.
 
 [9 <./more_pictures/horizontal_bowtie.png>]
-
-LaTeX Warning: Reference `f:adding_edges' on page 10 undefined on input line 77
-6.
-
 <more_pictures/one_edge.png, id=84, 350.30875pt x 339.2675pt>
 File: more_pictures/one_edge.png Graphic file (type png)
 <use more_pictures/one_edge.png>
@@ -771,27 +667,12 @@ File: more_pictures/two_edge_many.png Graphic file (type png)
 Package pdftex.def Info: more_pictures/two_edge_many.png  used on input line 81
 4.
 (pdftex.def)             Requested size: 142.26378pt x 145.81738pt.
-
-LaTeX Warning: Reference `f:adding_edges' on page 10 undefined on input line 81
-7.
-
-
-LaTeX Warning: Reference `f:adding_edges' on page 10 undefined on input line 83
-7.
-
-
-LaTeX Warning: Reference `f:adding_edges' on page 10 undefined on input line 84
-3.
-
-[10 <./more_pictures/one_edge.png> <./more_pictures/two_edge_many.png>]
-
-LaTeX Warning: Reference `l:pyramid_decomp' on page 11 undefined on input line 
-878.
-
-(./circlepatterns.tex
+ [10 <./more_pictures/one_edge.png> <./more_pictures/two_edge_many.png>] (./cir
+clepatterns.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 11.
 
- (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 <more_pictures/kite.png, id=91, 518.93875pt x 498.86375pt>
@@ -811,24 +692,20 @@ File: more_pictures/negative_angle.png Graphic file (type png)
 Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 3
 6.
 (pdftex.def)             Requested size: 142.26378pt x 142.60168pt.
-
-[11 <./more_pictures/kite.png>]) (./draft1.bbl) [12 <./more_pictures/positive_a
-ngle.png> <./more_pictures/negative_angle.png>] (./draft1.aux)
+ [11 <./more_pictures/kite.png>]) (./draft1.bbl) [12 <./more_pictures/positive_
+angle.png> <./more_pictures/negative_angle.png>] (./draft1.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  13770 strings out of 480478
  261394 string characters out of 5905959
- 476572 words of memory out of 5000000
+ 476784 words of memory out of 5000000
  29358 multiletter control sequences out of 15000+600000
  542900 words of font info for 64 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,60p,899b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,13n,60p,898b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -844,7 +721,7 @@ e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm
 10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
 usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft1.pdf (12 pages, 1662513 bytes).
+Output written on draft1.pdf (12 pages, 1662575 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream

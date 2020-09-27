@@ -24,18 +24,22 @@ to the lifting to such $\tilde{\gamma}$.
 
 To that end, let $L$ be the $(|E|-1)$-plane distribution on $\TTT$
 tangent to the level sets of $\sum_{e\in E} \theta_e$.
-The following proposition proves it (avoid using `it'?) up to first order at a point:
+The following proposition proves it (TODO avoid using `it'?) up to first order at a point:
 
 
 \begin{proposition}
 \label{p:point_lift}
-Let $c \in \CCC$ be an extended circle pattern such that
-\begin{itemize}
-	\item $\Phi_f = 2\pi$ for all $f\in F$;
-	\item all faces are eithe convex or thin,
-		with at least one convex face;
-	\item every pair of faces is connected by a thick path.
-\end{itemize}
+Let $c \in \CCC$ be a
+non-singular extended circle pattern on a graph
+with no bigons or self-loops such that
+there is no wide cycle of thin faces.
+%\begin{itemize}
+	%\item $\Phi_f = 2\pi$ for all $f\in F$;
+	%\item there is no wide cycle of thin faces.
+	%\item all faces are eithe convex or thin,
+		%with at least one convex face;
+	%\item every pair of faces is connected by a wide path.
+%\end{itemize}
 Let $K_c = \ker (\Phi_*|_c : T_c \CCC \to T_{\Phi(c)} \PPP)$.
 Then $\Theta_*(K_c) = L_{\Theta(c)}$.
 
@@ -78,7 +82,7 @@ $\Phi_*(\alpha_f) =
 
 If $f$ is a convex face, then the $\tan \vphi_{\vec{e}}$ are all non-negative,
 being 0 if and only if $e$ is short,
-and because $\Phi_f = 2\pi$, atleast three edges are long.
+and because $\Phi_f = 2\pi$, at least three edges are long.
 So $\Phi_*(\alpha_f)$ is a negative multiple of $\ddd{\Phi_f}$;
 we choose $\beta$ so that
 \begin{equation}
@@ -86,6 +90,13 @@ we choose $\beta$ so that
 \beta_f := \beta \cdot \alpha_f; \;\;\;
 \Phi_*(\beta_f) = \ddd{\Phi_f}
 \end{equation}
+
+If $f$ is thick but not convex,
+let $\vec{e}$ be an edge with largest $\vphi_{\vec{e}}$,
+so that $\vphi_{\vec{e}} \geq \pi/2$.
+If $\vphi_{\vec{e}} = \pi/2$,
+we can 
+
 
 
 If $f$ is thin, we actually have that $\alpha_f \in K_c$,
@@ -223,7 +234,7 @@ constant, so $d\theta_e(w_e) < 0$, so we can take
 u_e := (d\theta_e(w_e))^\inv \cdot w_e
 \end{equation}
 
-In general, we consider a thick path of faces $f_0, \ldots, f_n$,
+In general, we consider a wide path of faces $f_0, \ldots, f_n$,
 such that all faces except $f_0$ and $f_n$ are thin,
 and $f_i$ are distinct except possibly $f_0 = f_n$.
 \footnote{Picture a closed accordian.}
@@ -312,7 +323,7 @@ $f_0$).
 Furthermore, all the $\Theta_*(u_{e_i})$ have most components equal,
 so $e_i$ are in the same connected component of $G_\llong$.
 Thus connectivity of $G_\llong$ follows from the
-thick-path-connectivity of faces.
+wide-path-connectivity of faces.
 
 
 Finally, for short edges $e$, we simply define $u_e$
