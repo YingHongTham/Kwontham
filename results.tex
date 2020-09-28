@@ -180,7 +180,7 @@ the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
 or $\beta_{f'}$, which is positive by construciton
 (because $f,f'$ are convex faces);
 thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
-is equal 0 if and only if $e'$ is short.
+is equal to 0 if and only if $e'$ is short.
 Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
 constant, so $d\theta_e(w_e) < 0$, so we can take
 \begin{equation}
@@ -318,7 +318,7 @@ the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
 or $\beta_{f'}$, which is positive by construciton
 (because $f,f'$ are convex faces);
 thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
-is equal 0 if and only if $e'$ is short.
+is equal to 0 if and only if $e'$ is short.
 Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
 constant, so $d\theta_e(w_e) < 0$, so we can take
 \begin{equation}
@@ -344,7 +344,27 @@ Thus by the condition of non-existence of wide cycles of thin faces,
 this process must terminate.
 
 
-Now we need to check that 
+Now we need to check that $w_e$ has the right properties.
+First we assume that there are no thin faces.
+Then there is a sequence of thick faces
+$f_0 = f, f_1, \ldots, f_n$
+with edges $e_0 = e, e_1, \ldots, e_n$ between them
+(similar for $f_0 = f'$).
+Observe that the coefficient of $\ddd{\vphi_{\vec{e}}}$
+is positive in either $\eta_{\vec{e}}$ or $\gamma_{\vec{e}}$,
+so $d\theta_e(\Theta_*(w_e)) < 0$.
+Now consider $e_i$ for some $i$,
+and let $\vec{e_i} \in \del f_{i-1}, \cev{e_i} \in \del f_i$.
+Observe that since the $\gamma$ term from the previous edge
+affects the length of $e_i$,
+we must have $\vphi_{\vec{e_i}} > \pi/2$,
+and thus $\vphi_{\cev{e_i}} < \pi/2$.
+Then we see that $\Theta_*(w_e) > 0$
+by the following claim:
+consider an obtuse triangle
+with $\vphi_{\vec{e_i}}$,
+The coefficient of 
+
 
 \end{proof}
 
@@ -448,7 +468,7 @@ the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
 or $\beta_{f'}$, which is positive by construciton
 (this requires $f,f'$ to be convex faces);
 thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
-is equal 0 if and only if $e'$ is short.
+is equal to 0 if and only if $e'$ is short.
 Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
 constant, so $d\theta_e(w_e) < 0$, so we can take
 \begin{equation}
