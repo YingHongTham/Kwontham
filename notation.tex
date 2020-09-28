@@ -23,7 +23,13 @@ and we assume that an arbitrary choice has been made.
 Recall circle pattern.
 
 A circle pattern is determined by the radius of the circle $C_f$ associated to each face, $r_f$,
-and the angle that each edge subtends in adjacent faces, $\vphi_{\vec{e}}$. (see figure TODO)
+and the angle that each edge subtends in adjacent faces, $\vphi_{\vec{e}}$.
+(See \figref{f:circle_pattern})
+\begin{figure}
+\includegraphics[width=5cm]{circle_pattern}
+\caption{Circle pattern in terms of radii $r_f$ and angles $\vphi_{\vec{e}}$}
+\label{f:circle_pattern}
+\end{figure}
 Thus determines, and is determined by a point in $\RRR \times \QQQ$, where
 
 \begin{itemize}
@@ -39,7 +45,7 @@ On $\RRR \times \QQQ$, there are several functions to consider:
 	\item $\Phi_f = 2 \sum_{\vec{e} \in \del f} \vphi_{\vec{e}}$, measuring the cone angle
 		at the center of $C_f$
 	\item $\theta_e = \pi - \vphi_{\vec{e}} - \vphi_{\cev{e}}$
-	\item $l_{\vec{e}} = r_{f_{\vec{e}}} \sin \vphi_{\vec{e}}$
+	\item $l_{\vec{e}} = 2 r_{f_{\vec{e}}} \sin \vphi_{\vec{e}}$
 \end{itemize}
 
 These fit together to give maps to the following spaces:
@@ -160,10 +166,10 @@ Then $\CCC$ is a manifold in a neighborhood of $c$.
 \begin{proof}
 We need to show that the differentials
 $d(l_{\vec{e}} - l_{\cev{e}})
-= \sin \vphi_{\vec{e}} d r_{f_{\vec{e}}}
-+ r_{f_{\vec{e}}} \cos \vphi_{\vec{e}} d \vphi_{\vec{e}}
-- \sin \vphi_{\cev{e}} d r_{f_{\cev{e}}}
-- r_{f_{\cev{e}}} \cos \vphi_{\cev{e}} d \vphi_{\cev{e}}
+= 2\sin \vphi_{\vec{e}} d r_{f_{\vec{e}}}
++ 2r_{f_{\vec{e}}} \cos \vphi_{\vec{e}} d \vphi_{\vec{e}}
+- 2\sin \vphi_{\cev{e}} d r_{f_{\cev{e}}}
+- 2r_{f_{\cev{e}}} \cos \vphi_{\cev{e}} d \vphi_{\cev{e}}
 $
 are linearly independent at $c$.
 If $\vphi_{\vec{e}} \neq \pi/2$,
@@ -185,7 +191,7 @@ By face non-singularity, any face can meet at most two
 edges from $E'$, thus if $e\in E'$,
 it is contained in a unique such string of faces/edges.
 Thus the differentials
-$d(l_{\vec{e_i}} - l_{\cev{e_i}}) = dr_{f_i} - dr_{f_{i+1}}$
+$d(l_{\vec{e_i}} - l_{\cev{e_i}}) = 2dr_{f_i} - 2dr_{f_{i+1}}$
 are linearly independent.
 \end{proof}
 

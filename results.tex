@@ -163,7 +163,9 @@ Observe that %$\alpha_e$ from \eqnref{e:alpha_e}
 \alpha_e = \frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
 + \frac{1}{2 r_{f'}\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}
 \end{equation}
-increases $\Phi_f$ and $\Phi_{f'}$.
+increases both $l_{\vec{e}}$ and $l_{\cev{e}}$ at the same rate,
+and has the side effect of
+increasing $\Phi_f$ and $\Phi_{f'}$.
 We can compensate using $\beta_f$ from \eqnref{e:beta_f_convex},
 so we consider
 \[
@@ -176,7 +178,7 @@ w_e = \alpha_e - \frac{1}{\cos \vphi_{\vec{e}}} \beta_f
 For $\vec{e'} \in \del f \cup \del f' \backslash \{\vec{e},\cev{e}\}$,
 the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
 or $\beta_{f'}$, which is positive by construciton
-(this requires $f,f'$ to be convex faces);
+(because $f,f'$ are convex faces);
 thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
 is equal 0 if and only if $e'$ is short.
 Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
@@ -186,6 +188,163 @@ constant, so $d\theta_e(w_e) < 0$, so we can take
 u_e := (d\theta_e(w_e))^\inv \cdot w_e
 \end{equation}
 
+Next we consider the presence of thick faces that are not convex,
+but still assume there are no thin faces.
+Then a thick face as at most one edge with $\vphi_{\vec{e}} \geq \pi/2$.
+Suppose $\vec{e} \in \del f$, and $f$ is not convex.
+We want to increase $l_{\vec{e}}$ as before.
+If $f$ has no edges with $\vphi_\bullet = \pi/2$,
+then we consider
+\begin{equation}
+\gamma_f = \ddd{\vphi_{\vec{e}}} - \ddd{\vphi_{\vec{e'}}}
+\end{equation}
+where $e'$ is some other edge of $f$, such that
+$\max \{\vphi_{\vec{e}}, \vphi_{\vec{e'}}\} > \pi/2$.
+Because $\cos \vphi_{\vec{e}} \neq 0 \cos \vphi_{\vec{e'}}$,
+$\gamma_f$ affects both $l_{\vec{e}}$ and $l_{\vec{e'}}$
+(increasing or decreasing both simultaneously)
+while keeping $\Phi_f$ constant.
+This allows us to ``transfer'' the effect of increasing $l_{\vec{e}}$
+to $l_{\vec{e'}}$, in the following sense:
+if $e'$ is adjacent to another face $f''$ that is convex,
+then 
+
+
+END NEW PROOF END NEW PROOF END NEW PROOF END NEW PROOF END NEW PROOF 
+
+Let us first construct several other auxiliary vectors
+that are not necessarily in $T_c \CCC$.
+Generally they keep $\Phi_f$'s constant,
+but have an effect on the lengths of oriented edges $l_{\vec{e}}$.
+The $u_e$'s will be built from a combination of these.
+
+
+Let $f$ be a convex face, and $\vec{e} \in \del f$. Define
+\begin{equation}
+\label{e:eta_e}
+\eta_{\vec{e}} =
+\frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
+- \frac{1}{r_f \cos \vphi_{\vec{e}}} \beta_f
+\end{equation}
+$\eta_{\vec{e}}$ keeps $\Phi_f$ constant, but increases $l_{\vec{e}}$
+at unit speed, i.e. $dl_{\vec{e}}(\eta_{\vec{e}}) = 1$.
+
+
+Let $f$ be a thick but not convex face.
+There is exactly one edge $\vec{e} \in \del f$
+with $\vphi_{\vec{e}} \geq \pi/2$.
+If $\vphi_{\vec{e}} > \pi/2$, we will define
+$\eta_{\vec{e}}$ as in \eqnref{e:eta_e}.
+If $\vphi_{\vec{e}} = \pi/2$,
+we will define
+\begin{equation}
+\label{e:eta_e_2}
+\eta_{\vec{e}} = \frac{1}{2}\ddd{r_f}
++ (\sum_{\vec{e'} \neq \vec{e}}
+	\frac{\sin \vphi_{\vec{e'}}}{2 r_f \cos \vphi_{\vec{e'}}})
+	\ddd{\vphi_{\vec{e'}}}
+- \sum_{\vec{e'} \neq \vec{e}}
+	\frac{\sin \vphi_{\vec{e'}}}{2 r_f \cos \vphi_{\vec{e'}}}
+	\ddd{\vphi_{\vec{e'}}}
+\end{equation}
+Then it is easy to see that
+$dl_{\vec{e}}(\eta_{\vec{e}}) = 1$
+while
+$dl_{\vec{e'}}(\eta_{\vec{e}}) = 0$
+for all other $\vec{e'} \neq \vec{e}$,
+and $\eta_{\vec{e}}$ keeps $\Phi_f$ constant.
+
+
+Now let $\vec{e'} \in \del f$ be another edge.
+We define
+\begin{equation}
+\label{e:gamma_e}
+\gamma_{\vec{e'}} = \frac{1}{2 r_f \cos{\vphi_{\vec{e'}}}}
+	(\ddd{\vphi_{\vec{e'}}} - \ddd{\vphi_{\vec{e}}})
+\end{equation}
+Then $dl_{\vec{e'}} = 1$,
+$dl_{\vec{e}} = -\frac{\cos \vphi_{\vec{e}}}{\cos \vphi_{\vec{e'}}} \geq 0$,
+and keeps $\Phi_f$ constant.
+
+
+Finally, let $f$ be a thin face.
+If $\vec{e} \in \del f$ is a short edge,
+i.e. $\vphi_{\vec{e}} = 0$,
+then we define $\eta_{\vec{e}}$ as in \eqnref{e:eta_e}.
+If $\vec{e}$ is long, and $\vphi_{\vec{e}} \neq \pi/2$,
+we define $\gamma_{\vec{e}}$ as in \eqnref{e:gamma_e};
+if $\vphi_{\vec{e}} = \pi/2$, we define
+\begin{equation}
+\label{e:xi_e}
+\xi_{\vec{e}} = \frac{1}{2}\ddd{r_f}
+\end{equation}
+Clearly $dl_{\vec{e}}(\xi_{\vec{e}}) = dl_{\vec{e'}}(\xi_{\vec{e}}) = 1$
+for the other edge $e'$ with $\vphi_{\vec{e'}} = \pi/2$.
+%where $\vec{e'} \in \del f$ is the unique other long edge.
+
+
+In summary,
+$\eta_{\vec{e}}, \gamma_{\vec{e}}, \xi_{\vec{e}}$
+always increases $l_{\vec{e}}$ at unit speed,
+and keeps $\Phi_{f_{\vec{e}}}$ constant.
+$\eta_{\vec{e}}$ does not affect the lenghts of other edges
+in the face $f_{\vec{e}}$,
+but the other two might affect another edge
+- this other edge $\vec{e'}$ is unique,
+and $l_{\vec{e}}, l_{\vec{e'}}$ either both increase
+or decrease.
+Furthermore, $l_{\vec{e'}} \geq l_{\vec{e'}}$.
+
+
+For any oriented edge $\vec{e}$,
+there is exactly one such vector defined for it;
+call that vector $\zeta_{\vec{e}}$.
+
+
+Now we can put these vectors together to construct the desired $u_e$'s.
+To illustrate the main idea of the construction,
+first suppose that $e$ is an edge between two convex faces $f,f'$.
+Then we can consider
+\[
+w_e = \eta_{\vec{e}} + \eta_{\cev{e}}
+\]
+Since $dl_{\vec{e}}(w_e) = dl_{\cev{e}}(w_e) = 1$,
+and $dl_{\vec{e'}}(w_e) = 0$ for all other edges,
+$w_e \in T_c \CCC$;
+furthermore, $\eta_\bullet$ does not affect $\Phi_\bullet$,
+so $w_e \in K_c$.
+For $\vec{e'} \in \del f \cup \del f' \backslash \{\vec{e},\cev{e}\}$,
+the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
+or $\beta_{f'}$, which is positive by construciton
+(because $f,f'$ are convex faces);
+thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
+is equal 0 if and only if $e'$ is short.
+Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
+constant, so $d\theta_e(w_e) < 0$, so we can take
+\begin{equation}
+\label{e:u_e}
+u_e := (d\theta_e(w_e))^\inv \cdot w_e
+\end{equation}
+
+
+Now consider an arbitrary edge $e$ between faces $f,f'$.
+We build $u_e$ inductively, beginning with
+$w_e = \zeta_{\vec{e}} + \zeta_{\cev{e}}$,
+$F' = \{f, f'\}$, and $E' = \{e\}$.
+If $w_e$ also affects $l_{\vec{e'}}$ for some edge
+$\vec{e'} \in \del F' \backslash\{\vec{e''},\cev{e''} | e''\in E'\}$,
+we add an appriopriate positive multiple
+of $\zeta_{\cev{e'}}$ to $w_e$,
+add $f_{\cev{e'}}$ to $F'$,
+and add $e'$ to $E'$.
+Recall that when $\zeta_{\vec{e'}}$ affects
+the length of another edge $e''$,
+we always have $l_{\vec{e''}} \geq l_{\vec{e'}}$.
+Thus by the condition of non-existence of wide cycles of thin faces,
+this process must terminate.
+
+
+Now we need to check that 
 
 \end{proof}
 
