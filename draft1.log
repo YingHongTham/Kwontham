@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  5 OCT 2020 19:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  5 OCT 2020 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,9 +686,6 @@ Overfull \hbox (8.1119pt too wide) in paragraph at lines 303--308
  [][] 
  []
 
-
-LaTeX Warning: Reference `fig:step_one' on page 4 undefined on input line 337.
-
 <fig-3.png, id=42, 1204.5pt x 1204.5pt>
 File: fig-3.png Graphic file (type png)
 <use fig-3.png>
@@ -795,29 +792,26 @@ Package pdftex.def Info: more_pictures/kite.png  used on input line 242.
 File: more_pictures/positive_angle.png Graphic file (type png)
 <use more_pictures/positive_angle.png>
 Package pdftex.def Info: more_pictures/positive_angle.png  used on input line 2
-45.
+46.
 (pdftex.def)             Requested size: 142.26378pt x 156.75539pt.
 <more_pictures/negative_angle.png, id=113, 423.5825pt x 424.58624pt>
 File: more_pictures/negative_angle.png Graphic file (type png)
 <use more_pictures/negative_angle.png>
 Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 2
-46.
+47.
 (pdftex.def)             Requested size: 142.26378pt x 142.60168pt.
  [14] [15 <./more_pictures/kite.png> <./more_pictures/positive_angle.png> <./mo
-re_pictures/negative_angle.png>] [16] [17] [18]) (./draft1.bbl [19]) [20] (./dr
-aft1.aux)
-
-LaTeX Warning: There were undefined references.
-
+re_pictures/negative_angle.png>] [16] [17] [18] [19])
+(./draft1.bbl) [20] (./draft1.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14504 strings out of 492649
- 290745 string characters out of 6129622
- 334225 words of memory out of 5000000
- 17882 multiletter control sequences out of 15000+600000
+ 14503 strings out of 492649
+ 290723 string characters out of 6129622
+ 332249 words of memory out of 5000000
+ 17881 multiletter control sequences out of 15000+600000
  15912 words of font info for 60 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  61i,16n,82p,489b,887s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -841,7 +835,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 18/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft1.pdf (20 pages, 1818001 bytes).
+Output written on draft1.pdf (20 pages, 1818182 bytes).
 PDF statistics:
  206 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams
