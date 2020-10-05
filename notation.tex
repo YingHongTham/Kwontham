@@ -26,7 +26,7 @@ A circle pattern is determined by the radius of the circle $C_f$ associated to e
 and the angle that each edge subtends in adjacent faces, $\vphi_{\vec{e}}$.
 (See \figref{f:circle_pattern})
 \begin{figure}
-\includegraphics[width=5cm]{circle_pattern}
+\includegraphics[width=8cm]{circle_pattern}
 \caption{Circle pattern in terms of radii $r_f$ and angles $\vphi_{\vec{e}}$}
 \label{f:circle_pattern}
 \end{figure}
@@ -79,14 +79,19 @@ $\CCC$ the set of extended circle patterns.
 \end{tikzcd}
 
 
-[TODO Check this] The usual notion of circle pattern would be restricted to those $c\in \CCC$
+The notion of circle pattern that is considered in \cite{BandS}
+would be restricted to those $c\in \CCC$
 with $\vphi_{\vec{e}} \in (0,\pi)$ and $\theta_e \in (0,\pi)$.
-One may consider deforming a circle pattern so as to have some $\theta_e$ approach 0 or $\pi$.
+They parametrize circle patterns by $(r_f)$ and $(\theta_e)$
+(or $(\theta_e^*)$),
+and call $(\vphi_{\vec{e}})$ a coherent angle system.
+One may consider deforming a circle pattern so as to have
+some $\theta_e$ approach 0 or $\pi$.
 The limit $\theta_e \to \pi$ is easy to picture, one simply gets that the two circles
 $C_f, C_{f'}$ of the adjacent faces become tangent. The limit $\theta_e \to 0$
 is a bit more complex, as the final shape of $Q_e$ (the quadrangle associated to $e$)
 may depend on $\vphi_{\vec{e}}$ or $\vphi_{\cev{e}}$.
-If we parametrize circle patterns by $(r_f)$ and $(\theta_e)$ as in TODO \ocite{BS},
+If we parametrize circle patterns by $(r_f)$ and $(\theta_e)$ as in \cite{BandS},
 the limiting shape would depend on the relationship between 
 $r_f$ and $r_{f'}$.
 As our main result depends on extending \ocite{BS} result
@@ -113,7 +118,6 @@ if $\sum_{e \ni v} \theta_e = 2\pi$ for all vertices $v$.
 Finally it is said to be \emph{non-singular} if it is both.
 \end{definition}
 
-TODO non-degenerate circle pattern?
 
 \begin{definition}
 Let $f$ be a non-singular face (i.e. $\Phi_f = 2\pi$),
@@ -136,7 +140,7 @@ we have $\vphi_{\vec{e}} \in [0,\pi/2)$.
 %	$0 < \vphi_{\vec{e}} = \pi - \vphi_{\vec{e'}} < \pi/2$.
 %\end{definition}
 
-%TODO figures for convex, thin faces
+%figures for convex, thin faces
 
 \begin{definition}
 Given an extended circle pattern $c\in \CCC$, an edge $e$ is \emph{short}
@@ -194,33 +198,5 @@ Thus the differentials
 $d(l_{\vec{e_i}} - l_{\cev{e_i}}) = 2dr_{f_i} - 2dr_{f_{i+1}}$
 are linearly independent.
 \end{proof}
-
-\subsection{Modifications to Extended Circle Patterns}
-
-
-Let $\Gamma$ be a graph on the torus, and let $c$ be a
-non-singular extended circle pattern on $\Gamma$.
-There are two simple operations to modify $\Gamma$:
-cutting a face along a new edge,
-and splitting a vertex in two then joining them by a new edge.
-We describe how to associate an extended circle pattern $c'$ to
-the new graph.
-
-
-Cutting a face: Consider a face $f$,
-and suppose we added a new edge $e'$ so that $f$ is split into
-two faces $f'$ and $f''$, so that
-$\del f' = \{\vec{e_1},\ldots,\vec{e_k}, \vec{e'}\}$,
-and $\del f'' = \{\cev{e'}, \vec{e_{k+1}},\ldots \vec{e_n}\}$.
-Then for the new extended circle pattern $c'$,
-we set $r_{f'}(c') = r_{f''}(c') = r_f(c)$,
-$\vphi_{\vec{e'}} = \pi - \vphi_{\vec{e_1}} - \ldots - \vphi_{\vec{e_k}}$,
-$\vphi_{\cev{e'}} = \pi - \vphi_{\vec{e_{k+1}}} - \ldots \vphi_{\vec{e_n}}$,
-and $r_\bullet(c') = r_\bullet(c)$, $\vphi_\bullet(c') = \vphi_\bullet(c)$
-for all other faces, edges.
-It is straightforward to check that $c'$ is non-singular.
-
-
-Consider a vertex $v$ of the TODO
 
 

@@ -3,15 +3,21 @@
 \usepackage{amsfonts, amstext, amsmath, amsthm, amscd, amssymb, upgreek}
 \usepackage{bbm}
 \usepackage{graphicx, color,  subfigure, wrapfig, overpic}
+\usepackage{fullpage}
 %\usepackage[all,cmtip]{xy} 
-\usepackage{tikz}
+%\usepackage{tikz}
+\usepackage{tikz-cd}
 %\usepackage{mystyle}
 
 \newcommand{\thmref}[1]{Theorem \ref{#1}}
 \newcommand{\prpref}[1]{Proposition \ref{#1}}
 \newcommand{\lemref}[1]{Lemma \ref{#1}}
+\newcommand{\figref}[1]{Figure \ref{#1}}
+\newcommand{\secref}[1]{Section \ref{#1}}
+\newcommand{\eqnref}[1]{(\ref{#1})}
 %\newcommand{\ref}[1]{Figure \ref{#1}}
 \newcommand{\comment}[1]{}
+\newcommand{\inv}{{-1}} % annoying to type {-1} when taking inverse
 
 
 \textwidth 6.07in 
@@ -115,6 +121,7 @@ that $L$ is hyperbolic.
 \end{abstract}
 
 \section{Introduction}
+\label{s:intro}
 
 Given a twist reduced diagram of a link $K$, \emph{augmentating} is a process in
 which an unknotted circle component (augmentation) is added to one or
@@ -136,10 +143,16 @@ with their associated link diagram on $\torus \times \{0\}.$
 Menasco \cite{Menasco} showed there are decompositions of the complements of 
 alternating links in $\Sp^3$ into two polyhedra, a top polyhedron and a bottom polyhedron. 
 For alternating links, $K$ in the thickened torus Champanerkar, Kofman and Purcell \cite{CKP2}
-showed that there is a decomposition of the complement of $K$ into objects called torihedra, which we think of 
+showed that there is a decomposition of the complement of $K$ into objects called torihedra,
+which we think of 
 as counterparts of Menasco's decomposition of links in $\Sp^3$ into polyhedra, for links in the thickened 
-torus. Just like Menasco's decomposition, one can obtain a top and bottom torihedron. In section 2 we show that for augmented links in the thickened torus 
-one can also obtain a decomposition of the complement into a top and bottom torihedron.    
+torus. Just like Menasco's decomposition, one can obtain a top and bottom torihedron.
+In \secref{s:auglinks} we show that for augmented links in the thickened torus 
+one can also obtain a decomposition of the complement into a top and bottom torihedron.
+In \secref{s:hyperbolicity}, we prove that augmented alternating links in the thickened torus
+are hyperbolic.
+In the Appendix, we provide an alternative proof to hyperbolicity of these links
+via circle patterns, which one could use obtain lower bounds for volume.
 
  \begin{figure}
  \centering  
@@ -155,7 +168,9 @@ one can also obtain a decomposition of the complement into a top and bottom tori
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Augmented Links}
- Champanerkar, Kofman and Purcell have studied alternating links in the thickened torus \cite{CKP2}. They define a link in the thickened torus as a quotient of a biperiodic alternating link as follows,
+\label{s:auglinks}
+
+Champanerkar, Kofman and Purcell have studied alternating links in the thickened torus \cite{CKP2}. They define a link in the thickened torus as a quotient of a biperiodic alternating link as follows,
  
 \begin{define}
 \label{def:biperiodiclink}
@@ -320,24 +335,24 @@ and in fact $\Gamma_T(K) = \Gamma_B(K)$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The following figures is an example which decomposes the link (C) of Figure
 \ref{fig:Augmentations}. 
- \begin{figure}[h] 
- \centering
- \includegraphics
-[height=3cm]{fig-3}
- \includegraphics [height=3cm]{fig-4}
-  \caption{Each crossing
-circle bounds a disk} \end{figure}
+
+
+\begin{figure}[h] 
+\centering
+\includegraphics[height=3cm]{fig-3}
+\includegraphics[height=3cm]{fig-4}
+	\caption{Each crossing circle bounds a disk}
+\end{figure}
  
- \vspace*{-0.5cm} 
- \begin{figure}[h] 
- \centering 
- \includegraphics
- [height=3cm]{fig-5} 
- \caption{We split the disk and collapse the arc of each
+%\vspace{-0.5cm} 
+\begin{figure}[h] 
+\centering 
+\includegraphics[height=3cm]{fig-5} 
+	\caption{We split the disk and collapse the arc of each
  crossing circle to ideal vertices} 
- \end{figure}
- 
-\vspace*{-0.5cm} 
+\end{figure}
+
+
 \begin{figure}[h] 
 \centering 
 \includegraphics[height=3cm]{fig-6} 
@@ -346,46 +361,15 @@ Middle: Picture of splitting the crossing edge. Right: The link component is
 pushed off to infinity.} 
 \end{figure}
 
- \vspace*{-0.5cm} 
- \begin{figure}[h] 
- \centering 
- \includegraphics
- [height=3cm]{top-bottom} 
- \caption{Left: The top torihedron. Right: The bottom torihdron with rotation for face gluing.} 
- \label{fig:top-bottom} \end{figure}
+\begin{figure}[h] 
+\centering 
+\includegraphics[height=3cm]{top-bottom} 
+	\caption{Left: The top torihedron. Right: The bottom torihdron with rotation for face gluing.} 
+\label{fig:top-bottom}
+\end{figure}
 
 
-\comment{
-\begin{remark}\label{cor:triangulation}
-The faces of one torihedron which do not correspond to a bow-tie glue to a
-corresponding face of the second torihedron to form bipyramids. One can add
-stellating edges, edges which have vertices corresponding to the different
-components of the Hopf link that cuts through the center of the face to
-decompose the bipyramids into tetrahedra. This process is called {\it
-stellation}. Stellating all the bipyramids of the decomposition obtained from
-Proposition \ref{p:tori_decomp} we obtained a triangulation of the
-complement of $L$ which is made up of {\it horizontal} edges (edges from the
-graph of the torihedra), {\it vertical} edges (edges from coning vertices of the
-the graph of the torihedra) and stellating edges.
-\end{remark}
-}
 
-\comment{
-\begin{proof}[Proof of Remark 2.7]
-Using the decomposition from Proposition
-\ref{p:tori_decomp} we can add a stellation edge whose end points
-are $\torus \times \{-1\}$ and $\torus \times \{1\}$ which cut through faces of $\torus \times I$ which do not come from the augmentation disks like in \cite{CKP2}.
-Since each face of the top torihedron gets glued to the bottom torihedron, we
-obtain bipyramids, and the stellation edge will decompose the bipyramids into
-tetrahedra. Then the link of the vertex  $\torus \times \{1\}$ or
-$\torus \times \{-1\}$ is the graph of the torihedron
-%$\torus \times [0,1)$ or
-%$\torus \times (-1,0]$ respectively.
-\end{proof}
-}
-
-
-TODO refer to BS about theta's
 \begin{definition}
 An \emph{angled torihedron} $(\sT, \theta_\bullet^*)$
 is a torihedron $\sT$ with
@@ -461,10 +445,14 @@ the dihedral angles from the two adjacent pyramids
 add to $\theta_e^*$.
 \end{definition}
 
-TODO same as [BS] ``coherent angle system'' or something.
+\begin{remark}
+These $\theta$'s are related to the $\theta$'s in
+\cite{BandS},
+and the $\vphi$'s are related to their ``coherent angle system''.
+\end{remark}
 
-TODO remark on what splitting means in terms of ideal hyperbolic
 
+%TODO remark on what splitting means in terms of ideal hyperbolic
 
 \begin{lemma}
 \label{l:pyramid_decomp}
@@ -529,7 +517,20 @@ it is similar for $j = i+2$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hyperbolicity of Augmented Links}
-Thurston introduced a method for finding the unique hyperbolic metric for a given 3-manifold $M$ with boundary consisting of tori \cite{Thurston}. The idea was to triangulate the interior of $M$ into ideal tetrahedra and give those tetrahedra hyperbolic shapes (called shape parameters) that glue up coherently in $M$. The shape parameter of a tetrahedron is described by the cross-ratio of its four vertices on the sphere at infinity. Thurston had written down a system of gluing equations with shape parameters whose solutions correspond to the complete hyperbolic metric on the interior of $M$. Casson and Rivin separated gluing equations into a linear and non-linear part \cite{Casson-Rivin}. Angle structures is the linear part of Thurston's gluing equations, and what we will use to attain hyperbolicity of complements of augmented links in the thickened torus. 
+\label{s:hyperbolicity}
+Thurston introduced a method for finding the unique hyperbolic metric for a
+given 3-manifold $M$ with boundary consisting of tori \cite{Thurston}. The idea
+was to triangulate the interior of $M$ into ideal tetrahedra and give those
+tetrahedra hyperbolic shapes (called shape parameters) that glue up coherently
+in $M$. The shape parameter of a tetrahedron is described by the cross-ratio of
+its four vertices on the sphere at infinity. Thurston had written down a system
+of gluing equations with shape parameters whose solutions correspond to the
+complete hyperbolic metric on the interior of $M$. Casson and Rivin separated
+gluing equations into a linear and non-linear part \cite{Casson-Rivin}. Angle
+structures is the linear part of Thurston's gluing equations, and what we will
+use to attain hyperbolicity of complements of augmented links in the thickened
+torus.
+
 
 \begin{define}
 Let $M$ be an orientable 3-manifold with boundary consisting of tori. An angle
@@ -558,7 +559,9 @@ we then assign angles to edges of these torihedra
 and decompose them into base-angled pyramids.
 These pyramids can be further decomposed into tetrahedra,
 thus obtaining an angle structure on a triangulation.
-
+In the Appendix, we show that this triangulation
+also has an angle structure that
+satisfies Thurston's gluing equations.
 
 
 \begin{define}
@@ -719,6 +722,7 @@ entering $N'$, respectively.
 
 
 \begin{theorem}
+\label{t:auglink_hyp}
 Let $K$ be a weakly prime, alternating link whose diagram has no bigons.
 Let $L$ be a link obtained from augmenting $K$.
 Then $L$ is hyperbolic.
@@ -890,7 +894,7 @@ because the other face it meets is a bow-tie).
 
 %Thus, we could attempt to apply the feasible flow theorem in a similar manner,
 %and obtain an angle-splitting for $\sT_T(L)'$, but 
-TODO rephrase nicely.
+%TODO rephrase nicely.
 We can directly get an angle-splitting for $\sT_T(L)'$
 using the angle-splitting for $\sT_T(L)$.
 We reuse the $+/-$ assignments from Figure \ref{f:adding_edges}.
@@ -929,7 +933,7 @@ $\theta^*=\pi$,
 so an increase in the former would be conterbalanced by
 a decrease in the latter.
 It is also easy to see this is the case for the other edges.
-TODO hmm more detail?
+%TODO hmm more detail?
 
 
 Finally, for each face of $\Gamma_T(L)'$ that has more than three sides,

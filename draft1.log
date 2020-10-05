@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  26 SEP 2020 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  5 OCT 2020 01:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -210,7 +210,14 @@ or enter new name. (Default extension: sty)
 
 Enter file name: 
 \OVP@box=\box51
-) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+) (/usr/share/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip63
+)
+(/usr/local/share/texmf/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2018/11/19 v0.9f Commutative diagrams with TikZ
+
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
@@ -474,33 +481,49 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
+(/usr/local/share/texmf/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+matrix.code.tex
+File: tikzlibrarymatrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+quotes.code.tex
+File: tikzlibraryquotes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowinset=\dimen262
+\pgfarrowlength=\dimen263
+\pgfarrowwidth=\dimen264
+\pgfarrowlinewidth=\dimen265
+)))
 \c@theorem=\count281
-
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count282
 \l__pdf_internal_box=\box63
-) (./draft1.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 106
+)
+(./draft1.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 112
 .
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 106
+LaTeX Font Info:    Trying to load font information for U+msb on input line 112
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -509,13 +532,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count283
-\scratchdimen=\dimen262
+\scratchdimen=\dimen266
 \scratchbox=\box64
 \nofMPsegments=\count284
 \nofMParguments=\count285
 \everyMPshowfont=\toks43
 \MPscratchCnt=\count286
-\MPscratchDim=\dimen263
+\MPscratchDim=\dimen267
 \MPnumerator=\count287
 \makeMPintoPDFobject=\count288
 \everyMPtoPDFconversion=\toks44
@@ -531,200 +554,213 @@ e
 ABD: EveryShipout initializing macros
 
 Class amsart Warning: Abstract should precede \maketitle in AMS document classe
-s; reported on input line 109.
+s; reported on input line 115.
 
 <augmentation1.png, id=4, 397.485pt x 485.815pt>
 File: augmentation1.png Graphic file (type png)
 <use augmentation1.png>
-Package pdftex.def Info: augmentation1.png  used on input line 133.
+Package pdftex.def Info: augmentation1.png  used on input line 160.
 (pdftex.def)             Requested size: 93.11786pt x 113.81102pt.
 <augmentation2.png, id=6, 945.5325pt x 503.8825pt>
 File: augmentation2.png Graphic file (type png)
 <use augmentation2.png>
-Package pdftex.def Info: augmentation2.png  used on input line 134.
+Package pdftex.def Info: augmentation2.png  used on input line 161.
 (pdftex.def)             Requested size: 213.558pt x 113.81102pt.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./augmentation1.png> <./
-augmentation2.png>]
-<fig1.png, id=23, 1198.4775pt x 1198.4775pt>
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<fig1.png, id=22, 1198.4775pt x 1198.4775pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 180.
+Package pdftex.def Info: fig1.png  used on input line 209.
 (pdftex.def)             Requested size: 85.35826pt x 85.34668pt.
-<twist-augment.png, id=24, 1204.5pt x 1204.5pt>
+<twist-augment.png, id=23, 1204.5pt x 1204.5pt>
 File: twist-augment.png Graphic file (type png)
 <use twist-augment.png>
-Package pdftex.def Info: twist-augment.png  used on input line 181.
+Package pdftex.def Info: twist-augment.png  used on input line 210.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
-<fig-2.png, id=25, 1198.4775pt x 1198.4775pt>
+<fig-2.png, id=24, 1198.4775pt x 1198.4775pt>
 File: fig-2.png Graphic file (type png)
 <use fig-2.png>
-Package pdftex.def Info: fig-2.png  used on input line 182.
+Package pdftex.def Info: fig-2.png  used on input line 211.
 (pdftex.def)             Requested size: 85.35826pt x 85.34668pt.
- [2 <./fig1.png> <./twist-augment.png> <./fig-2.png>]
-<crossingArc.png, id=32, 377.41pt x 231.86626pt>
+ [2 <./augmentation1.png> <./augmentation2.png>]
+<crossingArc.png, id=30, 377.41pt x 231.86626pt>
 File: crossingArc.png Graphic file (type png)
 <use crossingArc.png>
-Package pdftex.def Info: crossingArc.png  used on input line 242.
+Package pdftex.def Info: crossingArc.png  used on input line 273.
 (pdftex.def)             Requested size: 113.81102pt x 69.92128pt.
-<crossingPush.png, id=33, 2427.0675pt x 1852.9225pt>
+<crossingPush.png, id=31, 2427.0675pt x 1852.9225pt>
 File: crossingPush.png Graphic file (type png)
 <use crossingPush.png>
-Package pdftex.def Info: crossingPush.png  used on input line 243.
+Package pdftex.def Info: crossingPush.png  used on input line 274.
 (pdftex.def)             Requested size: 142.26378pt x 108.59767pt.
-<falGluing1.png, id=34, 5857.885pt x 1782.66pt>
+ [3 <./fig1.png> <./twist-augment.png> <./fig-2.png> <./crossingArc.png> <./cro
+ssingPush.png>]
+<falGluing1.png, id=40, 5857.885pt x 1782.66pt>
 File: falGluing1.png Graphic file (type png)
 <use falGluing1.png>
-Package pdftex.def Info: falGluing1.png  used on input line 269.
+Package pdftex.def Info: falGluing1.png  used on input line 303.
 (pdftex.def)             Requested size: 227.62204pt x 69.25417pt.
-<falGluing2.png, id=35, 5857.885pt x 2372.865pt>
+<falGluing2.png, id=41, 5857.885pt x 2372.865pt>
 File: falGluing2.png Graphic file (type png)
 <use falGluing2.png>
-Package pdftex.def Info: falGluing2.png  used on input line 270.
+Package pdftex.def Info: falGluing2.png  used on input line 304.
 (pdftex.def)             Requested size: 199.16928pt x 80.6691pt.
 
-Overfull \hbox (8.11192pt too wide) in paragraph at lines 268--273
+Overfull \hbox (8.11192pt too wide) in paragraph at lines 302--307
  [][] 
  []
 
-[3 <./crossingArc.png> <./crossingPush.png>]
-<fig-3.png, id=41, 1204.5pt x 1204.5pt>
+<fig-3.png, id=42, 1204.5pt x 1204.5pt>
 File: fig-3.png Graphic file (type png)
 <use fig-3.png>
-Package pdftex.def Info: fig-3.png  used on input line 304.
+Package pdftex.def Info: fig-3.png  used on input line 342.
 (pdftex.def)             Requested size: 85.35284pt x 85.35826pt.
-<fig-4.png, id=42, 2051.665pt x 1204.5pt>
+<fig-4.png, id=43, 2051.665pt x 1204.5pt>
 File: fig-4.png Graphic file (type png)
 <use fig-4.png>
-Package pdftex.def Info: fig-4.png  used on input line 304.
+Package pdftex.def Info: fig-4.png  used on input line 343.
 (pdftex.def)             Requested size: 145.38435pt x 85.35826pt.
-<fig-5.png, id=43, 3346.5025pt x 1204.5pt>
+<fig-5.png, id=44, 3346.5025pt x 1204.5pt>
 File: fig-5.png Graphic file (type png)
 <use fig-5.png>
-Package pdftex.def Info: fig-5.png  used on input line 308.
+Package pdftex.def Info: fig-5.png  used on input line 350.
 (pdftex.def)             Requested size: 237.13866pt x 85.35826pt.
-<fig-6.png, id=44, 3519.1475pt x 1204.5pt>
-File: fig-6.png Graphic file (type png)
-<use fig-6.png>
-Package pdftex.def Info: fig-6.png  used on input line 312.
-(pdftex.def)             Requested size: 249.37257pt x 85.35826pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<top-bottom.png, id=45, 2487.2925pt x 1204.5pt>
+<fig-6.png, id=45, 3519.1475pt x 1204.5pt>
+File: fig-6.png Graphic file (type png)
+<use fig-6.png>
+Package pdftex.def Info: fig-6.png  used on input line 358.
+(pdftex.def)             Requested size: 249.37257pt x 85.35826pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<top-bottom.png, id=46, 2487.2925pt x 1204.5pt>
 File: top-bottom.png Graphic file (type png)
 <use top-bottom.png>
-Package pdftex.def Info: top-bottom.png  used on input line 317.
+Package pdftex.def Info: top-bottom.png  used on input line 366.
 (pdftex.def)             Requested size: 176.25363pt x 85.35826pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./falGluing1.png> <./falGluing2.png> <./fig-3.png> <./fig-4.png> <./fig-5.p
-ng>] [5 <./fig-6.png> <./top-bottom.png>]
-<more_pictures/angle_split.png, id=65, 502.87875pt x 672.5125pt>
+[4 <./falGluing1.png> <./falGluing2.png> <./fig-3.png> <./fig-4.png>] [5 <./fig
+-5.png> <./fig-6.png> <./top-bottom.png>]
+<more_pictures/angle_split.png, id=64, 502.87875pt x 672.5125pt>
 File: more_pictures/angle_split.png Graphic file (type png)
 <use more_pictures/angle_split.png>
-Package pdftex.def Info: more_pictures/angle_split.png  used on input line 460.
+Package pdftex.def Info: more_pictures/angle_split.png  used on input line 483.
 
 (pdftex.def)             Requested size: 170.20918pt x 227.62204pt.
  [6 <./more_pictures/angle_split.png>]
-
-LaTeX Warning: Reference `right_left_aug.png' on page 7 undefined on input line
- 529.
-
-<more_pictures/right_left_aug.png, id=70, 255.95625pt x 192.72pt>
+<more_pictures/right_left_aug.png, id=71, 255.95625pt x 192.72pt>
 File: more_pictures/right_left_aug.png Graphic file (type png)
 <use more_pictures/right_left_aug.png>
 Package pdftex.def Info: more_pictures/right_left_aug.png  used on input line 5
-33.
+76.
 (pdftex.def)             Requested size: 142.26378pt x 107.1167pt.
-
-LaTeX Warning: Reference `TODO' on page 7 undefined on input line 562.
-
-
-LaTeX Warning: Reference `TODO' on page 7 undefined on input line 567.
-
-[7 <./more_pictures/right_left_aug.png>] [8]
-<more_pictures/horizontal_bowtie.png, id=79, 409.53pt x 334.24875pt>
+[7]
+<bigon_crush.png, id=76, 758.835pt x 154.5775pt>
+File: bigon_crush.png Graphic file (type png)
+<use bigon_crush.png>
+Package pdftex.def Info: bigon_crush.png  used on input line 600.
+(pdftex.def)             Requested size: 312.9803pt x 63.75691pt.
+ [8 <./more_pictures/right_left_aug.png> <./bigon_crush.png>] [9]
+<more_pictures/horizontal_bowtie.png, id=85, 409.53pt x 334.24875pt>
 File: more_pictures/horizontal_bowtie.png Graphic file (type png)
 <use more_pictures/horizontal_bowtie.png>
 Package pdftex.def Info: more_pictures/horizontal_bowtie.png  used on input lin
-e 732.
-(pdftex.def)             Requested size: 142.26378pt x 116.11157pt.
+e 772.
+(pdftex.def)             Requested size: 199.16928pt x 162.55927pt.
+<before_bowtie_angles.png, id=86, 336.25626pt x 411.5375pt>
+File: before_bowtie_angles.png Graphic file (type png)
+<use before_bowtie_angles.png>
+Package pdftex.def Info: before_bowtie_angles.png  used on input line 794.
+(pdftex.def)             Requested size: 142.26378pt x 174.11304pt.
+<bowtie_angles.png, id=87, 336.25626pt x 411.5375pt>
+File: bowtie_angles.png Graphic file (type png)
+<use bowtie_angles.png>
+Package pdftex.def Info: bowtie_angles.png  used on input line 795.
+(pdftex.def)             Requested size: 142.26378pt x 174.11304pt.
 
+Underfull \vbox (badness 1082) has occurred while \output is active []
 
-LaTeX Warning: Reference `TODO' on page 9 undefined on input line 739.
-
-[9 <./more_pictures/horizontal_bowtie.png>]
-<more_pictures/one_edge.png, id=84, 350.30875pt x 339.2675pt>
+ [10 <./more_pictures/horizontal_bowtie.png> <./before_bowtie_angles.png> <./bo
+wtie_angles.png>]
+<more_pictures/one_edge.png, id=94, 350.30875pt x 339.2675pt>
 File: more_pictures/one_edge.png Graphic file (type png)
 <use more_pictures/one_edge.png>
-Package pdftex.def Info: more_pictures/one_edge.png  used on input line 812.
+Package pdftex.def Info: more_pictures/one_edge.png  used on input line 871.
 (pdftex.def)             Requested size: 142.26378pt x 137.78049pt.
-<more_pictures/two_edge_many.png, id=85, 441.65pt x 452.69125pt>
+<more_pictures/two_edge_many.png, id=95, 441.65pt x 452.69125pt>
 File: more_pictures/two_edge_many.png Graphic file (type png)
 <use more_pictures/two_edge_many.png>
-Package pdftex.def Info: more_pictures/two_edge_many.png  used on input line 81
-4.
+Package pdftex.def Info: more_pictures/two_edge_many.png  used on input line 87
+3.
 (pdftex.def)             Requested size: 142.26378pt x 145.81738pt.
- [10 <./more_pictures/one_edge.png> <./more_pictures/two_edge_many.png>] (./cir
-clepatterns.tex
-LaTeX Font Info:    Trying to load font information for U+euf on input line 11.
+ [11 <./more_pictures/one_edge.png> <./more_pictures/two_edge_many.png>]
+(./circlepatterns.tex
+<circle_pattern.png, id=101, 666.49pt x 441.65pt>
+File: circle_pattern.png Graphic file (type png)
+<use circle_pattern.png>
+Package pdftex.def Info: circle_pattern.png  used on input line 38.
+(pdftex.def)             Requested size: 227.62204pt x 150.8329pt.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 42.
 
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-<more_pictures/kite.png, id=91, 518.93875pt x 498.86375pt>
+[12] [13 <./circle_pattern.png>]
+<more_pictures/kite.png, id=112, 518.93875pt x 498.86375pt>
 File: more_pictures/kite.png Graphic file (type png)
 <use more_pictures/kite.png>
-Package pdftex.def Info: more_pictures/kite.png  used on input line 32.
+Package pdftex.def Info: more_pictures/kite.png  used on input line 242.
 (pdftex.def)             Requested size: 227.62204pt x 218.81564pt.
-<more_pictures/positive_angle.png, id=92, 384.43625pt x 423.5825pt>
+<more_pictures/positive_angle.png, id=113, 384.43625pt x 423.5825pt>
 File: more_pictures/positive_angle.png Graphic file (type png)
 <use more_pictures/positive_angle.png>
-Package pdftex.def Info: more_pictures/positive_angle.png  used on input line 3
-5.
+Package pdftex.def Info: more_pictures/positive_angle.png  used on input line 2
+45.
 (pdftex.def)             Requested size: 142.26378pt x 156.75539pt.
-<more_pictures/negative_angle.png, id=93, 423.5825pt x 424.58624pt>
+<more_pictures/negative_angle.png, id=114, 423.5825pt x 424.58624pt>
 File: more_pictures/negative_angle.png Graphic file (type png)
 <use more_pictures/negative_angle.png>
-Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 3
-6.
+Package pdftex.def Info: more_pictures/negative_angle.png  used on input line 2
+46.
 (pdftex.def)             Requested size: 142.26378pt x 142.60168pt.
- [11 <./more_pictures/kite.png>]) (./draft1.bbl) [12 <./more_pictures/positive_
-angle.png> <./more_pictures/negative_angle.png>] (./draft1.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ [14] [15 <./more_pictures/kite.png> <./more_pictures/positive_angle.png> <./mo
+re_pictures/negative_angle.png>] [16] [17]
+[18]) (./draft1.bbl [19]) [20] (./draft1.aux) ) 
 Here is how much of TeX's memory you used:
- 13770 strings out of 480478
- 261394 string characters out of 5905959
- 476784 words of memory out of 5000000
- 29358 multiletter control sequences out of 15000+600000
- 542900 words of font info for 64 fonts, out of 8000000 for 9000
+ 14866 strings out of 480478
+ 294694 string characters out of 5905959
+ 509974 words of memory out of 5000000
+ 30427 multiletter control sequences out of 15000+600000
+ 544610 words of font info for 70 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,13n,60p,898b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm
-10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on draft1.pdf (12 pages, 1662575 bytes).
+ 67i,16n,84p,489b,934s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on draft1.pdf (20 pages, 1816516 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 206 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

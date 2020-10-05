@@ -1,8 +1,8 @@
 \section{Main ?? results}
 
 
-TODO: make a list of images of vectors, e.g.
-$\Theta_*(\ddd{\vphi_{\vec{e}}}) = -\ddd{\theta_e}$.
+%TODO: make a list of images of vectors, e.g.
+%$\Theta_*(\ddd{\vphi_{\vec{e}}}) = -\ddd{\theta_e}$.
 
 
 Our general strategry for obtaining a (non-singular) circle pattern
@@ -24,7 +24,8 @@ to the lifting to such $\tilde{\gamma}$.
 
 To that end, let $L$ be the $(|E|-1)$-plane distribution on $\TTT$
 tangent to the level sets of $\sum_{e\in E} \theta_e$.
-The following proposition proves it (TODO avoid using `it'?) up to first order at a point:
+The following proposition proves that we can deform
+some circle patterns up to first order at a point:
 
 
 \begin{proposition}
@@ -32,14 +33,8 @@ The following proposition proves it (TODO avoid using `it'?) up to first order a
 Let $c \in \CCC$ be a
 non-singular extended circle pattern on a graph
 with no bigons or self-loops such that
-there is no wide cycle of thin faces.
-%\begin{itemize}
-	%\item $\Phi_f = 2\pi$ for all $f\in F$;
-	%\item there is no wide cycle of thin faces.
-	%\item all faces are eithe convex or thin,
-		%with at least one convex face;
-	%\item every pair of faces is connected by a wide path.
-%\end{itemize}
+there is no wide cycle of thin faces,
+and each edge meets two distinct faces.
 Let $K_c = \ker (\Phi_*|_c : T_c \CCC \to T_{\Phi(c)} \PPP)$.
 Then $\Theta_*(K_c) = L_{\Theta(c)}$.
 
@@ -463,13 +458,4 @@ can be lifted to a path $\tilde{\gamma}$ in $U_s$,
 so that $\tilde{\gamma}$ is always tangent to $K'$,
 hence $\Phi(\tilde{\gamma})$ is constant.
 \end{proof}
-
-%===============================================================================
-
-
-TODO
-Note: no face can have its edges glued together; prevented by fact
-of alternating links
-
-TODO just use Feasible Flow Theorem (see BS)
 

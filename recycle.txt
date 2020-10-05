@@ -547,3 +547,75 @@ as in \eqnref{e:u_e}
 (here we do not worry about whether faces are thin or convex,
 as the non-positivity condition of $a^{e'}$ is absent).
 \end{proof}
+
+
+
+
+\subsection{Modifications to Extended Circle Patterns}
+Let $\Gamma$ be a graph on the torus, and let $c$ be a
+non-singular extended circle pattern on $\Gamma$.
+There are two simple operations to modify $\Gamma$:
+cutting a face along a new edge,
+and splitting a vertex in two then joining them by a new edge.
+We describe how to associate an extended circle pattern $c'$ to
+the new graph.
+
+
+Cutting a face: Consider a face $f$,
+and suppose we added a new edge $e'$ so that $f$ is split into
+two faces $f'$ and $f''$, so that
+$\del f' = \{\vec{e_1},\ldots,\vec{e_k}, \vec{e'}\}$,
+and $\del f'' = \{\cev{e'}, \vec{e_{k+1}},\ldots \vec{e_n}\}$.
+Then for the new extended circle pattern $c'$,
+we set $r_{f'}(c') = r_{f''}(c') = r_f(c)$,
+$\vphi_{\vec{e'}} = \pi - \vphi_{\vec{e_1}} - \ldots - \vphi_{\vec{e_k}}$,
+$\vphi_{\cev{e'}} = \pi - \vphi_{\vec{e_{k+1}}} - \ldots \vphi_{\vec{e_n}}$,
+and $r_\bullet(c') = r_\bullet(c)$, $\vphi_\bullet(c') = \vphi_\bullet(c)$
+for all other faces, edges.
+It is straightforward to check that $c'$ is non-singular.
+
+
+Consider a vertex $v$ of the TODO
+
+
+
+
+%\begin{itemize}
+	%\item $\Phi_f = 2\pi$ for all $f\in F$;
+	%\item there is no wide cycle of thin faces.
+	%\item all faces are eithe convex or thin,
+		%with at least one convex face;
+	%\item every pair of faces is connected by a wide path.
+%\end{itemize}
+
+
+
+
+\comment{
+\begin{remark}\label{cor:triangulation}
+The faces of one torihedron which do not correspond to a bow-tie glue to a
+corresponding face of the second torihedron to form bipyramids. One can add
+stellating edges, edges which have vertices corresponding to the different
+components of the Hopf link that cuts through the center of the face to
+decompose the bipyramids into tetrahedra. This process is called {\it
+stellation}. Stellating all the bipyramids of the decomposition obtained from
+Proposition \ref{p:tori_decomp} we obtained a triangulation of the
+complement of $L$ which is made up of {\it horizontal} edges (edges from the
+graph of the torihedra), {\it vertical} edges (edges from coning vertices of the
+the graph of the torihedra) and stellating edges.
+\end{remark}
+}
+
+\comment{
+\begin{proof}[Proof of Remark 2.7]
+Using the decomposition from Proposition
+\ref{p:tori_decomp} we can add a stellation edge whose end points
+are $\torus \times \{-1\}$ and $\torus \times \{1\}$ which cut through faces of $\torus \times I$ which do not come from the augmentation disks like in \cite{CKP2}.
+Since each face of the top torihedron gets glued to the bottom torihedron, we
+obtain bipyramids, and the stellation edge will decompose the bipyramids into
+tetrahedra. Then the link of the vertex  $\torus \times \{1\}$ or
+$\torus \times \{-1\}$ is the graph of the torihedron
+%$\torus \times [0,1)$ or
+%$\torus \times (-1,0]$ respectively.
+\end{proof}
+}
