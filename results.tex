@@ -217,6 +217,7 @@ that are not necessarily in $T_c \CCC$.
 Generally they keep $\Phi_f$'s constant,
 but have an effect on the lengths of oriented edges $l_{\vec{e}}$.
 The $u_e$'s will be built from a combination of these.
+All discussion of changes will refer to changes in the first order.
 
 
 Let $f$ be a convex face, and $\vec{e} \in \del f$. Define
@@ -240,9 +241,9 @@ we will define
 \begin{equation}
 \label{e:eta_e_2}
 \eta_{\vec{e}} = \frac{1}{2}\ddd{r_f}
-+ (\sum_{\vec{e'} \neq \vec{e}}
-	\frac{\sin \vphi_{\vec{e'}}}{2 r_f \cos \vphi_{\vec{e'}}})
-	\ddd{\vphi_{\vec{e'}}}
++ \big(\sum_{\vec{e'} \neq \vec{e}}
+	\frac{\sin \vphi_{\vec{e'}}}{2 r_f \cos \vphi_{\vec{e'}}}\big)
+	\ddd{\vphi_{\vec{e}}}
 - \sum_{\vec{e'} \neq \vec{e}}
 	\frac{\sin \vphi_{\vec{e'}}}{2 r_f \cos \vphi_{\vec{e'}}}
 	\ddd{\vphi_{\vec{e'}}}
@@ -311,7 +312,7 @@ w_e = \eta_{\vec{e}} + \eta_{\cev{e}}
 Since $dl_{\vec{e}}(w_e) = dl_{\cev{e}}(w_e) = 1$,
 and $dl_{\vec{e'}}(w_e) = 0$ for all other edges,
 $w_e \in T_c \CCC$;
-furthermore, $\eta_\bullet$ does not affect $\Phi_\bullet$,
+furthermore, $\eta_-$ does not affect $\Phi_-$,
 so $w_e \in K_c$.
 For $\vec{e'} \in \del f \cup \del f' \backslash \{\vec{e},\cev{e}\}$,
 the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
@@ -342,28 +343,70 @@ the length of another edge $e''$,
 we always have $l_{\vec{e''}} \geq l_{\vec{e'}}$.
 Thus by the condition of non-existence of wide cycles of thin faces,
 this process must terminate.
+It is not hard to see that when an $\eta_-$ term appears,
+the process terminates (for that direction);
+a $\gamma_-$ term begets either another $\gamma_-$ or $\eta_-$ term;
+a $\xi_-$ term begets either
+a $\xi_-, \gamma_-$, or $\eta_-$ term.
+In other words, in the end we get some sum
+(ignoring possible positive coefficients)
+\[
+w_e = (\xi_- + \xi_- + \cdots + \gamma_- + \gamma_- + \cdots + \eta_-)
++ (\xi_- + \xi_- + \cdots + \gamma_- + \gamma_- + \cdots + \eta_-)
+\]
+where in each parenthesis,
+the first term affects the next term and so on.
 
 
-Now we need to check that $w_e$ has the right properties.
-First we assume that there are no thin faces.
-Then there is a sequence of thick faces
-$f_0 = f, f_1, \ldots, f_n$
-with edges $e_0 = e, e_1, \ldots, e_n$ between them
-(similar for $f_0 = f'$).
+Assume that there are no thin faces.
+We check that $w_e$ has the desired properties.
+By construction, $w_e \in T_c \CCC$.
 Observe that the coefficient of $\ddd{\vphi_{\vec{e}}}$
 is positive in either $\eta_{\vec{e}}$ or $\gamma_{\vec{e}}$,
 so $d\theta_e(\Theta_*(w_e)) < 0$.
-Now consider $e_i$ for some $i$,
-and let $\vec{e_i} \in \del f_{i-1}, \cev{e_i} \in \del f_i$.
-Observe that since the $\gamma$ term from the previous edge
-affects the length of $e_i$,
-we must have $\vphi_{\vec{e_i}} > \pi/2$,
-and thus $\vphi_{\cev{e_i}} < \pi/2$.
-Then we see that $\Theta_*(w_e) > 0$
-by the following claim:
-consider an obtuse triangle
-with $\vphi_{\vec{e_i}}$,
-The coefficient of 
+There is a maximal sequence of thick faces
+$f_0 = f, f_1, \ldots, f_n$
+and a sequence of edges $e_0 = e, e_1, \ldots, e_n$,
+where for $i\neq 0$, $e_i$ is between $f_{i-1}$ and $f_i$,
+and $l_{e_i}$ increases under $w_e$;
+we label oriented edges so $\vec{e_i} \in \del f_i$,
+$\cev{e_i} \in \del f_{i+1}$.
+(Similar discussion for $f_0 = f'$).
+Consider one of the edges $e_i$, $i\neq 0$.
+Since $l_{e_i}$ increases, the $\zeta_{\vec{e}_{i-1}}$ term
+from the previous edge $e_{i-1}$ must have been
+$\gamma_{\vec{e}_{i-1}}$;
+in particular, $\vphi_{\cev{e_i}} > \pi/2$,
+$w_e$ decreases $\vphi_{\cev{e_i}}$,
+and keeps $r_{f_{i-1}}$ constant.
+The edge $e_i$ also contributes some $\zeta_{\vec{e_i}}$
+term to $w_e$;
+it increases $\vphi_{\vec{e_i}}$ and either increases
+or keeps constant $r_{f_i}$.
+Then $\theta_{e_i}$ increases, i.e. $d\theta_{e_i}(\Theta_*(w_e)) > 0$,
+by the following simple exercise in elementary Euclidean geometry.
+Suppose an obtuse triangle $\triangle ABC$, $\angle B > \pi/2$,
+and we decrease $\angle B$, increase $\angle C$,
+keep length of $\overline{AB}$ constant,
+and either increase or keeps constant the length of $\overline{AC}$;
+then $\angle A$ increases.
+This can be proved by observing that the changes we are forcing
+on the triangle can be broken in two:
+the first is increase $\angle B$ and keeping lengths
+$\overline{AB}, \overline{AC}$ constant,
+and the second is keeping $\angle B$ and length $\overline{AB}$ constant,
+and increasing length $\overline{AC}$;
+each of these increases $\angle A$.
+We apply this to our situation with $B,C$ being the centers of
+the centers of circles $C_{f_{i-1}}, C_{f_i}$
+of the faces $f_{i-1}, f_i$.
+
+Now we consider the preence of thin faces.
+If all the $\zeta_-$ terms added to $w_e$
+are $\eta_-$ or $\gamma_-$,
+then all arguments in the previous paragraph applies.
+The only situation in which $\xi_-$ is used
+is when either $\zeta_{\vec{e}}$ or $\zeta_{\cev{e}}$ is $\xi_-$.
 
 
 \end{proof}
