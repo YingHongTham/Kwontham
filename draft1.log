@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  5 OCT 2020 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.8.31)  5 OCT 2020 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,7 +734,7 @@ re_pictures/negative_angle.png>] [16] [17]
 Here is how much of TeX's memory you used:
  14866 strings out of 480478
  294694 string characters out of 5905959
- 509975 words of memory out of 5000000
+ 510009 words of memory out of 5000000
  30427 multiletter control sequences out of 15000+600000
  544610 words of font info for 70 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -757,7 +757,7 @@ pe1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb>
-Output written on draft1.pdf (20 pages, 1816945 bytes).
+Output written on draft1.pdf (20 pages, 1817427 bytes).
 PDF statistics:
  206 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams
