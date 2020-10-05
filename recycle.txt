@@ -279,3 +279,271 @@ hence are linearly independent in a neighborhood of $c$.
 %Thus, by the implicit function theorem,
 %$\CCC$ is a manifold in a neighborhood of $c$.
 \end{proof}
+
+
+
+
+
+To illustrate the main idea of the construction,
+first suppose that $e$ is an edge between two convex faces $f, f'$
+(so $\vec{e} \in \del f, \cev{e} \in \del f'$).
+Observe that %$\alpha_e$ from \eqnref{e:alpha_e}
+\begin{equation}
+\label{e:alpha_e}
+\alpha_e = \frac{1}{2 r_f \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
++ \frac{1}{2 r_{f'}\cos \vphi_{\cev{e}}} \ddd{\vphi_{\cev{e}}}
+\end{equation}
+increases both $l_{\vec{e}}$ and $l_{\cev{e}}$ at the same rate,
+and has the side effect of
+increasing $\Phi_f$ and $\Phi_{f'}$.
+We can compensate using $\beta_f$ from \eqnref{e:beta_f_convex},
+so we consider
+\[
+w_e = \alpha_e - \frac{1}{\cos \vphi_{\vec{e}}} \beta_f
+	- \frac{1}{\cos \vphi_{\cev{e}}} \beta_{f'} \in K_c
+\]
+%Since $\theta_e = \pi - \vphi_{\vec{e}} - \vphi_{\cev{e}}$,
+%we need to show that the coefficients of $\ddd{\vphi_{\vec{e}}},
+%\ddd{\vphi_{\cev{e}}}$ sum to 0.
+For $\vec{e'} \in \del f \cup \del f' \backslash \{\vec{e},\cev{e}\}$,
+the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
+or $\beta_{f'}$, which is positive by construciton
+(because $f,f'$ are convex faces);
+thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
+is equal to 0 if and only if $e'$ is short.
+Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
+constant, so $d\theta_e(w_e) < 0$, so we can take
+\begin{equation}
+\label{e:u_e}
+u_e := (d\theta_e(w_e))^\inv \cdot w_e
+\end{equation}
+
+Next we consider the presence of thick faces that are not convex,
+but still assume there are no thin faces.
+Then a thick face as at most one edge with $\vphi_{\vec{e}} \geq \pi/2$.
+Suppose $\vec{e} \in \del f$, and $f$ is not convex.
+We want to increase $l_{\vec{e}}$ as before.
+If $f$ has no edges with $\vphi_\bullet = \pi/2$,
+then we consider
+\begin{equation}
+\gamma_f = \ddd{\vphi_{\vec{e}}} - \ddd{\vphi_{\vec{e'}}}
+\end{equation}
+where $e'$ is some other edge of $f$, such that
+$\max \{\vphi_{\vec{e}}, \vphi_{\vec{e'}}\} > \pi/2$.
+Because $\cos \vphi_{\vec{e}} \neq 0 \cos \vphi_{\vec{e'}}$,
+$\gamma_f$ affects both $l_{\vec{e}}$ and $l_{\vec{e'}}$
+(increasing or decreasing both simultaneously)
+while keeping $\Phi_f$ constant.
+This allows us to ``transfer'' the effect of increasing $l_{\vec{e}}$
+to $l_{\vec{e'}}$, in the following sense:
+if $e'$ is adjacent to another face $f''$ that is convex,
+then 
+
+
+
+Old proof of main first order deformation result:
+\begin{proof}[Proof of \prpref{p:point_lift}]
+We construct a vector $u_e \in K_c \subseteq T_c \CCC$ for each edge $e$
+and show that $\{\Theta_*(u_e)\}_{e\in E}$ spans an
+$|E|-1$ dimensional space,
+thus must be equal $L_{\Theta_c}$.
+
+
+For long edges $e$, $u_e$ will have the following property:
+if $\Theta_*(u_e) = \sum_{e' \in E} a^{e'} \ddd{\theta_{e'}}$, then
+\begin{itemize}
+	\item $a^e = 1$;
+	\item $a^{e'} \leq 0$ for all $e' \neq e$;
+	\item $a^{e'} = 0$ for short edges $e'$.
+	\item $\sum_{e' \in E} a^{e'} = 0$ (follows directly from $u_e \in K_c$)
+\end{itemize}
+Furthermore, these $u_e$'s collectively satisfy the following
+connectivity property:
+consider the graph $G_\llong$ whose vertex set is the set of long edges,
+and we connect two long edges $e,e'$ by an edge if there is some $e''$ such that
+$a^e, a^{e'}$ are both nonzero in $\Theta_*(u_{e''})$;
+then $G_\llong$ is connected.
+
+In addition, for short edges $e$,
+$u_e$ have the following property: again writing
+$\Theta_*(u_e) = \sum_{e' \in E} a^{e'} \ddd{\theta_{e'}}$,
+one has
+\begin{itemize}
+	\item $a^e = 1$;
+	\item $a^{e'} = 0$ for other short edges $e'$.
+	\item $\sum_{e' \in E} a^{e'} = 0$ (follows directly from $u_e \in K_c$)
+\end{itemize}
+
+
+Let us first suppose we have constructed such $u_e$,
+and show that these properties ensure that
+$\{\Theta_*(u_e)\}_{e\in E}$ spans an $|E|-1$ dimensional space.
+This is a simple exercise in linear algebra,
+but we show it for completeness.
+
+
+Put the $\Theta_*(u_e)$'s into a $E \times E$ matrix,
+denoted $M$,
+so that the $e$-th row corresponds to $\Theta_*(u_e)$.
+By virtue of $u_e \in K_c$, we have that $(1\; 1\; \cdots \; 1)^T$
+is in the null space of $M$;
+our goal is to show that it spans the null space.
+
+
+Suppose $b = (b_e)^T$ is in the null space of $M$.
+Reorder $E$, if necessary, so that long edges come before
+short edges.
+Then by the last property of $u_e$'s for long edges,
+the top right block of long-by-short entries are 0.
+Thus the vector $b_\llong := (b_e)_{e \in \llong}^T$ is in the null space
+of the submatrix $M_\llong$ of long-by-long entries.
+
+
+Let $|b_e|$ be the largest among components of $b_\llong$;
+rescale $b$ so that $b_e = 1$.
+The $e$-th component of $M_\llong b_\llong$
+is $1 - \sum_{e' \neq e} a^{e'} b_{e'}$,
+where $a^{e'}$ are the components of $\Theta_*(u_e)$.
+Since $\sum_{e' \neq e} |a^{e'}| = 1$, this can be 0 if and only if
+for all $e'$ with $a^{e'} < 0$, we have exactly $b_{e'} = 1$.
+By connectedness of $G_\llong$, this implies
+$b_\llong = (1 \; \cdots \; 1)^T$.
+
+
+Returning to the full $M$, it is now easy to see that
+for a short edge $e$,
+by looking at the $e$-th row of $M$,
+we have $b_e = \sum a^{e'} = 1$,
+so we are done.
+
+%\footnote{
+%This is a well-known argument/result about graph Laplacians:
+%the first two properties of $u_e$'s ensure that
+%$-M_\llong^T$ is essentially a graph Laplacian for $G_\llong$,
+%so has rank = (\#vertices) - (\#components).}
+
+
+Now we construct the $u_e$'s.
+First suppose that $e$ is a long edge between two convex faces $f, f'$
+(so $\vec{e} \in \del f, \cev{e} \in \del f'$).
+Observe that $\alpha_e$ from \eqnref{e:alpha_e}
+increases $\Phi_f$ and $\Phi_{f'}$,
+and we can compensate using $\beta_f$ from \eqnref{e:beta_f_convex},
+so we consider
+\[
+w_e = \alpha_e - \frac{1}{\cos \vphi_{\vec{e}}} \beta_f
+	- \frac{1}{\cos \vphi_{\cev{e}}} \beta_{f'} \in K_c
+\]
+%Since $\theta_e = \pi - \vphi_{\vec{e}} - \vphi_{\cev{e}}$,
+%we need to show that the coefficients of $\ddd{\vphi_{\vec{e}}},
+%\ddd{\vphi_{\cev{e}}}$ sum to 0.
+For $\vec{e'} \in \del f \cup \del f' \backslash \{\vec{e},\cev{e}\}$,
+the $\ddd{\vphi_{\vec{e'}}}$ component only appears in $\beta_f$
+or $\beta_{f'}$, which is positive by construciton
+(this requires $f,f'$ to be convex faces);
+thus, $d\theta_{e'}(w_e) \geq 0$ for such $e'$, and
+is equal to 0 if and only if $e'$ is short.
+Finally, since $w_e \in K_c$, it leaves the sum $\sum_{e\in E} \theta_e$
+constant, so $d\theta_e(w_e) < 0$, so we can take
+\begin{equation}
+\label{e:u_e}
+u_e := (d\theta_e(w_e))^\inv \cdot w_e
+\end{equation}
+
+In general, we consider a wide path of faces $f_0, \ldots, f_n$,
+such that all faces except $f_0$ and $f_n$ are thin,
+and $f_i$ are distinct except possibly $f_0 = f_n$.
+\footnote{Picture a closed accordian.}
+Let $e_i$ be the long edge between $f_i$ and $f_{i+1}$,
+and orient so that $\vec{e_i} \in \del f_i$, $\cev{e_i} \in \del f_{i+1}$.
+
+
+We will construct $u_{e_i}$ for $i = 1,\ldots,n$.
+
+
+We want to increase the lengths of $e_i$'s all together.
+Let $E' = \{\vec{e_i}, \cev{e_i} | i=0,1,\ldots,n-1\}$.
+Consider
+\[
+x :=
+\sum_{i=0,\ldots,n-1} \alpha_{e_i}
+=
+\sum_{\vec{e} \in E'}
+\frac{1}{2 r_{f_{\vec{e}}} \cos \vphi_{\vec{e}}} \ddd{\vphi_{\vec{e}}}
+%\sum_{\substack{i = 0,\ldots, n-1 \\ \vec{e} = \vec{e_i}, \cev{e_i} }}
+%\frac{1}{2 r_{f_0} \cos \vphi_{\vec{e_0}}} \ddd{\vphi_{\vec{e_0}}}
+%+
+%\frac{1}{2 r_{f_n} \cos \vphi_{\cev{e_{n-1}}}} \ddd{\vphi_{\cev{e_{n-1}}}}
+%+
+\]
+with $\alpha_e$ from \eqnref{e:alpha_e}.
+It is clear that $x$ increases all oriented $e_i$ lengths
+$l_{\vec{e}}$ equally fast,
+i.e. $dl_{\vec{e_i}}(x) = dl_{\cev{e_i}}(x) = 1/2$ for all $i$,
+so $x\in T_c \CCC$.
+It is also clear that for the thin faces $f_i$,
+$x$ makes one of the angles $\vphi_{\cev{e_{i-1}}}, \vphi_{\vec{e_i}}$
+increase and the other decrease, both at the same rate,
+thus $d\Phi_{f_i}(x) = 0$.
+However, the vector $x$ increase $\Phi_{f_0}$ and $\Phi_{f_n}$,
+so it is compensated using $\beta_f$'s, so that
+\[
+y := x - \frac{1}{r_{f_0} \cos \vphi_{\vec{e_0}}} \beta_{f_0}
+- \frac{1}{r_{f_n} \cos \vphi_{\cev{e_{n-1}}}} \beta_{f_n}
+\in K_c
+\]
+Before we modify $y$ to give the desired $u_{e_i}$,
+we note that for $\vec{e} \in (\cup \del f_i) \backslash E'$,
+the $\vphi_{\vec{e}}$-component in $y$ is non-positive,
+and is 0 if and only if $e$ is short;
+so $\Theta_*(-y)$ already satisfies three of the four properties
+desired in $\Theta_*(u_e)$.
+
+
+Recall that for thin face $f$,
+$\alpha_f$ from \eqnref{e:alpha_f} is in $K_c$,
+and we have
+\[
+\Theta_*(\frac{r_{f_i}}{\tan \vphi_{\vec{e_i}}} \alpha_{f_i}) = 
+	\ddd{\theta_{e_i}} - \ddd{\theta_{e_{i-1}}}
+\]
+Write $\bar{\alpha}_{f_i} = \frac{r_{f_i}}{\tan \vphi_{\vec{e_i}}} \alpha_{f_i}$.
+Then it is easy to see that using $\bar{\alpha}_{f_i}$'s, we can
+``push around'' the $\theta_{e_i}$-components in $\Theta_*(y)$
+so only one is nonzero.
+More precisely, if
+$\Theta_*(y) = \sum_e y^e \ddd{\theta_e}$, the image under $\Theta_*$
+of the vector
+\[
+\bar{u}_{e_0} := y - y^{e_{n-1}} \bar{\alpha}_{f_{n-1}}
+- (y^{e_{n-2}} + y^{e_{n-1}}) \bar{\alpha}_{f_{n-2}}
+- \ldots
+- (y^{e_1} + \ldots + y^{e_{n-1}}) \bar{\alpha}_{f_1}
+\]
+would have $\theta_{e_i}$-components 0 for all $i$ except 0;
+for $i=0$, the $\theta_{e_0}$-component is now $y^{e_0} + \ldots + y^{e_{n-1}}$,
+which is nonzero because $\sum_{e'\in E} y^{e'} = 0$
+and $\sum_{e' \in E \backslash E'} y^{e'} > 0$.
+Therefore, we can take
+\[
+u_{e_0} := (d\theta_{e_0}(\bar{u}_{e_0}))^\inv \cdot \bar{u}_{e_0};
+\;\;\;
+u_{e_i} = u_{e_{i-1}} + \bar{\alpha}_{f_i}
+\]
+
+We still need to show the collective connectivity property of the $u_e$'s.
+It is easy to see that the long edges of a convex face
+are connected in $G_\llong$
+(for example, $u_{e_0}$ defined above clearly does it for
+$f_0$).
+Furthermore, all the $\Theta_*(u_{e_i})$ have most components equal,
+so $e_i$ are in the same connected component of $G_\llong$.
+Thus connectivity of $G_\llong$ follows from the
+wide-path-connectivity of faces.
+
+
+Finally, for short edges $e$, we simply define $u_e$
+as in \eqnref{e:u_e}
+(here we do not worry about whether faces are thin or convex,
+as the non-positivity condition of $a^{e'}$ is absent).
+\end{proof}
