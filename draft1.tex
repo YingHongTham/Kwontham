@@ -14,6 +14,7 @@
 \newcommand{\lemref}[1]{Lemma \ref{#1}}
 \newcommand{\figref}[1]{Figure \ref{#1}}
 \newcommand{\secref}[1]{Section \ref{#1}}
+\newcommand{\remref}[1]{Remark \ref{#1}}
 \newcommand{\eqnref}[1]{(\ref{#1})}
 %\newcommand{\ref}[1]{Figure \ref{#1}}
 \newcommand{\comment}[1]{}
@@ -782,6 +783,8 @@ to edges of the bow-ties as in Figure \ref{f:bowtie_angles},
 and assign $\pi/2$ to all other edges.
 It is easy to check that upon gluing,
 each edge has sum of dihedral angles ($\theta^*$) equals $2\pi$.
+(This holds true even if they were glued assuming
+some augmentations had no half-twist; see \remref{r:nohalftwist}.)
 
 
 Furthermore, we can obtain an angle-splitting of $\sT_T(L)$
@@ -863,7 +866,7 @@ we just don't add it.
 
 This way we obtain a new graph $\Gamma_T(L)'$, which defines a
 new torihedron $\sT_T(L)'$.
-We make it angled using the angles from $\sT_T(L)$ for old edges,
+We make $\sT_T(L)'$ angled using the angles from $\sT_T(L)$ for old edges,
 and putting $\pi$ for all new edges.
 
 
@@ -933,7 +936,9 @@ $\theta^*=\pi$,
 so an increase in the former would be conterbalanced by
 a decrease in the latter.
 It is also easy to see this is the case for the other edges.
-%TODO hmm more detail?
+(Once again, a similar argument applies if $\sT_(L)'$
+and $\sT_B(L)'$ are glued assuming
+some augmentations had no half-twist; see \remref{r:nohalftwist}.)
 
 
 Finally, for each face of $\Gamma_T(L)'$ that has more than three sides,
@@ -946,6 +951,17 @@ into non-degenerate angled tetrahedra.
 Upon gluing, this gives an angle structure on the triangulation
 of $\toruscomp{L}$
 \end{proof}
+
+
+
+\begin{remark}
+\label{r:nohalftwist}
+If the original link $K$ had some twist regions with at least one bigon,
+we may consider augmentations $L$ where all such twist regions
+are augmented.
+Then, as pointed out in proof of \thmref{t:auglink_hyp} above,
+the proof still works for $L$, showing that $L$ is also hyperbolic.
+\end{remark}
 
 
 \input{circlepatterns}
