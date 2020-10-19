@@ -234,13 +234,8 @@ A&B&C
 \subsection{Torihedral Decomposition of Augmented Alternating Links in Thickened Torus}
 
 
-<<<<<<< HEAD
 We present a method of decomposing an augmented link in the thickened torus into
 objects called ``torihedra'' as defined below. The idea is to combine methods of Menasco
-=======
-We show a method of decomposing an augmented link in the thickened torus into
-objects called torihedra. The idea is to combine methods of Menasco
->>>>>>> f37a71b9e4978415848a6d4b4634ad96731f6d23
 \cite{Menasco} and the use of crossing edges between each crossing of our link
 and Lackenby's ``cut-slice-flatten" method \cite{lackenby} on the augmentation
 sites.   
@@ -412,7 +407,8 @@ we say it is \emph{non-degenerate} otherwise.
 
 
 One may ask for the pyramidal decomposition of a torihedron
-to ``respect" angles. The following definitions make sense of this.
+to ``respect" angles. The following definitions,
+in particular an ``angle splitting'', make sense of this.
 
 \begin{define}
 An \emph{angled ideal tetrahedron} is an ideal tetrahedron with an assignment of a dihedral angle
@@ -768,17 +764,17 @@ for all edges.
 We obtain an angle-splitting by applying the
 Feasible Flow theorem (\thmref{t:feasible_flow}) as follows:
 Consider the directed graph whose vertex set is
-$E \cup F \cup \{\otimes\}$,
+$E \cup F \cup \{*\}$,
 where $E, F$ are the set of edges, faces of $\Gamma_T(K)$ respectively,
-and $\otimes$ is some abstract vertex.
-There is a directed edge
+%and $*$ is some abstract vertex.
+and there is a directed edge
 \begin{itemize}
-\item $\otimes \to f$ for each face $f\in F$, with capacity interval
+\item $* \to f$ for each face $f\in F$, with capacity interval
 	$[\pi, \infty)$,
 \item $f \to e$ for each edge $e \in \del f$,
 	with capacity interval $[\veps, \infty)$
 	for some $\veps>0$ to be set later,
-\item $e \to \otimes$ for each edge $e$, with capacity interval
+\item $e \to *$ for each edge $e$, with capacity interval
 	$(-\infty, \pi/2]$.
 \end{itemize}
 By \lemref{l:2fe}, $2|F'| = 2\chi(F') \leq |E'|$,
@@ -786,11 +782,11 @@ and taking $\veps < \pi / |\text{max face size}|$,
 the feasible flow condition is satisfied,
 so a feasible flow exists.
 Since $2|F| = |E|$, the capacity interval restrictions
-on the flow at $\otimes$ is sharp, so out-edges at $\otimes$
-have flow $\pi$ and in-edges at $\otimes$ have flow $\pi/2$.
+on the flow at $*$ is sharp, so out-edges at $*$
+have flow $\pi$ and in-edges at $*$ have flow $\pi/2$.
 Then the flow $f \to e$ gives us $\vphi_{\vec{e}}$,
 where $f$ is the face to the left of $\vec{e}$.
-(we adapted this argument from \cite{BandS}).
+(We adapted this argument from \cite{BandS}).
 
 
 \begin{figure}
@@ -860,7 +856,8 @@ of $G(K)$ around the face $\bar{f}$;
 the edges around $f$ would start
 $e_{1,0}, e_{1,\pi}, e_{2,0}, e_{2,\pi}, \ldots$.
 We add new edges across $f$ as follows.
-(See Figure \ref{f:adding_edges}; the + and - signs will be explained later.)
+(See Figure \ref{f:adding_edges};
+ignore the + and - signs for now.)
 
 
 First suppose $k=n$; then we do nothing.
@@ -868,7 +865,7 @@ First suppose $k=n$; then we do nothing.
 Next suppose there is only one such maximal contiguous subsequence.
 If $k = 1$, we add an edge that goes across
 $e_{1,0},e_{1,\pi},e_2$
-(in the sense that the new edge separates the edges of $f$ into two sets
+(in the sense that the new edge separates the edges of $f$ into two sets,
 one of them being those three edges;
 since $n\geq 3$, this edge is new).
 %If $k = 2$, we add edge across $e_{1,0},e_{1,\pi}$
@@ -885,7 +882,7 @@ Finally, if there are multiple such maximal contiguous subsequences,
 we just add edges as above for each contiguous subsequence.
 The only caveat is that if the procedure calls to add a new edge
 that would form a bigon with the existing edges,
-we just don't add it.
+we just do not add it.
 
 
 This way we obtain a new graph $\Gamma_T(L)'$, which defines a
