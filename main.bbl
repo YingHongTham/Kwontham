@@ -1,4 +1,11 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{adams2021generalized}
+Colin Adams, Michele Capovilla-Searle, Darin Li, Qiao Li, Jacob McErlean,
+  Alexander Simons, Natalie Stewart, and Xiwen Wang.
+\newblock Generalized augmented cellular alternating links in thickened
+  surfaces are hyperbolic.
+\newblock {\em arXiv preprint arXiv:2107.05406}, 2021.
 
 \bibitem{CA}
 Colin~C. Adams.
@@ -31,6 +38,11 @@ David Futer and Fran\c{c}ois Gu\'{e}ritaud.
 \newblock In {\em Interactions between hyperbolic geometry, quantum topology
   and number theory}, volume 541 of {\em Contemp. Math.}, pages 159--182. Amer.
   Math. Soc., Providence, RI, 2011.
+
+\bibitem{kwon2020fully}
+Alice Kwon.
+\newblock Fully augmented links in the thickened torus.
+\newblock {\em arXiv preprint arXiv:2007.12773}, 2020.
 
 \bibitem{lackenby}
 Marc Lackenby.
