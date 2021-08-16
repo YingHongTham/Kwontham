@@ -1,6 +1,10 @@
-This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
+White space in argument---line 44 of file main.aux
+ : \citation{TODO:
+ :                 find rivin's paper? should be in here https://arxiv.org/pdf/1004.0440.pdf}
+I'm skipping whatever remains of this command
 The style file: plain.bst
 Database file #1: references-ak.bib
 You've used 10 entries,
@@ -44,3 +48,4 @@ warning$ -- 0
 while$ -- 35
 width$ -- 12
 write$ -- 120
+(There was 1 error message)
