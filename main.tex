@@ -484,8 +484,13 @@ with base a triangle, and with no preferred face.
 An \emph{angle splitting} of an angled torihedron $(\sT,\theta_\bullet^*)$
 is a splitting of $\theta_e^* = \vphi_{\vec{e}} + \vphi_{\cev{e}}$
 for each edge $e$,
+where $\vec{e},\cev{e}$ are the two orientations
+on $e$,
 such that for each face $f$,
-$\sum_{\vec{e} \in \del f} \vphi_{\vec{e}} = \pi$.
+$\sum_{\vec{e} \in \del f} \vphi_{\vec{e}} = \pi$,
+where $\vec{e} \in \del f$ is the edge in the boundary of $f$
+taken with outward orientation.
+
 
 Equivalently, an angle splitting is a decomposition of
 $\sT$ into base-angled pyramids,
@@ -493,6 +498,10 @@ one for each face of $G(\sT)$, such that
 for each boundary edge $e$ of $\sT$,
 the dihedral angles from the two adjacent pyramids
 add to $\theta_e^*$.
+
+
+We also say that $\vphi_\bullet$ is an angle-splitting
+of the edge-labeled graph $(G(\sT), \theta_\bullet^*)$.
 \end{definition}
 
 \begin{remark}
@@ -563,8 +572,6 @@ it is similar for $j = i+2$.
 \end{proof}
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hyperbolicity of Augmented Links}
 \label{s:hyperbolicity}
@@ -633,148 +640,48 @@ We can recover $L$ from the link diagram of $K$
 together with labels at vertices indicating left- or right-augmentation.
 
 
-\begin{lemma}
-\label{l:2fe}
-Let $G$ be a 4-valent graph on $\torus$ with no bigons or self-loops.
-%and whose faces can be checkerboard colored.
-Then for any subset $F' \subseteq F$ of faces,
-\[
-	2\chi(F') \leq |E'|
-\]
-where $E' = \cup_{f \in F'} \del f$ is the set of edges
-that meets some face of $F'$,
-and $\chi(F') = \sum_{f\in F'} \chi(f)$ is the sum
-of the Euler characteristics of faces in $F'$.
-\end{lemma}
-
-\begin{figure}
-\includegraphics[width=11cm]{bigon_crush.png}
-\caption{Resolving internal vertex; eliminating bigons via ``crushing"}
-\label{f:bigon_crush}
-\end{figure}
-
-\begin{proof}
-We induct on $\chi(F')$  (over all possible such graphs $G$);
-for $F' = \emptyset$ or $\chi(F') \leq 0$, there is nothing to prove.
-
-Call a vertex or edge \emph{interior} if it does not meet
-$F'' = F \backslash F'$.
-Suppose there is an interior vertex $v$.
-Make the modification as in Figure \ref{f:bigon_crush}
-(later we will choose which way to ``resolve'' the vertex).
-This decreases $\chi(F')$ by one and $|E'|$ by 2.
-However, this process may produce bigons;
-if it does, repeatedly eliminate bigons by either
-(1) performing the modification as in Figure \ref{f:bigon_crush}
-if the two vertices of the bigon are distinct,
-or (2) remove the bigon completely if the two vertices
-of the bigon are the same.
-Each of these steps also decreases $\chi(F')$ by one and $|E'|$ by 2
-(note in the second case, after removing the bigon,
-the operation merges two distinct faces or joins a face to itself;
-this adds an $S^1$, thus does not change the (total) euler characteristic
-of the two faces or the one face).
+We need the following theorem,
+adapted from \cite[Theorem 4]{BandS},
+specialized to genus 1 surfaces:
 
 
-We must check that this process terminates with a graph
-which satisfies the hypotheses set out in the lemma.
-It is clear that %checkboard colorability and
-4-valency is maintained
-at each step, and there will not be any bigons at the end.
-We need to ensure that eliminating bigons does not
-create self-loop edges.
-Here we specify how to choose which way to resolve the internal
-vertex $v$. If among the four faces touching $v$,
-one of them has greater than three sides (Case 1),
-then resolve $v$ so that this face is not merged;
-if all four faces are triangles (Case 2),
-simply resolve in an arbitrary manner.
-After the modification of the internal vertex,
-at most two bigons are created;
-eliminate those two bigons.
-Now we find that all bigons will be connected end-to-end
-(i.e. forming a single twist region) -
-this is because in Case 1, only one bigon was present after smoothing
-$v$, which would result in at most two bigons that would be connected;
-and if we were in Case 2, we find that the face between those
-eliminated bigons (coming from merging the two triangles across $v$)
-will become a bigon too,
-thus connecting the potential bigons on either ends.
-
-Therefore, one can eliminate bigons in an order so that
-they belong in one twist region;
-in particular, the (not necessarily distinct) faces on either side
-are not bigons,
-so eliminating the bigon does not produce a self-loop edge.
+\begin{theorem}{\cite[Theorem 4]{BandS}}
+Let $\Gamma = (V,E)$ be a graph on the torus,
+and let $\Gamma^* = (F,E^*)$ be the dual graph,
+with $E^*$ being naturally identified with $E$.
+Let $\theta_\bullet \in (0,\pi)^E$
+be a function on the set of edges $E$
+that sums to $2\pi$ around each vertex of $V$.
 
 
-Now suppose $G$ has no interior vertices.
-We perform some reductions.
-We remove all $f$ from $F'$ that have non-positive Euler characteristic,
-as doing so will not decrease $\chi(F')$ and will not increase $|E'|$.
-Now consider some $f\in F'$.
-If it has at least two boundary (i.e. non-interior) edges,
-we can remove $f$ from $F'$,
-which decreases $\chi(F')$ by 1 and $|E'|$ by at least 2.
-Thus we remove all such $f$.
+There exists an angle-splitting of $(\Gamma,\theta_\bullet)$
+if and only if the following
+``cocycle condition'' is satisfied:
 
+\begin{quotation}
+Suppose we cut the torus along a subset of edges in the dual graph
+$\Gamma^*$, obtaining one or more pieces;
+Then for any piece that is a disc,
+the sum of $\theta_\bullet$ over the edges in the boundary
+of the piece is at least $2\pi$,
+with equality if and only if the piece
+contains exactly one vertex of $\Gamma$.
+\end{quotation}
 
-Now suppose $f\in F'$ has three contiguous interior edges
-$e_1,e_2,e_3$.
-(e.g. if $f$ has at least four sides).
-Let $v_1, v_2$ be the vertices between these three interior edges.
-Since $v_1$ is not interior,
-the face across $v_1$ from $f$ is not in $F'$;
-likewise with $v_2$.
-But this shows that the face across $e_2$ from $f$
-has two boundary edges, contradicting our reduction.
-%This would lead to the situation in \ref{},
-%showing that there is a face with at least
-%two boundary edges, contradicting our reduction.
-
-
-Thus, we now have a graph whose faces are triangles,
-and each face has exactly one boundary edge.
-Now the problem is solved with a simple counting argument:
-each $f$ corresponds to one boundary edge and two interior edges,
-but, since the interior edges are shared by two faces,
-they should count as half an edge; so
-\[
- |E'| = \sum_{f\in F'} 1 + 1/2 + 1/2 = 2|F'| = 2\chi(F')
-\]
-and we get the desired result.
-\end{proof}
-
-
-The following theorem is quoted from \cite{BandS}
-(see also \cite{FF})
-
-\begin{theorem}[Feasible Flow Theorem]
-\label{t:feasible_flow}
-Let $(N,X)$ be a directed graph,
-with a \emph{lower capacity bound} $a_x$
-and \emph{upper capacity bound} $b_x$
-for each directed edge $x \in X$,
-with $-\infty \leq a_x \leq b_x \leq \infty$.
-A \emph{feasible flow} is a function $\vphi : X \to \RR$
-such that $\vphi_x \in [a_x, b_x]$ and
-Kirchhof's current law is satisfied
-(i.e. flow in = flow out at every vertex).
-
-A feasible flow exists if and only if,
-for every proper nonempty subset $N' \subset N$,
-\[
-\sum_{x \in ex(N')} b_x \geq \sum_{x \in in(N')} a_x
-\]
-where $ex(N'), in(N')$ refer to edges leaving,
-entering $N'$, respectively.
+\label{t:bs-thm4}
 \end{theorem}
 
+The original theorem \cite[Theorem 4]{BandS}
+proves that a circle pattern combinatorially equivalent to $\Gamma$
+exists; a circle pattern naturally yields
+an angle-splitting (which they call a coherent angle system).
 
 
 \begin{theorem}
 \label{t:auglink_hyp}
-Let $K$ be a weakly prime, alternating link whose diagram has no bigons.
+Let $K$ be a weakly prime, alternating link
+in the thickened torus
+whose diagram has no bigons.
 Let $L$ be a link obtained from augmenting $K$.
 Then $L$ is hyperbolic.
 \end{theorem}
@@ -784,42 +691,23 @@ By \cite[Theorem 7.5]{CKP2},
 (as discussed in \prpref{p:tori_decomp},)
 $\toruscomp{K}$ can be decomposed
 into two torihedra $\sT_T$ and $\sT_B$,
-whose graphs are $\Gamma_T(K), \Gamma_B(K)$ respectively;
+with $\sT_T$ meeting the top cone point $\torus \times \{1\}$
+and $\sT_B$ meeting the bottom cone point $\torus \times \{-1\}$.
+We denote their graphs by $\Gamma_T(K), \Gamma_B(K)$ respectively;
 viewed from the top cone point $\torus \times \{1\}$,
-they are both the same as the projection graph of $K$.
+both graphs are the same as the projection graph of $K$.
 %which we denote by $\Gamma$.
 We make them non-degenerate angled torihedra by assigning $\theta^* = \pi/2$
-for all edges. Unlike in the case of alternating links or fully augmented links 
-in the thickened torus we cannot make all angles $\pi/2$. This is 
-because in our decomposition the vertices of the graph which
-defines our torihedra are not all four valent. 
+for all edges.
+%%Unlike in the case of alternating links or fully augmented links 
+%%in the thickened torus we cannot make all angles $\pi/2$. This is 
+%%because in our decomposition the vertices of the graph which
+%%defines our torihedra are not all four valent. 
 
-We obtain an angle-splitting by applying the
-Feasible Flow theorem (\thmref{t:feasible_flow}) as follows:
-Consider the directed graph whose vertex set is
-$E \cup F \cup \{*\}$,
-where $E, F$ are the set of edges, faces of $\Gamma_T(K)$ respectively,
-%and $*$ is some abstract vertex.
-and there is a directed edge
-\begin{itemize}
-\item $* \to f$ for each face $f\in F$, with capacity interval
-	$[\pi, \infty)$,
-\item $f \to e$ for each edge $e \in \del f$,
-	with capacity interval $[\veps, \infty)$
-	for some $\veps>0$ to be set later,
-\item $e \to *$ for each edge $e$, with capacity interval
-	$(-\infty, \pi/2]$.
-\end{itemize}
-By \lemref{l:2fe}, $2|F'| = 2\chi(F') \leq |E'|$,
-and taking $\veps < \pi / |\text{max face size}|$,
-the feasible flow condition is satisfied,
-so a feasible flow exists.
-Since $2|F| = |E|$, the capacity interval restrictions
-on the flow at $*$ is sharp, so out-edges at $*$
-have flow $\pi$ and in-edges at $*$ have flow $\pi/2$.
-Then the flow $f \to e$ gives us $\vphi_{\vec{e}}$,
-where $f$ is the face to the left of $\vec{e}$.
-(We adapted this argument from Lemma 3.4 of \cite{BandS}).
+
+Using the fact that $K$ is weakly prime,
+it is not hard to see that the ``cocycle condition''
+of \thmref{t:bs-thm4} are satisfied,
 
 
 \begin{figure}
