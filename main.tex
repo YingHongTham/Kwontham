@@ -67,6 +67,10 @@
 
 \newcommand{\torus}{{\mathbb{T}^2}}
 \newcommand{\sT}{{\mathcal{T}}}
+\newcommand{\cD}{{\mathcal{D}}}
+\newcommand{\cL}{{\mathcal{L}}}
+
+
 
 \newcommand{\RRR}{{\underline{\mathfrak{R}}}}
 \newcommand{\QQQ}{{\underline{\mathfrak{Q}}}}
@@ -192,25 +196,49 @@ is different from theirs, which is based on topological arguments.
 \section{Augmented Links}
 \label{s:auglinks}
 
-Champanerkar, Kofman and Purcell have studied alternating links in the thickened torus \cite{CKP2}. They define a link in the thickened torus as a quotient of a biperiodic alternating link as follows,
+TODO Notation section: $I = (-1,1)$.
+
+Champanerkar, Kofman and Purcell have studied alternating links in the thickened
+torus \cite{CKP2}. They define a link in the thickened torus as a quotient of a
+biperiodic alternating link as follows:
  
 \begin{define}
 \label{def:biperiodiclink}
-A \emph{biperiodic alternating link} $\mathcal{L}$ is an infinite link
-which has a projection onto
-$\R^2$ which is invariant under an action of a two dimensional lattice $\Lambda$
-by translations, such that $L=\mathcal{L}/\Lambda$ is an alternating link in
-$\torus \times I$, where $I = (-1,1)$, with the projection on $\torus \times \{0\}$.   
+A \emph{biperiodic alternating link} $\cL$ is an infinite link
+in $\R^2 \times I$ with a link diagram $\cD \subset \R^2$
+such that $\cL$ and $\cD$ are
+invariant under the action of a two dimensional lattice $\Lambda$
+on $\R^2$ by translations.
+
+
+The quotient $L=\mathcal{L}/\Lambda$ is an alternating link in
+$\torus \times I$,
+whose projection onto $\torus \times \{0\} = \R^2 \times \{0\} /\Lambda$
+is an alternating link diagram $\cD/\Lambda$.
 \end{define}
+%%\begin{define}
+%%\label{def:biperiodiclink}
+%%A \emph{biperiodic alternating link} $\mathcal{L}$ is an infinite link
+%%which has a projection onto
+%%$\R^2$ which is invariant under an action of a two dimensional lattice $\Lambda$
+%%by translations, such that $L=\mathcal{L}/\Lambda$ is an alternating link in
+%%$\torus \times I$, where $I = (-1,1)$, with the projection on $\torus \times \{0\}$.
+%%\end{define}
 
 \begin{remark}
-Since $\torus \times I \cong \Sp^3 - H$, where $H$ is a Hopf link. The complement $\torus \times I- L = \Sp^3 - (L \cup H)$.
+Since $\torus \times I \cong \Sp^3 - H$, where $H$ is a Hopf link.
+The complement $\torus \times I- L = \Sp^3 - (L \cup H)$.
 \end{remark}
 
-Champanerkar, Kofman and Purcell \cite{CKP2} extended the definition of prime links in $\Sp^3$ for links in $\torus \times I$ called weakly prime. 
+Champanerkar, Kofman and Purcell \cite{CKP2} extended
+the definition of prime links in $\Sp^3$
+for links in $\torus \times I$ called weakly prime. 
 
- \begin{define} \label{def:weaklyprime}
-	 A diagram of a link $L$ is \emph{weakly prime} if whenever a disk is embedded in the diagram surface meets the diagram transversely in exactly two edges, then the disk contains a simple edge of the diagram and no crossings.
+\begin{define} \label{def:weaklyprime}
+A diagram of a link $L$ is \emph{weakly prime}
+if whenever a disk is embedded in the diagram surface
+meets the diagram transversely in exactly two edges,
+then the disk contains a simple edge of the diagram and no crossings.
 \end{define}
 
 
@@ -229,11 +257,22 @@ the diagram of $L$ is \emph{twist-reduced} if it is the quotient of a twist-redu
 link diagram.  \end{define}
 
 Now we can define augmentation for a link in $\torus \times I$ the same way we
-define augmentation for links in $\Sp^3$. For a link in $\torus \times I$, the
+define augmentation for links in $\Sp^3$:
+For a link in $\torus \times I$, the
 crossing circles are added to the diagram projected onto $\torus \times \{0\}$.
 Let $D(L)$ be a twist reduced diagram of a link $L$ in $\torus \times I$, we define
 \emph{augmenting} as a process in which an unknotted circle component is added
 to one or more twist regions of $D(L)$. See Figure \ref{fig:Augmentations}
+
+\begin{definition}
+Let $D(L)$ be a twist reduced diagram of a link $L$ in $\torus \times I$, we define
+\emph{augmenting} as a process in which an unknotted circle component is added
+to one or more twist regions of $D(L)$. See Figure \ref{fig:Augmentations}
+
+We say $L$ is \emph{fully} augmented
+if $L$ is augmented at \emph{every} crossing/twist site,
+\label{d:augmentation}
+\end{definition}
 
 \begin{remark}
 If $L$ is augmented at \emph{every} crossing/twist site we say $L$ is \emph{fully} augmented.
@@ -274,13 +313,15 @@ sites.
 \begin{define}\cite{CKP2}
 \label{def:torihedron}
 A \emph{torihedron} $\sT$ is a cone on the torus, 
-i.e. $\torus \times [0,1]/(\torus \times \{1\})$, with a cellular graph
+i.e. $\torus \times [0,1]/(\torus \times \{1\})$, with a
+(TODO define cellular; later say ``if faces are disks'') cellular graph
 $G = G(\sT)$ on $\torus \times \{0\}$.
 The \emph{ideal torihedron} $\sT^\circ$ is $\sT$ with the
 vertices of $G$ and the vertex $\torus \times \{1\}$ removed. Hence, an ideal
 torihedron is homeomorphic to $\torus \times [0,1)$ with a finite set of points
 (ideal vertices) removed from $\torus \times \{0\}$.
-We refer to the vertex $\torus \times \{1\}$ as the cone point.
+We refer to the vertex $\torus \times \{1\}$ as the \emph{cone point}
+of $\sT$.
 \end{define}
 
 
@@ -712,7 +753,8 @@ of \thmref{t:bs-thm4} are satisfied,
 
 \begin{figure}
 \includegraphics[width=7cm]{more_pictures/horizontal_bowtie.png}
-\caption{Angle assignments on a bow-tie corresponding to an augmentation site}
+\caption{Assignments of $\theta^*$ to edges of a bow-tie
+	corresponding to an augmentation site}
 \label{f:bowtie_angles}
 \end{figure}
 
@@ -740,7 +782,7 @@ this is shown in Figure \ref{f:bowtie_angles2}.
 \includegraphics[width = 5cm]{bowtie_angles.png}\\
 (a)&(b)
 \end{tabular}
-\caption{(a) Angles before augmentation (b) Angle splitting for bowtie corresponding to augmentation}
+\caption{(a) Angle splitting before augmentation (b) Angle splitting for bowtie corresponding to augmentation}
 \label{f:bowtie_angles2}
 \end{figure}
 
@@ -810,7 +852,8 @@ we just do not add it.
 This way we obtain a new graph $\Gamma_T(L)'$, which defines a
 new torihedron $\sT_T(L)'$.
 We make $\sT_T(L)'$ angled using the angles from $\sT_T(L)$ for old edges,
-and putting $\pi$ for all new edges.
+and putting $\pi$ for all new edges TODO make clear it's the red edges that is
+new.
 
 
 \begin{figure}
@@ -879,7 +922,7 @@ $\theta^*=\pi$,
 so an increase in the former would be conterbalanced by
 a decrease in the latter.
 It is also easy to see this is the case for the other edges.
-(Once again, a similar argument applies if $\sT_(L)'$
+(Once again, a similar argument applies if $\sT_T(L)'$
 and $\sT_B(L)'$ are glued assuming
 some augmentations had no half-twist; see \remref{r:nohalftwist}.)
 
