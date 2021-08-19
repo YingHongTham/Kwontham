@@ -38,7 +38,7 @@
 \AtBeginDocument{
    \def\MR#1{}
 }
-\newcommand{\Sp}{{\rm{S}}}
+\newcommand{\Sp}{{S}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -212,18 +212,14 @@ on $\R^2$ by translations.
 
 
 The quotient $L=\mathcal{L}/\Lambda$ is an alternating link in
-$\torus \times I$,
+the thickened torus $\torus \times I$,
 whose projection onto $\torus \times \{0\} = \R^2 \times \{0\} /\Lambda$
 is an alternating link diagram $\cD/\Lambda$.
 \end{define}
-%%\begin{define}
-%%\label{def:biperiodiclink}
-%%A \emph{biperiodic alternating link} $\mathcal{L}$ is an infinite link
-%%which has a projection onto
-%%$\R^2$ which is invariant under an action of a two dimensional lattice $\Lambda$
-%%by translations, such that $L=\mathcal{L}/\Lambda$ is an alternating link in
-%%$\torus \times I$, where $I = (-1,1)$, with the projection on $\torus \times \{0\}$.
-%%\end{define}
+
+
+We refer to $\torus \times \{0\}$ as the \emph{projection plane}.
+
 
 \begin{remark}
 Since $\torus \times I \cong \Sp^3 - H$, where $H$ is a Hopf link.
@@ -235,8 +231,10 @@ the definition of prime links in $\Sp^3$
 for links in $\torus \times I$ called weakly prime. 
 
 \begin{define} \label{def:weaklyprime}
-A diagram of a link $L$ is \emph{weakly prime}
-if whenever a disk is embedded in the diagram surface
+A diagram $D \subset \torus$
+of a link $L$ in the thickened torus $\torus \times I$
+is \emph{weakly prime}
+if whenever a disk is embedded in $\torus$
 meets the diagram transversely in exactly two edges,
 then the disk contains a simple edge of the diagram and no crossings.
 \end{define}
@@ -249,34 +247,51 @@ $\mathcal{L}$.
 %a string of bigons, or a single crossing in the diagram on the universal cover of $\torus \times I$ is called a .  
 A biperiodic link
 $\mathcal{L}$ is called \emph{twist-reduced} if for any simple closed curve on
-the plane that intersects the diagram of $\mathcal{L}$ transversely in four points, with two
+the plane that intersects the diagram of $\mathcal{L}$
+transversely in four points, with two
 points adjacent to one crossing and the other two points adjacent to another
 crossing, the simple closed curve bounds a subdiagram consisting of a (possibly
 empty) collection of bigons strung end to end between these crossings. We say
-the diagram of $L$ is \emph{twist-reduced} if it is the quotient of a twist-reduced biperiodic
-link diagram.  \end{define}
+the diagram of $L$ is \emph{twist-reduced}
+if it is the quotient of a twist-reduced biperiodic
+link diagram.
+\end{define}
+
 
 Now we can define augmentation for a link in $\torus \times I$ the same way we
 define augmentation for links in $\Sp^3$:
-For a link in $\torus \times I$, the
-crossing circles are added to the diagram projected onto $\torus \times \{0\}$.
-Let $D(L)$ be a twist reduced diagram of a link $L$ in $\torus \times I$, we define
-\emph{augmenting} as a process in which an unknotted circle component is added
-to one or more twist regions of $D(L)$. See Figure \ref{fig:Augmentations}
+%For a link in $\torus \times I$, the
+%crossing circles are added to the diagram projected onto $\torus \times \{0\}$.
+%Let $D(L)$ be a twist reduced diagram of a link $L$ in $\torus \times I$, we define
+%\emph{augmenting} as a process in which an unknotted circle component is added
+%to one or more twist regions of $D(L)$. See Figure \ref{fig:Augmentations}
 
 \begin{definition}
-Let $D(L)$ be a twist reduced diagram of a link $L$ in $\torus \times I$, we define
-\emph{augmenting} as a process in which an unknotted circle component is added
-to one or more twist regions of $D(L)$. See Figure \ref{fig:Augmentations}
-
+Let $D(K)$ be a twist reduced diagram of a link $K$ in $\torus \times I$, we define
+\emph{augmenting} as a process in which an unknotted circle component,
+called a \emph{crossing circle}, is added
+to one or more twist regions of $D(K)$ (see Figure \ref{fig:Augmentations});
+we call the resulting link $L$ an \emph{augmented link obtained from $K$}.
 We say $L$ is \emph{fully} augmented
-if $L$ is augmented at \emph{every} crossing/twist site,
+if $L$ is obtained by augmenting
+$K$ at \emph{every} crossing/twist site.
 \label{d:augmentation}
 \end{definition}
 
-\begin{remark}
-If $L$ is augmented at \emph{every} crossing/twist site we say $L$ is \emph{fully} augmented.
-\end{remark}
+
+\begin{definition}
+A graph $G = (V,E)$ on the torus is \emph{cellular}
+if its complement is a collection of open disks.
+\label{d:cellular}
+\end{definition}
+
+%We say that a link diagram in the thickened torus is
+%\emph{cellular}.
+
+%%\begin{remark}
+%%If $L$ is augmented at \emph{every} crossing/twist site we say $L$ is \emph{fully} augmented.
+%%\end{remark}
+
 
 \begin{figure}
 \centering
@@ -298,14 +313,18 @@ A&B&C
 \subsection{Torihedral Decomposition of Augmented Alternating Links in Thickened Torus}
 
 
-We present a method of decomposing an augmented link (not necessarily fully augmented) 
-in the thickened torus into
-objects called ``torihedra'' as defined below.  Decomposing alternating links in the thickened torus into 
-torihedra were first described in \cite{CKP2} then later used for fully augmented links in 
+We present a method of decomposing an augmented link
+(not necessarily fully augmented) in the thickened torus into
+objects called ``torihedra'' as defined below.
+Decomposing alternating links in the thickened torus into 
+torihedra were first described in \cite{CKP2},
+then later used for fully augmented links in 
 the thickened torus in \cite{kwon2020fully}.
 The idea is to combine methods of Menasco
-\cite{Menasco} and the use of crossing edges between each crossing of our link
-and Lackenby's ``cut-slice-flatten" method \cite{lackenby} on the augmentation
+\cite{Menasco} and the use of crossing edges
+between each crossing of our link
+and Lackenby's ``cut-slice-flatten" method \cite{lackenby}
+on the augmentation
 sites.
 
 
@@ -313,8 +332,7 @@ sites.
 \begin{define}\cite{CKP2}
 \label{def:torihedron}
 A \emph{torihedron} $\sT$ is a cone on the torus, 
-i.e. $\torus \times [0,1]/(\torus \times \{1\})$, with a
-(TODO define cellular; later say ``if faces are disks'') cellular graph
+i.e. $\torus \times [0,1]/(\torus \times \{1\})$, with a cellular graph
 $G = G(\sT)$ on $\torus \times \{0\}$.
 The \emph{ideal torihedron} $\sT^\circ$ is $\sT$ with the
 vertices of $G$ and the vertex $\torus \times \{1\}$ removed. Hence, an ideal
@@ -336,20 +354,29 @@ $\sT^\circ$ into ideal pyramids.
 We call these the \emph{pyramidal decompositions} of $\sT$ and $\sT^\circ$.
 
 \begin{prop}\label{p:tori_decomp}
-Let $L$ be an augmented link in $\torus \times I$.
+Let $K$ be an alternating link in the thickened torus,
+and let $L$ be an augmented link obtained from $K$.
 %Let $G(L)$ be a diagram of the link on $\torus \times \{0\}$.
 There is a decomposition of the complement,
 $(\torus \times I) - L$ into two ideal torihedra.
 \end{prop}
 
+
 \begin{proof}
-We will begin by assuming that there are no half twists. 
-Arrange the link diagram of $L$ in the following way: first place the added
-circle components perpendicular to the projection plane, $\torus
-\times \{0\}$ leaving the remaining part of the link parallel to the projection
-plane.  We now place a crossing edge on each crossing of the link so that for
-each crossing edge, one end of the edge lies on a bottom strand while the other
-end lies on a top strand as in Figure \ref{fig:crossingArc} left.
+We will begin by assuming that there are no half twists.
+Let $L = K \cup C$, with $C$ being the collection of crossing circles.
+%Arrange the link diagram of $L$ in the following way:
+Arrange $L$ in the following way:
+place the circle components in $C$ perpendicular to
+the projection plane $\torus \times \{0\}$,
+and leave the remaining part of the link $K \subseteq L$
+lying in the projection plane (except at crossings).
+We now place a \emph{crossing edge} at each crossing of the original link $K$,
+connecting the top and bottom strands at the crossing
+(see Figure \ref{fig:crossingArc} left).
+%so that for each crossing edge,
+%one end of the edge lies on a bottom strand while the other
+%end lies on a top strand as in Figure \ref{fig:crossingArc} left.
 
 \begin{figure} 
 \centering 
@@ -362,23 +389,34 @@ by the crossing circle}
 \label{fig:crossingArc} 
 \end{figure}
 
-\indent We view the link from the point at infinity from the top. We will push
+We view the link from the point at infinity from the top. We will push
 the top strand to the bottom strand, splitting the crossing edge into two
 identical edges as in Figure \ref{fig:crossingArc} right. We push the link
 components to infinity and stretch the crossing edge so that we have flattened
 the link onto $\torus \times \{0\}$ except for the crossing circles which will
 remain perpendicular to the projection plane. 
  
-\indent Now place a disk on each crossing circle, so that the disk is bounded by
-the crossing circle. We can then cut $\torus \times I$ along $\torus \times \{0\}$ and
-focus on the top half, $\torus \times [0,1)$. We will follow the same method on the
-bottom half to obtain the second identical torihedron. The disk we place on each
-crossing circle is now cut in half. This half disk is now bounded by the
-projection plane and the semi-cricle arc of the crossing circle. We push down on
-the crossing circle and split the disk into two identical disks. We then push
-the arc of each crossing circle to infinity, collapsing them to ideal vertices.
+
+%Now place a disk on each crossing circle, so that the disk is bounded by
+%the crossing circle.
+Now for each crossing circle $c$, consider a spanning disk $B_c$;
+$B_c$ intersects the projection plane $\torus \times \{0\}$
+along the red segments in Figure \ref{fig:falGluings},
+which consists of three edges.
+We then cut $\torus \times I$ along $\torus \times \{0\}$ and
+focus on the top half, $\torus \times [0,1)$.
+(We will follow the same method on the
+bottom half to obtain the second identical torihedron.)
+The spanning disks we placed for each crossing circle are now cut in half
+along the red segment.
+Each half of the disk is now bounded by the
+projection plane and the semi-circle arc of the crossing circle.
+We push down on the crossing circle and split the disk into
+two identical disks.
+We then push the arc of each crossing circle to infinity,
+collapsing them to ideal vertices.
 We obtain two triangular faces which represent the disk which look like a
-bow-tie as in Figure \ref{fig:falGluings}. 
+bow-tie as in Figure \ref{fig:falGluings} (a). 
 
 \begin{figure}
  \centering
@@ -392,11 +430,14 @@ bow-tie as in Figure \ref{fig:falGluings}.
  \label{fig:falGluings}
  \end{figure}
 
-\indent We repeat the steps for the bottom half of $\torus \times I$, $\torus \times
+
+We repeat the steps for the bottom half of $\torus \times I$, $\torus \times
 (-1,0]$. Then we get two torihedra. The graph of each will come from
-crossing edges and edges of the disk. Now, if there are half twists we will
-decompose the complement of the link the same way as if there are no half twists
-and we will identify the two bow-ties as in Figure \ref{fig:falGluings}.
+crossing edges and edges from crossing circles.
+Now, if there are half twists,
+we decompose the complement of the link the same way
+(as if there are no half twists)
+but we identify the two bow-ties as in Figure \ref{fig:falGluings} (b).
 Finally,
 we obtain the complement of the link by gluing the two torihedra with the gluing
 information given by identifying crossing edges and triangles of the bow-tie. We
@@ -410,7 +451,7 @@ torihedra by $\Gamma_T(L)$ and $\Gamma_B(L)$, respectively,
 where both graphs are viewed from the cone point of the top torihedron
 $\torus \times \{1\}$.
 Note that if $L = K$ is the non-augmented link,
-$\Gamma_T(L)$ is simply the link projection $K$,
+$\Gamma_T(L)$ is simply the link projection of $K$,
 and in fact $\Gamma_T(K) = \Gamma_B(K)$.
 
 \end{proof}
@@ -418,7 +459,8 @@ and in fact $\Gamma_T(K) = \Gamma_B(K)$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Figures \ref{fig:step_one} to \ref{fig:top-bottom} is an example which decomposes the link (C) of Figure
+The Figures \ref{fig:step_one} to \ref{fig:top-bottom}
+depict an example which decomposes the link (C) of Figure
 \ref{fig:Augmentations}. 
 
 
@@ -722,7 +764,7 @@ an angle-splitting (which they call a coherent angle system).
 \label{t:auglink_hyp}
 Let $K$ be a weakly prime, alternating link
 in the thickened torus
-whose diagram has no bigons.
+whose diagram is cellular and has no bigons.
 Let $L$ be a link obtained from augmenting $K$.
 Then $L$ is hyperbolic.
 \end{theorem}

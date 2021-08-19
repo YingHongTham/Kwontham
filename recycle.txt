@@ -1,5 +1,16 @@
 ================================================================================
 ================================================================================
+================================================================================
+================================================================================
+%%\begin{define}
+%%\label{def:biperiodiclink}
+%%A \emph{biperiodic alternating link} $\mathcal{L}$ is an infinite link
+%%which has a projection onto
+%%$\R^2$ which is invariant under an action of a two dimensional lattice $\Lambda$
+%%by translations, such that $L=\mathcal{L}/\Lambda$ is an alternating link in
+%%$\torus \times I$, where $I = (-1,1)$, with the projection on $\torus \times \{0\}$.
+%%\end{define}
+================================================================================
 
 We obtain an angle-splitting by applying the
 Feasible Flow theorem (\thmref{t:feasible_flow}) as follows:
