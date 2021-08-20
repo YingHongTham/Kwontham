@@ -24,16 +24,15 @@ Abhijit Champanerkar, Ilya Kofman, and Jessica~S. Purcell.
 \newblock Geometry of biperiodic alternating links.
 \newblock {\em J. Lond. Math. Soc. (2)}, 99(3):807--830, 2019.
 
-\bibitem{FF}
-L.~R. Ford, Jr. and D.~R. Fulkerson.
-\newblock {\em Flows in networks}.
-\newblock Princeton Landmarks in Mathematics. Princeton University Press,
-  Princeton, NJ, 2010.
-\newblock Paperback edition [of MR0159700], With a new foreword by Robert G.
-  Bland and James B. Orlin.
-
 \bibitem{Casson-Rivin}
 David Futer and Fran\c{c}ois Gu\'{e}ritaud.
+\newblock From angled triangulations to hyperbolic structures.
+\newblock In {\em Interactions between hyperbolic geometry, quantum topology
+  and number theory}, volume 541 of {\em Contemp. Math.}, pages 159--182. Amer.
+  Math. Soc., Providence, RI, 2011.
+
+\bibitem{FG-angles}
+David Futer and Fran{\c{c}}ois Gu{\'e}ritaud.
 \newblock From angled triangulations to hyperbolic structures.
 \newblock In {\em Interactions between hyperbolic geometry, quantum topology
   and number theory}, volume 541 of {\em Contemp. Math.}, pages 159--182. Amer.

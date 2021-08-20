@@ -118,10 +118,12 @@
 \maketitle
 
 \begin{abstract}
-For a hyperbolic link $K$ in the thickened torus, We show there is a decomposition of the complement
-of a link $L$, obtained from augmenting $K$, into torihedra. We further decompose 
-the torihedra into angled pyramids and finally angled tetrahedra. These fit into an angled structure 
-on a triangulation of the link complement, and thus by \cite{Casson-Rivin}, this shows
+For a hyperbolic link $K$ in the thickened torus,
+we show there is a decomposition of the complement of a link $L$,
+obtained from augmenting $K$, into torihedra. We further decompose 
+the torihedra into angled pyramids and finally angled tetrahedra.
+These fit into an angled structure on a triangulation of the link complement,
+and thus by \cite{Casson-Rivin}, this shows
 that $L$ is hyperbolic.  
 \end{abstract}
 
@@ -267,16 +269,27 @@ define augmentation for links in $\Sp^3$:
 %to one or more twist regions of $D(L)$. See Figure \ref{fig:Augmentations}
 
 \begin{definition}
-Let $D(K)$ be a twist reduced diagram of a link $K$ in $\torus \times I$, we define
+Let $D(K)$ be a twist reduced diagram of a link $K$ in $\torus \times I$.
+We define
 \emph{augmenting} as a process in which an unknotted circle component,
-called a \emph{crossing circle}, is added
-to one or more twist regions of $D(K)$ (see Figure \ref{fig:Augmentations});
+called a \emph{crossing circle},
+is added to one or more twist regions of $D(K)$
+(see Figure \ref{fig:Augmentations});
 we call the resulting link $L$ an \emph{augmented link obtained from $K$}.
-We say $L$ is \emph{fully} augmented
-if $L$ is obtained by augmenting
+We say $L$ is \emph{fully} augmented if $L$ is obtained by augmenting
 $K$ at \emph{every} crossing/twist site.
 \label{d:augmentation}
 \end{definition}
+
+
+As pointed out in the introduction,
+after augmenting a twist region,
+a standard Dehn twist argument allows us to remove
+a full twist (that is, two bigons).
+We say an augmentation has a \emph{half twist}
+if at least one of the augmented twist regions
+has an odd number of bigons.
+
 
 
 \begin{definition}
@@ -345,6 +358,12 @@ of $\sT$.
 
 For visualization purposes, we typically draw the graph $G(\sT)$ of a
 torihedron from the perspective of the cone point $\torus \times \{1\}$.
+Note however that later we will be dealing with
+``top'' and ``bottom'' torihedra that are glued together
+along their torus boundary faces;
+to avoid confusion, we will visualize the graphs of both torihedra
+from the perspective of the cone point of the ``top'' torihedron.
+
 
 If the faces of $G(\sT)$ are disks,
 then $\sT$ can be decomposed into a union of pyramids,
@@ -352,6 +371,14 @@ obtained by coning each face to the cone point of $\sT$.
 This also gives a decomposition of the corresponding ideal torihedron
 $\sT^\circ$ into ideal pyramids.
 We call these the \emph{pyramidal decompositions} of $\sT$ and $\sT^\circ$.
+
+
+\begin{definition}
+Let $G$ be a graph with no self-loops on the torus.
+
+\label{d:diagram-bowtie}
+\end{definition}
+
 
 \begin{prop}\label{p:tori_decomp}
 Let $K$ be an alternating link in the thickened torus,
@@ -363,7 +390,7 @@ $(\torus \times I) - L$ into two ideal torihedra.
 
 
 \begin{proof}
-We will begin by assuming that there are no half twists.
+We will begin by assuming that $L$ has no half twists.
 Let $L = K \cup C$, with $C$ being the collection of crossing circles.
 %Arrange the link diagram of $L$ in the following way:
 Arrange $L$ in the following way:
@@ -389,12 +416,18 @@ by the crossing circle}
 \label{fig:crossingArc} 
 \end{figure}
 
-We view the link from the point at infinity from the top. We will push
-the top strand to the bottom strand, splitting the crossing edge into two
-identical edges as in Figure \ref{fig:crossingArc} right. We push the link
+
+Next we construct the graph that will define the ``top'' torihedron.
+We view the link from the point at infinity from the top end
+($\torus \times \{1\}$) of the thickened torus.
+Push the top strand to the bottom strand,
+splitting the crossing edge into two
+identical edges and spreading them apart
+as in Figure \ref{fig:crossingArc} right.
+We push the link
 components to infinity and stretch the crossing edge so that we have flattened
-the link onto $\torus \times \{0\}$ except for the crossing circles which will
-remain perpendicular to the projection plane. 
+the link onto $\torus \times \{0\}$ except for the crossing circles,
+which remains perpendicular to the projection plane. 
  
 
 %Now place a disk on each crossing circle, so that the disk is bounded by
@@ -427,8 +460,8 @@ bow-tie as in Figure \ref{fig:falGluings} (a).
  \end{tabular}
 	\caption{(a) Gluing of bow-ties without half-twists
 	(b) Gluing with half-twists}
- \label{fig:falGluings}
- \end{figure}
+\label{fig:falGluings}
+\end{figure}
 
 
 We repeat the steps for the bottom half of $\torus \times I$, $\torus \times
@@ -685,7 +718,8 @@ angle to each edge of each tetrahedron, such that
 \end{itemize}
 \end{define}
 
-\begin{theorem}\cite{TODO: find rivin's paper? should be in here https://arxiv.org/pdf/1004.0440.pdf}
+%\cite{TODO: find rivin's paper? should be in here https://arxiv.org/pdf/1004.0440.pdf}
+\begin{theorem}\cite[Theorem 1.1]{FG-angles}
 Let $M$ be a 3-manifold admitting an angle structure. Then $M$ is hyperbolic.
 \end{theorem}
 
@@ -767,9 +801,20 @@ in the thickened torus
 whose diagram is cellular and has no bigons.
 Let $L$ be a link obtained from augmenting $K$.
 Then $L$ is hyperbolic.
+
+
+More generally, if $K$ is as above with a twist reduced diagram
+containing bigons,
+and $L$ is obtained by augmenting $K$
+at every twist region with at least one bigon
+(and possibly other crossings),
+then $L$ is hyperbolic.
 \end{theorem}
 
 \begin{proof}
+Let us first consider the case when $K$ did not have bigons.
+
+
 By \cite[Theorem 7.5]{CKP2},
 (as discussed in \prpref{p:tori_decomp},)
 $\toruscomp{K}$ can be decomposed
@@ -790,7 +835,7 @@ for all edges.
 
 Using the fact that $K$ is weakly prime,
 it is not hard to see that the ``cocycle condition''
-of \thmref{t:bs-thm4} are satisfied,
+of \thmref{t:bs-thm4} is satisfied.
 
 
 \begin{figure}
@@ -809,7 +854,9 @@ and assign $\pi/2$ to all other edges.
 It is easy to check that upon gluing,
 each edge has sum of dihedral angles ($\theta^*$) that is equal to $2\pi$.
 (This holds true even if they were glued assuming
-some augmentations had no half-twist; see \remref{r:nohalftwist}.)
+some augmentations had no half-twist;
+see end of proof where we deal with $K$ having bigons.)
+%\remref{r:nohalftwist}.)
 
 
 Furthermore, we can obtain an angle-splitting of $\sT_T(L)$
@@ -966,7 +1013,9 @@ a decrease in the latter.
 It is also easy to see this is the case for the other edges.
 (Once again, a similar argument applies if $\sT_T(L)'$
 and $\sT_B(L)'$ are glued assuming
-some augmentations had no half-twist; see \remref{r:nohalftwist}.)
+some augmentations had no half-twist;
+see end of proof where we deal with $K$ having bigons.)
+%see \remref{r:nohalftwist}.)
 
 
 Finally, for each face of $\Gamma_T(L)'$ that has more than three sides,
@@ -978,19 +1027,37 @@ $\Gamma_B(L)'$ and obtain a triangulation of $\sT_B(L)'$
 into non-degenerate angled tetrahedra.
 Upon gluing, this gives an angle structure on the triangulation
 of $\toruscomp{L}$
-\end{proof}
 
 
+Now let us consider $K$ with bigons.
+Let $K'$ be the link obtained from $K$ by replacing
+each twist region of $K$ by a single appropriate crossing.
+Let $L'$ be the link obtained from augmenting $K'$
+by exactly the same crossing circles.
+The top and bottom torihedra $\sT_T(L'),\sT_B(L')$
+are the same as $\sT_T(L),\sT_B(L)$;
+however, the gluing differs slightly:
+for twist regions of $K$ that have an even number of bigons,
+the gluing of $\sT_T(L')$ to $\sT_B(L')$
+should be using Figure \ref{fig:falGluings} (a) (not (b)).
+As remarked throughout the proof,
+all the arguments carry through verbatim.
 
-\begin{remark}
-\label{r:nohalftwist}
+%Then the only difference in the arguments
+%is that, for twist regions of $K$ that have an even number of bigons,
+%the 
+
+%\begin{remark}
+%\label{r:nohalftwist}
 If the original link $K$ had some twist regions with at least one bigon,
 we may consider augmentations $L$ where all such twist regions
 are augmented, i.e. $L$ may have augmentations without half-twists.
 Then, as pointed out in proof of \thmref{t:auglink_hyp} above,
 the proof still works for $L$, showing that $L$ is also hyperbolic.
-\end{remark}
+%\end{remark}
 
+
+\end{proof}
 
 
 \bibliographystyle{plain}
