@@ -130,17 +130,26 @@ that $L$ is hyperbolic.
 \section{Introduction}
 \label{s:intro}
 
-Given a twist reduced diagram of a link $K$, \emph{augmenting} is a process in
+Given a twist-reduced diagram of a link $K$, \emph{augmenting} is a process in
 which an unknotted circle component (augmentation) is added to one or more twist
-regions (a single crossing or a maximal string of bigons) of $K$. The added circle
-component allows us to remove full twists at the twist region of $K$. If the
-twist region has an odd number of crossings then all but one crossing is
-removed, whereas if the twist region has an even number of crossings then all
-are removed. We can remove full twists by a standard argument using a Dehn twist 
-on the complement of the crossing circle. The newly obtained link is called an 
+regions (a single crossing or a maximal string of bigons) of $K$.
+%%By a standard argument using a Dehn twist
+%%on the complement of the crossing circle,
+%%the added circle component allows us to remove full twists
+%%(i.e. pairs of bigons)
+%%at the twist region of $K$
+%%while keeping the link complement the same.
+%%If the twist region has an odd number of crossings,
+%%then all but one crossing is removed,
+%%whereas if the twist region has an even number of crossings,
+%%then all are removed.
+%We can remove full twists by a standard argument using a Dehn twist 
+%on the complement of the crossing circle.
+The newly obtained link is called an 
 \emph{augmented link} and the newly obtained diagram is called an 
 \emph{augmented link diagram}. See Figure
 \ref{fig:Augmentations}. 
+
 
 Adams showed in \cite{CA} that given a hyperbolic alternating link $K$ in
 $\Sp^3$ the link $L$ obtained by augmenting $K$ is hyperbolic. In this paper we
@@ -149,21 +158,26 @@ is a link obtained from augmenting a hyperbolic alternating link $K$ in the
 thickened torus. We define augmenting similarly for links in the thickened torus
 with their associated link diagram on $\torus \times \{0\}.$ 
 
-Menasco \cite{Menasco} showed there are decompositions of the complements of
-alternating links in $\Sp^3$ into two topological polyhedra, a top polyhedron and a bottom
-polyhedron.  For alternating links $K$ in the thickened torus, Champanerkar,
-Kofman and Purcell \cite{CKP2} showed that there is a decomposition of the
+
+Menasco \cite{Menasco} showed that there are decompositions
+of the complements of alternating links in $\Sp^3$
+into two topological polyhedra,
+a top polyhedron and a bottom polyhedron.
+For alternating links $K$ in the thickened torus,
+Champanerkar, Kofman and Purcell \cite{CKP2}
+showed that there is a decomposition of the
 complement of $K$ into objects called torihedra, which we think of as
-counterparts to Menasco's decomposition of links in $\Sp^3$ into polyhedra, for
-links in the thickened torus. Just like Menasco's decomposition, one obtains a
-top and a bottom torihedron.
+counterparts to Menasco's decomposition % of links in $\Sp^3$ into polyhedra,
+for links in the thickened torus;
+just like Menasco's decomposition, one obtains a top and a bottom torihedron.
 
 
 In \secref{s:auglinks} we show that for augmented
-links in the thickened torus one can also obtain a decomposition of the
-complement into a top and bottom torihedron.  In \secref{s:hyperbolicity}, we
-prove that many augmented alternating links in the thickened torus are
-hyperbolic.
+links in the thickened torus (not necessarily fully augmented),
+one can also obtain a decomposition of the
+complement into a top and bottom torihedron.
+In \secref{s:hyperbolicity}, we prove that
+many augmented alternating links in the thickened torus are hyperbolic.
 
 
 We point out that \cite{kwon2020fully}, the first author
@@ -172,8 +186,7 @@ are hyperbolic, so this paper can be seen as a generalization
 of that work.
 
 
-While revising this paper,
-we learned that \cite{adams2021generalized}
+While revising this paper, we learned that \cite{adams2021generalized}
 proves a generalization of our work here,
 showing hyperbolicity of generalized augmented links
 in an arbitrary thickened surface.
@@ -182,16 +195,22 @@ is different from theirs, which is based on topological arguments.
 
 
 
- \begin{figure}
- \centering  
- \begin{tabular}{cc}
- \includegraphics [height=4cm]{augmentation1.png}&
-  \includegraphics [height=4cm]{augmentation2.png}\\
-  (a)&(b)
-  \end{tabular}
- \caption{The left shows a pretzel knot before augmentation and the right shows after augmentation}
- \label{fig:augmentationS3}
- \end{figure}
+\begin{figure}
+\centering  
+\begin{tabular}{cc}
+\includegraphics[height=4cm]{augmentation1.png}
+\;\;\;\;
+& \includegraphics[height=4cm]{augmentation2.png}
+\\
+(a)
+& (b)
+\end{tabular}
+\caption{(a) pretzel knot before augmentation
+(b) pretzel knot after augmentation;
+second diagram shows
+removal of full twists in the augmented twist regions.}
+\label{fig:augmentationS3}
+\end{figure}
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -264,12 +283,12 @@ Now we can define augmentation for a link in $\torus \times I$ the same way we
 define augmentation for links in $\Sp^3$:
 %For a link in $\torus \times I$, the
 %crossing circles are added to the diagram projected onto $\torus \times \{0\}$.
-%Let $D(L)$ be a twist reduced diagram of a link $L$ in $\torus \times I$, we define
+%Let $D(L)$ be a twist-reduced diagram of a link $L$ in $\torus \times I$, we define
 %\emph{augmenting} as a process in which an unknotted circle component is added
 %to one or more twist regions of $D(L)$. See Figure \ref{fig:Augmentations}
 
 \begin{definition}
-Let $D(K)$ be a twist reduced diagram of a link $K$ in $\torus \times I$.
+Let $D(K)$ be a twist-reduced diagram of a link $K$ in $\torus \times I$.
 We define
 \emph{augmenting} as a process in which an unknotted circle component,
 called a \emph{crossing circle},
@@ -286,9 +305,13 @@ As pointed out in the introduction,
 after augmenting a twist region,
 a standard Dehn twist argument allows us to remove
 a full twist (that is, two bigons).
+
+\begin{definition}
 We say an augmentation has a \emph{half twist}
 if at least one of the augmented twist regions
 has an odd number of bigons.
+\label{d:half-twist}
+\end{definition}
 
 
 
@@ -375,7 +398,7 @@ We call these the \emph{pyramidal decompositions} of $\sT$ and $\sT^\circ$.
 
 \begin{definition}
 Let $G$ be a graph with no self-loops on the torus.
-
+TODO definition of adding a bow-tie
 \label{d:diagram-bowtie}
 \end{definition}
 
@@ -397,20 +420,39 @@ Arrange $L$ in the following way:
 place the circle components in $C$ perpendicular to
 the projection plane $\torus \times \{0\}$,
 and leave the remaining part of the link $K \subseteq L$
-lying in the projection plane (except at crossings).
+lying in the projection plane (except at crossings of $K$).
+Thus, the projection of $L$ onto the projection plane
+will be a diagram $D(K)$ of $K$
+together with line segments corresponding to crossing circles.
+(We demand that $D(K)$ be alternating and twist-reduced.)
+As discussed before, we may remove full twists (i.e. pairs of bigons)
+from the twist regions of $K$ that are augmented in $L$,
+and since $L$ is assumed to have no half twists,
+the two edges of $D(K)$ that go through a crossing circle
+do not meet (see Figure \ref{fig:Augmentations} C).
+From now on, we will take $K$ to be this modified link
+(with full twists removed).
+
+
 We now place a \emph{crossing edge} at each crossing of the original link $K$,
 connecting the top and bottom strands at the crossing
-(see Figure \ref{fig:crossingArc} left).
+(see Figure \ref{fig:crossingArc} (a)).
 %so that for each crossing edge,
 %one end of the edge lies on a bottom strand while the other
-%end lies on a top strand as in Figure \ref{fig:crossingArc} left.
+%end lies on a top strand as in Figure \ref{fig:crossingArc} (a).
 
 \begin{figure} 
 \centering 
+\begin{tabular}{cc}
 \includegraphics[width=4cm]{crossingArc.png}
-\includegraphics[width=5cm]{crossingPush.png}
-\caption{Left: The black strands are
-part of the link and the red strand is the crossing edge. Right: The blue and
+& \includegraphics[width=5cm]{crossingPush.png}
+\\
+(a)
+& (b)
+\end{tabular}
+\caption{(a) The black strands are
+part of the link and the red strand is the crossing edge.
+(b) The blue and
 red edges represent the split crossing edges and the shaded half disk is bounded
 by the crossing circle} 
 \label{fig:crossingArc} 
@@ -420,14 +462,15 @@ by the crossing circle}
 Next we construct the graph that will define the ``top'' torihedron.
 We view the link from the point at infinity from the top end
 ($\torus \times \{1\}$) of the thickened torus.
-Push the top strand to the bottom strand,
+At each crossing of $K$,
+push the top strand towards the bottom strand,
 splitting the crossing edge into two
 identical edges and spreading them apart
-as in Figure \ref{fig:crossingArc} right.
-We push the link
-components to infinity and stretch the crossing edge so that we have flattened
-the link onto $\torus \times \{0\}$ except for the crossing circles,
-which remains perpendicular to the projection plane. 
+as in Figure \ref{fig:crossingArc} (b).
+%We push the link
+%components to infinity and stretch the crossing edge so that we have flattened
+%the link onto $\torus \times \{0\}$ except for the crossing circles,
+%which remains perpendicular to the projection plane. 
  
 
 %Now place a disk on each crossing circle, so that the disk is bounded by
@@ -444,39 +487,56 @@ The spanning disks we placed for each crossing circle are now cut in half
 along the red segment.
 Each half of the disk is now bounded by the
 projection plane and the semi-circle arc of the crossing circle.
-We push down on the crossing circle and split the disk into
-two identical disks.
+We push down on the crossing circle and split the half-disk into
+two identical half-disks.
 We then push the arc of each crossing circle to infinity,
 collapsing them to ideal vertices.
-We obtain two triangular faces which represent the disk which look like a
-bow-tie as in Figure \ref{fig:falGluings} (a). 
+We obtain two triangular faces which represent the half-disk which look like a
+bow-tie as in Figure \ref{fig:falGluings} (a).
+See Figures \ref{fig:step_one} to \ref{fig:top-bottom}
+for an example.
+
 
 \begin{figure}
- \centering
- \begin{tabular}{cc}
- \includegraphics [width=8cm]{falGluing1.png}&
- \includegraphics [width=7cm]{falGluing2.png}\\
- (a)&(b)
- \end{tabular}
-	\caption{(a) Gluing of bow-ties without half-twists
-	(b) Gluing with half-twists}
+\centering
+\begin{tabular}{cc}
+\includegraphics [width=8cm]{falGluing1.png}&
+\includegraphics [width=7cm]{falGluing2.png}\\
+(a)&(b)
+\end{tabular}
+\caption{(a) Gluing of bow-ties without half-twists
+(b) Gluing with half-twists}
 \label{fig:falGluings}
 \end{figure}
 
 
+The crossing edges and edges from spanning disks of crossing circles
+form the graph of the top ideal torihedron.
 We repeat the steps for the bottom half of $\torus \times I$, $\torus \times
-(-1,0]$. Then we get two torihedra. The graph of each will come from
-crossing edges and edges from crossing circles.
-Now, if there are half twists,
-we decompose the complement of the link the same way
-(as if there are no half twists)
-but we identify the two bow-ties as in Figure \ref{fig:falGluings} (b).
-Finally,
-we obtain the complement of the link by gluing the two torihedra with the gluing
+(-1,0]$. Thus we get two ideal torihedra.
+%The graph of each will come from
+%crossing edges and edges from spanning disks of crossing circles.
+
+
+We obtain the complement of $L$ by gluing the two torihedra with the gluing
 information given by identifying crossing edges and triangles of the bow-tie. We
 glue the faces of the torihedra which do not correspond to a bow-tie with a
 $2\pi/n$ twist where $n$ is the number of sides of each face as in Figure
 \ref{fig:top-bottom} clockwise or counterclockwise.
+
+
+Now, if $L$ has half-twists,
+we apply the constructions above to $L'$,
+which is the link obtained from $L$ by removing all half-twists
+(replacing them with parallel strands).
+The complement of $L$ is again obtained by
+gluing the torihedra together all the same,
+except that at the bow-ties coming from twist regions with a half-twist,
+they are glued as in Figure \ref{fig:falGluings} (b).
+%we decompose the complement of the link the same way
+%(as if there are no half twists)
+%but we identify the two bow-ties as in Figure \ref{fig:falGluings} (b).
+%Finally,
 
 
 For future reference, we will denote the graph for the top and bottom
@@ -486,7 +546,6 @@ $\torus \times \{1\}$.
 Note that if $L = K$ is the non-augmented link,
 $\Gamma_T(L)$ is simply the link projection of $K$,
 and in fact $\Gamma_T(K) = \Gamma_B(K)$.
-
 \end{proof}
 
 
@@ -519,15 +578,17 @@ depict an example which decomposes the link (C) of Figure
 \centering 
 \includegraphics[height=3cm]{fig-6.png} 
 \caption{Left: The crossing arc is the edge in red.
-Middle: Picture of splitting the crossing edge. Right: The link component is
-pushed off to infinity.}
+Middle: Picture of splitting the crossing edge.
+Right: The link components are pushed off to infinity.}
 	\label{fig:step_three}
 \end{figure}
 
 \begin{figure}[h] 
 \centering 
 \includegraphics[height=3cm]{top-bottom.png} 
-	\caption{Left: The top torihedron. Right: The bottom torihdron with rotation for face gluing.} 
+	\caption{Left: The top torihedron.
+	Right: The bottom torihdron with rotation indicating face gluing;
+	TODO shouldn't it be rotating other way.} 
 \label{fig:top-bottom}
 \end{figure}
 
@@ -803,7 +864,7 @@ Let $L$ be a link obtained from augmenting $K$.
 Then $L$ is hyperbolic.
 
 
-More generally, if $K$ is as above with a twist reduced diagram
+More generally, if $K$ is as above with a twist-reduced diagram
 containing bigons,
 and $L$ is obtained by augmenting $K$
 at every twist region with at least one bigon
