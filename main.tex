@@ -262,10 +262,25 @@ then the disk contains a simple edge of the diagram and no crossings.
 
 
 \begin{define}
-A \emph{twist region} in a link diagram of $L=\mathcal{L}/\Lambda$ in $\torus
+Recall that a \emph{twist region}
+in a link diagram is a maximal sequence of vertices
+such that consecutive vertices are two vertices of a bigon face,
+and consecutive bigons meet only at a vertex (not an edge).
+\footnote{There is an ambiguity of ``maximality'' in this definition:
+for example, if a vertex of a link diagram meets exactly one bigon,
+it can be considered as part of a twist region of length 2
+(given by that bigon),
+or it can be considered as part of a twist region of length 1,
+as there are no bigons in the other ``direction''.
+It should be clear which ``direction'' a twist region is going
+when we deal with augmentations later.
+}
+For links in the thickened torus,
+a \emph{twist region} in a link diagram of $L=\mathcal{L}/\Lambda$ in $\torus
 \times I$, is the quotient of a twist region in the biperiodic link
 $\mathcal{L}$. 
-%a string of bigons, or a single crossing in the diagram on the universal cover of $\torus \times I$ is called a .  
+
+
 A biperiodic link
 $\mathcal{L}$ is called \emph{twist-reduced} if for any simple closed curve on
 the plane that intersects the diagram of $\mathcal{L}$
@@ -277,6 +292,12 @@ the diagram of $L$ is \emph{twist-reduced}
 if it is the quotient of a twist-reduced biperiodic
 link diagram.
 \end{define}
+
+
+We note that when a link diagram is cellular
+(Definition \ref{d:cellular}),
+a twist region in the torus cannot be a cycle;
+otherwise, the face adjacent to the twist region would be an annulus.
 
 
 Now we can define augmentation for a link in $\torus \times I$ the same way we
@@ -309,7 +330,7 @@ a full twist (that is, two bigons).
 \begin{definition}
 We say an augmentation has a \emph{half twist}
 if at least one of the augmented twist regions
-has an odd number of bigons.
+has an odd number of vertices (i.e. even number of bigons).
 \label{d:half-twist}
 \end{definition}
 
@@ -358,7 +379,7 @@ then later used for fully augmented links in
 the thickened torus in \cite{kwon2020fully}.
 The idea is to combine methods of Menasco
 \cite{Menasco} and the use of crossing edges
-between each crossing of our link
+between (TODO for?) each crossing of our link
 and Lackenby's ``cut-slice-flatten" method \cite{lackenby}
 on the augmentation
 sites.
@@ -397,22 +418,56 @@ We call these the \emph{pyramidal decompositions} of $\sT$ and $\sT^\circ$.
 
 
 \begin{definition}
-Let $G$ be a graph with no self-loops on the torus.
-TODO definition of adding a bow-tie
+Let $G$ be a graph on the torus.
+Let $v$ be a vertex and $e,e'$ be distinct edges that meet $v$.
+A \emph{left (resp. right) bow-tie modification to $v,e,e'$}
+is the process of removing $v,e,e'$ and adding in a ``bow-tie''
+as in Figure \ref{TODO} (a) (resp. (b)).
+We call the TODO long edges, the TODO short edges,
+and TODO diagonal edges.
+TODO in figure caption, left bow-tie modification so-called because
+the triangular face appears to the left of the long edges;
+also note that left/right conincide with Figure \ref{f:right_left_aug}
 \label{d:diagram-bowtie}
 \end{definition}
 
 
+\begin{define}
+We say a twist region is \emph{right-augmented} if, when both strands are
+(locally) oriented so that they cross the augmentation disk in the same
+direction, the crossing is a positive right-handed half-twist.
+We say a twist is \emph{left-augmented} if it is not right-augmented.
+See Figure \ref{f:right_left_aug}.
+\end{define}
+
+\begin{figure}
+\includegraphics[width=5cm]{more_pictures/right_left_aug.png}
+\caption{R: right augmentation, L: left augmentation}
+\label{f:right_left_aug}
+\end{figure}
+
+We can recover $L$ from the link diagram of $K$
+together with labels at vertices indicating left- or right-augmentation.
+
+
 \begin{prop}\label{p:tori_decomp}
-Let $K$ be an alternating link in the thickened torus,
+Let $K$ be an alternating link in the thickened torus
+with a cellular link diagram,
 and let $L$ be an augmented link obtained from $K$.
 %Let $G(L)$ be a diagram of the link on $\torus \times \{0\}$.
 There is a decomposition of the complement,
-$(\torus \times I) - L$ into two ideal torihedra.
+$(\torus \times I) - L$, into two ideal torihedra.
 \end{prop}
 
 
 \begin{proof}
+We first give a description of the topological operations
+that give the torihedral decomposition;
+this will justify the 
+more concise description purely in terms of link diagrams
+which we present at the end.
+
+
 We will begin by assuming that $L$ has no half twists.
 Let $L = K \cup C$, with $C$ being the collection of crossing circles.
 %Arrange the link diagram of $L$ in the following way:
@@ -434,7 +489,7 @@ From now on, we will take $K$ to be this modified link
 (with full twists removed).
 
 
-We now place a \emph{crossing edge} at each crossing of the original link $K$,
+We now place a \emph{crossing edge} at each crossing of $K$,
 connecting the top and bottom strands at the crossing
 (see Figure \ref{fig:crossingArc} (a)).
 %so that for each crossing edge,
@@ -546,6 +601,43 @@ $\torus \times \{1\}$.
 Note that if $L = K$ is the non-augmented link,
 $\Gamma_T(L)$ is simply the link projection of $K$,
 and in fact $\Gamma_T(K) = \Gamma_B(K)$.
+
+
+As promised, we give a description of (the graphs of) the torihedra
+in terms of link diagrams of $K$ and $L$.
+Let $D = D(K)$ be the link diagram of $K$,
+and let $D'$ be the graph obtained from $D$
+by collapsing each augmented twist region of $K$ to a vertex.
+It is clear that $D'$ is the link diagram of a link $K'$
+obtained from $K$ by removing half-twists from each augmented twist region
+until one crossing remains.
+Let $v_t$ denote a vertex of $D'$ corresponding to
+an augmented twist region of $K$,
+and let $v_c$ denote a vertex of $D'$ corresponding to
+a crossing of $K$ not in an augmented twist region.
+
+
+Orient the edges of $D'$ to point from an undercrossing
+to an overcrossing.
+Label the two outgoing edges at vertex $v$
+(which corresponds to a crossing or a twist region)
+by $e_v^{(1)}, e_v^{(2)}$ (in arbitrary order).
+For each left- (resp. right-) augmented twist region $t$,
+we perform a left (resp. right) bow-tie modification to
+$v_t, e_{v_t}^{(1)}, e_{v_t}^{(2)}$.
+
+
+The resulting graph is the graph $\Gamma_T(L)$
+of the top torihedron.
+If we had oriented the edges of $D'$ the other way,
+and subsequently performed the same operations,
+we would obtain $\Gamma_B(L)$ the graph of the bottom torihedron.
+
+
+The non-bow-tie faces of $\Gamma_T(L)$ and $\Gamma_B(L)$
+naturally correspond
+(as the bow-tie modification procedure does not remove faces)
+and are glued together.
 \end{proof}
 
 
@@ -588,7 +680,7 @@ Right: The link components are pushed off to infinity.}
 \includegraphics[height=3cm]{top-bottom.png} 
 	\caption{Left: The top torihedron.
 	Right: The bottom torihdron with rotation indicating face gluing;
-	TODO shouldn't it be rotating other way.} 
+	TODO shouldn't it be rotating other way?} 
 \label{fig:top-bottom}
 \end{figure}
 
@@ -597,13 +689,14 @@ Right: The link components are pushed off to infinity.}
 \begin{definition}
 An \emph{angled torihedron} $(\sT, \theta_\bullet^*)$
 is a torihedron $\sT$ with
-an assignment $\theta_e^* \in [0,\pi]$
+an assignment of an \emph{interior dihedral angle}
+$\theta_e^* \in [0,\pi]$ to each edge $e$ of $G(\sT)$
 such that for each vertex $v \in G(\sT)$,
 $\sum_{e \ni v} \theta_e^* = (\deg(v) - 2)\pi$.
 We also denote $\theta_e = \pi - \theta_e^*$,
 so $\sum_{e \ni v} \theta_e = 2\pi$;
-we refer to $\theta_e$ as the exterior angle
-and $\theta_e^*$ as the interior angle. 
+we refer to $\theta_e$ as the \emph{exterior dihedral angle}.
+%and $\theta_e^*$ as the interior angle. 
 For brevity, we write dihedral angle to mean 
 interior dihedral angle.  
 
@@ -619,8 +712,9 @@ to ``respect" angles. The following definitions,
 in particular an ``angle splitting'', make sense of this.
 
 \begin{define}
-An \emph{angled ideal tetrahedron} is an ideal tetrahedron with an assignment of an
-dihedral angle to each edge, such that
+An \emph{angled ideal tetrahedron} is an ideal tetrahedron
+with an assignment of an
+interior dihedral angle $\theta_e^*$ to each edge $e$, such that
 \begin{itemize}
 \item each dihedral angle is in $[0, \pi]$;
 \item for each tetrahedron, opposite edges have equal dihedral angles;
@@ -636,7 +730,7 @@ one dihedral angle is 0; we say it is \emph{non-degenerate} otherwise.
 A \emph{base-angled ideal pyramid}
 is a pyramid whose base is an $n$-gon, $n \geq 3$,
 and each boundary edge $e_i$ of the base face is assigned a dihedral angle
-$\alpha_i \geq 0$ such that the sum is $\sum \alpha_i = 2\pi$.
+$\alpha_i \geq 0$ such that their sum is $\sum \alpha_i = \pi$.
 The vertical edge $e_i'$ that meets $e_i$ and $e_{i+1}$
 is automatically assigned the dihedral angle $\pi - \alpha_i - \alpha_{i+1}$.
 
@@ -659,14 +753,18 @@ with base a triangle, and with no preferred face.
 \begin{definition}
 %TODO: this definition should come after base-angled pyramid
 An \emph{angle splitting} of an angled torihedron $(\sT,\theta_\bullet^*)$
-is a splitting of $\theta_e^* = \vphi_{\vec{e}} + \vphi_{\cev{e}}$
-for each edge $e$,
-where $\vec{e},\cev{e}$ are the two orientations
-on $e$,
-such that for each face $f$,
+is an assignment of an angle $\vphi_{\vec{e}}$ to each
+oriented edge $\vec{e}$, such that
+
+\begin{itemize}
+\item for each edge $e$,
+$\theta_e^* = \vphi_{\vec{e}} + \vphi_{\cev{e}}$,
+where $\cev{e}$ is the opposite orientation on $e$,
+\item for each face $f$,
 $\sum_{\vec{e} \in \del f} \vphi_{\vec{e}} = \pi$,
 where $\vec{e} \in \del f$ is the edge in the boundary of $f$
 taken with outward orientation.
+\end{itemize}
 
 
 Equivalently, an angle splitting is a decomposition of
@@ -679,12 +777,18 @@ add to $\theta_e^*$.
 
 We also say that $\vphi_\bullet$ is an angle-splitting
 of the edge-labeled graph $(G(\sT), \theta_\bullet^*)$.
+
+
+We say that an angle-splitting is \emph{degenerate}
+if $\vphi_{\vec{e}} = 0$ for some oriented edge $\vec{e}$;
+it is \emph{non-degenerate} otherwise.
 \end{definition}
 
 \begin{remark}
-These $\theta$'s are related to the $\theta$'s in
+These $\theta$'s are the same as the $\theta$'s in
 \cite{BandS},
-and the $\vphi$'s are related to their ``coherent angle system''.
+and angle-splittings $\vphi_\bullet$'s
+are the same as their ``coherent angle system''.
 \end{remark}
 
 
@@ -708,12 +812,17 @@ ideal tetrahedron in this triangulation such that
 \item the dihedral angles of the edges of the original base face are the same as
 	before.
 \end{itemize} 
+Moreover, if $P_n$ is non-degenerate,
+then the resulting angled tetrahedra are also non-degenerate.
 \end{lemma}
 
 \begin{proof}
 Induct on $n$; there is nothing to prove for the base case $n=3$.
 
+
 The proof is essentially given in Figure \ref{f:ideal_pyramid_arg}.
+We spell it out here in words.
+
 
 \begin{figure}
 \includegraphics[height=5cm]{more_pictures/angle_split.png}
@@ -746,27 +855,35 @@ in $T$ and $\pi - \alpha_{i-1} - (\alpha_i + \alpha_{i+1})$ in $P_{n-1}$,
 which sum to $\pi - \alpha_i - \alpha_{i+1}$;
 it is similar for $j = i+2$.
 
+
+Non-degeneracy of the resulting angled tetrahedra
+follows easily from the observation that the angles
+assigned to each side of a new edge is simply the sum
+of the angles of original edges on the other side.
 \end{proof}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hyperbolicity of Augmented Links}
 \label{s:hyperbolicity}
-Thurston introduced a method for finding the unique complete hyperbolic metric for a
-given 3-manifold $M$ with boundary consisting of tori \cite{Thurston}. 
+Thurston introduced a method for finding the
+unique complete hyperbolic metric for a given 3-manifold $M$
+with boundary consisting of tori \cite{Thurston}. 
 %The idea
 %was to triangulate the interior of $M$ into ideal tetrahedra and give those
 %tetrahedra hyperbolic shapes (called shape parameters) that glue up coherently
 %in $M$. The shape parameter of a tetrahedron is described by the cross-ratio of
 %its four vertices on the sphere at infinity. 
-Thurston had written down a system
-of gluing and consistency equations which can be translated to 
-equations with angles for a triangulation of $M$ whose solutions correspond to the
-complete hyperbolic metric on the interior of $M$. Casson and Rivin separated Thurston's
-gluing equations into a linear and non-linear part \cite{Casson-Rivin}. Angle
-structures is the linear part of Thurston's gluing equations, and what we will
-use to attain hyperbolicity of complements of augmented links in the thickened
-torus.
+Thurston wrote down a system of gluing and consistency equations
+which can be translated to equations involving
+angles for a triangulation of $M$ whose solutions correspond to the
+complete hyperbolic metric on the interior of $M$.
+Casson and Rivin separated Thurston's
+gluing equations into a linear and non-linear part \cite{Casson-Rivin}.
+Angle structures are solutions to the linear part of
+Thurston's gluing equations;
+we will use them to attain hyperbolicity of complements
+of augmented links in the thickened torus.
 
 
 \begin{define}
@@ -780,17 +897,19 @@ angle to each edge of each tetrahedron, such that
 \end{define}
 
 %\cite{TODO: find rivin's paper? should be in here https://arxiv.org/pdf/1004.0440.pdf}
+
+
 \begin{theorem}\cite[Theorem 1.1]{FG-angles}
-Let $M$ be a 3-manifold admitting an angle structure. Then $M$ is hyperbolic.
+Let $M$ be a 3-manifold with a triangulation that admits an angle structure.
+Then $M$ is hyperbolic.
 \end{theorem}
 
+
 For a hyperbolic link $K$ in $\torus \times I$, we show
-that the resulting link obtained from augmenting $K$ is
-hyperbolic. The idea is to start with a graph from the torihedral decomposition
+that the link $L$ obtained from augmenting $K$ is hyperbolic.
+The idea is to start with a graph from the torihedral decomposition
 of the link $K$ which will give us a graph on each torihedron with an angle
-assignment of
-$\pi/2$ for edge
-\cite{CKP2}.
+assignment of $\pi/2$ to each edge \cite{CKP2}.
 By \prpref{p:tori_decomp},
 there is a torihedral decomposition of the complement of the augmented link $L$.
 Using those angles from $K$,
@@ -800,22 +919,6 @@ and decompose them into base-angled pyramids which can be decomposed
 into tetrahedra, thus obtaining an angle structure on a triangulation.
 
 
-\begin{define}
-We say an augmentation is \emph{right-augmented} if, when both strands are
-(locally) oriented so that they cross the augmentation disk in the same
-direction, the crossing between them is a positive right-handed half-twist.
-See Figure \ref{f:right_left_aug}.
-We say an augmentation is \emph{left-augmented} if it is not right-augmented.
-\end{define}
-
-\begin{figure}
-\includegraphics[width=5cm]{more_pictures/right_left_aug.png}
-\caption{R: right augmentation, L: left augmentation}
-\label{f:right_left_aug}
-\end{figure}
-
-We can recover $L$ from the link diagram of $K$
-together with labels at vertices indicating left- or right-augmentation.
 
 
 We need the following theorem,
