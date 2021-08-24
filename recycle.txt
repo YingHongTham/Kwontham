@@ -1,6 +1,282 @@
 ================================================================================
 ================================================================================
 ================================================================================
+
+
+Now let us consider $K$ with bigons.
+Let $K'$ be the link obtained from $K$ by replacing
+each twist region of $K$ by a single appropriate crossing.
+Let $L'$ be the link obtained from augmenting $K'$
+by exactly the same crossing circles.
+The top and bottom torihedra $\sT_T(L'),\sT_B(L')$
+are the same as $\sT_T(L),\sT_B(L)$;
+however, the gluing differs slightly:
+for twist regions of $K$ that have an even number of bigons,
+the gluing of $\sT_T(L')$ to $\sT_B(L')$
+should be using Figure \ref{fig:falGluings} (a) (not (b)).
+As remarked throughout the proof,
+all the arguments carry through verbatim.
+
+%Then the only difference in the arguments
+%is that, for twist regions of $K$ that have an even number of bigons,
+%the 
+
+%\begin{remark}
+%\label{r:nohalftwist}
+If the original link $K$ had some twist regions with at least one bigon,
+we may consider augmentations $L$ where all such twist regions
+are augmented, i.e. $L$ may have augmentations without half-twists.
+Then, as pointed out in proof of \thmref{t:auglink_hyp} above,
+the proof still works for $L$, showing that $L$ is also hyperbolic.
+%\end{remark}
+
+
+OLD PROOF OLD PROOF OLD PROOF OLD PROOF 
+
+
+By \cite[Theorem 7.5]{CKP2},
+(as discussed in \prpref{p:tori_decomp},)
+$\toruscomp{K}$ can be decomposed
+into two torihedra $\sT_T$ and $\sT_B$,
+with $\sT_T$ meeting the top cone point $\torus \times \{1\}$
+and $\sT_B$ meeting the bottom cone point $\torus \times \{-1\}$.
+We denote their graphs by $\Gamma_T(K), \Gamma_B(K)$ respectively;
+viewed from the top cone point $\torus \times \{1\}$,
+both graphs are the same as the projection graph of $K$.
+%which we denote by $\Gamma$.
+We make them non-degenerate angled torihedra by assigning $\theta^* = \pi/2$
+for all edges.
+%%Unlike in the case of alternating links or fully augmented links 
+%%in the thickened torus we cannot make all angles $\pi/2$. This is 
+%%because in our decomposition the vertices of the graph which
+%%defines our torihedra are not all four valent. 
+
+
+Using the fact that $K$ is weakly prime,
+it is not hard to see that the ``cocycle condition''
+of \thmref{t:bs-thm4} is satisfied.
+
+
+\begin{figure}
+\includegraphics[width=7cm]{more_pictures/horizontal_bowtie.png}
+\caption{Assignments of $\theta^*$ to edges of a bow-tie
+	corresponding to an augmentation site}
+\label{f:bowtie_angles}
+\end{figure}
+
+By \prpref{p:tori_decomp}, $\toruscomp{L}$ can be
+obtained by gluing two torihedra $\sT_T(L),\sT_B(L)$
+with graphs $\Gamma_T(L),\Gamma_B(L)$.
+We make them degenerate angled torihedra by assigning $\theta^*$'s
+to edges of the bow-ties as in Figure \ref{f:bowtie_angles},
+and assign $\pi/2$ to all other edges.
+It is easy to check that upon gluing,
+each edge has sum of dihedral angles ($\theta^*$) that is equal to $2\pi$.
+(This holds true even if they were glued assuming
+some augmentations had no half-twist;
+see end of proof where we deal with $K$ having bigons.)
+%\remref{r:nohalftwist}.)
+
+
+Furthermore, we can obtain an angle-splitting of $\sT_T(L)$
+(and similarly $\sT_B(L)$) by modifying the angle-splitting
+for $\sT_T(K)$;
+this is shown in Figure \ref{f:bowtie_angles2}. 
+
+
+\begin{figure}
+\begin{tabular}{cc}
+\includegraphics[width = 5cm]{before_bowtie_angles.png}&
+\includegraphics[width = 5cm]{bowtie_angles.png}\\
+(a)&(b)
+\end{tabular}
+\caption{(a) Angle splitting before augmentation (b) Angle splitting for bowtie corresponding to augmentation}
+\label{f:bowtie_angles2}
+\end{figure}
+
+Now we have a decomposition of the two torihedra into
+degenerate base-angled pyramids.
+However, we need the pyramids to be non-degenerate,
+so we first need to modify the angles and graph on the torihedra
+to make all $\theta^*$ nonzero.
+
+
+Consider a face $f$ of $\Gamma_T(L)$ that is not in a bow-tie.
+Suppose the corresponding face $\bar{f}$ of $\Gamma$,
+the projection graph (which is equal to $\Gamma_T(K)$),
+had vertices $v_1,\ldots,v_n$ in counter-clockwise order.
+We label the edges of $f$ by $e_{i,0}$, $e_{i,\pi}$, or $e_i$,
+depending on whether the $\theta^*$ is $0$, $\pi$, or $\pi/2$ respectively,
+with $i$ non-decreasing from 1 to $n$,
+adjacent edges having the same $i$ if and only if they
+belong to the same bow-tie.
+For sake of concreteness,
+suppose that if a vertex $v_i$ is right-augmented,
+then the augmentation circle intersects $\bar{f}$
+(everything is similar if it is left-augmented vertices' circles
+that intersect $\bar{f}$).
+In other words, locally, $f$ meets two of the edges of the bow-tie
+corresponding to a right-augmented vertex $v_i$
+(which would be labeled $e_{i,0}, e_{i,\pi}$ in counter-clockwise order),
+but only meets one of the edges of the bow-tie corresponding to
+a left-augmented vertex.
+
+
+Suppose, after cyclically reindexing, $v_1,\ldots,v_k$
+is a maximally contiguous subsequence of left-augmented vertices
+of $G(K)$ around the face $\bar{f}$;
+the edges around $f$ would start
+$e_{1,0}, e_{1,\pi}, e_{2,0}, e_{2,\pi}, \ldots$.
+We add new edges across $f$ as follows.
+(See Figure \ref{f:adding_edges};
+ignore the + and - signs for now.)
+
+
+First suppose $k=n$; then we do nothing.
+
+Next suppose there is only one such maximal contiguous subsequence.
+If $k = 1$, we add an edge that goes across
+$e_{1,0},e_{1,\pi},e_2$
+(in the sense that the new edge separates the edges of $f$ into two sets,
+one of them being those three edges;
+since $n\geq 3$, this edge is new).
+%If $k = 2$, we add edge across $e_{1,0},e_{1,\pi}$
+%and another edge across $e_{2,0},e_{2,\pi}$
+%(these two edges do not form a bigon because we've ruled out $k=n$).
+%(these two edges do not form a bigon because we've ruled out $k=n$).
+If $k \geq 2$,
+we add an edge across $e_{1,0},e_{1,\pi}$
+and another edge across $e_{2,0},e_{2,\pi},e_{3,0},\ldots,e_{k,\pi}$
+(these two edges do not form a bigon because we've ruled out $k=n$).
+%(again these two edges do not form a bigon).
+
+Finally, if there are multiple such maximal contiguous subsequences,
+we just add edges as above for each contiguous subsequence.
+The only caveat is that if the procedure calls to add a new edge
+that would form a bigon with the existing edges,
+we just do not add it.
+
+
+This way we obtain a new graph $\Gamma_T(L)'$, which defines a
+new torihedron $\sT_T(L)'$.
+We make $\sT_T(L)'$ angled using the angles from $\sT_T(L)$ for old edges,
+and putting $\pi$ for all new edges TODO make clear it's the red edges that is
+new.
+
+
+\begin{figure}
+\includegraphics[width=5cm]{more_pictures/one_edge.png}
+%\includegraphics[width=5cm]{more_pictures/two_edge.png}
+\includegraphics[width=5cm]{more_pictures/two_edge_many.png}
+\caption{Red edge indicates an added edge to the graph to appropriately assign +/- labels which indicate 
+increasing/decreasing angles on the edge respectively.}
+\label{f:adding_edges}
+\end{figure}
+
+Now we deform the $\theta^*$ based on Figure \ref{f:adding_edges},
+increasing/decreasing by some small $\veps' > 0$ if the edge
+is labeled $+/-$.
+Note some edges may be labeled twice, in which case we perform
+both increasing/decreasing (e.g. if it is labeled $+$ and $-$,
+the $\theta^*$ is not changed).
+It is easy to see that the sum of $\theta^*$ around a vertex
+remains unchanged.
+Furthermore, all the edges with $\theta^*$ originally equal 0,
+i.e. all $e_{i,0}$'s,
+now have positive $\theta^*$,
+(it receives only one label $+$,
+because the other face it meets is a bow-tie).
+
+
+
+%Thus, we could attempt to apply the feasible flow theorem in a similar manner,
+%and obtain an angle-splitting for $\sT_T(L)'$, but 
+%TODO rephrase nicely.
+We can directly get an angle-splitting for $\sT_T(L)'$
+using the angle-splitting for $\sT_T(L)$.
+We reuse the $+/-$ assignments from Figure \ref{f:adding_edges}.
+For $e = e_{i,0}$, we increase $\vphi_{\vec{e}}, \vphi_{\cev{e}}$
+by $\veps'/2$ each; for $e = e_{i,\pi}$,
+we decrease them by $\veps'/2$ each.
+For other edges, we increase/decrease $\vphi_{\vec{e}}$ by $\veps'$,
+where $\vec{e}$ is the oriented edge corresponding to the side
+on which the $+/-$ sign appears in Figure \ref{f:adding_edges};
+so for example, if an edge $e$ receives both $+$ and $-$,
+then one of $\vphi_{\vec{e}},\vphi_{\cev{e}}$ increases
+while the other decreases, thus $\theta_e^*$ remains constant.
+
+
+Now we address $\sT_B(L)$.
+In the gluing of $\sT_T(L)$ to $\sT_B(L)$,
+non-bow-tie faces of $\Gamma_T(L)$ are identified with
+non-bow-tie faces of $\Gamma_B(L)$.
+Under this identification, we add the same edges to $\Gamma_B(L)$,
+thus obtaining the new torihedron $\sT_B(L)'$ with graph
+$\Gamma_B(L)'$.
+We perform the same deformations of $\theta^*$'s (or $\vphi$'s).
+
+
+We need to check that upon gluing $\sT_T(L)'$ to $\sT_B(L)'$,
+the sum of dihedral angles around each edge is still $2\pi$.
+This was clearly true before deforming, as the new edges of
+$\Gamma_T(L)'$ only gets identified with the unique
+corresponding edge of $\Gamma_B(L)'$, and they are both labeled
+with $\theta^* = \pi$.
+To see that the deformation does not change these sums,
+note that in the identification of faces of $\Gamma_T(L)'$
+to $\Gamma_B(L)'$,
+an edge with $\theta^*=0$ is identified with an edge with
+$\theta^*=\pi$,
+so an increase in the former would be conterbalanced by
+a decrease in the latter.
+It is also easy to see this is the case for the other edges.
+(Once again, a similar argument applies if $\sT_T(L)'$
+and $\sT_B(L)'$ are glued assuming
+some augmentations had no half-twist;
+see end of proof where we deal with $K$ having bigons.)
+%see \remref{r:nohalftwist}.)
+
+
+Finally, for each face of $\Gamma_T(L)'$ that has more than three sides,
+we arbitrarily decompose it into triangles
+and apply \lemref{l:pyramid_decomp}
+to obtain a triangulation of $\sT_T(L)'$ into non-degenerate angled tetrahedra;
+perform the corresponding decomposition for faces of
+$\Gamma_B(L)'$ and obtain a triangulation of $\sT_B(L)'$
+into non-degenerate angled tetrahedra.
+Upon gluing, this gives an angle structure on the triangulation
+of $\toruscomp{L}$
+
+
+Now let us consider $K$ with bigons.
+Let $K'$ be the link obtained from $K$ by replacing
+each twist region of $K$ by a single appropriate crossing.
+Let $L'$ be the link obtained from augmenting $K'$
+by exactly the same crossing circles.
+The top and bottom torihedra $\sT_T(L'),\sT_B(L')$
+are the same as $\sT_T(L),\sT_B(L)$;
+however, the gluing differs slightly:
+for twist regions of $K$ that have an even number of bigons,
+the gluing of $\sT_T(L')$ to $\sT_B(L')$
+should be using Figure \ref{fig:falGluings} (a) (not (b)).
+As remarked throughout the proof,
+all the arguments carry through verbatim.
+
+%Then the only difference in the arguments
+%is that, for twist regions of $K$ that have an even number of bigons,
+%the 
+
+%\begin{remark}
+%\label{r:nohalftwist}
+If the original link $K$ had some twist regions with at least one bigon,
+we may consider augmentations $L$ where all such twist regions
+are augmented, i.e. $L$ may have augmentations without half-twists.
+Then, as pointed out in proof of \thmref{t:auglink_hyp} above,
+the proof still works for $L$, showing that $L$ is also hyperbolic.
+%\end{remark}
+
+
+
 ================================================================================
 %%\begin{define}
 %%\label{def:biperiodiclink}

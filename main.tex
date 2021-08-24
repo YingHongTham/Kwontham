@@ -12,6 +12,7 @@
 \newcommand{\thmref}[1]{Theorem \ref{#1}}
 \newcommand{\prpref}[1]{Proposition \ref{#1}}
 \newcommand{\lemref}[1]{Lemma \ref{#1}}
+\newcommand{\defref}[1]{Definition \ref{#1}}
 \newcommand{\figref}[1]{Figure \ref{#1}}
 \newcommand{\secref}[1]{Section \ref{#1}}
 \newcommand{\remref}[1]{Remark \ref{#1}}
@@ -447,7 +448,51 @@ See Figure \ref{f:right_left_aug}.
 \end{figure}
 
 We can recover $L$ from the link diagram of $K$
-together with labels at vertices indicating left- or right-augmentation.
+together with labels at twist regions indicating left- or right-augmentation.
+
+\begin{definition}
+\label{d:tori-decomp-graph}
+Let $L$ be a link obtained from augmenting an alternating link $K$
+with a cellular link diagram $D = D(K)$.
+We define the \emph{top/bottom bow-tie graph of $L$} as follows.
+
+
+%Let $D = D(K)$ be the link diagram of $K$,
+Let $D'$ be the graph obtained from $D$
+by collapsing each augmented twist region of $K$ to a vertex.
+Clearly, $D'$ is the link diagram of a link $K'$
+obtained from $K$ by removing half-twists from each augmented twist region
+until one crossing remains.
+Let $v_t$ denote a vertex of $D'$ corresponding to
+an augmented twist region of $K$,
+and let $v_c$ denote a vertex of $D'$ corresponding to
+a crossing of $K$ not in an augmented twist region.
+
+
+Orient the edges of $D'$ to point from an undercrossing
+to an overcrossing.
+Label the two outgoing edges at vertex $v$
+(which corresponds to a crossing or a twist region)
+by $e_v^{(1)}, e_v^{(2)}$ (in arbitrary order).
+For each left- (resp. right-) augmented twist region $t$,
+we perform a left (resp. right) bow-tie modification to
+$v_t, e_{v_t}^{(1)}, e_{v_t}^{(2)}$.
+
+
+We call the resulting graph the \emph{top bow-tie graph of $L$},
+denoted by $\Gamma_T(L)$.
+If we had oriented the edges of $D'$ the other way,
+and subsequently performed the same operations,
+we obtain another graph,
+which we call the \emph{bottom bow-tie graph of $L$},
+denoted by $\Gamma_B(L)$.
+\hfill $\triangle$
+\end{definition}
+
+
+Note that the non-bow-tie faces of $\Gamma_T(L)$ and $\Gamma_B(L)$
+are naturally identified with the faces of $D'$
+(as the bow-tie modification procedure does not remove faces).
 
 
 \begin{prop}\label{p:tori_decomp}
@@ -456,16 +501,22 @@ with a cellular link diagram,
 and let $L$ be an augmented link obtained from $K$.
 %Let $G(L)$ be a diagram of the link on $\torus \times \{0\}$.
 There is a decomposition of the complement,
-$(\torus \times I) - L$, into two ideal torihedra.
+$(\torus \times I) - L$, into two ideal torihedra;
+the graphs of the torihedra are $\Gamma_T(L)$ and $\Gamma_B(L)$.
 \end{prop}
 
 
 \begin{proof}
-We first give a description of the topological operations
-that give the torihedral decomposition;
-this will justify the 
-more concise description purely in terms of link diagrams
-which we present at the end.
+%As mentioned before, we will be combining
+%Menasco's method using crossing edges at each crossing
+%and Lackenby's ``cut-slice-flatten'' method
+%on augmentation sites.
+
+%We give a description of the topological operations
+%that give the torihedral decomposition;
+%this will justify the 
+%more concise description purely in terms of link diagrams
+%which we present in Remark \ref{r:tori-decomp-graph}.
 
 
 We will begin by assuming that $L$ has no half twists.
@@ -567,17 +618,30 @@ for an example.
 
 The crossing edges and edges from spanning disks of crossing circles
 form the graph of the top ideal torihedron.
-We repeat the steps for the bottom half of $\torus \times I$, $\torus \times
-(-1,0]$. Thus we get two ideal torihedra.
+It is not hard to see that this graph is $\Gamma_T(L)$.
+We repeat similar steps for the bottom half of $\torus \times I$,
+$\torus \times (-1,0]$
+(note we should be pushing the bottom strands up towards the top strand).
+It is also easy to see that this graph is $\Gamma_B(L)$
+(from the same perspective, not from the perspective of the bottom end
+$\torus \times \{-1\}$).
+Thus we get two ideal torihedra.
 %The graph of each will come from
 %crossing edges and edges from spanning disks of crossing circles.
 
 
 We obtain the complement of $L$ by gluing the two torihedra with the gluing
-information given by identifying crossing edges and triangles of the bow-tie. We
-glue the faces of the torihedra which do not correspond to a bow-tie with a
-$2\pi/n$ twist where $n$ is the number of sides of each face as in Figure
-\ref{fig:top-bottom} clockwise or counterclockwise.
+information given by identifying crossing edges and triangles of the bow-tie.
+As observed before, the non-bow-tie faces of $\Gamma_T(L),\Gamma_B(L)$
+naturally pair up, and we glue them accordingly
+(there is a ``$2\pi/n$'' twist when gluing these faces,
+where $n$ is the number of sides of each face as in Figure
+\ref{fig:top-bottom} clockwise or counterclockwise).
+The bow-tie triangular faces are glued up according to
+\figref{fig:falGluings} (a).
+%We glue the faces of the torihedra which do not correspond to a bow-tie with a
+%$2\pi/n$ twist where $n$ is the number of sides of each face as in Figure
+%\ref{fig:top-bottom} clockwise or counterclockwise.
 
 
 Now, if $L$ has half-twists,
@@ -594,51 +658,15 @@ they are glued as in Figure \ref{fig:falGluings} (b).
 %Finally,
 
 
-For future reference, we will denote the graph for the top and bottom
-torihedra by $\Gamma_T(L)$ and $\Gamma_B(L)$, respectively,
-where both graphs are viewed from the cone point of the top torihedron
-$\torus \times \{1\}$.
-Note that if $L = K$ is the non-augmented link,
-$\Gamma_T(L)$ is simply the link projection of $K$,
-and in fact $\Gamma_T(K) = \Gamma_B(K)$.
-
-
-As promised, we give a description of (the graphs of) the torihedra
-in terms of link diagrams of $K$ and $L$.
-Let $D = D(K)$ be the link diagram of $K$,
-and let $D'$ be the graph obtained from $D$
-by collapsing each augmented twist region of $K$ to a vertex.
-It is clear that $D'$ is the link diagram of a link $K'$
-obtained from $K$ by removing half-twists from each augmented twist region
-until one crossing remains.
-Let $v_t$ denote a vertex of $D'$ corresponding to
-an augmented twist region of $K$,
-and let $v_c$ denote a vertex of $D'$ corresponding to
-a crossing of $K$ not in an augmented twist region.
-
-
-Orient the edges of $D'$ to point from an undercrossing
-to an overcrossing.
-Label the two outgoing edges at vertex $v$
-(which corresponds to a crossing or a twist region)
-by $e_v^{(1)}, e_v^{(2)}$ (in arbitrary order).
-For each left- (resp. right-) augmented twist region $t$,
-we perform a left (resp. right) bow-tie modification to
-$v_t, e_{v_t}^{(1)}, e_{v_t}^{(2)}$.
-
-
-The resulting graph is the graph $\Gamma_T(L)$
-of the top torihedron.
-If we had oriented the edges of $D'$ the other way,
-and subsequently performed the same operations,
-we would obtain $\Gamma_B(L)$ the graph of the bottom torihedron.
-
-
-The non-bow-tie faces of $\Gamma_T(L)$ and $\Gamma_B(L)$
-naturally correspond
-(as the bow-tie modification procedure does not remove faces)
-and are glued together.
+%%For future reference, we will denote the graph for the top and bottom
+%%torihedra by $\Gamma_T(L)$ and $\Gamma_B(L)$, respectively,
+%%where both graphs are viewed from the cone point of the top torihedron
+%%$\torus \times \{1\}$.
+%%Note that if $L = K$ is the non-augmented link,
+%%$\Gamma_T(L)$ is simply the link projection of $K$,
+%%and in fact $\Gamma_T(K) = \Gamma_B(K)$.
 \end{proof}
+
 
 
 
@@ -752,7 +780,7 @@ with base a triangle, and with no preferred face.
 
 \begin{definition}
 %TODO: this definition should come after base-angled pyramid
-An \emph{angle splitting} of an angled torihedron $(\sT,\theta_\bullet^*)$
+An \emph{angle-splitting} of an angled torihedron $(\sT,\theta_\bullet^*)$
 is an assignment of an angle $\vphi_{\vec{e}}$ to each
 oriented edge $\vec{e}$, such that
 
@@ -767,12 +795,14 @@ taken with outward orientation.
 \end{itemize}
 
 
-Equivalently, an angle splitting is a decomposition of
+Equivalently, an angle-splitting is a decomposition of
 $\sT$ into base-angled pyramids,
-one for each face of $G(\sT)$, such that
-for each boundary edge $e$ of $\sT$,
-the dihedral angles from the two adjacent pyramids
-add to $\theta_e^*$.
+one for each face $F$ of $G(\sT)$, such that
+the interior dihedral of the edge $\vec{e} \in \del F$
+is $\vphi_{\vec{e}}$.
+%for each boundary edge $e$ of $\sT$,
+%the dihedral angles from the two adjacent pyramids
+%add to $\theta_e^*$.
 
 
 We also say that $\vphi_\bullet$ is an angle-splitting
@@ -928,22 +958,26 @@ specialized to genus 1 surfaces:
 
 \begin{theorem}{\cite[Theorem 4]{BandS}}
 Let $\Gamma = (V,E)$ be a graph on the torus,
-and let $\Gamma^* = (F,E^*)$ be the dual graph,
-with $E^*$ being naturally identified with $E$.
-Let $\theta_\bullet \in (0,\pi)^E$
+and let $\check{\Gamma} = (F,\check{E})$ be the dual graph,
+with $\check{E}$ being naturally identified with $E$.
+%Let $\theta_\bullet \in (0,\pi)^E$
+Let $f \in (0,\pi)^E$
 be a function on the set of edges $E$
-that sums to $2\pi$ around each vertex of $V$.
+that sums to $2\pi$ around each vertex of $V$;
+let $f^*(e) = \pi - f(e)$.
 
 
-There exists an angle-splitting of $(\Gamma,\theta_\bullet)$
+There exists a non-degenerate
+%angle-splitting of $(\Gamma,\theta_\bullet)$
+angle-splitting of $(\Gamma,f^*)$
 if and only if the following
 ``cocycle condition'' is satisfied:
 
 \begin{quotation}
 Suppose we cut the torus along a subset of edges in the dual graph
-$\Gamma^*$, obtaining one or more pieces;
+$\check{\Gamma}$, obtaining one or more pieces;
 Then for any piece that is a disc,
-the sum of $\theta_\bullet$ over the edges in the boundary
+the sum of $f$ over the edges in the boundary
 of the piece is at least $2\pi$,
 with equality if and only if the piece
 contains exactly one vertex of $\Gamma$.
@@ -970,74 +1004,65 @@ Then $L$ is hyperbolic.
 More generally, if $K$ is as above with a twist-reduced diagram
 containing bigons,
 and $L$ is obtained by augmenting $K$
-at every twist region with at least one bigon
-(and possibly other crossings),
+such that every twist region with at least one bigon is augmented,
+%(and possibly other crossings),
 then $L$ is hyperbolic.
 \end{theorem}
 
 \begin{proof}
-Let us first consider the case when $K$ did not have bigons.
-
-
-By \cite[Theorem 7.5]{CKP2},
-(as discussed in \prpref{p:tori_decomp},)
-$\toruscomp{K}$ can be decomposed
-into two torihedra $\sT_T$ and $\sT_B$,
-with $\sT_T$ meeting the top cone point $\torus \times \{1\}$
-and $\sT_B$ meeting the bottom cone point $\torus \times \{-1\}$.
-We denote their graphs by $\Gamma_T(K), \Gamma_B(K)$ respectively;
-viewed from the top cone point $\torus \times \{1\}$,
-both graphs are the same as the projection graph of $K$.
-%which we denote by $\Gamma$.
-We make them non-degenerate angled torihedra by assigning $\theta^* = \pi/2$
-for all edges.
-%%Unlike in the case of alternating links or fully augmented links 
-%%in the thickened torus we cannot make all angles $\pi/2$. This is 
-%%because in our decomposition the vertices of the graph which
-%%defines our torihedra are not all four valent. 
-
-
-Using the fact that $K$ is weakly prime,
-it is not hard to see that the ``cocycle condition''
-of \thmref{t:bs-thm4} is satisfied.
-
-
-\begin{figure}
-\includegraphics[width=7cm]{more_pictures/horizontal_bowtie.png}
-\caption{Assignments of $\theta^*$ to edges of a bow-tie
-	corresponding to an augmentation site}
-\label{f:bowtie_angles}
-\end{figure}
-
+%Let us first consider the case when $K$ did not have bigons.
 By \prpref{p:tori_decomp}, $\toruscomp{L}$ can be
 obtained by gluing two torihedra $\sT_T(L),\sT_B(L)$
 with graphs $\Gamma_T(L),\Gamma_B(L)$.
-We make them degenerate angled torihedra by assigning $\theta^*$'s
-to edges of the bow-ties as in Figure \ref{f:bowtie_angles},
-and assign $\pi/2$ to all other edges.
-It is easy to check that upon gluing,
-each edge has sum of dihedral angles ($\theta^*$) that is equal to $2\pi$.
-(This holds true even if they were glued assuming
-some augmentations had no half-twist;
-see end of proof where we deal with $K$ having bigons.)
-%\remref{r:nohalftwist}.)
 
 
-Furthermore, we can obtain an angle-splitting of $\sT_T(L)$
-(and similarly $\sT_B(L)$) by modifying the angle-splitting
-for $\sT_T(K)$;
-this is shown in Figure \ref{f:bowtie_angles2}. 
+Recall that $\Gamma_T(L),\Gamma_B(L)$ are
+obtained by bow-tie modifications of the diagram $D'$
+of a link $K'$
+(see \defref{d:tori-decomp-graph}).
+Assign to each edge $e$ of $D'$ the angle $\theta_e = \pi/2$
+(so that $\theta_e^* = \pi/2$).
+Using the fact that $K'$ is weakly prime
+(which easily follows from $K$ being weakly prime),
+it is not hard to see that the ``cocycle condition''
+of \thmref{t:bs-thm4} is satisfied by this assignment.
+Thus, there exists a non-degenerate angle-splitting
+$\vphi_\bullet$ of $(D',\theta_\bullet^*)$.
+%Recall from the proof of \prpref{p:tori_decomp}
+%that the two graphs $\Gamma_T(L),\Gamma_B(L)$
+%can be obtained by modifying the link diagram of $K$:
+%we take $K'$ to be the link that agrees with $K$ everywhere
+%except each augmented twist region has only one crossing,
+%and $\Gamma_T(L),\Gamma_B(L)$ are 
 
 
-\begin{figure}
-\begin{tabular}{cc}
-\includegraphics[width = 5cm]{before_bowtie_angles.png}&
-\includegraphics[width = 5cm]{bowtie_angles.png}\\
-(a)&(b)
-\end{tabular}
-\caption{(a) Angle splitting before augmentation (b) Angle splitting for bowtie corresponding to augmentation}
-\label{f:bowtie_angles2}
-\end{figure}
+Now we perform the bow-tie modifications to obtain
+$\Gamma_T(L),\Gamma_B(L)$.
+For each step (i.e. each bow-tie modification),
+we show how to modify the $\theta^*$ assignments
+and how to get angle-splittings.
+Say we perform such a modification
+at some vertex $v$ and two edges $e^{(1)},e^{(2)}$.
+We assign new $\theta_\bullet^*$ angles to
+the resulting bow-tie modification graph
+as in \figref{f:bowtie_angles}.
+Note that the sum of $\theta$ (not $\theta^*$)
+around each vertex is still $2\pi$.
+\figref{f:bowtie_angles2} shows an angle-splitting
+of this assignment.
+TODO perhaps these figures need some tidying up
+
+
+It is straightforward to check that
+upon gluing the top and bottom torihedra,
+the sum of interior dihedral angles $\theta^*$
+around each edge is $2\pi$;
+crossing edges have $\theta^* = \pi/2$,
+and appear four times, twice in each torihedron,
+while for bow-tie edges,
+simply check for half-twist and non-half-twist cases
+separately.
+
 
 Now we have a decomposition of the two torihedra into
 degenerate base-angled pyramids.
@@ -1047,8 +1072,7 @@ to make all $\theta^*$ nonzero.
 
 
 Consider a face $f$ of $\Gamma_T(L)$ that is not in a bow-tie.
-Suppose the corresponding face $\bar{f}$ of $\Gamma$,
-the projection graph (which is equal to $\Gamma_T(K)$),
+Suppose the corresponding face $\bar{f}$ of $D'$
 had vertices $v_1,\ldots,v_n$ in counter-clockwise order.
 We label the edges of $f$ by $e_{i,0}$, $e_{i,\pi}$, or $e_i$,
 depending on whether the $\theta^*$ is $0$, $\pi$, or $\pi/2$ respectively,
@@ -1190,37 +1214,8 @@ perform the corresponding decomposition for faces of
 $\Gamma_B(L)'$ and obtain a triangulation of $\sT_B(L)'$
 into non-degenerate angled tetrahedra.
 Upon gluing, this gives an angle structure on the triangulation
-of $\toruscomp{L}$
-
-
-Now let us consider $K$ with bigons.
-Let $K'$ be the link obtained from $K$ by replacing
-each twist region of $K$ by a single appropriate crossing.
-Let $L'$ be the link obtained from augmenting $K'$
-by exactly the same crossing circles.
-The top and bottom torihedra $\sT_T(L'),\sT_B(L')$
-are the same as $\sT_T(L),\sT_B(L)$;
-however, the gluing differs slightly:
-for twist regions of $K$ that have an even number of bigons,
-the gluing of $\sT_T(L')$ to $\sT_B(L')$
-should be using Figure \ref{fig:falGluings} (a) (not (b)).
-As remarked throughout the proof,
-all the arguments carry through verbatim.
-
-%Then the only difference in the arguments
-%is that, for twist regions of $K$ that have an even number of bigons,
-%the 
-
-%\begin{remark}
-%\label{r:nohalftwist}
-If the original link $K$ had some twist regions with at least one bigon,
-we may consider augmentations $L$ where all such twist regions
-are augmented, i.e. $L$ may have augmentations without half-twists.
-Then, as pointed out in proof of \thmref{t:auglink_hyp} above,
-the proof still works for $L$, showing that $L$ is also hyperbolic.
-%\end{remark}
-
-
+of $\toruscomp{L}$.
+Thus, $L$ is hyperbolic.
 \end{proof}
 
 
