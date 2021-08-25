@@ -99,6 +99,7 @@
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{example}[theorem]{Example}
+\newtheorem{convention}[theorem]{Convention}
 
 \newtheorem*{namedtheorem}{\theoremname}
 \newcommand{\theoremname}{testing}
@@ -108,6 +109,8 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{question}[theorem]{Question}
 \newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\cm}{,\linebreak[1]}
 
 \title{Hyperbolicity of Augmented Links in the Thickened Torus}
 
@@ -267,15 +270,23 @@ Recall that a \emph{twist region}
 in a link diagram is a maximal sequence of vertices
 such that consecutive vertices are two vertices of a bigon face,
 and consecutive bigons meet only at a vertex (not an edge).
-\footnote{There is an ambiguity of ``maximality'' in this definition:
-for example, if a vertex of a link diagram meets exactly one bigon,
-it can be considered as part of a twist region of length 2
-(given by that bigon),
-or it can be considered as part of a twist region of length 1,
-as there are no bigons in the other ``direction''.
-It should be clear which ``direction'' a twist region is going
-when we deal with augmentations later.
-}
+We say that the \emph{direction} of a twist region
+is the pair of faces (possibly the same face)
+that are across from the bigons at the end;
+if a twist region consists of only one vertex,
+a direction is a pair of opposite faces (again, possibly the same face)
+meeting at the crossing.
+%%\footnote{There is an ambiguity of ``maximality'' in this definition:
+%%for example, if a vertex of a link diagram meets exactly one bigon,
+%%it can be considered as part of a twist region of length 2
+%%(given by that bigon),
+%%or it can be considered as part of a twist region of length 1,
+%%as there are no bigons in the other ``direction''.
+%%It should be clear which ``direction'' a twist region is going
+%%when we deal with augmentations later.
+%%}
+
+
 For links in the thickened torus,
 a \emph{twist region} in a link diagram of $L=\mathcal{L}/\Lambda$ in $\torus
 \times I$, is the quotient of a twist region in the biperiodic link
@@ -791,7 +802,8 @@ where $\cev{e}$ is the opposite orientation on $e$,
 \item for each face $f$,
 $\sum_{\vec{e} \in \del f} \vphi_{\vec{e}} = \pi$,
 where $\vec{e} \in \del f$ is the edge in the boundary of $f$
-taken with outward orientation.
+taken with outward-orientation
+(see Convention \ref{cvn:ornt-edge}).
 \end{itemize}
 
 
@@ -813,6 +825,17 @@ We say that an angle-splitting is \emph{degenerate}
 if $\vphi_{\vec{e}} = 0$ for some oriented edge $\vec{e}$;
 it is \emph{non-degenerate} otherwise.
 \end{definition}
+
+
+\begin{convention}
+The outward-orientation on the boundary of a face
+is the orientation such that the face is to the left of the boundary.
+An assignment/label on an oriented edge $\vec{e}$
+(for example, $\vphi_{\vec{e}}$)
+will usually be drawn to the left of that edge.
+\label{cvn:ornt-edge}
+\end{convention}
+
 
 \begin{remark}
 These $\theta$'s are the same as the $\theta$'s in
@@ -1055,7 +1078,10 @@ TODO perhaps these figures need some tidying up
 \begin{figure}
 \includegraphics[width=7cm]{more_pictures/horizontal_bowtie.png}
 \caption{Assignments of $\theta^*$ to edges of a bow-tie
-	corresponding to an augmentation site}
+	corresponding to an augmentation site;
+	the edges labeled $\pi$ are the long edges,
+	the edges labeled 0 are the short edges,
+	the edges labeled $\pi/2$ are the diagonal edges}
 \label{f:bowtie_angles}
 \end{figure}
 
@@ -1081,58 +1107,75 @@ separately.
 
 
 Now we have a decomposition of the two torihedra into
-degenerate base-angled pyramids.
-However, we need the pyramids to be non-degenerate,
-so we first need to modify the angles and graph on the torihedra
-to make all $\theta^*$ nonzero.
+degenerate base-angled pyramids
+(recall that that means that some of the
+interior dihedral angles $\theta^*$ are 0),
+but we need the pyramids to be non-degenerate,
+so we need to modify the graph on the torihedra
+and the angle assignments to make all $\theta^*$ nonzero.
 
 
-Consider a face $f$ of $\Gamma_T(L)$ that is not in a bow-tie.
+We first modify the graphs on the torihedra by adding edges
+to them for some extra ``flexibility''.
+Consider a face $f$ of $\Gamma_T(L)$ that is not from a bow-tie.
 Suppose the corresponding face $\bar{f}$ of $D'$
 had vertices $v_1,\ldots,v_n$ in counter-clockwise order.
+Note that $f$ may meet a vertex twice,
+but we label each occurence with its own index.
 We label the edges of $f$ by $e_{i,0}$, $e_{i,\pi}$, or $e_i$,
-depending on whether the $\theta^*$ is $0$, $\pi$, or $\pi/2$ respectively,
-with $i$ non-decreasing from 1 to $n$,
-adjacent edges having the same $i$ if and only if they
-belong to the same bow-tie.
-For sake of concreteness,
-suppose that if a vertex $v_i$ is right-augmented,
-then the augmentation circle intersects $\bar{f}$
-(everything is similar if it is left-augmented vertices' circles
-that intersect $\bar{f}$).
-In other words, locally, $f$ meets two of the edges of the bow-tie
-corresponding to a right-augmented vertex $v_i$
-(which would be labeled $e_{i,0}, e_{i,\pi}$ in counter-clockwise order),
-but only meets one of the edges of the bow-tie corresponding to
-a left-augmented vertex.
+depending on whether the $\theta^*$ of that edges
+is $0$, $\pi$, or $\pi/2$ respectively.
+%with $i$ non-decreasing from 1 to $n$,
+%so that adjacent edges having the same $i$ if and only if they
+%belong to the same bow-tie.
+More precisely, for a vertex $v_i$ corresponding to a crossing
+of $K$ that is not augmented,
+we label $e_{v_i}^{(.)}$ by $e_i$
+(here $e_{v_i}^{(.)}$ is $e_{v_i}^{(1)}$ or $e_{v_i}^{(2)}$,
+whichever meets $\bar{f}$; see \defref{d:tori-decomp-graph}).
+For a vertex $v_i$ that corresponds to a twist region of $K$,
+if the direction of the twist region is towards $\bar{f}$,
+then $f$ meets a diagonal edge of the bow-tie corresponding to $v_i$,
+and we label it $e_i$;
+if not, then $f$ meets a short and long edge of the corresponding bow-tie,
+and we label them by $e_{i,0}$ and $e_{i,\pi}$,
+respectively.
+
+
+If $\bar{f}$ does not have vertices of the latter kind,
+i.e. if $f$ does not meet short or long edges,
+then we will not modify $f$.
+So assume that $\bar{f}$ does have such a vertex,
+and suppose it is left-augmented
+(the other case is treated similarly).
+Then for all left-augmented vertices $v_i$ of $\bar{f}$,
+$f$ would meet the short,long edges $e_{i,0},e_{i,\pi}$,
+while for all right-augmented vertices,
+$f$ would meet the diagonal edges.
+In particular,
+the edges $e_{i,0}, e_{i,\pi}$ always appear in counter-clockwise order),
 
 
 Suppose, after cyclically reindexing, $v_1,\ldots,v_k$
 is a maximally contiguous subsequence of left-augmented vertices
-of $G(K)$ around the face $\bar{f}$;
+of $D'$ around $\bar{f}$;
 the edges around $f$ would start
-$e_{1,0}, e_{1,\pi}, e_{2,0}, e_{2,\pi}, \ldots$.
-We add new edges across $f$ as follows.
-(See \figref{f:adding_edges};
-ignore the + and - signs for now.)
+$e_{1,0} \cm e_{1,\pi} \cm e_{2,0} \cm e_{2,\pi} \cm \ldots
+	\cm e_{k,0} \cm e_{k,\pi} \cm \ldots$.
+We add new edges across $f$ as follows
+(see \figref{f:adding_edges};
+ignore the + and - signs for now.):
 
 
-\begin{figure}
-\includegraphics[width=5cm]{more_pictures/one_edge.png}
-%\includegraphics[width=5cm]{more_pictures/two_edge.png}
-\includegraphics[width=5cm]{more_pictures/two_edge_many.png}
-\caption{Red edge indicates an added edge to the graph to appropriately assign +/- labels which indicate 
-increasing/decreasing angles on the edge respectively.}
-\label{f:adding_edges}
-\end{figure}
+\begin{itemize}
+\item \textbf{Case $k=n$:} (i.e. every vertex of $\bar{f}$ is left-augmented.)
+In this case, we do nothing.
+
+\item \textbf{Case: There is only one such maximal contiguous subsequence:}
 
 
-
-First suppose $k=n$; then we do nothing.
-
-Next suppose there is only one such maximal contiguous subsequence.
-If $k = 1$, we add an edge that goes across
-$e_{1,0},e_{1,\pi},e_2$
+\textbf{Subcase: $k=1$:}
+We add an edge that goes across $e_{1,0},e_{1,\pi},e_2$
 (in the sense that the new edge separates the edges of $f$ into two sets,
 one of them being those three edges;
 since $n\geq 3$, this edge is new).
@@ -1140,108 +1183,101 @@ since $n\geq 3$, this edge is new).
 %and another edge across $e_{2,0},e_{2,\pi}$
 %(these two edges do not form a bigon because we've ruled out $k=n$).
 %(these two edges do not form a bigon because we've ruled out $k=n$).
-If $k \geq 2$,
-we add an edge across $e_{1,0},e_{1,\pi}$
+
+\textbf{Subcase: $k \geq 2$:}
+We add an edge across $e_{1,0},e_{1,\pi}$
 and another edge across $e_{2,0},e_{2,\pi},e_{3,0},\ldots,e_{k,\pi}$
 (these two edges do not form a bigon because we've ruled out $k=n$).
 %(again these two edges do not form a bigon).
 
-Finally, if there are multiple such maximal contiguous subsequences,
-we just add edges as above for each contiguous subsequence.
-The only caveat is that if the procedure calls to add a new edge
-that would form a bigon with the existing edges,
-we just do not add it.
-
-
-This way we obtain a new graph $\Gamma_T(L)'$, which defines a
-new torihedron $\sT_T(L)'$.
-We make $\sT_T(L)'$ angled using the angles from $\sT_T(L)$ for old edges,
-and putting $\pi$ for all new edges TODO make clear it's the red edges that is
-new.
+\textbf{Case: There are multiple such maximal contiguous subsequences.}
+We just add edges as in the previous case for each contiguous subsequence,
+except one special case: when the edges of $f$ are exactly
+$e_{1,0},e_{1,\pi},e_2,e_{3,0},e_{3,\pi},e_4$,
+we add only one edge separating the first three edges from the other three.
+(This prevents formation of a bigon.)
+\end{itemize}
 
 
 \begin{figure}
 \includegraphics[width=5cm]{more_pictures/one_edge.png}
 %\includegraphics[width=5cm]{more_pictures/two_edge.png}
 \includegraphics[width=5cm]{more_pictures/two_edge_many.png}
-\caption{Red edge indicates an added edge to the graph to appropriately assign +/- labels which indicate 
-increasing/decreasing angles on the edge respectively.}
+\caption{TODO change this. Red edge indicates an added edge to $\Gamma_T(L)$;
+the +/- labels indicate whether to
+increase/decrease $\theta^*$ and $\vphi$.}
 \label{f:adding_edges}
 \end{figure}
 
-Now we deform the $\theta^*$ based on Figure \ref{f:adding_edges},
-increasing/decreasing by some small $\veps' > 0$ if the edge
-is labeled $+/-$.
-Note some edges may be labeled twice, in which case we perform
-both increasing/decreasing (e.g. if it is labeled $+$ and $-$,
-the $\theta^*$ is not changed).
-It is easy to see that the sum of $\theta^*$ around a vertex
-remains unchanged.
-Furthermore, all the edges with $\theta^*$ originally equal 0,
-i.e. all $e_{i,0}$'s,
-now have positive $\theta^*$,
-(it receives only one label $+$,
-because the other face it meets is a bow-tie).
+
+This way we obtain a new graph $\Gamma_T'$, which defines a
+new torihedron $\sT_T'$.
+We make $\sT_T'$ angled using the angles from $\sT_T(L)$ for old edges,
+and putting $\theta^* = \pi$ for all new edges.
 
 
-
-%Thus, we could attempt to apply the feasible flow theorem in a similar manner,
-%and obtain an angle-splitting for $\sT_T(L)'$, but 
-%TODO rephrase nicely.
-We can directly get an angle-splitting for $\sT_T(L)'$
-using the angle-splitting for $\sT_T(L)$.
-We reuse the $+/-$ assignments from Figure \ref{f:adding_edges}.
-For $e = e_{i,0}$, we increase $\vphi_{\vec{e}}, \vphi_{\cev{e}}$
-by $\veps'/2$ each; for $e = e_{i,\pi}$,
-we decrease them by $\veps'/2$ each.
-For other edges, we increase/decrease $\vphi_{\vec{e}}$ by $\veps'$,
-where $\vec{e}$ is the oriented edge corresponding to the side
-on which the $+/-$ sign appears in Figure \ref{f:adding_edges};
-so for example, if an edge $e$ receives both $+$ and $-$,
-then one of $\vphi_{\vec{e}},\vphi_{\cev{e}}$ increases
-while the other decreases, thus $\theta_e^*$ remains constant.
+We can get an angle-splitting for $(\Gamma_T',\theta^*)$,
+using the angle-splitting for $\Gamma_T(L)$ for old edges,
+and for a new edge $e$ that cuts through some face $f$ of $\Gamma_T(L)$,
+we assign $\vphi_{\vec{e}} = \sum \vphi_{\vec{e'}}$,
+where the sum is over all the edges $\vec{e'} \in \del f$
+that on the other side of $\vec{e}$.
+It is easy to see that the new assignments are all non-zero
+(follows from non-degeneracy of the angle-splitting on $D'$).
 
 
-Now we address $\sT_B(L)$.
-In the gluing of $\sT_T(L)$ to $\sT_B(L)$,
-non-bow-tie faces of $\Gamma_T(L)$ are identified with
-non-bow-tie faces of $\Gamma_B(L)$.
-Under this identification, we add the same edges to $\Gamma_B(L)$,
-thus obtaining the new torihedron $\sT_B(L)'$ with graph
-$\Gamma_B(L)'$.
-We perform the same deformations of $\theta^*$'s (or $\vphi$'s).
+Now fix some small $\veps > 0$.
+Let $\vphi_{\vec{e}}' = \vphi_{\vec{e}} + x \cdot \veps$,
+where $x$ is the label on $\vec{e}$ (0 if unlabeled).
+Let $\theta_e'^* = \vphi_{\vec{e}}' + \vphi_{\cev{e}}'$.
+It is easy to check that the sum of $\theta'*$
+around each vertex is the same as for $\theta^*$,
+so it defines an angled torihedron $(\sT_T',\theta'^*)$.
+It is also easy to check that for each face of $\Gamma_T'$,
+the $+/-$ labels cancel out,
+so $\vphi'$ is an angle-splitting of it.
+Furthermore, all shorts edges
+(which are the only edges with $\vphi_{\vec{e}} = 0$)
+have a $+1$ label on each side,
+so $\vphi'$ is non-degenerate.
 
 
-We need to check that upon gluing $\sT_T(L)'$ to $\sT_B(L)'$,
-the sum of dihedral angles around each edge is still $2\pi$.
-This was clearly true before deforming, as the new edges of
-$\Gamma_T(L)'$ only gets identified with the unique
-corresponding edge of $\Gamma_B(L)'$, and they are both labeled
-with $\theta^* = \pi$.
-To see that the deformation does not change these sums,
-note that in the identification of faces of $\Gamma_T(L)'$
-to $\Gamma_B(L)'$,
-an edge with $\theta^*=0$ is identified with an edge with
-$\theta^*=\pi$,
-so an increase in the former would be conterbalanced by
-a decrease in the latter.
-It is also easy to see this is the case for the other edges.
-(Once again, a similar argument applies if $\sT_T(L)'$
-and $\sT_B(L)'$ are glued assuming
-some augmentations had no half-twist;
-see end of proof where we deal with $K$ having bigons.)
-%see \remref{r:nohalftwist}.)
+Now we perform the same operations for the bottom torihedron,
+adding new edges to $\Gamma_B(L)$ to get $\Gamma_B'$
+in the same manner;
+note that left and right augmentations are switched,
+so that the order of $e_{i,0},e_{i,\pi}$ are switched.
+Thus all the $+/-$ labels in \figref{f:adding_edges}
+should have switched signs.
+We also get a nondegerate angle-splitting $\vphi'$
+of an angled torihedron $(\sT_B',\theta'^*)$.
 
 
-Finally, for each face of $\Gamma_T(L)'$ that has more than three sides,
+It is easy to see that, under the gluing of
+$\sT_T(L)$ to $\sT_B(L)$,
+the new edges added to $\Gamma_T(L)$
+are glued to the new edges added to $\Gamma_B(L)$.
+As noted before, upon gluing $\sT_T(L)$ to $\sT_B(L)$
+the sum of exterior dihedral angles $\theta^*$ around each edge
+is $2\pi$.
+This clearly remains true after adding the new edges
+(they're label $\pi$ on each torihedron).
+It is also eashy to check that the $+/-$ labels get canceled out.
+Thus, upon gluing $\sT_T'$ to $\sT_B'$,
+the sum of new exterior dihedral angles $\theta'^*$ around each edge
+is $2\pi$.
+
+
+Finally, we obtain a triangulation with an angle structure as follows.
+For each face of $\Gamma_T'$ that has more than three sides,
 we arbitrarily decompose it into triangles
 and apply \lemref{l:pyramid_decomp}
-to obtain a triangulation of $\sT_T(L)'$ into non-degenerate angled tetrahedra;
+to obtain a triangulation of $\sT_T'$ into non-degenerate angled tetrahedra;
 perform the corresponding decomposition for faces of
-$\Gamma_B(L)'$ and obtain a triangulation of $\sT_B(L)'$
+$\Gamma_B'$ and obtain a triangulation of $\sT_B'$
 into non-degenerate angled tetrahedra.
-Upon gluing, this gives an angle structure on the triangulation
-of $\toruscomp{L}$.
+These triangulations glue up into a triangulation of $\toruscomp{L}$
+with an angle structure.
 Thus, $L$ is hyperbolic.
 \end{proof}
 
@@ -1251,3 +1287,27 @@ Thus, $L$ is hyperbolic.
 
 
 \end{document}
+
+
+%%Figures for easy look up
+
+%augmenting twist regions
+%\label{fig:Augmentations}
+
+%left right augmentations
+%\label{f:right_left_aug}
+
+%crossing edge, Menasco thing
+%\label{fig:crossingArc} 
+
+%cut-slice-flatten, bow-ties, gluing
+%\label{fig:falGluings}
+
+%definition of the torihedral decomp graph
+%\label{d:tori-decomp-graph}
+
+%assignments of theta^*
+%\label{f:bowtie_angles}
+
+%assigment of +/- labels
+%\label{f:adding_edges}
