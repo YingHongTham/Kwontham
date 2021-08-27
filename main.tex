@@ -5,9 +5,94 @@
 \usepackage{graphicx, color,  subfigure, wrapfig, overpic}
 \usepackage{fullpage}
 %\usepackage[all,cmtip]{xy} 
-%\usepackage{tikz}
-\usepackage{tikz-cd}
 %\usepackage{mystyle}
+
+%%%%%%%%%%%%%%%%%% Tikz %%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{shapes.multipart} %% for multiple lines in node (must have align=center)
+\usetikzlibrary{calc}
+\usetikzlibrary{scopes}
+\usetikzlibrary{math}
+\usetikzlibrary{decorations.markings,decorations.pathreplacing}
+\usetikzlibrary{fadings}
+\usepackage{tikz-cd}
+
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-2in}
+\calclayout
+
+\tikzset{
+every picture/.style={line width=0.8pt, >=stealth,
+                       baseline=-3pt,label distance=-3pt},
+%%%%%%%%%%  Node styles
+emptynode/.style={circle,minimum size=0pt, inner sep=0pt, outer
+sep=0},
+dotnode/.style={fill=black,circle,minimum size=2.5pt, inner sep=1pt, outer
+sep=0},
+small_dotnode/.style={fill=black,circle,minimum size=2pt, inner sep=0pt, outer
+sep=0},
+morphism/.style={fill=white,circle,draw,thin, inner sep=1pt, minimum size=15pt,
+                 scale=0.8},
+small_morphism/.style={fill=white,circle,draw,thin,inner sep=1pt,
+                       minimum size=10pt, scale=0.8},
+ellipse_morphism/.style args={#1}{fill=white,circle,draw,thin,inner sep=1pt,
+                       minimum size=5pt, scale=0.8,
+												ellipse, draw, rotate=#1},
+%note that ellipse stretches based on the text inside, so put \;\;\; in label
+coupon/.style={draw,thin, inner sep=1pt, minimum size=18pt,scale=0.8},
+semi_morphism/.style args={#1,#2}{
+                  fill=white,semicircle,draw,thin, inner sep=1pt, scale=0.8,
+                  shape border rotate=#1,
+                  label={#1-90:#2}},
+%%can only rotate semi_morphisms by right angles tho
+%%%% different line styles:
+regular/.style={densely dashed}, %% for the regular color, i.e. sum d_i
+edge/.style={very thick, draw=green, text=black},
+overline/.style={preaction={draw,line width=2mm,white,-}},
+thin_overline/.style={preaction={draw,line width=#1 mm,white,-}},
+thin_overline/.default=2,
+thick_overline/.style={preaction={draw,line width=3mm,white,-}},
+really_thick/.style={line width=3mm, gray},
+%drinfeld center/.style={>=stealth,green!60!black, double
+%distance=1pt,text=black},
+boundary/.style={thick,  draw=blue, text=black},
+%arrow_decoration={markings, mark=at position 0.5 with {\arrow{>}}}
+ribbon/.style={line width=1.5mm, postaction={draw,line width=1mm,white}},
+ribbon_u/.style args={#1,#2}{line width=#1mm, postaction={draw,line width=#2mm,white}},
+%use line width=0.4pt for thin lines to point to things
+%%%%%%% Fill styles %%%%%%%%%%%%%%%
+cell/.style={fill=black!10},
+subgraph/.style={fill=black!30},
+%%%%%%% Mid-path arrows
+midarrow/.style={postaction={decorate},
+                 decoration={
+                    markings,% switch on markings
+                    mark=at position #1 with {\arrow{>}},
+                 }},
+midarrow/.default=0.5,
+%%%%% Mid-path arrow but reverse
+midarrow_rev/.style={postaction={decorate},
+                 decoration={
+                    markings,% switch on markings
+                    mark=at position #1 with {\arrow{<}},
+                 }},
+midarrow_rev/.default=0.5,
+%%%%% for the flowchart; need align=center to allow multiline in node
+block/.style={rectangle, rounded corners, text centered, draw=black, align=center}
+}
+
+%% style for flow chart blocks
+\tikzstyle{block} = [rectangle, rounded corners, text centered, draw=black, align=center]
+
+%% for shading with gradients
+\tikzfading[name=fade inside, inner color=transparent!80, outer
+color=transparent!10]
+
+%%%end tikz stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \newcommand{\thmref}[1]{Theorem \ref{#1}}
 \newcommand{\prpref}[1]{Proposition \ref{#1}}
@@ -112,6 +197,7 @@
 
 \newcommand{\cm}{,\linebreak[1]}
 
+
 \title{Hyperbolicity of Augmented Links in the Thickened Torus}
 
 
@@ -130,6 +216,32 @@ These fit into an angled structure on a triangulation of the link complement,
 and thus by \cite{Casson-Rivin}, this shows
 that $L$ is hyperbolic.  
 \end{abstract}
+
+
+\begin{tikzpicture}
+\node[emptynode] (a) at (-0.9,-0.3) {};
+\node[dotnode] (b) at (-0.3,-0.1) {};
+\node[dotnode] (c) at (0.3,0.1) {};
+\node[emptynode] (d) at (0.9,0.3) {};
+%% two strands going out back
+\draw (b) -- +(150:1cm);
+\draw (c) -- +(150:1cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+\draw[thin_overline={1}] (a) -- (b) -- (c) -- (d)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+\draw[fill, opacity=0.2] (a) -- (d)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+\draw (a) -- (d)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
+%% two strands coming out front with twist
+%\draw (b) -- +(-30:2cm); %\draw (c) -- +(-30:2cm);
+\draw[thin_overline={1}] (c)
+	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
+\draw[thin_overline={1}] (b)
+	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
+\end{tikzpicture}
+
+\comment{
 
 \section{Introduction}
 \label{s:intro}
@@ -1123,7 +1235,7 @@ had vertices $v_1,\ldots,v_n$ in counter-clockwise order.
 Note that $f$ may meet a vertex twice,
 but we label each occurence with its own index.
 We label the edges of $f$ by $e_{i,0}$, $e_{i,\pi}$, or $e_i$,
-depending on whether the $\theta^*$ of that edges
+depending on whether the $\theta^*$ of that edge
 is $0$, $\pi$, or $\pi/2$ respectively.
 %with $i$ non-decreasing from 1 to $n$,
 %so that adjacent edges having the same $i$ if and only if they
@@ -1146,18 +1258,18 @@ If $\bar{f}$ does not have vertices of the latter kind,
 i.e. if $f$ does not meet short or long edges,
 then we will not modify $f$.
 So assume that $\bar{f}$ does have such a vertex,
-and suppose it is left-augmented
+and suppose it is right-augmented
 (the other case is treated similarly).
-Then for all left-augmented vertices $v_i$ of $\bar{f}$,
+Then for all right-augmented vertices $v_i$ of $\bar{f}$,
 $f$ would meet the short,long edges $e_{i,0},e_{i,\pi}$,
-while for all right-augmented vertices,
+while for all left-augmented vertices,
 $f$ would meet the diagonal edges.
 In particular,
-the edges $e_{i,0}, e_{i,\pi}$ always appear in counter-clockwise order),
+the edges $e_{i,0}, e_{i,\pi}$ always appear in counter-clockwise order.
 
 
 Suppose, after cyclically reindexing, $v_1,\ldots,v_k$
-is a maximally contiguous subsequence of left-augmented vertices
+is a maximally contiguous subsequence of right-augmented vertices
 of $D'$ around $\bar{f}$;
 the edges around $f$ would start
 $e_{1,0} \cm e_{1,\pi} \cm e_{2,0} \cm e_{2,\pi} \cm \ldots
@@ -1168,7 +1280,7 @@ ignore the + and - signs for now.):
 
 
 \begin{itemize}
-\item \textbf{Case $k=n$:} (i.e. every vertex of $\bar{f}$ is left-augmented.)
+\item \textbf{Case $k=n$:} (i.e. every vertex of $\bar{f}$ is right-augmented.)
 In this case, we do nothing.
 
 \item \textbf{Case: There is only one such maximal contiguous subsequence:}
@@ -1285,6 +1397,7 @@ Thus, $L$ is hyperbolic.
 \bibliographystyle{plain}
 \bibliography{references-ak}
 
+}
 
 \end{document}
 
