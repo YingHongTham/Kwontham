@@ -1,145 +1,94 @@
 \begin{tikzpicture}
 \begin{scope}[shift={(0,0)}]
-\node at (-2,0.5) {$K:$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-%\draw (2,-0.5) -- (2,1.5);
-\draw (2,1.5)
-	.. controls +(-90:1cm) and +(135:0.2cm) .. (1.9,-0.1)
-	.. controls +(-45:0.2cm) and +(180:0.3cm) .. (2.5,0);
-%$% horizontal lines
-\draw[overline] (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[overline] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (1.75,0);
-\draw[thin_overline={1.5}] (1.95,0)
-	.. controls +(0:0.1cm) and +(90:0.5cm) .. (2,-0.5);
-%% vertical lines again
-\draw[overline] (0,-0.5) -- (0,0.5);
-\draw[overline] (1,0.5) -- (1,1.5);
-%\draw[overline] (2,-0.5) -- (2,0.5);
+\node[dotnode] at (0,0) {};
+\draw (-1,0) -- (1,0);
+\draw (0,-1.2) -- (0,1.2);
+\draw (-0.3,1) -- (0.3,1);
+\draw (-0.3,-1) -- (0.3,-1);
+%%% labels
+\node at (-0.15,0.15) {$v$};
+\node at (0.15,0.5) {$e$};
+\node at (0.2,-0.5) {$e'$};
+%%% arrows
+\draw[->] (-1.5,0) -- (-3.5,0);
+\node at (-2.5,0.7) {left bow-tie};
+\node at (-2.5,0.3) {modification};
+\draw[->] (1.5,0) -- (3.5,0);
+\node at (2.5,0.7) {right bow-tie};
+\node at (2.5,0.3) {modification};
 \end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(8,0)}]
-\node at (-2,0.5) {$L:$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-%\draw (2,-0.5) -- (2,1.5);
-\draw (2,1.5)
-	.. controls +(-90:1cm) and +(135:0.2cm) .. (1.9,-0.1)
-	.. controls +(-45:0.2cm) and +(180:0.3cm) .. (2.5,0);
-%$% horizontal lines
-\draw[overline] (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[overline] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (1.75,0);
-\draw[thin_overline={1.5}] (1.95,0)
-	.. controls +(0:0.1cm) and +(90:0.5cm) .. (2,-0.5);
-%% vertical lines again
-\draw[overline] (0,-0.5) -- (0,0.5);
-\draw[overline] (1,0.5) -- (1,1.5);
-%\draw[overline] (2,-0.5) -- (2,0.5);
-%% augmentations/crossing circles
-\draw[thin_overline={1.5}] (0.8,-0.1)
-	.. controls +(-135:0.1cm) and +(-135:0.2cm) .. (0.85,0.15)
-	.. controls +(45:0.2cm) and +(45:0.1cm) .. (1.1,0.2);
-\draw[thin_overline={1.5}] (1.7,-0.1)
-	.. controls +(-135:0.1cm) and +(-135:0.2cm) .. (1.75,0.15)
-	.. controls +(45:0.2cm) and +(45:0.1cm) .. (2,0.2);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(-5,0)}]
+\node[dotnode] at (0,0) {};
+\draw (-1,0) -- (1,0);
+\draw (0,-1.2) -- (0,1.2);
+\draw (-0.3,1) -- (0.3,1);
+\draw (-0.3,-1) -- (0.3,-1);
+%% bow-tie part
+\draw (-0.3,0) -- (0,1);
+\draw (0.3,0) -- (0,-1);
+%% labels
+\node (diag) at (-1.5,0.6) {\tiny diagonal};
+\node (short) at (-1.5,-0.4) {\tiny short};
+\node (long) at (-1.2,-0.9) {\tiny long};
+\draw[line width=0.3pt] (diag) -- (-0.15,0.5);
+\draw[line width=0.3pt] (short) to[out=0,in=-120] (-0.15,0);
+\draw[line width=0.3pt] (long) -- (0,-0.5);
 \end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(0,-3)}]
-\node at (-2,0.5) {$K':$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-\draw (2,-0.5) -- (2,1.5);
-%$% horizontal lines
-\draw[overline] (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[overline] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (2.5,0);
-%% vertical lines again
-\draw[overline] (0,-0.5) -- (0,0.5);
-\draw[overline] (1,0.5) -- (1,1.5);
-\draw[overline] (2,-0.5) -- (2,0.5);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(5,0)}]
+\node[dotnode] at (0,0) {};
+\draw (-1,0) -- (1,0);
+\draw (0,-1.2) -- (0,1.2);
+\draw (-0.3,1) -- (0.3,1);
+\draw (-0.3,-1) -- (0.3,-1);
+%% bow-tie part
+\draw (0.3,0) -- (0,1);
+\draw (-0.3,0) -- (0,-1);
 \end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% D' diagram
-\begin{scope}[shift={(0,-6)}]
-\node at (-2,0.5) {$D':$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw[midarrow_rev={0.1},midarrow={0.5}]  (1,-0.5) -- (1,1.5);
-\draw (2,-0.5) -- (2,1.5);
-%% horizontal lines
-\draw (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[midarrow_rev={0.8},midarrow={0.98}] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (2.5,0);
-%% arrow label
-\draw[->] (3,1) -- (5,2);
-\draw[->] (3,0) -- (5,-1);
-\node at (4.2,0.7) {bow-tie};
-\node at (4.2,0.3) {modification};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(0,4)}]
+\node[dotnode] at (0,0) {};
+\draw (-0.3,1) -- (0.3,1);
+\draw[overline] (0,-1.2) -- (0,1.2);
+\draw[overline] (-1,0) -- (1,0);
+\draw[overline] (-0.3,-1) -- (0.3,-1);
+%% augmentation, crossing circle
+\draw[thin_overline={1.5}] (-0.1,-0.1)
+	.. controls +(-135:0.3cm) and +(-135:0.4cm) .. (-0.15,0.15)
+	.. controls +(45:0.4cm) and +(45:0.3cm) .. (0.1,0.1);
+%% arrows
+\draw[->] (-1.5,-1) -- (-3.5,-2.5);
+\node at (-3,-0.8) {top};
+\node at (-3,-1.2) {torihedron};
+\draw[->] (1.5,-1) -- (3.5,-2.5);
+\node at (3,-0.8) {bottom};
+\node at (3,-1.2) {torihedron};
+%% label
+\node at (2,1) {left};
+\node at (2,0.6) {augmentation};
 \end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% top torihedron graph
-\begin{scope}[shift={(8,-4.5)}]
-\node at (-2,0.5) {$\Gamma_T(L):$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-\draw (2,-0.5) -- (2,1.5);
-%% horizontal lines
-\draw (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (2.5,0);
-%% bow-tie
-\draw (0.8,0) -- (1,1);
-\draw (1.2,0) -- (1.1,-0.5);
-\draw (1.1,1.5) -- (1,1);
-%% second bow-tie
-\draw (1.2,0) -- (2,0.2);
-\draw (2,-0.2) -- (2.5,-0.15);
-\draw (-1.2,-0.15)
-	.. controls +(5:0.5cm) and +(-110:0.3cm) .. (-0.6,0.5);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% bottom torihedron graph
-\begin{scope}[shift={(8,-7.5)}]
-\node at (-2,0.5) {$\Gamma_B(L):$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-\draw (2,-0.5) -- (2,1.5);
-%% horizontal lines
-\draw (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (2.5,0);
-%% bow-tie
-\draw (0,0) -- (1,0.2);
-\draw (1,-0.2) -- (1.8,0);
-%% second bow-tie
-\draw (1.8,0) -- (2,1);
-\draw (2.2,0) -- (2.1,-0.5);
-\draw (2.1,1.5) -- (2,1);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(0,-4)}]
+\node[dotnode] at (0,0) {};
+\draw (-0.3,1) -- (0.3,1);
+\draw[overline] (0,-1.2) -- (0,1.2);
+\draw[overline] (-1,0) -- (1,0);
+\draw[overline] (-0.3,-1) -- (0.3,-1);
+%% augmentation, crossing circle
+\draw[thin_overline={1.5}] (-0.1,0.1)
+	.. controls +(135:0.3cm) and +(135:0.4cm) .. (0.15,0.15)
+	.. controls +(-45:0.4cm) and +(-45:0.3cm) .. (0.1,-0.1);
+%% arrows
+\draw[->] (-1.5,1) -- (-3.5,2.5);
+\node at (-3,1.4) {bottom};
+\node at (-3,1) {torihedron};
+\draw[->] (1.5,1) -- (3.5,2.5);
+\node at (3,1.4) {top};
+\node at (3,1) {torihedron};
+%% label
+\node at (1.5,-1.2) {right};
+\node at (1.5,-1.6) {augmentation};
 \end{scope}
 \end{tikzpicture}
 
