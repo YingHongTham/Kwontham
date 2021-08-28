@@ -218,217 +218,8 @@ that $L$ is hyperbolic.
 \end{abstract}
 
 
-\begin{tikzpicture}
-\node[emptynode] (a) at (-0.9,-0.3) {};
-\node[dotnode] (b) at (-0.3,-0.1) {};
-\node[dotnode] (c) at (0.3,0.1) {};
-\node[emptynode] (d) at (0.9,0.3) {};
-%% two strands going out back
-\draw (b) -- +(150:1cm);
-\draw (c) -- +(150:1cm);
-%% the ellipse; draw top arc, then fill, then bottom arc
-\draw[thin_overline={1}] (a) -- (b) -- (c) -- (d)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
-\draw[fill, opacity=0.4] (a) -- (d)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
-\draw (a) -- (d)
-	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
-%% two strands coming out front with twist
-%\draw (b) -- +(-30:2cm); %\draw (c) -- +(-30:2cm);
-\draw[thin_overline={1}] (c)
-	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
-\draw[thin_overline={1}] (b)
-	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
-\end{tikzpicture}
 
-
-\begin{tikzpicture}
-\node[emptynode] (a) at (-0.9,-0.3) {};
-%\node[dotnode] (b) at (-0.3,-0.1) {};
-%\node[dotnode] (c) at (0.3,0.1) {};
-\node[dotnode] (e) at (-0.47,0) {};
-\node[dotnode] (f) at (0.13,0.2) {};
-\node[dotnode] (g) at (-0.13,-0.2) {};
-\node[dotnode] (h) at (0.47,0) {};
-\node[emptynode] (d) at (0.9,0.3) {};
-%% two strands going out back
-\draw (e) -- +(150:1cm);
-\draw (f) -- +(150:1cm);
-%% the ellipse; draw top arc, then fill, then bottom arc
-\draw[thin_overline={1}] (d)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
-\fill[opacity=0.2] (a.center) -- (e.center) -- (f.center) -- (d.center)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
-\fill[opacity=0.2] (a.center) -- (g.center) -- (h.center) -- (d.center)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
-\draw (a) -- (g) -- (h) -- (d);
-\draw[opacity=0.4] (a) -- (e) -- (f) -- (d);
-\draw (d)
-	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
-%% two strands coming out front with twist
-%\draw (g) -- +(-30:2cm); \draw (h) -- +(-30:2cm);
-\draw[thin_overline={1}] (h)
-	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
-\draw[thin_overline={1}] (g)
-	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
-\end{tikzpicture}
-
-
-\begin{tikzpicture}
-\node[emptynode] (a) at (-0.9,-0.3) {};
-%\node[dotnode] (b) at (-0.3,-0.1) {};
-%\node[dotnode] (c) at (0.3,0.1) {};
-\node[dotnode] (e) at (-0.47,0) {};
-\node[dotnode] (f) at (0.13,0.2) {};
-\node[dotnode] (g) at (-0.13,-0.2) {};
-\node[dotnode] (h) at (0.47,0) {};
-\node[emptynode] (d) at (0.9,0.3) {};
-%% two strands going out back
-\draw (e) -- +(150:1cm);
-\draw (f) -- +(150:1cm);
-%% the ellipse; draw top arc, then fill, then bottom arc
-\draw[thin_overline={1}] (d)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
-\fill[opacity=0.2] (a.center) -- (e.center) -- (f.center) -- (d.center)
-	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
-\fill[opacity=0.2] (a.center) -- (g.center) -- (h.center) -- (d.center)
-	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. cycle;
-\draw (a) -- (g) -- (h) -- (d);
-\draw (a) -- (e) -- (f) -- (d);
-\draw (d)
-	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
-%% two strands coming out front with twist
-\draw (g) -- +(-30:1.2cm); \draw (h) -- +(-30:1.2cm);
-%\draw[thin_overline={1}] (h)
-%	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
-%\draw[thin_overline={1}] (g)
-%	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
-\end{tikzpicture}
-
-
-
-\begin{tikzpicture}
-\begin{scope}[shift={(0,0)}]
-\node at (-2,0.5) {$K:$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-%\draw (2,-0.5) -- (2,1.5);
-\draw (2,1.5)
-	.. controls +(-90:1cm) and +(135:0.2cm) .. (1.9,-0.1)
-	.. controls +(-45:0.2cm) and +(180:0.3cm) .. (2.5,0);
-%$% horizontal lines
-\draw[overline] (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[overline] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (1.75,0);
-\draw[thin_overline={1.5}] (1.95,0)
-	.. controls +(0:0.1cm) and +(90:0.5cm) .. (2,-0.5);
-%% vertical lines again
-\draw[overline] (0,-0.5) -- (0,0.5);
-\draw[overline] (1,0.5) -- (1,1.5);
-%\draw[overline] (2,-0.5) -- (2,0.5);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(8,0)}]
-\node at (-2,0.5) {$L:$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-%\draw (2,-0.5) -- (2,1.5);
-\draw (2,1.5)
-	.. controls +(-90:1cm) and +(135:0.2cm) .. (1.9,-0.1)
-	.. controls +(-45:0.2cm) and +(180:0.3cm) .. (2.5,0);
-%$% horizontal lines
-\draw[overline] (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[overline] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (1.75,0);
-\draw[thin_overline={1.5}] (1.95,0)
-	.. controls +(0:0.1cm) and +(90:0.5cm) .. (2,-0.5);
-%% vertical lines again
-\draw[overline] (0,-0.5) -- (0,0.5);
-\draw[overline] (1,0.5) -- (1,1.5);
-%\draw[overline] (2,-0.5) -- (2,0.5);
-%% augmentations/crossing circles
-\draw[thin_overline={1.5}] (0.8,-0.1)
-	.. controls +(-135:0.1cm) and +(-135:0.2cm) .. (0.85,0.15)
-	.. controls +(45:0.2cm) and +(45:0.1cm) .. (1.1,0.2);
-\draw[thin_overline={1.5}] (1.7,-0.1)
-	.. controls +(-135:0.1cm) and +(-135:0.2cm) .. (1.75,0.15)
-	.. controls +(45:0.2cm) and +(45:0.1cm) .. (2,0.2);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{scope}[shift={(0,-3)}]
-\node at (-2,0.5) {$K':$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-\draw (2,-0.5) -- (2,1.5);
-%$% horizontal lines
-\draw[overline] (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[overline] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (2.5,0);
-%% vertical lines again
-\draw[overline] (0,-0.5) -- (0,0.5);
-\draw[overline] (1,0.5) -- (1,1.5);
-\draw[overline] (2,-0.5) -- (2,0.5);
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% D' diagram
-\begin{scope}[shift={(0,-6)}]
-\node at (-2,0.5) {$D':$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw[midarrow_rev={0.1},midarrow={0.5}]  (1,-0.5) -- (1,1.5);
-\draw (2,-0.5) -- (2,1.5);
-%% horizontal lines
-\draw (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw[midarrow_rev={0.8},midarrow={0.98}] (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (2.5,0);
-%% arrow label
-\draw[->] (3,0.5) -- (5,0.5);
-\node at (4,0.2) {bow-tie};
-\node at (4,-0.1) {modification};
-\end{scope}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% final diagram
-\begin{scope}[shift={(8,-6)}]
-\node at (-2,0.5) {$\Gamma_T(L):$};
-%% vertical lines
-\draw (0,-0.5) -- (0,1.5);
-\draw (1,-0.5) -- (1,1.5);
-\draw (2,-0.5) -- (2,1.5);
-%% horizontal lines
-\draw (-1.2,0)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,1)
-	-- (2.5,1);
-\draw (-1.2,1)
-	.. controls +(0:0.7cm) and +(180:0.7cm) .. (0,0)
-	-- (2.5,0);
-%% bow-ties
-\draw (0.8,0) -- (1,1);
-\draw (1.2,0) -- (1.1,-0.5);
-\draw (1.1,1.5) -- (1,1);
-%% second bow-tie
-\draw (1.2,0) -- (2,0.2);
-\draw (2,-0.2) -- (2.5,-0.15);
-\draw (-1.2,-0.15)
-	.. controls +(5:0.5cm) and +(-110:0.3cm) .. (-0.6,0.5);
-\end{scope}
-\end{tikzpicture}
-
-\comment{
+%%\comment{
 
 \section{Introduction}
 \label{s:intro}
@@ -799,6 +590,12 @@ denoted by $\Gamma_B(L)$.
 \hfill $\triangle$
 \end{definition}
 
+\begin{figure}[ht]
+\input{bow-tie-modification.tikz}
+\caption{Constructing the top and bottom bow-tie graphs,
+using bow-tie modifications}
+\label{f:tori-decomp-graph}
+\end{figure}
 
 Note that the non-bow-tie faces of $\Gamma_T(L)$ and $\Gamma_B(L)$
 are naturally identified with the faces of $D'$
@@ -912,6 +709,11 @@ bow-tie as in Figure \ref{fig:falGluings} (a).
 See Figures \ref{fig:step_one} to \ref{fig:top-bottom}
 for an example.
 
+\begin{figure}[ht]
+\input{cut-slice-flatten.tikz}
+\caption{Removing half-twists from augmented twist-regions}
+\label{f:cut-slice-flatten}
+\end{figure}
 
 \begin{figure}
 \centering
@@ -1584,7 +1386,7 @@ Thus, $L$ is hyperbolic.
 \bibliographystyle{plain}
 \bibliography{references-ak}
 
-}
+%%% comment}
 
 \end{document}
 
