@@ -542,7 +542,7 @@ also note that left/right conincide with Figure \ref{f:right_left_aug}
 
 
 \begin{figure}[ht]
-\input{bow-tie-modification.tikz}
+\input{fig-bow-tie-modification.tikz}
 \caption{Bow-tie modifications}
 \label{f:bow-tie-modification}
 \end{figure}
@@ -604,7 +604,7 @@ denoted by $\Gamma_B(L)$.
 \end{definition}
 
 \begin{figure}[ht]
-\input{torihedra-graphs.tikz}
+\input{fig-torihedra-graphs.tikz}
 \caption{Constructing the top and bottom bow-tie graphs,
 using bow-tie modifications}
 \label{f:tori-decomp-graph}
@@ -689,7 +689,7 @@ connecting the top and bottom strands at the crossing
 \end{figure}
 
 
-Next we construct the graph that will define the ``top'' torihedron.
+Next we construct the graph that will define the torihedra.
 We view the link from the point at infinity from the top end
 ($\torus \times \{1\}$) of the thickened torus.
 At each crossing of $K$,
@@ -707,44 +707,60 @@ identical edges and spreading them apart as in
 
 %Now place a disk on each crossing circle, so that the disk is bounded by
 %the crossing circle.
-Now for each crossing circle $c$, consider a spanning disk $B_c$;
-$B_c$ intersects the projection plane $\torus \times \{0\}$
-along the red segments in Figure \ref{fig:falGluings},
-which consists of three edges.
-We then cut $\torus \times I$ along $\torus \times \{0\}$ and
-focus on the top half, $\torus \times [0,1)$.
-(We will follow the same method on the
-bottom half to obtain the second identical torihedron.)
-The spanning disks we placed for each crossing circle are now cut in half
-along the red segment.
-Each half of the disk is now bounded by the
-projection plane and the semi-circle arc of the crossing circle.
-We push down on the crossing circle and split the half-disk into
-two identical half-disks.
-We then push the arc of each crossing circle to infinity,
-collapsing them to ideal vertices.
-We obtain two triangular faces which represent the half-disk which look like a
-bow-tie as in Figure \ref{fig:falGluings} (a).
-See Figures \ref{fig:step_one} to \ref{fig:top-bottom}
-for an example.
+Now for each crossing circle $c$, consider a spanning
+(twice-punctured) disk $B_c$.
+The following operations are depicted in \figref{f:cut-slice-flatten}.
+$B_c$ intersects the projection plane $\torus \times \{0\}$,
+cutting $B_c$ into two pieces $B_c^+,B_c^-$,
+each being an ideal triangle.
+We then slice along the disk $B_c$, turning it into two copies,
+$B_c^{(1)},B_c^{(2)}$ (in no particular order);
+each copy $B_c^{(j)}$ is also cut horizontally into two pieces,
+$B_c^{(j),+},B_c^{(j),-}$.
+We untwist all crossings in the twist region
+which $c$ encircles,
+rotating $B_c^{(j)}$ by $180^\circ$ for each crossing.
+Then we flatten the disks;
+the crossing circle is shrunk to a point,
+as it is at infinity.
+
 
 \begin{figure}[ht]
-\input{cut-slice-flatten.tikz}
-\caption{Removing half-twists from augmented twist-regions}
+\input{fig-cut-slice-flatten.tikz}
+\caption{Cut-slice-flatten}
 \label{f:cut-slice-flatten}
 \end{figure}
 
-\begin{figure}
-\centering
-\begin{tabular}{cc}
-\includegraphics [width=8cm]{falGluing1.png}&
-\includegraphics [width=7cm]{falGluing2.png}\\
-(a)&(b)
-\end{tabular}
-\caption{(a) Gluing of bow-ties without half-twists
-(b) Gluing with half-twists}
-\label{fig:falGluings}
-\end{figure}
+
+%%We cut $\torus \times I$ along $\torus \times \{0\}$ and
+%%focus on the top half, $\torus \times [0,1)$.
+%%(We will follow the same method on the
+%%bottom half to obtain the second identical torihedron.)
+%%The spanning disks we placed for each crossing circle are now
+%%cut in half along the red segment.
+%%Each half of the disk is now bounded by the
+%%projection plane and the semi-circle arc of the crossing circle.
+%%We push down on the crossing circle and split the half-disk into
+%%two identical half-disks.
+%%We then push the arc of each crossing circle to infinity,
+%%collapsing them to ideal vertices.
+%%We obtain two triangular faces which represent the half-disk which look like a
+%%bow-tie as in Figure \ref{fig:falGluings} (a).
+%%See Figures \ref{fig:step_one} to \ref{fig:top-bottom}
+%%for an example.
+%%
+%%
+%%\begin{figure}
+%%\centering
+%%\begin{tabular}{cc}
+%%\includegraphics [width=8cm]{falGluing1.png}&
+%%\includegraphics [width=7cm]{falGluing2.png}\\
+%%(a)&(b)
+%%\end{tabular}
+%%\caption{(a) Gluing of bow-ties without half-twists
+%%(b) Gluing with half-twists}
+%%\label{fig:falGluings}
+%%\end{figure}
 
 
 The crossing edges and edges from spanning disks of crossing circles
@@ -1125,7 +1141,7 @@ if and only if the following is satisfied:
 \begin{quotation}
 Suppose we cut the torus along a subset of edges in the dual graph
 $\check{\Gamma}$, obtaining one or more pieces;
-Then for any piece that is a disc,
+Then for any piece that is a disk,
 the sum of $f$ over the edges in the boundary
 of the piece is at least $2\pi$,
 with equality if and only if the piece

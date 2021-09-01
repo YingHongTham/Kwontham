@@ -1,0 +1,231 @@
+\begin{tikzpicture}
+\begin{scope}[shift={(-8,0)}]
+\node[emptynode] (a) at (-0.9,-0.3) {};
+\node[dotnode] (b) at (-0.3,-0.1) {};
+\node[dotnode] (c) at (0.3,0.1) {};
+\node[emptynode] (d) at (0.9,0.3) {};
+%% two strands going out back
+\draw (b) -- +(150:1cm);
+\draw (c) -- +(150:1cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+\draw[thin_overline={1}] (a) -- (b) -- (c) -- (d)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+\draw[fill, opacity=0.4] (a) -- (d)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+\draw (a) -- (d)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
+%% two strands coming out front with twist
+%\draw (b) -- +(-30:2cm); %\draw (c) -- +(-30:2cm);
+\draw[thin_overline={1}] (c)
+	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
+\draw[thin_overline={1.5}] (b)
+	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
+%% labels
+\node[emptynode] (b+) at (-1.6,0.1) {\small $B_c^+$};
+\draw[line width=0.4pt] (b+) -- (-0.7,-0.1);
+\node[emptynode] (b-) at (-1.6,-0.6) {\small $B_c^-$};
+\draw[line width=0.4pt] (b-) -- (-0.7,-0.4);
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(-6,0)}]
+%% arrow to next diagram
+\draw[->] (-0.7,0) -- (0.7,0);
+\node[emptynode] at (0,0.25) {\small slice $B_c$};
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(-4,0)}]
+\node[emptynode] (a) at (-0.9,-0.3) {};
+%\node[dotnode] (b) at (-0.3,-0.1) {};
+%\node[dotnode] (c) at (0.3,0.1) {};
+\node[dotnode] (e) at (-0.47,0) {};
+\node[dotnode] (f) at (0.13,0.2) {};
+\node[dotnode] (g) at (-0.13,-0.2) {};
+\node[dotnode] (h) at (0.47,0) {};
+\node[emptynode] (d) at (0.9,0.3) {};
+%% two strands going out back
+\draw (e) -- +(150:1cm);
+\draw (f) -- +(150:1cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+\draw[thin_overline={1}] (d)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+%% back face
+\fill[opacity=0.2] (a.center) -- (e.center) -- (f.center) -- (d.center)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
+%% front face
+\fill[opacity=0.2] (a.center) -- (g.center) -- (h.center) -- (d.center)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
+\draw (a) -- (g) -- (h) -- (d);
+\draw[opacity=0.4] (a) -- (e) -- (f) -- (d);
+\draw (d)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
+%% two strands coming out front with twist
+%\draw (g) -- +(-30:2cm); \draw (h) -- +(-30:2cm);
+\draw[thin_overline={1}] (h)
+	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
+\draw[thin_overline={1.5}] (g)
+	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
+%% labels
+\node[emptynode] (b1) at (0.5,1.2) {\small $B_c^{(1),+}$};
+\node[emptynode] (b2) at (1.5,0.5) {\small $B_c^{(2),+}$};
+\draw[line width=0.4pt] (0.2,0.9) to[out=-90,in=120] (0.4,0.3);
+\draw[line width=0.4pt] (1.4,0.2) to[out=-90,in=-30] (0.55,0.15);
+%% arrow to next diagram
+\draw[->] (2,0.3) -- (3,1);
+\draw[->] (2,-0.3) -- (3,-1);
+\node[emptynode] at (2.8,0) {\small untwist};
+\node[emptynode] at (2.98,0.6) {\small even};
+\node[emptynode] at (2.95,-0.6) {\small odd};
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(0,2)}]
+\node[emptynode] (a) at (-0.9,-0.3) {};
+%\node[dotnode] (b) at (-0.3,-0.1) {};
+%\node[dotnode] (c) at (0.3,0.1) {};
+\node[dotnode] (e) at (-0.47,0) {};
+\node[dotnode] (f) at (0.13,0.2) {};
+\node[dotnode] (g) at (-0.13,-0.2) {};
+\node[dotnode] (h) at (0.47,0) {};
+\node[emptynode] (d) at (0.9,0.3) {};
+%% two strands going out back
+\draw (e) -- +(150:1cm);
+\draw (f) -- +(150:1cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+\draw[thin_overline={1}] (d)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+\fill[opacity=0.2] (a.center) -- (e.center) -- (f.center) -- (d.center)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
+\fill[opacity=0.2] (a.center) -- (g.center) -- (h.center) -- (d.center)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
+\draw (a) -- (g) -- (h) -- (d);
+\draw (a) -- (e) -- (f) -- (d);
+\draw (d)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
+%% two strands coming out front with twist
+\draw (g) -- +(-30:1.2cm); \draw (h) -- +(-30:1.2cm);
+%\draw[thin_overline={1}] (h)
+%	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
+%\draw[thin_overline={1}] (g)
+%	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
+\draw[->] (1.6,0.3) -- (2.6,0.7);
+\node at (2,0.8) {\small top};
+\draw[->] (1.6,-0.3) -- (2.6,-0.7);
+\node at (2.1,-0.9) {\small bottom};
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(4,2.8)}]
+\node[dotnode] (o) at (0,0) {};
+\node[dotnode] (e) at (-0.8,0.2) {};
+\node[dotnode] (f) at (-0.2,0.4) {};
+\node[dotnode] (g) at (0.2,-0.4) {};
+\node[dotnode] (h) at (0.8,-0.2) {};
+%% two strands going out back
+\draw (e) -- +(150:0.5cm);
+\draw (f) -- +(150:0.5cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+\fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
+\fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
+\draw (o) -- (g) -- (h) -- (o);
+\draw (o) -- (e) -- (f) -- (o);
+%% two strands coming out front with twist
+\draw (g) -- +(-30:0.5cm);
+\draw (h) -- +(-30:0.5cm);
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(4,1.2)}]
+\node[dotnode] (o) at (0,0) {};
+\node[dotnode] (e) at (-0.8,0.2) {};
+\node[dotnode] (f) at (-0.2,0.4) {};
+\node[dotnode] (g) at (0.2,-0.4) {};
+\node[dotnode] (h) at (0.8,-0.2) {};
+%% two strands going out back
+\draw (e) -- +(150:0.5cm);
+\draw (f) -- +(150:0.5cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+%\fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
+%\fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
+\draw (o) -- (g) -- (h) -- (o);
+\draw (o) -- (e) -- (f) -- (o);
+%% two strands coming out front with twist
+\draw (g) -- +(-30:0.5cm);
+\draw (h) -- +(-30:0.5cm);
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(0,-2)}]
+\node[emptynode] (a) at (-0.9,-0.3) {};
+%\node[dotnode] (b) at (-0.3,-0.1) {};
+%\node[dotnode] (c) at (0.3,0.1) {};
+\node[dotnode] (e) at (-0.47,0) {};
+\node[dotnode] (f) at (0.13,0.2) {};
+\node[dotnode] (g) at (-0.13,-0.2) {};
+\node[dotnode] (h) at (0.47,0) {};
+\node[emptynode] (d) at (0.9,0.3) {};
+%% two strands going out back
+\draw (e) -- +(150:1cm);
+\draw (f) -- +(150:1cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+\draw[thin_overline={1}] (d)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+\fill[opacity=0.2] (a.center) -- (e.center) -- (f.center) -- (d.center)
+	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
+\fill[opacity=0.2] (a.center) -- (g.center) -- (h.center) -- (d.center)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. cycle;
+\draw (a) -- (g) -- (h) -- (d);
+\draw (a) -- (e) -- (f) -- (d);
+\draw (d)
+	.. controls +(-90:0.8cm) and +(-90:0.8cm) .. (a);
+%% two strands coming out front with twist
+\draw (g) -- +(-30:1.2cm); \draw (h) -- +(-30:1.2cm);
+%\draw[thin_overline={1}] (h)
+%	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (0.9,-0.8);
+%\draw[thin_overline={1}] (g)
+%	.. controls +(-30:0.5cm) and +(150:0.5cm) .. (1.5,-0.6);
+%% label
+\node[emptynode] (b2) at (-1.5,-0.7) {\small $B_c^{(2),+}$};
+\draw[line width=0.4pt] (-1.4,-0.9) to[out=-20,in=-60] (-0.55,-0.4);
+%% arrow to next diagram
+\draw[->] (1.6,0.3) -- (2.6,0.7);
+\node at (2,0.8) {\small top};
+\draw[->] (1.6,-0.3) -- (2.6,-0.7);
+\node at (2.1,-0.9) {\small bottom};
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(4,-1.2)}]
+\node[dotnode] (o) at (0,0) {};
+\node[dotnode] (e) at (-0.8,0.2) {};
+\node[dotnode] (f) at (-0.2,0.4) {};
+\node[dotnode] (g) at (0.2,-0.4) {};
+\node[dotnode] (h) at (0.8,-0.2) {};
+%% two strands going out back
+\draw (e) -- +(150:0.5cm);
+\draw (f) -- +(150:0.5cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+\fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
+%\fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
+\draw (o) -- (g) -- (h) -- (o);
+\draw (o) -- (e) -- (f) -- (o);
+%% two strands coming out front with twist
+\draw (g) -- +(-30:0.5cm);
+\draw (h) -- +(-30:0.5cm);
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(4,-2.8)}]
+\node[dotnode] (o) at (0,0) {};
+\node[dotnode] (e) at (-0.8,0.2) {};
+\node[dotnode] (f) at (-0.2,0.4) {};
+\node[dotnode] (g) at (0.2,-0.4) {};
+\node[dotnode] (h) at (0.8,-0.2) {};
+%% two strands going out back
+\draw (e) -- +(150:0.5cm);
+\draw (f) -- +(150:0.5cm);
+%% the ellipse; draw top arc, then fill, then bottom arc
+%\fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
+\fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
+\draw (o) -- (g) -- (h) -- (o);
+\draw (o) -- (e) -- (f) -- (o);
+%% two strands coming out front with twist
+\draw (g) -- +(-30:0.5cm);
+\draw (h) -- +(-30:0.5cm);
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{tikzpicture}
+
