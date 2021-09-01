@@ -37,8 +37,10 @@
 %% the ellipse; draw top arc, then fill, then bottom arc
 \draw[thin_overline={1}] (d)
 	.. controls +(90:0.8cm) and +(90:0.8cm) .. (a);
+%% back face
 \fill[opacity=0.2] (a.center) -- (e.center) -- (f.center) -- (d.center)
 	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
+%% front face
 \fill[opacity=0.2] (a.center) -- (g.center) -- (h.center) -- (d.center)
 	.. controls +(90:0.8cm) and +(90:0.8cm) .. cycle;
 \draw (a) -- (g) -- (h) -- (d);

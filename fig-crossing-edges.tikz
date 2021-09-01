@@ -1,0 +1,71 @@
+\begin{tikzpicture}
+\begin{scope}[shift={(0,0)}]
+\draw (2,-1)
+	.. controls +(30:0.7cm) and +(-150:0.3cm) .. (3,-0.7)
+	.. controls +(30:0.3cm) and +(-150:0.7cm) .. (4,0);
+\draw[overline] (2,0)
+	.. controls +(-30:0.7cm) and +(150:0.3cm) .. (3,-0.3)
+	.. controls +(-30:0.3cm) and +(150:0.7cm) .. (4,-1);
+\draw (0,1)
+	.. controls +(-30:0.7cm) and +(150:0.3cm) .. (1,0.3)
+	.. controls +(-30:0.3cm) and +(150:0.7cm) .. (2,0);
+\draw[overline] (0,0)
+	.. controls +(30:0.7cm) and +(-150:0.3cm) .. (1,0.7)
+	.. controls +(30:0.3cm) and +(-150:0.7cm) .. (2,1);
+%% crossing edges
+\draw[color=red,midarrow={0.7}] (1,0.7) -- (1,0.3);
+\draw[color=red,midarrow={0.7}] (3,-0.3) -- (3,-0.7);
+%% label
+\node[inner sep=0] (x) at (0.7,-0.7) {\tiny crossing};
+\node[inner sep=0] (y) at (0.7,-1.0) {\tiny edge};
+\draw[line width=0.4pt] (x) -- (1,0.5);
+\draw[line width=0.4pt] (x) -- (3,-0.6);
+%%%% edge to crossing circle/disc
+%%\draw (4,0)
+%%	.. controls +(30:0.5cm) and +(-150:0.7cm) .. (4.4,1.2);
+%%\draw (2,1)
+%%	.. controls +(30:0.5cm) and +(-150:0.7cm) .. (4,1.4);
+%%%% crossing circle/disc
+%%\filldraw[med-gray] (3.6,1.6) to[out=90,in=90] (4.8,1.0)
+%%	-- cycle;
+%%\draw (3.6,1.6) to[out=90,in=90] (4.8,1.0);
+%%\draw[color=red] (3.6,1.6) -- (4.8,1.0);
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(6,0)}]
+\node[emptynode] (a) at (2.6,-0.75) {};
+\node[emptynode] (b) at (3.4,-0.4) {};
+\node[emptynode] (c) at (1.4,0.25) {};
+\node[emptynode] (d) at (0.6,0.6) {};
+\draw (2,-1)
+	.. controls +(30:0.7cm) and +(180:0.1cm) .. (a);
+\draw (b)
+	.. controls +(50:0.1cm) and +(-150:0.7cm) .. (4,0);
+\draw (2,0)
+	.. controls +(-30:0.7cm) and +(150:0.3cm) .. (3,-0.4)
+	.. controls +(-30:0.3cm) and +(150:0.7cm) .. (4,-1);
+\draw (0,1)
+	.. controls +(-30:0.7cm) and +(130:0.1cm) .. (d);
+\draw (c)
+	.. controls +(0:0.1cm) and +(150:0.7cm) .. (2,0);
+\draw (0,0)
+	.. controls +(30:0.7cm) and +(-150:0.3cm) .. (1,0.6)
+	.. controls +(30:0.3cm) and +(-150:0.7cm) .. (2,1);
+%% crossing edges
+\draw[color=red,midarrow={0.7}] (3,-0.4) -- (a);
+\draw[color=red,midarrow={0.7}] (3,-0.4) -- (b);
+\draw[color=red,midarrow={0.7}] (1,0.6) -- (c);
+\draw[color=red,midarrow={0.7}] (1,0.6) -- (d);
+%%%% edge to crossing circle/disc
+%%\draw (4,0)
+%%	.. controls +(30:0.5cm) and +(-150:0.7cm) .. (4.4,1.2);
+%%\draw (2,1)
+%%	.. controls +(30:0.5cm) and +(-150:0.7cm) .. (4,1.4);
+%%%% crossing circle/disc
+%%\filldraw[med-gray] (3.6,1.6) to[out=90,in=90] (4.8,1.0)
+%%	-- (4.2,1.0) -- (3.6,1.25) -- cycle;
+%%\draw (3.6,1.6) to[out=90,in=90] (4.8,1.0);
+%%\draw[color=red] (3.6,1.6) -- (3.6,1.25) -- (4.2,1.0) -- (4.8,1.0);
+\end{scope}
+\end{tikzpicture}
+

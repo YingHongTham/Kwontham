@@ -1,5 +1,13 @@
 ================================================================================
 ================================================================================
+
+\begin{figure}
+\includegraphics[width=5cm]{more_pictures/right_left_aug.png}
+\caption{R: right augmentation, L: left augmentation}
+\label{f:right_left_aug}
+\end{figure}
+
+
 ================================================================================
 
 

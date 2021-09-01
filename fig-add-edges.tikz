@@ -1,0 +1,83 @@
+\begin{tikzpicture}
+\begin{scope}[shift={(0,0)}]
+\node[dotnode] (a) at (-1,2) {};
+\node[dotnode] (b) at (-1,0.9) {};
+\node[dotnode] (c) at (-0.1,0) {};
+\node[dotnode] (d) at (1,0) {};
+\draw (a) -- (b) -- (c) -- (d);
+\draw[dotted] (a) -- +(60:1cm);
+\draw (a) -- +(60:0.5cm);
+\draw[dotted] (d) -- +(30:1cm);
+\draw (d) -- +(30:0.5cm);
+\draw[densely dotted] (a) to[out=-10,in=100] (d);
+%% labels, edge by edge
+\node[inner sep=0, outer sep=0] (e10) at (-1.6,1.0) {\tiny $e_{1,0}$};
+\draw[line width=0.4pt] (e10) -- (-1,1.1);
+\node at (-1.15,1.45) {\tiny $+$};
+\node at (-0.85,1.45) {\tiny $+$};
+%%
+\node[inner sep=0, outer sep=0] (e1pi) at (-1.3,0.3) {\tiny $e_{1,\pi}$};
+\draw[line width=0.4pt] (e1pi) -- (-0.8,0.7);
+\node at (-0.65,0.35) {\tiny $-$};
+\node at (-0.45,0.55) {\tiny $-$};
+%%
+\node at (0.2,-0.15) {\tiny $e_2$};
+\node at (0.4,0.15) {\tiny $+2$};
+%%
+\node at (0.7,1.6) {\tiny new edge};
+\node at (0.25,1.1) {\tiny $-2$};
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scope}[shift={(5,0)}]
+\node[dotnode] (e) at (-1.2,1.6) {};
+\node[dotnode] (a) at (-1,0.6) {};
+\node[dotnode] (b) at (-0.1,0) {};
+\node[dotnode] (c) at (1,0) {};
+\node[dotnode] (d) at (2.3,1.9) {};
+\draw (e) -- (a) -- (b) -- (c);
+\draw[dotted] (e) -- +(80:0.9cm);
+\draw (e) -- +(80:0.5cm);
+\draw[dotted] (c) -- +(30:0.9cm);
+\draw (c) -- +(30:0.5cm);
+\draw[dotted] (d) -- +(-100:0.9cm);
+\draw (d) -- +(-100:0.5cm);
+\draw[dotted] (d) -- +(100:0.9cm);
+\draw (d) -- +(100:0.5cm);
+\draw[densely dotted] (e) to[out=-10,in=90] (b);
+\draw[densely dotted] (b) to[out=70,in=180] (d);
+%% labels
+\node[inner sep=0, outer sep=0] (e10) at (-1.8,0.6) {\tiny $e_{1,0}$};
+\draw[line width=0.4pt] (e10) -- (-1.04,0.8);
+\node at (-1.25,1.0) {\tiny $+$};
+\node at (-0.95,1.1) {\tiny $+$};
+%%
+\node[inner sep=0, outer sep=0] (e1pi) at (-1.6,0.2) {\tiny $e_{1,\pi}$};
+\draw[line width=0.4pt] (e1pi) -- (-0.82,0.48);
+\node at (-0.5,0.4) {\tiny $-$};
+\node at (-0.6,0.2) {\tiny $-$};
+%%
+\node[inner sep=0, outer sep=0] (e20) at (1,-0.6) {\tiny $e_{2,0}$};
+\draw[line width=0.4pt] (e20) -- (0.8,0);
+\node at (0.5,-0.15) {\tiny $+$};
+\node at (0.5,0.15) {\tiny $+$};
+%%
+\node[inner sep=0, outer sep=0] (e2pi) at (1.5,-0.3) {\tiny $e_{2,\pi}$};
+\draw[line width=0.4pt] (e2pi) -- (1.2,0.1);
+\node at (1.3,0.3) {\tiny $-$};
+\node at (1.5,0.1) {\tiny $-$};
+%%
+\node[inner sep=0, outer sep=0] (ekpi) at (2.9,1.7) {\tiny $e_{k,\pi}$};
+\draw[line width=0.4pt] (ekpi) -- (2.25,1.7);
+\node at (2.4,1.5) {\tiny $-$};
+\node at (2.05,1.55) {\tiny $-$};
+%%
+\node at (-0.3,1.3) {\tiny $-2$};
+\node at (0.8,1.7) {\tiny $+2$};
+%%
+\node[inner sep=0, outer sep=0] (n) at (0.4,2.5) {\tiny new edges};
+\draw[line width=0.4pt] (n) -- (-0.7,1.4);
+\draw[line width=0.4pt] (n) -- (1.5,1.8);
+\end{scope}
+\end{tikzpicture}
+
+

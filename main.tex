@@ -91,6 +91,11 @@ block/.style={rectangle, rounded corners, text centered, draw=black, align=cente
 \tikzfading[name=fade inside, inner color=transparent!80, outer
 color=transparent!10]
 
+%% colors
+\definecolor{light-gray}{gray}{0.9}
+\definecolor{med-gray}{gray}{0.6}
+
+
 %%%end tikz stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -208,7 +213,8 @@ color=transparent!10]
 \maketitle
 
 
-%%%\comment{
+
+%%% \comment{
 
 \begin{abstract}
 For a hyperbolic link $K$ in the thickened torus,
@@ -366,6 +372,8 @@ that are across from the bigons at the end;
 if a twist region consists of only one vertex,
 a direction is a pair of opposite faces (again, possibly the same face)
 meeting at the crossing.
+We say that a twist region consisting of only one vertex
+is \emph{trivial}.
 %%\footnote{There is an ambiguity of ``maximality'' in this definition:
 %%for example, if a vertex of a link diagram meets exactly one bigon,
 %%it can be considered as part of a twist region of length 2
@@ -525,8 +533,9 @@ Let $v$ be a vertex and $e,e'$ be distinct edges that meet $v$.
 A \emph{left (resp. right) bow-tie modification to $v,e,e'$}
 is the process of removing $v,e,e'$ and adding in a ``bow-tie''
 as in Figure \ref{TODO} (a) (resp. (b)).
-We call the TODO long edges, the TODO short edges,
-and TODO diagonal edges.
+We call the TODO \emph{long} edges, the TODO \emph{short} edges,
+and TODO \emph{diagonal} edges,
+and we call the new triangular faces the \emph{bow-tie faces}.
 TODO in figure caption, left bow-tie modification so-called because
 the triangular face appears to the left of the long edges;
 also note that left/right conincide with Figure \ref{f:right_left_aug}
@@ -551,11 +560,6 @@ We say a twist is \emph{left-augmented} if it is not right-augmented.
 See Figure \ref{f:right_left_aug}.
 \end{define}
 
-\begin{figure}
-\includegraphics[width=5cm]{more_pictures/right_left_aug.png}
-\caption{R: right augmentation, L: left augmentation}
-\label{f:right_left_aug}
-\end{figure}
 
 We can recover $L$ from the link diagram of $K$
 together with labels at twist regions indicating left- or right-augmentation.
@@ -596,7 +600,7 @@ and subsequently performed the same operations,
 we obtain another graph,
 which we call the \emph{bottom bow-tie graph of $L$},
 denoted by $\Gamma_B(L)$.
-\hfill $\triangle$
+%\hfill $\triangle$
 \end{definition}
 
 \begin{figure}[ht]
@@ -646,7 +650,7 @@ lying in the projection plane (except at crossings of $K$).
 Thus, the projection of $L$ onto the projection plane
 will be a diagram $D(K)$ of $K$
 together with line segments corresponding to crossing circles.
-(We demand that $D(K)$ be alternating and twist-reduced.)
+%(We demand that $D(K)$ be alternating and twist-reduced.)
 As discussed before, we may remove full twists (i.e. pairs of bigons)
 from the twist regions of $K$ that are augmented in $L$,
 and since $L$ is assumed to have no half twists,
@@ -658,26 +662,30 @@ From now on, we will take $K$ to be this modified link
 
 We now place a \emph{crossing edge} at each crossing of $K$,
 connecting the top and bottom strands at the crossing
-(see Figure \ref{fig:crossingArc} (a)).
+(see \figref{f:crossing-edges}).
+%(see Figure \ref{fig:crossingArc} (a)).
 %so that for each crossing edge,
 %one end of the edge lies on a bottom strand while the other
 %end lies on a top strand as in Figure \ref{fig:crossingArc} (a).
 
 \begin{figure} 
-\centering 
-\begin{tabular}{cc}
-\includegraphics[width=4cm]{crossingArc.png}
-& \includegraphics[width=5cm]{crossingPush.png}
-\\
-(a)
-& (b)
-\end{tabular}
-\caption{(a) The black strands are
-part of the link and the red strand is the crossing edge.
-(b) The blue and
-red edges represent the split crossing edges and the shaded half disk is bounded
-by the crossing circle} 
-\label{fig:crossingArc} 
+\input{fig-crossing-edges.tikz}
+\label{f:crossing-edges}
+\caption{Splitting and flattening crossing edges.}
+%\centering 
+%\begin{tabular}{cc}
+%\includegraphics[width=4cm]{crossingArc.png}
+%& \includegraphics[width=5cm]{crossingPush.png}
+%\\
+%(a)
+%& (b)
+%\end{tabular}
+%\caption{(a) The black strands are
+%part of the link and the red strand is the crossing edge.
+%(b) The blue and
+%red edges represent the split crossing edges and the shaded half disk is bounded
+%by the crossing circle} 
+%\label{fig:crossingArc} 
 \end{figure}
 
 
@@ -687,8 +695,10 @@ We view the link from the point at infinity from the top end
 At each crossing of $K$,
 push the top strand towards the bottom strand,
 splitting the crossing edge into two
-identical edges and spreading them apart
-as in Figure \ref{fig:crossingArc} (b).
+identical edges and spreading them apart as in
+\figref{f:crossing-edges}.
+%Figure \ref{fig:crossingArc}.
+% (b).
 %We push the link
 %components to infinity and stretch the crossing edge so that we have flattened
 %the link onto $\torus \times \{0\}$ except for the crossing circles,
@@ -833,6 +843,13 @@ Right: The link components are pushed off to infinity.}
 \label{fig:top-bottom}
 \end{figure}
 
+
+\begin{remark}
+We note that our main \thmref{t:auglink_hyp}
+requires that all non-trivial twist regions be augmented,
+but \prpref{p:tori_decomp} does not require it.
+\label{r:unnecessary-augment-bigon}
+\end{remark}
 
 
 \begin{definition}
@@ -1103,8 +1120,7 @@ let $f^*(e) = \pi - f(e)$.
 There exists a non-degenerate
 %angle-splitting of $(\Gamma,\theta_\bullet)$
 angle-splitting of $(\Gamma,f^*)$
-if and only if the following
-``cocycle condition'' is satisfied:
+if and only if the following is satisfied:
 
 \begin{quotation}
 Suppose we cut the torus along a subset of edges in the dual graph
@@ -1157,7 +1173,7 @@ Assign to each edge $e$ of $D'$ the angle $\theta_e = \pi/2$
 (so that $\theta_e^* = \pi/2$ too).
 Using the fact that $K'$ is weakly prime
 (which easily follows from $K$ being weakly prime),
-it is not hard to see that the ``cocycle condition''
+it is not hard to see that the condition on cocycles
 of \thmref{t:bs-thm4} is satisfied by this assignment.
 Thus, there exists a non-degenerate angle-splitting
 $\vphi_\bullet$ of $(D',\theta_\bullet^*)$.
@@ -1205,10 +1221,9 @@ TODO perhaps these figures need some tidying up
 \label{f:bowtie_angles2}
 \end{figure}
 
-It is straightforward to check that
-upon gluing the top and bottom torihedra,
+We check that upon gluing the top and bottom torihedra,
 the sum of interior dihedral angles $\theta^*$
-around each edge is $2\pi$;
+around each edge is $2\pi$:
 crossing edges have $\theta^* = \pi/2$,
 and appear four times, twice in each torihedron,
 while for bow-tie edges,
@@ -1218,11 +1233,12 @@ separately.
 
 Now we have a decomposition of the two torihedra into
 degenerate base-angled pyramids
-(recall that that means that some of the
-interior dihedral angles $\theta^*$ are 0),
-but we need the pyramids to be non-degenerate,
-so we need to modify the graph on the torihedra
-and the angle assignments to make all $\theta^*$ nonzero.
+(recall that that means some of the
+interior dihedral angles $\theta^*$ are 0);
+since we need the pyramids to be non-degenerate,
+we modify the graph on the torihedra
+and the angle assignments to make all $\theta^*$ nonzero
+as follows.
 
 
 We first modify the graphs on the torihedra by adding edges
@@ -1310,12 +1326,12 @@ we add only one edge separating the first three edges from the other three.
 
 
 \begin{figure}
-\includegraphics[width=5cm]{more_pictures/one_edge.png}
-%\includegraphics[width=5cm]{more_pictures/two_edge.png}
-\includegraphics[width=5cm]{more_pictures/two_edge_many.png}
-\caption{TODO change this. Red edge indicates an added edge to $\Gamma_T(L)$;
-the +/- labels indicate whether to
-increase/decrease $\theta^*$ and $\vphi$.}
+\input{fig-add-edges.tikz}
+\caption{Adding edges to non-bow-tie faces;
+the $+/-$ labels are short for $+1/-1$.}
+%edge indicates an added edge to $\Gamma_T(L)$;
+%indicate whether to
+%increase/decrease $\vphi$ (and $\theta^*$)
 \label{f:adding_edges}
 \end{figure}
 
@@ -1340,12 +1356,15 @@ Now fix some small $\veps > 0$.
 Let $\vphi_{\vec{e}}' = \vphi_{\vec{e}} + x \cdot \veps$,
 where $x$ is the label on $\vec{e}$ (0 if unlabeled).
 Let $\theta_e'^* = \vphi_{\vec{e}}' + \vphi_{\cev{e}}'$.
-It is easy to check that the sum of $\theta'*$
+It is easy to check that the sum of $\theta'^*$
 around each vertex is the same as for $\theta^*$,
 so it defines an angled torihedron $(\sT_T',\theta'^*)$.
-It is also easy to check that for each face of $\Gamma_T'$,
-the $+/-$ labels cancel out,
-so $\vphi'$ is an angle-splitting of it.
+For each face of $\Gamma_T'$, the $+/-$ labels
+on the inner side of boundary edges cancel out:
+for bow-tie faces, the short edge gets a $+1$ and the long edge
+gets $-1$, while for non-bow-tie faces,
+it is clear from \figref{f:adding_edges}.
+Hence, $\vphi'$ is an angle-splitting of $(\sT_T',\theta'^*)$.
 Furthermore, all shorts edges
 (which are the only edges with $\vphi_{\vec{e}} = 0$)
 have a $+1$ label on each side,
@@ -1363,16 +1382,18 @@ We also get a nondegerate angle-splitting $\vphi'$
 of an angled torihedron $(\sT_B',\theta'^*)$.
 
 
-It is easy to see that, under the gluing of
+By construction, under the gluing of
 $\sT_T(L)$ to $\sT_B(L)$,
 the new edges added to $\Gamma_T(L)$
-are glued to the new edges added to $\Gamma_B(L)$.
+are glued to the new edges added to $\Gamma_B(L)$,
+since they are added by the same procedure.
 As noted before, upon gluing $\sT_T(L)$ to $\sT_B(L)$
 the sum of exterior dihedral angles $\theta^*$ around each edge
 is $2\pi$.
 This clearly remains true after adding the new edges
 (they're label $\pi$ on each torihedron).
-It is also eashy to check that the $+/-$ labels get canceled out.
+Again by construction,
+the $+/-$ labels coming from the top and bottom diagrams get canceled out.
 Thus, upon gluing $\sT_T'$ to $\sT_B'$,
 the sum of new exterior dihedral angles $\theta'^*$ around each edge
 is $2\pi$.
@@ -1395,8 +1416,7 @@ Thus, $L$ is hyperbolic.
 \bibliographystyle{plain}
 \bibliography{references-ak}
 
-%%% comment
-%}
+%%% comment }
 
 \end{document}
 
@@ -1411,6 +1431,7 @@ Thus, $L$ is hyperbolic.
 
 %crossing edge, Menasco thing
 %\label{fig:crossingArc} 
+%\label{f:crossing-edges}.
 
 %cut-slice-flatten, bow-ties, gluing
 %\label{fig:falGluings}
