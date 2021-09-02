@@ -124,8 +124,12 @@
 %% the ellipse; draw top arc, then fill, then bottom arc
 \fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
 \fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
-\draw (o) -- (g) -- (h) -- (o);
-\draw (o) -- (e) -- (f) -- (o);
+\draw[midarrow_thin={0.45},midarrow_thin={0.65},midarrow_thin={0.85}] (o) -- (f);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (f) -- (e);
+\draw[midarrow_thin={0.6}] (e) -- (o);
+\draw[midarrow_thin={0.4},midarrow_thin={0.5},midarrow_thin={0.6}] (o) -- (h);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (h) -- (g);
+\draw[midarrow_thin={0.6}] (g) -- (o);
 %% two strands coming out front with twist
 \draw (g) -- +(-30:0.5cm);
 \draw (h) -- +(-30:0.5cm);
@@ -143,8 +147,12 @@
 %% the ellipse; draw top arc, then fill, then bottom arc
 %\fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
 %\fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
-\draw (o) -- (g) -- (h) -- (o);
-\draw (o) -- (e) -- (f) -- (o);
+\draw[midarrow_thin={0.45},midarrow_thin={0.65},midarrow_thin={0.85}] (o) -- (f);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (f) -- (e);
+\draw[midarrow_thin={0.6}] (e) -- (o);
+\draw[midarrow_thin={0.4},midarrow_thin={0.5},midarrow_thin={0.6}] (o) -- (h);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (h) -- (g);
+\draw[midarrow_thin={0.6}] (g) -- (o);
 %% two strands coming out front with twist
 \draw (g) -- +(-30:0.5cm);
 \draw (h) -- +(-30:0.5cm);
@@ -201,8 +209,12 @@
 %% the ellipse; draw top arc, then fill, then bottom arc
 \fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
 %\fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
-\draw (o) -- (g) -- (h) -- (o);
-\draw (o) -- (e) -- (f) -- (o);
+\draw[midarrow_thin={0.45},midarrow_thin={0.65},midarrow_thin={0.85}] (o) -- (f);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (f) -- (e);
+\draw[midarrow_thin={0.6}] (e) -- (o);
+\draw[midarrow_thin={0.45},midarrow_thin={0.65},midarrow_thin={0.85}] (o) -- (g);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (g) -- (h);
+\draw[midarrow_thin={0.6}] (h) -- (o);
 %% two strands coming out front with twist
 \draw (g) -- +(-30:0.5cm);
 \draw (h) -- +(-30:0.5cm);
@@ -220,12 +232,17 @@
 %% the ellipse; draw top arc, then fill, then bottom arc
 %\fill[opacity=0.2] (o.center) -- (f.center) -- (e.center) -- cycle;
 \fill[opacity=0.2] (o.center) -- (g.center) -- (h.center) -- cycle;
-\draw (o) -- (g) -- (h) -- (o);
-\draw (o) -- (e) -- (f) -- (o);
+\draw[midarrow_thin={0.45},midarrow_thin={0.65},midarrow_thin={0.85}] (o) -- (f);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (f) -- (e);
+\draw[midarrow_thin={0.6}] (e) -- (o);
+\draw[midarrow_thin={0.45},midarrow_thin={0.65},midarrow_thin={0.85}] (o) -- (g);
+\draw[midarrow_thin={0.55},midarrow_thin={0.7}] (g) -- (h);
+\draw[midarrow_thin={0.6}] (h) -- (o);
 %% two strands coming out front with twist
 \draw (g) -- +(-30:0.5cm);
 \draw (h) -- +(-30:0.5cm);
 \end{scope}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{tikzpicture}
+
 
