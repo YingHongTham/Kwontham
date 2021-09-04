@@ -848,15 +848,16 @@ with a ``$2\pi/n$'' twist as discussed before.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The Figures \ref{fig:step_one} to \ref{fig:top-bottom}
-depict an example which decomposes the link (C) of Figure
-\ref{fig:Augmentations}. 
+depict an example which decomposes the link (C) of
+\figref{fig:Augmentations}. 
 
 
 \begin{figure}[h] 
 \centering
 \includegraphics[height=3cm]{fig-3.png}
 \includegraphics[height=3cm]{fig-4.png}
-	\caption{Each crossing circle bounds a twice-punctured disk}
+	\caption{Each crossing circle bounds a twice-punctured disk;
+	the rightmost figure shows half of the disk.}
 	\label{fig:step_one}
 \end{figure}
  
@@ -865,7 +866,9 @@ depict an example which decomposes the link (C) of Figure
 \centering 
 \includegraphics[height=3cm]{fig-5.png} 
 	\caption{We split the disk and collapse the arc of each
- crossing circle to ideal vertices}
+ crossing circle to ideal vertices;
+ the leftmost figure shows the view from the top
+ of a half disk being spread apart.}
 	\label{fig:step_two}
 \end{figure}
 
@@ -881,22 +884,13 @@ Right: The link components are pushed off to infinity
 	\label{fig:step_three}
 \end{figure}
 
-\begin{figure}[h] 
-\centering 
-\includegraphics[height=3cm]{top-bottom.png} 
-	\caption{Left: The top torihedron.
-	Right: The bottom torihdron with rotation indicating face gluing;
-	TODO shouldn't it be rotating other way?} 
-\label{fig:top-bottom}
-\end{figure}
 
 \begin{figure}[h] 
 \centering 
 \includegraphics[height=3cm]{top-bottom-flippedarrows.png} 
 	\caption{Left: The top torihedron.
-	Right: The bottom torihdron with rotation indicating face gluing;
-	TODO should it be like that?} 
-\label{fig:top-bottom-flippedarrows}
+	Right: The bottom torihdron with rotation indicating face gluing}
+\label{fig:top-bottom}
 \end{figure}
 
 
@@ -933,6 +927,7 @@ One may ask for the pyramidal decomposition of a torihedron
 to ``respect" angles. The following definitions,
 in particular an ``angle splitting'', make sense of this.
 
+\begin{samepage}
 \begin{define}
 An \emph{angled ideal tetrahedron} is an ideal tetrahedron
 with an assignment of an
@@ -946,6 +941,7 @@ interior dihedral angle $\theta_e^*$ to each edge $e$, such that
 We say an angled ideal tetrahedron is \emph{degenerate} if
 one dihedral angle is 0; we say it is \emph{non-degenerate} otherwise.
 \end{define}
+\end{samepage}
 
 
 \begin{define}
@@ -1136,6 +1132,7 @@ angle to each edge of each tetrahedron, such that
 
 
 \begin{theorem}\cite[Theorem 1.1]{FG-angles}
+\label{t:hyperbolic-angle-str}
 Let $M$ be a 3-manifold with a triangulation that admits an angle structure.
 Then $M$ is hyperbolic.
 \end{theorem}
@@ -1277,8 +1274,9 @@ of this assignment.
 \end{tabular}
 \caption{(a) Angle splitting before augmentation 
 (b) Angle splitting for bowtie corresponding to
-left bow-tie modification/augmentation;
-similar for right bow-tie modification/augmentation}
+left bow-tie modification/augmentation.
+For right bow-tie modification/augmentation,
+just flip both diagrams (a) and (b) horizontally.}
 \label{f:bowtie_angles2}
 \end{figure}
 
@@ -1360,8 +1358,8 @@ In this case, we do nothing.
 
 \item \textbf{Case: There is only one such maximal contiguous subsequence:}
 
-
-\textbf{Subcase: $k=1$:}
+\begin{itemize}
+\item \textbf{Subcase: $k=1$:}
 We add an edge that goes across $e_{1,0},e_{1,\pi},e_2$
 (in the sense that the new edge separates the edges of $f$ into two sets,
 one of them being those three edges;
@@ -1371,13 +1369,14 @@ since $n\geq 3$, this edge is new).
 %(these two edges do not form a bigon because we've ruled out $k=n$).
 %(these two edges do not form a bigon because we've ruled out $k=n$).
 
-\textbf{Subcase: $k \geq 2$:}
+\item \textbf{Subcase: $k \geq 2$:}
 We add an edge across $e_{1,0},e_{1,\pi}$
 and another edge across $e_{2,0},e_{2,\pi},e_{3,0},\ldots,e_{k,\pi}$
 (these two edges do not form a bigon because we've ruled out $k=n$).
 %(again these two edges do not form a bigon).
+\end{itemize}
 
-\textbf{Case: There are multiple such maximal contiguous subsequences.}
+\item \textbf{Case: There are multiple such maximal contiguous subsequences.}
 We just add edges as in the previous case for each contiguous subsequence,
 except one special case: when the edges of $f$ are exactly
 $e_{1,0},e_{1,\pi},e_2,e_{3,0},e_{3,\pi},e_4$,
@@ -1389,7 +1388,7 @@ we add only one edge separating the first three edges from the other three.
 \begin{figure}
 \input{fig-add-edges.tikz}
 \caption{Adding edges to non-bow-tie faces;
-the $+/-$ labels are short for $+1/-1$.}
+the $+,-$ labels are short for $+1,-1$ respectively.}
 %edge indicates an added edge to $\Gamma_T(L)$;
 %indicate whether to
 %increase/decrease $\vphi$ (and $\theta^*$)
@@ -1405,12 +1404,13 @@ and putting $\theta^* = \pi$ for all new edges.
 
 We can get an angle-splitting for $(\Gamma_T',\theta^*)$,
 using the angle-splitting for $\Gamma_T(L)$ for old edges,
-and for a new edge $e$ that cuts through some face $f$ of $\Gamma_T(L)$,
+and for a new edge $e$ (as in \figref{f:adding_edges})
+that cuts through some face $f$ of $\Gamma_T(L)$,
 we assign $\vphi_{\vec{e}} = \sum \vphi_{\vec{e'}}$,
 where the sum is over all the edges $\vec{e'} \in \del f$
 that on the other side of $\vec{e}$.
-It is easy to see that the new assignments are all non-zero
-(follows from non-degeneracy of the angle-splitting on $D'$).
+By non-degeneracy of the angle-splitting on $D'$,
+these assignments to the new edges are all non-zero
 
 
 Now fix some small $\veps > 0$.
@@ -1470,7 +1470,8 @@ $\Gamma_B'$ and obtain a triangulation of $\sT_B'$
 into non-degenerate angled tetrahedra.
 These triangulations glue up into a triangulation of $\toruscomp{L}$
 with an angle structure.
-Thus, $L$ is hyperbolic.
+Thus, by \thmref{t:hyperbolic-angle-str},
+$L$ is hyperbolic.
 \end{proof}
 
 
