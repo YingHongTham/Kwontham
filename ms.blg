@@ -1,15 +1,11 @@
 This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
+The top-level auxiliary file: ms.aux
 The style file: plain.bst
 Database file #1: references-ak.bib
-Repeated entry---line 882 of file references-ak.bib
- : @incollection{FG-angles
- :                        ,
-I'm skipping whatever remains of this entry
 You've used 10 entries,
             2118 wiz_defined-function locations,
-            569 strings with 5801 characters,
+            569 strings with 5797 characters,
 and the built_in function-call counts, 3739 in all, are:
 = -- 389
 > -- 135
@@ -48,4 +44,3 @@ warning$ -- 0
 while$ -- 38
 width$ -- 12
 write$ -- 121
-(There was 1 error message)
