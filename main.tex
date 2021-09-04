@@ -325,7 +325,8 @@ removal of full twists in the augmented twist regions.}
 \section{Augmented Links}
 \label{s:auglinks}
 
-TODO Notation section: $I = (-1,1)$.
+We denote $I = (-1,1)$.
+
 
 Champanerkar, Kofman and Purcell have studied alternating links in the thickened
 torus \cite{CKP2}. They define a link in the thickened torus as a quotient of a
@@ -495,13 +496,10 @@ Decomposing alternating links in the thickened torus into
 torihedra were first described in \cite{CKP2},
 then later used for fully augmented links in 
 the thickened torus in \cite{kwon2020fully}.
-The idea is to combine methods of Menasco
-\cite{Menasco} and the use of crossing edges
-between (TODO for?) each crossing of our link
+The idea is to combine methods of Menasco \cite{Menasco}
+and the use of crossing edges at each crossing of our link
 and Lackenby's ``cut-slice-flatten" method \cite{lackenby}
-on the augmentation
-sites.
-
+on the augmentation sites.
 
 
 \begin{define}\cite{CKP2}
@@ -876,8 +874,10 @@ depict an example which decomposes the link (C) of Figure
 \centering 
 \includegraphics[height=3cm]{fig-6.png} 
 \caption{Left: The crossing arc is the edge in red.
-Middle: Picture of splitting the crossing edge.
-Right: The link components are pushed off to infinity.}
+Middle: Picture of splitting the crossing edge
+and bow-ties.
+Right: The link components are pushed off to infinity
+(diagrammatically, they are shrunk to points).}
 	\label{fig:step_three}
 \end{figure}
 
@@ -888,6 +888,15 @@ Right: The link components are pushed off to infinity.}
 	Right: The bottom torihdron with rotation indicating face gluing;
 	TODO shouldn't it be rotating other way?} 
 \label{fig:top-bottom}
+\end{figure}
+
+\begin{figure}[h] 
+\centering 
+\includegraphics[height=3cm]{top-bottom-flippedarrows.png} 
+	\caption{Left: The top torihedron.
+	Right: The bottom torihdron with rotation indicating face gluing;
+	TODO should it be like that?} 
+\label{fig:top-bottom-flippedarrows}
 \end{figure}
 
 
@@ -1246,15 +1255,17 @@ Note that the sum of $\theta$ (not $\theta^*$)
 around each vertex is still $2\pi$.
 \figref{f:bowtie_angles2} shows an angle-splitting
 of this assignment.
-TODO perhaps these figures need some tidying up
+
 
 \begin{figure}
 \includegraphics[width=7cm]{more_pictures/horizontal_bowtie.png}
 \caption{Assignments of $\theta^*$ to edges of a bow-tie
-	corresponding to an augmentation site;
-	the edges labeled $\pi$ are the long edges,
-	the edges labeled 0 are the short edges,
-	the edges labeled $\pi/2$ are the diagonal edges}
+	corresponding to a left augmentation site;
+	the long edges are assigned $\pi$,
+	the short edges are assigned 0,
+	and the diagonal edges are assigned $\pi/2$
+	(same for a right augmentation).
+	}
 \label{f:bowtie_angles}
 \end{figure}
 
@@ -1264,7 +1275,10 @@ TODO perhaps these figures need some tidying up
 \includegraphics[width = 5cm]{bowtie_angles.png}\\
 (a)&(b)
 \end{tabular}
-\caption{(a) Angle splitting before augmentation (b) Angle splitting for bowtie corresponding to augmentation}
+\caption{(a) Angle splitting before augmentation 
+(b) Angle splitting for bowtie corresponding to
+left bow-tie modification/augmentation;
+similar for right bow-tie modification/augmentation}
 \label{f:bowtie_angles2}
 \end{figure}
 
