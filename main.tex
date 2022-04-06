@@ -375,6 +375,9 @@ Recall that a \emph{twist region}
 in a link diagram is a maximal sequence of vertices
 such that consecutive vertices are two vertices of a bigon face,
 and consecutive bigons meet only at a vertex (not an edge).
+
+TODO terrible defn.
+
 We say that the \emph{direction} of a twist region
 is the pair of faces (possibly the same face)
 that are across from the bigons at the end;
@@ -630,8 +633,19 @@ with a cellular link diagram,
 and let $L$ be an augmented link obtained from $K$.
 %Let $G(L)$ be a diagram of the link on $\torus \times \{0\}$.
 There is a decomposition of the complement,
-$(\torus \times I) - L$, into two ideal torihedra;
-the graphs of the torihedra are $\Gamma_T(L)$ and $\Gamma_B(L)$.
+$(\torus \times I) - L$, into two ideal torihedra.
+
+
+Moreover, the graphs of the torihedra are
+the top and bottom bow-tie graphs from
+\defref{d:tori-decomp-graph},
+$\Gamma_T(L)$ and $\Gamma_B(L)$,
+respectively.
+
+
+We call this the
+\emph{torihedral decomposition of
+the link complement of $L$ in the thickened torus}.
 \end{prop}
 
 
@@ -1138,6 +1152,8 @@ Then $M$ is hyperbolic.
 \end{theorem}
 
 
+TODO rephrase to more careful.
+
 For a hyperbolic link $K$ in $\torus \times I$, we show
 that the link $L$ obtained from augmenting $K$ is hyperbolic.
 The idea is to start with a graph from the torihedral decomposition
@@ -1206,10 +1222,33 @@ Then $L$ is hyperbolic.
 More generally, if $K$ is as above with a twist-reduced diagram
 containing bigons,
 and $L$ is obtained by augmenting $K$
-such that every twist region with at least one bigon is augmented,
+such that for every twist region with at least one bigon,
+either the twist region is augmented,
+or each vertex of the twist region is augmented
+in the other direction,
+or both.
 %(and possibly other crossings),
 then $L$ is hyperbolic.
 \end{theorem}
+
+% awkward attempts to address necessity of bigon condition
+% in main theorem
+%\begin{remark}
+%In the torihedral decomposition of $L$
+%(as in \prpref{p:tori_decomp}),
+%a string of bigons would
+%produce bow-tie graphs whose total number 
+%of edges identified is greater than 4 
+%
+%
+%We put restrictions on bigons for the following reason.
+%Recall from \prpref{p:tori_decomp} that
+%a link complement is obtained from identifying
+%certain collections of edges from the top and bottom torihedra.
+%When there are non-augmented bigons,
+%some of these collections would not be 
+%\end{remark}
+
 
 \begin{proof}
 %Let us first consider the case when $K$ did not have bigons.
@@ -1224,6 +1263,13 @@ of a link $K'$
 (see \defref{d:tori-decomp-graph}).
 Assign to each edge $e$ of $D'$ the angle $\theta_e = \pi/2$
 (so that $\theta_e^* = \pi/2$ too).
+This assignment has the property that
+the sum of dihedral angles around each identified edge
+(in the complement of $K'$) is $2\pi$.
+This can be achieved because of the hypotheses on bigons
+in our theorem statement.
+
+
 Using the fact that $K'$ is weakly prime
 (which easily follows from $K$ being weakly prime),
 it is not hard to see that the condition on cocycles
@@ -1473,6 +1519,24 @@ with an angle structure.
 Thus, by \thmref{t:hyperbolic-angle-str},
 $L$ is hyperbolic.
 \end{proof}
+
+
+\begin{remark}
+Note that for our definition of augmentation,
+we exclude the case where
+an unknotted circle component is added around
+two parallel strands that do not meet at a crossing.
+In particular, this implies that
+a non-weakly prime link cannot become weakly prime
+under augmentation.
+
+
+If we have an augmentation around two such parallel strands,
+we may consider the related link
+where those two strands have a full twist;
+the hyperbolicity is unaltered, and
+\thmref{t:auglink_hyp} would apply.
+\end{remark}
 
 
 \bibliographystyle{plain}
