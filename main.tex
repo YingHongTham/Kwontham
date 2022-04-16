@@ -288,7 +288,7 @@ In \secref{s:hyperbolicity}, we prove that
 many augmented alternating links in the thickened torus are hyperbolic.
 
 
-We point out that \cite{kwon2020fully}, the first author
+We point out that in \cite{kwon2020fully}, the first author
 proved that \emph{fully} augmented links in the thickened torus
 are hyperbolic, so this paper can be seen as a generalization
 of that work.
@@ -372,54 +372,49 @@ then the disk contains a simple edge of the diagram and no crossings.
 
 \begin{define}
 Recall that a \emph{twist region}
-in a link diagram is a maximal sequence of vertices
+in a link diagram in the plane is a maximal sequence of vertices
 such that consecutive vertices are two vertices of a bigon face,
-and consecutive bigons meet only at a vertex (not an edge).
+and consecutive bigons meet at exactly one vertex.
+The \emph{length} of the twist region is the number of bigons.
 
-TODO terrible defn.
-
-We say that the \emph{direction} of a twist region
-is the pair of faces (possibly the same face)
-that are across from the bigons at the end;
-if a twist region consists of only one vertex,
-a direction is a pair of opposite faces (again, possibly the same face)
-meeting at the crossing.
-We say that a twist region consisting of only one vertex
-is \emph{trivial}.
-%%\footnote{There is an ambiguity of ``maximality'' in this definition:
-%%for example, if a vertex of a link diagram meets exactly one bigon,
-%%it can be considered as part of a twist region of length 2
-%%(given by that bigon),
-%%or it can be considered as part of a twist region of length 1,
-%%as there are no bigons in the other ``direction''.
-%%It should be clear which ``direction'' a twist region is going
-%%when we deal with augmentations later.
-%%}
-
+We say a single vertex $v$ is a \emph{trivial twist region}
+(or \emph{twist region of length 0})
+if, for some cyclical ordering $f_1,f_2,f_3,f_4$
+of the four faces adjacent to $v$,
+$f_1,f_3$ are not bigons.
+Note that if all four faces are not bigons,
+then we think of $v$ as being a trivial twist region in two ways,
+and in this sense, every vertex is part of exactly
+two twist regions.
+%
+%We say that the \emph{direction} of a twist region
+%is the pair of faces (possibly the same face)
+%that are across from the bigons at the end;
+%if a twist region consists of only one vertex,
+%a direction is a pair of opposite faces (again, possibly the same face)
+%meeting at the crossing.
+%We say that a twist region consisting of only one vertex
+%is \emph{trivial}.
 
 For links in the thickened torus,
 a \emph{twist region} in a link diagram of $L=\mathcal{L}/\Lambda$ in $\torus
 \times I$, is the quotient of a twist region in the biperiodic link
 $\mathcal{L}$. 
-
-
-A biperiodic link
-$\mathcal{L}$ is called \emph{twist-reduced} if for any simple closed curve on
-the plane that intersects the diagram of $\mathcal{L}$
-transversely in four points, with two
-points adjacent to one crossing and the other two points adjacent to another
-crossing, the simple closed curve bounds a subdiagram consisting of a (possibly
-empty) collection of bigons strung end to end between these crossings. We say
-the diagram of $L$ is \emph{twist-reduced}
-if it is the quotient of a twist-reduced biperiodic
-link diagram.
 \end{define}
 
 
-We note that when a link diagram is cellular
-(Definition \ref{d:cellular}),
-a twist region in the torus cannot be a cycle;
-otherwise, the face adjacent to the twist region would be an annulus.
+\begin{define}
+A biperiodic link $\mathcal{L}$ is called \emph{twist-reduced}
+if for any simple closed curve on
+the plane that intersects the diagram of $\mathcal{L}$
+transversely in four points,
+with two points adjacent to one crossing
+and the other two points adjacent to another crossing,
+the simple closed curve bounds a subdiagram consisting of
+a collection of bigons strung end to end between these crossings.
+We say the diagram of $L$ is \emph{twist-reduced}
+if it is the quotient of a twist-reduced biperiodic link diagram.
+\end{define}
 
 
 Now we can define augmentation for a link in $\torus \times I$ the same way we
@@ -438,7 +433,7 @@ called a \emph{crossing circle},
 is added to one or more twist regions of $D(K)$
 (see Figure \ref{fig:Augmentations});
 we call the resulting link $L$ an \emph{augmented link obtained from $K$}.
-We say $L$ is \emph{fully} augmented if $L$ is obtained by augmenting
+We say $L$ is \emph{fully augmented} if $L$ is obtained by augmenting
 $K$ at \emph{every} crossing/twist site.
 \label{d:augmentation}
 \end{definition}
@@ -463,6 +458,14 @@ A graph $G = (V,E)$ on the torus is \emph{cellular}
 if its complement is a collection of open disks.
 \label{d:cellular}
 \end{definition}
+
+We note that when a link diagram is cellular,
+a twist region in the torus cannot be a cycle;
+otherwise, the face adjacent to the twist region would
+have non-trivial homology.
+
+
+
 
 %We say that a link diagram in the thickened torus is
 %\emph{cellular}.
@@ -528,9 +531,10 @@ to avoid confusion, we will visualize the graphs of both torihedra
 from the perspective of the cone point of the ``top'' torihedron.
 
 
-If the faces of $G(\sT)$ are disks,
-then $\sT$ can be decomposed into a union of pyramids,
-obtained by coning each face to the cone point of $\sT$.
+Since the faces of $G(\sT)$ are disks,
+$\sT$ can be decomposed into a union of pyramids,
+where each pyramid is obtained by coning a face of $G(\sT)$
+to the cone point of $\sT$.
 This also gives a decomposition of the corresponding ideal torihedron
 $\sT^\circ$ into ideal pyramids.
 We call these the \emph{pyramidal decompositions} of $\sT$ and $\sT^\circ$.
@@ -539,22 +543,35 @@ We call these the \emph{pyramidal decompositions} of $\sT$ and $\sT^\circ$.
 \begin{definition}
 Let $G$ be a graph on the torus.
 Let $v$ be a vertex and $e,e'$ be distinct edges that meet $v$.
-A \emph{left (resp. right) bow-tie modification to $v,e,e'$}
+A \emph{bow-tie modification to $v,e,e'$}
 is the process of removing $v,e,e'$ and adding in
-a pair of triangular faces, which we refer to as a ``bow-tie''
-(see \figref{f:bow-tie-modification}).
-%as in Figure \ref{TODO} (a) (resp. (b)).
+a pair of triangular faces, which we refer to as
+\emph{bow-tie faces} or a \emph{bow-tie}
+(see Figure \ref{f:bow-tie-modification},
+\ref{f:bow-tie-modification-general}).
 The edges of the bow-tie are of three types;
 \emph{diagonal} edges, which do not touch $v$,
 \emph{long} edges, which are ``parallel'' to the original edges $e,e'$,
-and \emph{short} edges, which connect $v$ to the two new vertices.
-We call the new triangular faces the \emph{bow-tie faces}.
+and \emph{short} edges.
+%, which connect $v$ to the two new vertices.
+%We call the new triangular faces the \emph{bow-tie faces}.
+A bow-tie modification is a \emph{left} bow-tie modification
+if, traveling from $v$ out along $e$ and $e'$,
+the diagonal faces appear to the left of $e$ and $e'$,
+respectively;
+likewise for \emph{right} bow-tie modifications.
 
 
 \begin{figure}[ht]
 \input{fig-bow-tie-modification.tikz}
-\caption{Bow-tie modifications}
+\caption{Bow-tie modifications and its relation to torihedra}
 \label{f:bow-tie-modification}
+\end{figure}
+
+\begin{figure}[ht]
+\input{fig-bow-tie-modification-general.tikz}
+\caption{Another example of (left) bow-tie modification}
+\label{f:bow-tie-modification-general}
 \end{figure}
 
 
@@ -563,9 +580,10 @@ We call the new triangular faces the \emph{bow-tie faces}.
 
 
 \begin{define}
-We say a twist region is \emph{right-augmented} if, when both strands are
-(locally) oriented so that they cross the augmentation disk in the same
-direction, the crossing is a right-handed half-twist.
+We say a twist region is \emph{right-augmented} if,
+when both strands are (locally) oriented
+so that they cross the augmentation disk in the same direction,
+the crossing is a right-handed half-twist.
 We say a twist is \emph{left-augmented} if it is not right-augmented.
 (See \figref{f:bow-tie-modification}).
 \end{define}
@@ -579,7 +597,7 @@ together with labels at twist regions indicating left- or right-augmentation.
 Let $L$ be a link obtained from augmenting an alternating link $K$
 with a cellular link diagram $D = D(K)$.
 We define the \emph{top/bottom bow-tie graph of $L$} as follows.
-
+(See \figref{f:tori-decomp-graph} for illustrations.)
 
 %Let $D = D(K)$ be the link diagram of $K$,
 Let $D'$ be the graph obtained from $D$
@@ -681,33 +699,15 @@ connecting the top and bottom strands at the crossing
 (see \figref{f:crossing-edges}).
 We also three horizontal edges for each crossing circle
 (see \figref{f:cut-slice-flatten}, leftmost diagram).
-%(see Figure \ref{fig:crossingArc} (a)).
-%so that for each crossing edge,
-%one end of the edge lies on a bottom strand while the other
-%end lies on a top strand as in Figure \ref{fig:crossingArc} (a).
+
 
 \begin{figure} 
 \input{fig-crossing-edges.tikz}
-\label{f:crossing-edges}
 \caption{Splitting and flattening crossing edges.}
-%\centering 
-%\begin{tabular}{cc}
-%\includegraphics[width=4cm]{crossingArc.png}
-%& \includegraphics[width=5cm]{crossingPush.png}
-%\\
-%(a)
-%& (b)
-%\end{tabular}
-%\caption{(a) The black strands are
-%part of the link and the red strand is the crossing edge.
-%(b) The blue and
-%red edges represent the split crossing edges and the shaded half disk is bounded
-%by the crossing circle} 
-%\label{fig:crossingArc} 
+\label{f:crossing-edges}
 \end{figure}
 
 
-%Next we construct the graph that will define the torihedra.
 View the link from the point at infinity from the top end
 ($\torus \times \{1\}$) of the thickened torus.
 At each crossing of $K$,
@@ -719,18 +719,10 @@ Note that after this operation, the link (which is no longer a link)
 for both top and bottom look the same,
 but a crossing edge associated to a crossing
 is pushed in different directions;
-this contributes to a ``$2\pi/n$'' twist
+this contributes to a ``$2\pi/n$ twist''
 when gluing back the faces of the top and bottom torihedra.
-%Figure \ref{fig:crossingArc}.
-% (b).
-%We push the link
-%components to infinity and stretch the crossing edge so that we have flattened
-%the link onto $\torus \times \{0\}$ except for the crossing circles,
-%which remains perpendicular to the projection plane. 
 
 
-%Now place a disk on each crossing circle, so that the disk is bounded by
-%the crossing circle.
 Now for each crossing circle $c$, consider a spanning
 (twice-punctured) disk $B_c$.
 The following operations are depicted in \figref{f:cut-slice-flatten}.
@@ -1226,7 +1218,7 @@ such that for every twist region with at least one bigon,
 either the twist region is augmented,
 or each vertex of the twist region is augmented
 in the other direction,
-or both.
+or both,
 %(and possibly other crossings),
 then $L$ is hyperbolic.
 \end{theorem}
@@ -1342,7 +1334,7 @@ degenerate base-angled pyramids
 interior dihedral angles $\theta^*$ are 0);
 since we need the pyramids to be non-degenerate,
 we modify the graph on the torihedra
-and the angle assignments to make all $\theta^*$ nonzero
+and the angle assignments to make all $\theta^*$ non-zero
 as follows.
 
 
@@ -1380,7 +1372,7 @@ So assume that $\bar{f}$ does have such a vertex,
 and suppose it is right-augmented
 (the other case is treated similarly).
 Then for all right-augmented vertices $v_i$ of $\bar{f}$,
-$f$ would meet the short,long edges $e_{i,0},e_{i,\pi}$,
+$f$ would meet the short, long edges $e_{i,0},e_{i,\pi}$,
 while for all left-augmented vertices,
 $f$ would meet the diagonal edges.
 In particular,
@@ -1456,7 +1448,7 @@ we assign $\vphi_{\vec{e}} = \sum \vphi_{\vec{e'}}$,
 where the sum is over all the edges $\vec{e'} \in \del f$
 that on the other side of $\vec{e}$.
 By non-degeneracy of the angle-splitting on $D'$,
-these assignments to the new edges are all non-zero
+these assignments to the new edges are all non-zero.
 
 
 Now fix some small $\veps > 0$.

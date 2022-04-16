@@ -6,3 +6,21 @@ Second, could you explain what the problem is with bigons? ...
 
 Further, what if you start with a projection that is not weakly prime...
 -we address this in the remark at the end of the paper.
+
+errata/suggestions:
+1 10 We explained twist-reduced in Section 2
+1 11 added "in": We point out that in [7]
+
+
+pg 5 Figure 4 referenced in Def 2.11
+
+pg 6 yes, "We also add three horizontal edges.."
+
+pg 6 yes, weird latex issue
+
+
+
+
+Other changes:
+-added Figure 4 for clarity
+-separated definition of twist-reduced from definition of twist-region
