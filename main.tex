@@ -434,7 +434,7 @@ is added to one or more twist regions of $D(K)$
 (see Figure \ref{fig:Augmentations});
 we call the resulting link $L$ an \emph{augmented link obtained from $K$}.
 We say $L$ is \emph{fully augmented} if $L$ is obtained by augmenting
-$K$ at \emph{every} crossing/twist site.
+$K$ at \emph{every} crossing/twist region.
 \label{d:augmentation}
 \end{definition}
 
@@ -1214,36 +1214,12 @@ Then $L$ is hyperbolic.
 More generally, if $K$ is as above with a twist-reduced diagram
 containing bigons,
 and $L$ is obtained by augmenting $K$
-such that for every twist region with at least one bigon,
-either the twist region is augmented,
-or each vertex of the twist region is augmented
-in the other direction,
-or both,
-%(and possibly other crossings),
+such that for every twist region with at least one bigon
+is augmented,
 then $L$ is hyperbolic.
 \end{theorem}
 
-% awkward attempts to address necessity of bigon condition
-% in main theorem
-%\begin{remark}
-%In the torihedral decomposition of $L$
-%(as in \prpref{p:tori_decomp}),
-%a string of bigons would
-%produce bow-tie graphs whose total number 
-%of edges identified is greater than 4 
-%
-%
-%We put restrictions on bigons for the following reason.
-%Recall from \prpref{p:tori_decomp} that
-%a link complement is obtained from identifying
-%certain collections of edges from the top and bottom torihedra.
-%When there are non-augmented bigons,
-%some of these collections would not be 
-%\end{remark}
-
-
 \begin{proof}
-%Let us first consider the case when $K$ did not have bigons.
 By \prpref{p:tori_decomp}, $\toruscomp{L}$ can be
 obtained by gluing two torihedra $\sT_T(L),\sT_B(L)$
 with graphs $\Gamma_T(L),\Gamma_B(L)$.
@@ -1357,12 +1333,18 @@ we label $e_{v_i}^{(.)}$ by $e_i$
 (here $e_{v_i}^{(.)}$ is $e_{v_i}^{(1)}$ or $e_{v_i}^{(2)}$,
 whichever meets $\bar{f}$; see \defref{d:tori-decomp-graph}).
 For a vertex $v_i$ that corresponds to a twist region of $K$,
-if the direction of the twist region is towards $\bar{f}$,
+if the crossing circle ``faces'' $f$,
+%if the direction of the twist region is towards $\bar{f}$,
 then $f$ meets a diagonal edge of the bow-tie corresponding to $v_i$,
-and we label it $e_i$;
-if not, then $f$ meets a short and long edge of the corresponding bow-tie,
+and we label it $e_i$
+(for example if $f$ is the top left face
+in \figref{f:bowtie_angles2} (a));
+if not, then $f$ meets a short and long edge
+of the corresponding bow-tie,
 and we label them by $e_{i,0}$ and $e_{i,\pi}$,
-respectively.
+respectively
+(for example if $f$ is the top right face
+in \figref{f:bowtie_angles2} (b)).
 
 
 If $\bar{f}$ does not have vertices of the latter kind,
@@ -1387,7 +1369,7 @@ $e_{1,0} \cm e_{1,\pi} \cm e_{2,0} \cm e_{2,\pi} \cm \ldots
 	\cm e_{k,0} \cm e_{k,\pi} \cm \ldots$.
 We add new edges across $f$ as follows
 (see \figref{f:adding_edges};
-ignore the + and - signs for now.):
+ignore the + and - signs for now):
 
 
 \begin{itemize}
@@ -1446,18 +1428,23 @@ and for a new edge $e$ (as in \figref{f:adding_edges})
 that cuts through some face $f$ of $\Gamma_T(L)$,
 we assign $\vphi_{\vec{e}} = \sum \vphi_{\vec{e'}}$,
 where the sum is over all the edges $\vec{e'} \in \del f$
-that on the other side of $\vec{e}$.
+on the other side of $\vec{e}$.
 By non-degeneracy of the angle-splitting on $D'$,
 these assignments to the new edges are all non-zero.
 
 
 Now fix some small $\veps > 0$.
 Let $\vphi_{\vec{e}}' = \vphi_{\vec{e}} + x \cdot \veps$,
-where $x$ is the label on $\vec{e}$ (0 if unlabeled).
+where $x$ is the label
+(in \figref{f:adding_edges}) on $\vec{e}$
+(set $x=0$ if unlabeled).
 Let $\theta_e'^* = \vphi_{\vec{e}}' + \vphi_{\cev{e}}'$.
-It is easy to check that the sum of $\theta'^*$
-around each vertex is the same as for $\theta^*$,
-so it defines an angled torihedron $(\sT_T',\theta'^*)$.
+It is easy to check that the sum of labels
+% $\theta'^*$
+around each vertex is 0,
+hence $\theta'^*$
+%the same as for $\theta^*$,
+defines an angled torihedron $(\sT_T',\theta'^*)$.
 For each face of $\Gamma_T'$, the $+/-$ labels
 on the inner side of boundary edges cancel out:
 for bow-tie faces, the short edge gets a $+1$ and the long edge
@@ -1490,12 +1477,12 @@ As noted before, upon gluing $\sT_T(L)$ to $\sT_B(L)$
 the sum of exterior dihedral angles $\theta^*$ around each edge
 is $2\pi$.
 This clearly remains true after adding the new edges
-(they're label $\pi$ on each torihedron).
+(they're labeled $\pi$ on each torihedron).
 Again by construction,
 the $+/-$ labels coming from the top and bottom diagrams get canceled out.
 Thus, upon gluing $\sT_T'$ to $\sT_B'$,
-the sum of new exterior dihedral angles $\theta'^*$ around each edge
-is $2\pi$.
+the sum of new exterior dihedral angles $\theta'^*$
+around each edge is still $2\pi$.
 
 
 Finally, we obtain a triangulation with an angle structure as follows.
@@ -1514,20 +1501,57 @@ $L$ is hyperbolic.
 
 
 \begin{remark}
-Note that for our definition of augmentation,
-we exclude the case where
-an unknotted circle component is added around
-two parallel strands that do not meet at a crossing.
-In particular, this implies that
-a non-weakly prime link cannot become weakly prime
-under augmentation.
+By applying \thmref{t:auglink_hyp} judiciously,
+one may prove hyperbolicity of augmented links
+that do not satisfy its hypotheses as stated.
 
 
-If we have an augmentation around two such parallel strands,
-we may consider the related link
-where those two strands have a full twist;
-the hyperbolicity is unaltered, and
-\thmref{t:auglink_hyp} would apply.
+%Note that for our definition of augmentation,
+%we exclude the case where
+%an unknotted circle component is added around
+%two parallel strands that do not meet at a crossing.
+%In particular, this implies that
+%a non-weakly prime link cannot become weakly prime
+%under augmentation.
+
+
+%If we have an augmentation around two such parallel strands,
+Say we have a link $K$ that satisfies
+the stricter hypotheses of \thmref{t:auglink_hyp}
+(no bigons).
+Consider a crossing circle $C$ around two parallel strands
+that do not meet at a crossing.
+The addition of $C$ to $K$ is not an augmentation
+as in \defref{d:augmentation},
+and so \thmref{t:auglink_hyp} does not directly apply.
+However, we may consider the related link $K"$
+where those two strands have a full twist,
+so that the addition of $C$ to $K"$ is an augmentation.
+Now \thmref{auglink_hyp} applies to $K" \cup C$,
+and thus $K \cup C$ is also hyperbolic.
+
+
+Note that augmenting in the sense of \defref{d:augmentation}
+will not turn a non-weakly prime link into a weakly prime link,
+but the above extended notion of augmenting might.
+
+
+Another way to squeeze more out of \thmref{t:auglink_hyp}
+is to consider augmenting twist regions
+in the ``transverse direction''.
+That is, suppose $K$ has only one twist region $T$,
+which is left-handed,
+but we perform a right-handed augmentation
+at each vertex of $T$
+(instead of the usual left-handed augmentation which is
+one of the hypotheses of \thmref{t:auglink_hyp}).
+Consider the link $K"$ where each vertex of $T$
+is replaced by a right-handed twist region of length 2
+(two bigons).
+Then the twist region $T$ ``is'' no longer a twist region
+in $K"$, and we may freely apply \thmref{t:auglink_hyp})
+and conclude that the ``transversely augmented'' $K$
+is hyperbolic.
 \end{remark}
 
 
