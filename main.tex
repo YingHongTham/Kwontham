@@ -975,7 +975,6 @@ Also, an angled ideal tetrahedron is simply a base-angled ideal pyramid
 with base a triangle, and with no preferred face.
 
 \begin{definition}
-%TODO: this definition should come after base-angled pyramid
 An \emph{angle-splitting} of an angled torihedron $(\sT,\theta_\bullet^*)$
 is an assignment of an angle $\vphi_{\vec{e}}$ to each
 oriented edge $\vec{e}$, such that
@@ -1030,15 +1029,8 @@ are the same as their ``coherent angle system''.
 \end{remark}
 
 
-%TODO remark on what splitting means in terms of ideal hyperbolic
-
 \begin{lemma}
 \label{l:pyramid_decomp}
-%Let $P_n$ be an ideal pyramid whose base is an $n$-gon and suppose,
-%\begin{itemize}
-%\item each boundary edge of the base face is assigned a dihedral angle $\alpha_i$ such that for adjacent edges, $\alpha_i + \alpha_{i+1} < \pi$;
-%\item we are given a decomposition of the base face into triangles by adding new edges. 
-%\end{itemize}
 Let $P_n$ be a base-angled ideal pyramid, and suppose we are given a
 decomposition of the base face into triangles by adding new edges.  One gets an
 obvious corresponding triangulation of $P_n$, where a new face is added for each
@@ -1119,15 +1111,21 @@ complete hyperbolic metric on the interior of $M$.
 Casson and Rivin separated Thurston's
 gluing equations into a linear and non-linear part \cite{Casson-Rivin}.
 Angle structures are solutions to the linear part of
-Thurston's gluing equations;
-we will use them to attain hyperbolicity of complements
-of augmented links in the thickened torus.
+Thurston's gluing equations.
+By \thmref{t:hyperbolic-angle-str}
+(\cite[Theorem 1.1]{FG-angles}),
+to prove hyperbolicity of a link complement,
+it suffices to find an angle structure
+on a triangulation of the link complement.
+%we will use them to attain hyperbolicity of complements
+%of augmented links in the thickened torus.
 
 
 \begin{define}
-Let $M$ be an orientable 3-manifold with boundary consisting of tori. An angle
-structure on an ideal triangulation $\tau$ of $M$ is an assignment of a dihedral
-angle to each edge of each tetrahedron, such that
+Let $M$ be an orientable 3-manifold with boundary consisting of tori.
+An angle structure on an ideal triangulation $\tau$ of $M$
+is an assignment of a dihedral angle to each edge
+of each tetrahedron, such that
 \begin{itemize}
 \item each tetrahedron is a non-degenerate angled ideal tetrahedron,
 \item around each edge of $\tau$, the dihedral angles sum to $2\pi$.
@@ -1143,8 +1141,6 @@ Let $M$ be a 3-manifold with a triangulation that admits an angle structure.
 Then $M$ is hyperbolic.
 \end{theorem}
 
-
-TODO rephrase to more careful.
 
 For a hyperbolic link $K$ in $\torus \times I$, we show
 that the link $L$ obtained from augmenting $K$ is hyperbolic.
